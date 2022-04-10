@@ -1,59 +1,17 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
-    - hey
+    - Hello
+    - Hi
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
+- intent: restaurant_choice
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
+    - Hello i want to eat [mexican](cuisine_type) cuisine today.
+    - I want to eat [mom's]{"entity": "cuisine_type", "value": "homemade"} cuisine today.
+    - hi i'd like to eat [francaise](cuisine_type) cuisine today.
+- synonym: /
   examples: |
-    - yes
-    - yeah
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - nope
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: search_recipe
-  examples: |
-    - I'd like to cook a [pizza](recipe)
-    - I want to cook a [pizza](recipe)
-    - Give me a recipe for [pizza](recipe)
-    - Please find me a recipe for [pizza](recipe)
+    - mom's
+    - homemade
