@@ -1,0 +1,36 @@
+version: "3.1"
+
+# Intents
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - search_recipe
+
+# Responses
+responses:
+  utter_greet:
+  - text: "Hey! What would you like me to do?"
+
+  utter_goodbye:
+  - text: "Bye!"
+
+  utter_recipe_found:
+  - text: "Great! Here's the recipe I found for {recipe}"
+
+# Entities
+entities:
+  - recipe
+
+# Slots
+slots:
+  recipe:
+    type: text
+    mappings:
+    - type: custom
+
+# Other configs
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

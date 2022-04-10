@@ -1,0 +1,10 @@
+
+stories:
+- story: happy path 1
+  steps:
+  - user: hello there!
+    intent: greet
+  - action: utter_greet
+  - user: I would like to prepara a pizza
+    intent: search_recipe
+  - action: utter_recipe_found
