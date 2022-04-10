@@ -2,16 +2,49 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
+    - Good evening
+    - Good morning
     - Hello
+    - Hello there
+    - Hey
     - Hi
+    - good evening
+    - good morning
     - hello
+    - hello there
+    - hey
     - hi
-- intent: restaurant_choice
+- intent: search_recipe
   examples: |
-    - Hello i want to eat [mexican](cuisine_type) cuisine today.
-    - I want to eat [mom's]{"entity": "cuisine_type", "value": "homemade"} cuisine today.
-    - hi i'd like to eat [francaise](cuisine_type) cuisine today.
-- synonym: /
+    - Good evening can you please find me recipes for [pasta](recipe)?
+    - Good evening can you please search recipes for [pasta](recipe)?
+    - Good evening could you find [pasta](recipe) recipes?
+    - Good evening could you please search for [pizza](recipe) recipes?
+    - Good morning I'd really like to eat [pasta](recipe).
+    - Good morning can you please find me how to prepare [pizza](recipe)?
+    - Good morning could you search for [pizza](recipe) recipes?
+    - Hello there could you please find recipes for [pasta](recipe)?
+    - Hello there may you please search for how to make [pasta](recipe)?
+    - Hey i'd love to taste [pasta](recipe).
+    - Hi could you find me recipes for [pasta](recipe)?
+    - could you search [pasta](recipe) recipes?
+    - good morning could you find me how to cook a [pizza](recipe)?
+    - good morning may you search for [pasta](recipe) recipes?
+    - hello there can you please search how to make a [pasta](recipe)?
+    - hello there may you search [pizza](recipe) recipes?
+    - hi could you find me recipes for [pizza](recipe)?
+    - i'd really like to taste [pizza](recipe) this evening.
+    - may you please find me [pasta](recipe) recipes?
+    - may you search [pasta](recipe) recipes?
+- intent: search_cuisine
   examples: |
-    - mom's
-    - homemade
+    - Hey i would love to try [mexican](cuisine_type) cuisine.
+    - I want to taste [mexican](cuisine_type) cuisine today.
+    - I would really love to eat [japanese](cuisine_type) cuisine.
+    - I'd really like to taste [indian](cuisine_type) food today.
+    - I'd really love to eat [italian](cuisine_type) cuisine.
+    - I'd really love to taste [chinese](cuisine_type) food.
+    - hey i would love to taste [mexican](cuisine_type) food tomorrow.
+    - i want to eat [japanese](cuisine_type) food tomorrow.
+    - i want to try [japanese](cuisine_type) food.
+    - i would like to eat [chinese](cuisine_type) cuisine.

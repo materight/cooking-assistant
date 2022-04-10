@@ -1,0 +1,44 @@
+//================== Alias definitions =======================
+~[greet]
+    [hi|hello|hey|hello there|good morning|good evening]
+
+~[please]
+    [please]
+
+~[search]
+    search [for?]
+    find [me?]
+
+~[cook]
+    cook
+    prepare
+    make
+    bake
+
+~[can you]
+    can you
+    could you
+    may you
+
+~[i want to]
+    [&i] ~[want#no elision]
+    [&I]~[want#elision]
+~[want#no elision]
+    want to
+    would [really?] [like|love] to
+~[want#elision]
+    'd [really?] [like|love] to
+
+~[eat]
+    eat
+    try
+    taste
+
+~[time]
+    today
+    tomorrow
+    for breakfast
+    for launch
+    for dinner
+    this morning
+    this evening

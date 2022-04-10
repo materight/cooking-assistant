@@ -1,0 +1,11 @@
+@[recipe]
+    pizza
+    pasta
+
+@[cuisine_type]
+    italian
+    french
+    indian
+    chinese
+    japanese
+    mexican
