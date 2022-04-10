@@ -417,22 +417,22 @@
   cook_time: 10
   servings: 5
   ingredients:
-  - name: 20oz (550g) tilapia (about 5 medium sized fillets)
-    amount: 20oz (550g
-  - name: 3 tablespoons (45ml) Maesri Red Curry Paste
-    amount: 3 tablespoons (45ml
-  - name: 1 tablespoon (15ml) fish sauce
-    amount: 1 tablespoon (15ml
-  - name: 1 egg yolk
-    amount: 1 egg yolk
-  - name: 1 teaspoon (5ml) cornstarch
-    amount: 1 teaspoon (5ml
-  - name: 5 green beans
-    amount: 5 green beans
-  - name: 5 Thai basil leaves
-    amount: 5 Thai basil leaves
-  - name: 1/2 cup (120ml) vegetable oil (for pan frying)
-    amount: 1/2 cup (120ml
+  - name: tilapia
+    amount: 550g
+  - name: curry paste
+    amount: 45ml
+  - name: fish sauce
+    amount: 15ml
+  - name: egg yolk
+    amount: 1
+  - name: cornstarch
+    amount: 5ml
+  - name: green beans
+    amount: 5
+  - name: basil leaves
+    amount: 5
+  - name: vegetable oil
+    amount: 120ml
   steps:
   - Cut the green beans into thin rings and set aside.
   - Mince the basil and set aside.
@@ -450,41 +450,45 @@
   - Cook for approximately 3 - 4 minutes on each side until evenly browned.
   - Serve with Thai sweet chili dipping sauce. The Maesri brand is very good if you
     can find it.
+
 - title: Rocket and Bitter Orange Salad
   prep_time: 5
   cook_time: 0
   servings: 2
   ingredients:
-  - name: 3 large handfulls of rocket (arugula) greens
-    amount: 3 large handfulls of rocket (arugula
-  - name: 1 tablespoon (15ml) extra virgin olive oil
-    amount: 1 tablespoon (15ml
-  - name: 2 to 3 dashes of orange bitters
-    amount: 2 to 3 dashes of orange bitters
-  - name: salt and pepper to taste
-    amount: salt and pepper to taste
+  - name: arugula greens
+    amount: 3
+  - name: olive oil
+    amount: 15ml
+  - name: orange bitters
+    amount: 2 dashes
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - Add greens to a large mixing bowl.
   - Add olive oil, two dashes of bitters, along with a sprinkle of salt and pepper
   - Toss ingredients together.
   - Check or desired orange bitterness flavor and add another dash of bitters if necessary.
+
 - title: Crêpes
   prep_time: 5
   cook_time: 3
   servings: 4
   ingredients:
-  - name: 1 cup (240ml) milk
-    amount: 1 cup (240ml
-  - name: 1/2 cup (120ml) all-purpose flour
-    amount: 1/2 cup (120ml
-  - name: 2 tablespoons (30ml) melted butter
-    amount: 2 tablespoons (30ml
-  - name: 1 tablespoon (15ml) sugar
-    amount: 1 tablespoon (15ml
-  - name: 1 egg
-    amount: 1 egg
-  - name: 1 pinch salt
-    amount: 1 pinch salt
+  - name: milk
+    amount: 240ml
+  - name: flour
+    amount: 120ml
+  - name: butter
+    amount: 30ml
+  - name: sugar
+    amount: 15ml
+  - name: egg
+    amount: 1
+  - name: salt
+    amount: null
   steps:
   - Combine all ingredients and whisk together until smooth.
   - Allow batter to rest for 5 minutes.
@@ -495,6 +499,7 @@
   - Cook for 2 minutes.
   - Flip and cook an additional 1-2 minutes until the other side is browned as well.
   - Stuff with sweet or savory fillings of your choice.
+
 - title: Skillet Apple Tart
   prep_time: 15
   cook_time: 35
