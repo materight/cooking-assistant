@@ -25,6 +25,38 @@
   - Transfer the pasta directly to the garlic and oil sauce with a pasta spoon, combine
     with the parsley and stir until combined.
 
+- title: Spaghetti Carbonara
+  prep_time: 5
+  cook_time: 15
+  servings: 2
+  ingredients:
+  - name: spaghetti
+    amount: 225g
+  - name: bacon
+    amount: 6
+  - name: eggs
+    amount: 2
+  - name: pecorino romano cheese
+    amount: 120ml
+  - name: pepper
+    amount: null
+  steps:
+  - Bring a stockpot of salted water to a rapid boil.
+  - Add pasta and begin to cook.
+  - While the pasta is cooking, chop the bacon into 2cm thick strips.
+  - Begin to cook the bacon in a large skillet over medium heat.
+  - While the bacon is cooking and the pasta is boiling, whisk the eggs and cheese
+    in a separate bowl and set aside.
+  - Once the bacon is crisp, remove it from the skillet then drain off all the grease
+    except for roughly 1 tablespoon (15ml).
+  - By this time the pasta should be almost finished cooking. Remove the skillet from
+    the heat and transfer the pasta directly from the boiling water to the skillet
+    using a pasta spoon or tongs.
+  - Quickly stir in the egg and cheese mixture. If it's too thick or sticky you can
+    add additional pasta water until you get a creamy consistency.
+  - Check for seasoning and add salt and pepper if necessary.
+  - Stir in the crispy bacon and garnish with parsley and additional cheese.
+
 - title: Frito Pie
   prep_time: 0
   cook_time: 30
@@ -505,16 +537,16 @@
   cook_time: 35
   servings: 8
   ingredients:
-  - name: 4 medium red apples
-    amount: 4 medium red apples
-  - name: 2 cinnamon sticks
-    amount: 2 cinnamon sticks
-  - name: 2/3 cup (160ml) sugar
-    amount: 2/3 cup (160ml
-  - name: 1 lemon
-    amount: 1 lemon
-  - name: 10oz (300g) frozen puff pastry (defrosted)
-    amount: 10oz (300g
+  - name: apples
+    amount: 4
+  - name: cinnamon sticks
+    amount: 2
+  - name: sugar
+    amount: 160ml
+  - name: lemon
+    amount: 1
+  - name: frozen puff pastry
+    amount: 300g
   steps:
   - Preheat oven to 390°F (200°C) or to the recommended baking temperature for your
     frozen puff pastry.
@@ -535,31 +567,32 @@
   - Bake for 20 minutes.
   - Wearing oven mitts, remove from the oven and invert onto a plate. Rearrange the
     apples as necessary so it looks nice again.
+
 - title: Spicy Roasted Red Pepper Hummus
   prep_time: 15
   cook_time: 0
   servings: 8
   ingredients:
-  - name: 16oz (480ml) canned chickpeas (drained and rinsed)
-    amount: 16oz (480ml
-  - name: 8oz (240ml) roasted red peppers from a jar (drained)
-    amount: 8oz (240ml
-  - name: 2oz (60ml) spicy tahini
-    amount: 2oz (60ml
-  - name: 1oz (30ml) olive oil
-    amount: 1oz (30ml
-  - name: 1 tablespoon (15ml) lemon juice
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) cumin
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) paprika
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) salt
-    amount: 1 teaspoon (5ml
-  - name: 1/2 teaspoon (2.5ml) cayanne pepper
-    amount: 1/2 teaspoon (2.5ml
-  - name: 2 cloves garlic
-    amount: 2 cloves garlic
+  - name: canned chickpeas
+    amount: 480ml
+  - name: red peppers
+    amount: 240ml
+  - name: tahini
+    amount: 60ml
+  - name: olive oil
+    amount: 30ml
+  - name: lemon juice
+    amount: 15ml
+  - name: cumin
+    amount: 5ml
+  - name: paprika
+    amount: 5ml
+  - name: salt
+    amount: 5ml
+  - name: pepper
+    amount: 2ml
+  - name: garlic
+    amount: 2 cloves
   steps:
   - Drain the chickpeas and rinse under cold water until clean. No need to remove
     the skins.
@@ -568,21 +601,22 @@
   - Combine all ingredients in a food processor until smooth.
   - Refrigerate for an hour to firm up texture further. It will be even better the
     next day.
+
 - title: Dark Peppermint Mocha Latte
   prep_time: 5
   cook_time: 0
   servings: 1
   ingredients:
-  - name: 1.5 oz (45ml) espresso (check out our stovetop method)
-    amount: 1.5 oz (45ml
-  - name: 4 oz (120ml) steamed milk
-    amount: 4 oz (120ml
-  - name: 1 tablespoon (15ml) peppermint syrup
-    amount: 1 tablespoon (15ml
-  - name: 1 1/2 tablespoons (25ml) Hershey's Special Dark Chocolate Syrup
-    amount: 1 1/2 tablespoons (25ml
-  - name: Whipped cream and candy cane (optional garnish)
-    amount: Whipped cream and candy cane (optional garnish
+  - name: espresso
+    amount: 45ml
+  - name: steamed milk
+    amount: 120ml
+  - name: peppermint syrup
+    amount: 15ml
+  - name: dark chocolate syrup
+    amount: 25ml
+  - name: whipped cream
+    amount: null
   steps:
   - Start brewing a shot and a half of espresso.
   - While the espresso is brewing, microwave the milk in a tall microwave-safe glass
@@ -592,23 +626,22 @@
   - Pour the espresso and milk into a serving glass.
   - Add the peppermint and chocolate syrup then mix with a spoon.
   - Top with whipped cream and candy cane pieces.
+
 - title: Red Wine Poached Pears
   prep_time: 15
   cook_time: 60
   servings: 6
   ingredients:
-  - name: 6 bosc pears
-    amount: 6 bosc pears
-  - name: 1 bottle (750ml) dry red wine (sangiovese, cabernet, pinot noir for example)
-    amount: 1 bottle (750ml
-  - name: 1/2 cup sugar (120ml)
-    amount: 1/2 cup sugar (120ml
-  - name: 2 cinnamnon sticks
-    amount: 2 cinnamnon sticks
-  - name: 4 whole dried cloves
-    amount: 4 whole dried cloves
-  - name: Zest and juice of one tangerine or small orange
-    amount: Zest and juice of one tangerine or small orange
+  - name: pears
+    amount: 6
+  - name: red wine
+    amount: 750ml
+  - name: sugar
+    amount: 120ml
+  - name: cinnamnon sticks
+    amount: 2
+  - name: orange juice
+    amount: 50ml
   steps:
   - Empty the wine into a medium-sized saucepot and turn on the heat to medium-low.
   - Add the sugar, cinnamon sticks, cloves, and the juice and zest of the tangerine
@@ -625,31 +658,32 @@
   - Serve standing up drizzled with the sauce and a side of vanilla bean ice cream.
     Give people a fork and a knife because although they're tender you'll still need
     to cut through them.
+
 - title: Banana Bread with Raisins and Walnuts
   prep_time: 15
   cook_time: 60
   servings: 12
   ingredients:
-  - name: 6 very ripe bananas
-    amount: 6 very ripe bananas
-  - name: 3 cups (360ml) all-purpose flour
-    amount: 3 cups (360ml
-  - name: 1 cup (240ml) butter, softened
-    amount: 1 cup (240ml
-  - name: 1 cup (240ml) sugar
-    amount: 1 cup (240ml
-  - name: 1 cup (240ml) walnuts
-    amount: 1 cup (240ml
-  - name: 1 cup (240ml) raisins
-    amount: 1 cup (240ml
-  - name: 4 eggs
-    amount: 4 eggs
-  - name: 2 teaspoons (10ml) baking soda
-    amount: 2 teaspoons (10ml
-  - name: 1 teaspoon (5ml) salt
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) vanilla extract
-    amount: 1 teaspoon (5ml
+  - name: bananas
+    amount: 6
+  - name: flour
+    amount: 360ml
+  - name: butter
+    amount: 240ml
+  - name: sugar
+    amount: 240ml
+  - name: walnuts
+    amount: 240ml
+  - name: raisins
+    amount: 240ml
+  - name: eggs
+    amount: 4
+  - name: baking soda
+    amount: 10ml
+  - name: salt
+    amount: 5ml
+  - name: vanilla extract
+    amount: 5ml
   steps:
   - Preheat oven to 350°F (175°).
   - Toast the walnuts for 5 minutes in the oven then take them out.
@@ -659,25 +693,26 @@
   - Transfer batter to a mixing bowl then add walnuts and raisins and mix with a spoon.
   - Transfer batter into a greased bundt pan.
   - Bake for 55 minutes then allow to cool before serving.
+
 - title: Gnocchi with butter and sage
   prep_time: 5
   cook_time: 10
   servings: 4
   ingredients:
-  - name: 1 pound (.5kg) uncooked gnocchi (we used pre-made)
-    amount: 1 pound (.5kg
-  - name: 3 tablespoons (45ml) butter
-    amount: 3 tablespoons (45ml
-  - name: 24 leaves sage
-    amount: 24 leaves sage
-  - name: 1 tablespoon (15ml) olive oil
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) garlic powder
-    amount: 1 teaspoon (5ml
-  - name: salt and pepper to taste
-    amount: salt and pepper to taste
-  - name: parmesan cheese for garnish
-    amount: parmesan cheese for garnish
+  - name: gnocchi
+    amount: 500g
+  - name: butter
+    amount: 45ml
+  - name: leaves sage
+    amount: 24
+  - name: olive oil
+    amount: 15ml
+  - name: garlic powder
+    amount: 5ml
+  - name: salt
+    amount: null
+  - name: parmesan cheese
+    amount: null
   steps:
   - Bring a pot of salted water to a rapid boil.
   - Add the gnocchi to the boiling water. It will be done when most of them start
@@ -689,23 +724,24 @@
   - Crank up the heat to medium high and continue to sauté until the gnocchi takes
     on a toasted color.
   - Taste again for seasoning and serve with grated parmesan cheese.
+
 - title: Christmas Cookies
   prep_time: 120
   cook_time: 8
   servings: 36
   ingredients:
-  - name: 2 1/2 cups (600ml) all-purpose flour
-    amount: 2 1/2 cups (600ml
-  - name: 1 1/2 cups (350ml) powdered sugar
-    amount: 1 1/2 cups (350ml
-  - name: 1 cup (240ml) softened butter
-    amount: 1 cup (240ml
-  - name: 1 teaspoon (5ml) vanilla extract
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) baking soda
-    amount: 1 teaspoon (5ml
-  - name: 1 egg
-    amount: 1 egg
+  - name: flour
+    amount: 600ml
+  - name: sugar
+    amount: 350ml
+  - name: butter
+    amount: 240ml
+  - name: vanilla extract
+    amount: 5ml
+  - name: baking soda
+    amount: 5ml
+  - name: egg
+    amount: 1
   steps:
   - Combine all ingredients in a large mixing bowl then mix with a hand mixer until
     thorougly blended together and a dough starts to form.
@@ -723,64 +759,32 @@
   - Bake for 8 minutes then allow to cool.
   - While the first batch is cooking continue making cookies with the remaining dough
     until you run out.
-- title: Spaghetti Carbonara
-  prep_time: 5
-  cook_time: 15
-  servings: 2
-  ingredients:
-  - name: 8oz (225g) spaghetti
-    amount: 8oz (225g
-  - name: 6 strips bacon
-    amount: 6 strips bacon
-  - name: 2 eggs
-    amount: 2 eggs
-  - name: 1/2 cup (120ml) grated pecorino romano cheese (or parmesan)
-    amount: 1/2 cup (120ml
-  - name: Salt and pepper to taste
-    amount: Salt and pepper to taste
-  - name: Parsley flakes for garnish
-    amount: Parsley flakes for garnish
-  steps:
-  - Bring a stockpot of salted water to a rapid boil.
-  - Add pasta and begin to cook.
-  - While the pasta is cooking, chop the bacon into 2cm thick strips.
-  - Begin to cook the bacon in a large skillet over medium heat.
-  - While the bacon is cooking and the pasta is boiling, whisk the eggs and cheese
-    in a separate bowl and set aside.
-  - Once the bacon is crisp, remove it from the skillet then drain off all the grease
-    except for roughly 1 tablespoon (15ml).
-  - By this time the pasta should be almost finished cooking. Remove the skillet from
-    the heat and transfer the pasta directly from the boiling water to the skillet
-    using a pasta spoon or tongs.
-  - Quickly stir in the egg and cheese mixture. If it's too thick or sticky you can
-    add additional pasta water until you get a creamy consistency.
-  - Check for seasoning and add salt and pepper if necessary.
-  - Stir in the crispy bacon and garnish with parsley and additional cheese.
+
 - title: Gingersnap Cookies
   prep_time: 15
   cook_time: 15
   servings: 36
   ingredients:
-  - name: 3/4 cup (175ml) shortening
-    amount: 3/4 cup (175ml
-  - name: 1 cup (240ml) sugar
-    amount: 1 cup (240ml
-  - name: 1 egg
-    amount: 1 egg
-  - name: 1/4 cup (60ml) molasses
-    amount: 1/4 cup (60ml
-  - name: 2 cups (280ml) flour
-    amount: 2 cups (280ml
-  - name: 3/4 teaspoon (3.5ml) ground ginger
-    amount: 3/4 teaspoon (3.5ml
-  - name: 2 teaspoons (10ml) baking soda
-    amount: 2 teaspoons (10ml
-  - name: 1 teaspoon (5ml) cinnamon
-    amount: 1 teaspoon (5ml
-  - name: 1/2 teaspoon (2.5ml) salt
-    amount: 1/2 teaspoon (2.5ml
-  - name: Sugar (for rolling cookie balls in)
-    amount: Sugar (for rolling cookie balls in
+  - name: shortening
+    amount: 175ml
+  - name: sugar
+    amount: 240ml
+  - name: egg
+    amount: 1
+  - name: molasses
+    amount: 60ml
+  - name: flour
+    amount: 280ml
+  - name: ginger
+    amount: 3.5ml
+  - name: baking soda
+    amount: 10ml
+  - name: cinnamon
+    amount: 5ml
+  - name: salt
+    amount: 2.5ml
+  - name: sugar
+    amount: null
   steps:
   - Preheat oven to 350°F (175°C), pour sugar into a bowl and set aside.
   - Grease cookie sheets and set aside.
@@ -790,41 +794,42 @@
   - Roll dough into balls and roll in sugar before placing on cookie sheets.
   - Bake for 10-15 minutes.
   - Cool on cookie sheets for 2 minutes before moving to wire racks to finish cooling.
+
 - title: Beef bourguignon
   prep_time: 15
   cook_time: 240
   servings: 4
   ingredients:
-  - name: 2 pounds (1kg) beef chuck roast
-    amount: 2 pounds (1kg
-  - name: 1/2 bottle of red wine (preferably burgundy)
-    amount: 1/2 bottle of red wine (preferably burgundy
-  - name: 16oz (475ml) beef broth
-    amount: 16oz (475ml
-  - name: 6 strips of bacon
-    amount: 6 strips of bacon
-  - name: 6 medium sized carrots
-    amount: 6 medium sized carrots
-  - name: 12 cremini mushrooms
-    amount: 12 cremini mushrooms
-  - name: 2 large yellow onions
-    amount: 2 large yellow onions
-  - name: 6 cloves garlic
-    amount: 6 cloves garlic
-  - name: 2 tablespoons (30ml) tomato paste
-    amount: 2 tablespoons (30ml
-  - name: 1 tablespoon (15ml) butter
-    amount: 1 tablespoon (15ml
-  - name: 1 tablespoon (15ml) all-purpose flour
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) black pepper
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) dried thyme
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) parsley flakes
-    amount: 1 teaspoon (5ml
-  - name: Salt (to taste)
-    amount: Salt (to taste
+  - name: beef roast
+    amount: 1000g
+  - name: red wine
+    amount: 300ml
+  - name: beef broth
+    amount: 475ml
+  - name: bacon
+    amount: 6
+  - name: carrots
+    amount: 6
+  - name: mushrooms
+    amount: 12
+  - name: onions
+    amount: 2
+  - name: garlic
+    amount: 6 cloves
+  - name: tomato paste
+    amount: 30ml
+  - name: butter
+    amount: 15ml
+  - name: flour
+    amount: 15ml
+  - name: pepper
+    amount: 5ml
+  - name: thyme
+    amount: 5ml
+  - name: parsley flakes
+    amount: 5ml
+  - name: salt
+    amount: null
   steps:
   - Cut the bacon into large chunks, about 1cm wide.
   - Cook the bacon in a large skillet (preferably cast iron) over medium high heat
@@ -853,27 +858,22 @@
   - Serve the beef by placing it on a plate along with the carrots then top with the
     mushrooms and a genorous portion of the sauce. Follow up with crispy bacon and
     parsley. This is also commonly served on top of mashed potatoes.
+
 - title: Nutella Muddy Buddies
   prep_time: 10
   cook_time: 0
   servings: 12
   ingredients:
-  - name: 9 cups (2L) rice Chex cereal
-    amount: 9 cups (2L
-  - name: 2 cups (280ml) powdered sugar
-    amount: 2 cups (280ml
-  - name: 1 cup (240ml) nutella
-    amount: 1 cup (240ml
-  - name: 1 stick (120ml) butter
-    amount: 1 stick (120ml
-  - name: 1/2 teaspoon (2.5ml) vanilla extract
-    amount: 1/2 teaspoon (2.5ml
-  - name: Pretzels (optional)
-    amount: Pretzels (optional
-  - name: Mini Reeses peanut butter cups (optional)
-    amount: Mini Reeses peanut butter cups (optional
-  - name: M&Ms (optional)
-    amount: M&Ms (optional
+  - name: rice cereal
+    amount: 2000ml
+  - name: sugar
+    amount: 280ml
+  - name: nutella
+    amount: 240ml
+  - name: butter
+    amount: 120ml
+  - name: vanilla extract
+    amount: 3ml
   steps:
   - Microwave the nutella and butter together for 1 minute, 30 seconds.
   - Stir together until evenly combined.
@@ -885,31 +885,32 @@
   - Add the second cup of powdered sugar and shake again until well-combined.
   - Transfer to the storage container of your choice and add additional optional ingredients
     such as m&m's, pretzels, or whatever you want.
+
 - title: Blueberry Muffins
   prep_time: 10
   cook_time: 30
   servings: 6
   ingredients:
-  - name: 2 cups (475ml) all-purpose flour
-    amount: 2 cups (475ml
-  - name: 2 cups (475ml) frozen blueberries
-    amount: 2 cups (475ml
-  - name: 1 cup (220ml) white sugar
-    amount: 1 cup (220ml
-  - name: 1/2 cup (120ml) softened butter
-    amount: 1/2 cup (120ml
-  - name: 1/2 cup (12ml) milk
-    amount: 1/2 cup (12ml
-  - name: 2 eggs
-    amount: 2 eggs
-  - name: 1 teaspoon (5ml) vanilla extract
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) salt
-    amount: 1 teaspoon (5ml
-  - name: 2 teaspoons (10ml) baking powder
-    amount: 2 teaspoons (10ml
-  - name: 3 teaspoons (15ml) sugar
-    amount: 3 teaspoons (15ml
+  - name: flour
+    amount: 475ml
+  - name: blueberries
+    amount: 475ml
+  - name: sugar
+    amount: 220ml
+  - name: butter
+    amount: 120ml
+  - name: milk
+    amount: 12ml
+  - name: eggs
+    amount: 2
+  - name: vanilla extract
+    amount: 5ml
+  - name: salt
+    amount: 5ml
+  - name: baking powder
+    amount: 10ml
+  - name: sugar
+    amount: 15ml
   steps:
   - Preheat oven to 400°F (205°C).
   - Combine all ingredients listed above except the blueberries and the remaining
@@ -919,17 +920,18 @@
     lower than the top of the cup.
   - Sprinkle the remaining 3 teaspoons of sugar over the tops of each muffin.
   - Bake for 25-30 minutes.
+
 - title: Perfect Jasmine Rice
   prep_time: 3
   cook_time: 17
   servings: 4
   ingredients:
-  - name: 2 cups (475ml) jasmine rice
-    amount: 2 cups (475ml
-  - name: 2 cups (475ml) water
-    amount: 2 cups (475ml
-  - name: 1 teaspoon (5ml) salt
-    amount: 1 teaspoon (5ml
+  - name: jasmine rice
+    amount: 475ml
+  - name: water
+    amount: 475ml
+  - name: salt
+    amount: 5ml
   steps:
   - Rinse the rice by pouring it into in a medium-sized pot, filling it up with cold
     water, swishing with your hands, then draining.
@@ -950,25 +952,26 @@
   - Quickly place the teacup upside down on a serving plate then gently remove the
     cup.
   - Garnish with spring onions and sesame seeds.
+
 - title: Pecan-Crusted Tilapia
   prep_time: 5
   cook_time: 15
   servings: 4
   ingredients:
-  - name: 4 large tilapia filets
-    amount: 4 large tilapia filets
-  - name: 1/2 cup (120ml) seasoned breadcrumbs
-    amount: 1/2 cup (120ml
-  - name: 1/2 cup (120ml) pecans
-    amount: 1/2 cup (120ml
-  - name: 4 tablespoons (60ml) melted salted butter
-    amount: 4 tablespoons (60ml
-  - name: 2 teaspoons (10ml) dried thyme
-    amount: 2 teaspoons (10ml
+  - name: tilapia filets
+    amount: 4
+  - name: breadcrumbs
+    amount: 120ml
+  - name: pecans
+    amount: 120ml
+  - name: butter
+    amount: 60ml
+  - name: thyme
+    amount: 10ml
   - name: salt
-    amount: salt
+    amount: null
   - name: pepper
-    amount: pepper
+    amount: null
   steps:
   - Preheat oven to 400°F (205°C).
   - Add pecans to a plastic bag and pound finely using a rolling pin until they're
@@ -984,29 +987,30 @@
     of the topping and pressing it firmly into the fish. You should end up with 1/2
     cm thick crust on each piece.
   - Bake for 15 minutes until fish is cooked thoroughly and crust has browned.
+
 - title: Breakfast Potatoes
   prep_time: 10
   cook_time: 20
   servings: 6
   ingredients:
-  - name: 3 large russet potatoes
-    amount: 3 large russet potatoes
-  - name: 2 tablespoons (30ml) olive oil
-    amount: 2 tablespoons (30ml
-  - name: 1 tablespoon (15ml) butter
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) salt
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) paprika
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) onion powder
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) garlic powder
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) dried thyme
-    amount: 1 teaspoon (5ml
-  - name: 1/2 teaspoon (2.5ml) black pepper
-    amount: 1/2 teaspoon (2.5ml
+  - name: potatoes
+    amount: 3
+  - name: olive oil
+    amount: 30ml
+  - name: butter
+    amount: 15ml
+  - name: salt
+    amount: 5ml
+  - name: paprika
+    amount: 5ml
+  - name: onion powder
+    amount: 5ml
+  - name: garlic powder
+    amount: 5ml
+  - name: thyme
+    amount: 5ml
+  - name: pepper
+    amount: 3ml
   steps:
   - Cube the potatoes up into 1cm pieces.
   - Heat the olive oil in your largest skillet.
@@ -1017,23 +1021,24 @@
     cook until they start to crisp up around the edges.
   - When they're almost done, add the tablespoon of butter and cook a bit more until
     the butter has absorbed into the potatoes and the edges are crisp.
+
 - title: Creamed Leeks
   prep_time: 15
   cook_time: 15
   servings: 8
   ingredients:
-  - name: 3 pounds (1.3kg) leeks
-    amount: 3 pounds (1.3kg
-  - name: 1/2 cup (120ml) heavy cream
-    amount: 1/2 cup (120ml
-  - name: 4 tablespoons (60ml) butter
-    amount: 4 tablespoons (60ml
-  - name: 1 cup (220ml) seasoned breadcrumbs
-    amount: 1 cup (220ml
-  - name: 1/2 teaspoon (2.5ml) salt
-    amount: 1/2 teaspoon (2.5ml
-  - name: 1/2 teaspoon (2.5ml) pepper
-    amount: 1/2 teaspoon (2.5ml
+  - name: leeks
+    amount: 1300g
+  - name: heavy cream
+    amount: 120ml
+  - name: butter
+    amount: 60ml
+  - name: breadcrumbs
+    amount: 220ml
+  - name: salt
+    amount: 2ml
+  - name: pepper
+    amount: 2ml
   steps:
   - Prep the leeks by cutting the large green end off. Then slice each leek down the
     middle long-ways, then cut horizontally into 1in (2cm) thick semi-circles. Afterwards,
@@ -1052,31 +1057,32 @@
   - Sprinkle the breadcrumbs over the leeks to form a flat surface.
   - Bake at 400°F (205°C) approximatley 15 minutes until bubbling and the crust has
     toasted.
+
 - title: Bob's Peanut Butter Cookies
   prep_time: 20
   cook_time: 10
   servings: 60
   ingredients:
-  - name: 16oz (475ml) smooth peanut butter
-    amount: 16oz (475ml
-  - name: 12oz (350ml) shortening
-    amount: 12oz (350ml
-  - name: 1 tablespoon (15ml) salt
-    amount: 1 tablespoon (15ml
-  - name: 4 eggs
-    amount: 4 eggs
-  - name: 4oz (120ml) milk
-    amount: 4oz (120ml
-  - name: 12oz (350ml) sugar
-    amount: 12oz (350ml
-  - name: 9oz (265ml) brown sugar
-    amount: 9oz (265ml
-  - name: 1 tablespoon (15ml) baking soda
-    amount: 1 tablespoon (15ml
-  - name: 24oz (.7kg) pastry flour
-    amount: 24oz (.7kg
-  - name: 1 tablespoon (15ml) baking powder
-    amount: 1 tablespoon (15ml
+  - name: peanut butter
+    amount: 475ml
+  - name: shortening
+    amount: 350ml
+  - name: salt
+    amount: 15ml
+  - name: eggs
+    amount: 4
+  - name: milk
+    amount: 120ml
+  - name: sugar
+    amount: 350ml
+  - name: brown sugar
+    amount: 265ml
+  - name: baking soda
+    amount: 15ml
+  - name: flour
+    amount: 700g
+  - name: baking powder
+    amount: 15ml
   steps:
   - In your largest mixing bowl, combine peanut butter, shortening, and salt then
     mix until smooth.
@@ -1093,31 +1099,32 @@
   - Bake for 10 minutes then allow to cool.
   - Repeat in batches until they're all cooked. You can also mix in chocolate chips
     if you want for variety.
+
 - title: Macaroni and Cheese with Goldfish Crust
   prep_time: 0
   cook_time: 60
   servings: 10
   ingredients:
-  - name: 1 pound (0.5kg) shell-shaped pasta
-    amount: 1 pound (0.5kg
-  - name: 1/2 cup (120ml) butter
-    amount: 1/2 cup (120ml
-  - name: 1/4 cup (60ml) flour
-    amount: 1/4 cup (60ml
-  - name: 4 cups (1L) cold whole milk
-    amount: 4 cups (1L
-  - name: 1 tsp (5ml) paprika
-    amount: 1 tsp (5ml
-  - name: 1 tsp (5ml) garlic powder
-    amount: 1 tsp (5ml
-  - name: 8 oz (250ml) Velveeta cheese
-    amount: 8 oz (250ml
-  - name: 8 oz (250ml) extra sharp cheddar cheese
-    amount: 8 oz (250ml
-  - name: 1/2 tsp (2.5ml) gound black pepper
-    amount: 1/2 tsp (2.5ml
-  - name: 2 cups (500ml) goldfish crackers
-    amount: 2 cups (500ml
+  - name: pasta
+    amount: 500g
+  - name: butter
+    amount: 120ml
+  - name: flour
+    amount: 60ml
+  - name: milk
+    amount: 1000ml
+  - name: paprika
+    amount: 5ml
+  - name: garlic powder
+    amount: 5ml
+  - name: cheese
+    amount: 250ml
+  - name: cheddar cheese
+    amount: 250ml
+  - name: pepper
+    amount: 2ml
+  - name: crackers
+    amount: 500ml
   steps:
   - Bring a large saucepot full of salted water to a boil.
   - Cook the pasta until completely following the directions on the back of the package.
@@ -1143,45 +1150,22 @@
   - Bake at 400°F (205°C) for about 20-30 minutes. You're looking for the cheese sauce
     to start bubbling up around the sides and for the crust to take on color.
   - Allow to cool for a few minutes then serve and fall asleep.
-- title: Taste of Fall
-  prep_time: 1
-  cook_time: 0
-  servings: 1
-  ingredients:
-  - name: 1 oz Fireball cinnamon whiskey
-    amount: 1 oz Fireball cinnamon whiskey
-  - name: 2 oz spiced apple cider
-    amount: 2 oz spiced apple cider
-  - name: 1 oz lemon-lime soda
-    amount: 1 oz lemon-lime soda
-  - name: 1 cinnamon stick
-    amount: 1 cinnamon stick
-  - name: 1 orange slice
-    amount: 1 orange slice
-  - name: 1 pinch powdered cloves
-    amount: 1 pinch powdered cloves
-  steps:
-  - Add ice to a rocks glass
-  - Add the whiskey then the cider and the soda, no need to mix.
-  - Add the cinnamon stick followed by the orange slice.
-  - Dust the top of the orange with the powdered cloves.
+
 - title: Cinnamon Bourbon Cranberry Sauce
   prep_time: 0
   cook_time: 15
   servings: 6
   ingredients:
-  - name: 1 12oz (350ml) package of fresh cranberries
-    amount: 1 12oz (350ml
-  - name: 1 cup (250ml) orange juice
-    amount: 1 cup (250ml
-  - name: 1 cup (250ml) white sugar
-    amount: 1 cup (250ml
-  - name: 1 tablespoon (15ml) bourbon
-    amount: 1 tablespoon (15ml
-  - name: 1 tsp (5ml) cinnamon
-    amount: 1 tsp (5ml
-  - name: 1/2 tsp (2.5ml) ground cloves
-    amount: 1/2 tsp (2.5ml
+  - name: cranberries
+    amount: 350ml
+  - name: orange juice
+    amount: 250ml
+  - name: sugar
+    amount: 250ml
+  - name: bourbon
+    amount: 15ml
+  - name: cinnamon
+    amount: 5ml
   steps:
   - Combine orange juice, sugar, cinnamon, and cloves in a small saucepot and bring
     up to a simmer.
@@ -1190,53 +1174,28 @@
   - Once the cranberries have mostly broken down add the bourbon.
   - Continue to cook another 3-5 minutes until the sauce has thickened then set aside
     to cool.
-- title: Cast Iron Baked Eggs
-  prep_time: 0
-  cook_time: 10
-  servings: 3
-  ingredients:
-  - name: Eggs
-    amount: Eggs
-  - name: spicy chipotle-flavored salsa
-    amount: spicy chipotle-flavored salsa
-  - name: shredded taco cheese
-    amount: shredded taco cheese
-  - name: jarred jalapeño rings
-    amount: jarred jalapeño rings
-  - name: salt (1 pinch)
-    amount: salt (1 pinch
-  - name: pepper (1 pinch)
-    amount: pepper (1 pinch
-  steps:
-  - Get a cast iron pan hot and spray with cooking spray.
-  - Add 3-4 eggs (or however many you want).
-  - Cook the bottom of the eggs until they turn white.
-  - Spoon salsa over the egg whites.
-  - Sprinkle with the taco cheese and jalapeño rings.
-  - Sprinkle with salt and pepper.
-  - Throw under the broiler for 1-2 minutes until the cheese is melted and the tops
-    of the eggs become translucent.
+
 - title: Chicken Thigh Cutlet
   prep_time: 20
   cook_time: 10
   servings: 8
   ingredients:
-  - name: 8 boneless, skinless, chicken thighs
-    amount: 8 boneless, skinless, chicken thighs
-  - name: 2 cups (500ml) vegetable oil
-    amount: 2 cups (500ml
-  - name: 1 cup (250ml) all-purpose flour
-    amount: 1 cup (250ml
-  - name: 1 cup (250ml) seasoned breadcrumbs
-    amount: 1 cup (250ml
-  - name: 1 cup (250ml) grated parmesan cheese
-    amount: 1 cup (250ml
-  - name: 5 eggs
-    amount: 5 eggs
-  - name: 1 tablespoon (15ml) dried oregano
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) ground black pepper
-    amount: 1 teaspoon (5ml
+  - name: chicken thighs
+    amount: 8
+  - name: vegetable oil
+    amount: 500ml
+  - name: flour
+    amount: 250ml
+  - name: breadcrumbs
+    amount: 250ml
+  - name: cheese
+    amount: 250ml
+  - name: eggs
+    amount: 5
+  - name: oregano
+    amount: 15ml
+  - name: pepper
+    amount: 5ml
   steps:
   - Using a sharp knife, butterfly the thick part of each thigh so you get one long
     flat strip of meat.
@@ -1255,64 +1214,30 @@
   - Cook each piece 5 minutes on each side then move to a wire rack.
   - Repeat the process until all the chicken is cooked.
   - Serve as is or add tomato sauce and mozzarella then broil to make chicken parmesan.
-- title: Steamed Tilapia with Soy Sauce and Ginger
-  prep_time: 10
-  cook_time: 10
-  servings: 4
-  ingredients:
-  - name: 4 tilapia filets
-    amount: 4 tilapia filets
-  - name: 1 thumb-size piece of fresh ginger
-    amount: 1 thumb-size piece of fresh ginger
-  - name: 1/2 cup (120ml) soy sauce
-    amount: 1/2 cup (120ml
-  - name: 3 stalks of green onions
-    amount: 3 stalks of green onions
-  - name: 1 tablespoon (15ml) minced garlic
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) red chili flakes
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) brown sugar
-    amount: 1 teaspoon (5ml
-  - name: 1 tablespoon (15ml) vegetable oil (or sesame oil if you have it)
-    amount: 1 tablespoon (15ml
-  steps:
-  - Get your steamer up to temperature. Some rice cookers also have steamer baskets
-    as well which is what we used.
-  - Add the fish to the steamer and set a timer for 10 minutes.
-  - Cut the fresh ginger into matchstick sized pieces.
-  - Cut the green onions into small rings.
-  - Add the oil into a small pot, get it up to temperature, and add the ginger.
-  - Once the ginger begins to take on color, add the garlic and cook until fragrant.
-  - Add the soy sauce, chili flakes, and brown sugar and brign the mixture up to temperature.
-  - Add the green onions then turn the heat off.
-  - Once the fish is done (fork tender). Put it on a serving tray and spoon the sauce
-    over the fish.
-  - Serve with rice.
+
 - title: Chewy Chocolate Chunk Cookies
   prep_time: 15
   cook_time: 12
   servings: 20
   ingredients:
-  - name: 2 1/2 cups (600ml) all-purpose flour
-    amount: 2 1/2 cups (600ml
-  - name: 8 tablespoons (113g) room temperature butter
-    amount: 8 tablespoons (113g
-  - name: 3/4 cup (175ml) white sugar
-    amount: 3/4 cup (175ml
-  - name: 3/4 cup (175ml) brown sugar
-    amount: 3/4 cup (175ml
-  - name: 2 eggs
-    amount: 2 eggs
-  - name: 1 teaspoon (5ml) baking soda
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) vanilla concentrate
-    amount: 1 teaspoon (5ml
-  - name: 1/2 teaspoon (2.5ml) baking powder
-    amount: 1/2 teaspoon (2.5ml
-  - name: 2 cups (475ml) chocolate chips, M&Ms, cut up chocolate bars (whatever you
-      want!)
-    amount: 2 cups (475ml
+  - name: flour
+    amount: 600ml
+  - name: butter
+    amount: 113g
+  - name: sugar
+    amount: 175ml
+  - name: brown sugar
+    amount: 175ml
+  - name: eggs
+    amount: 2
+  - name: baking soda
+    amount: 5ml
+  - name: vanilla extract
+    amount: 5ml
+  - name: baking powder
+    amount: 5ml
+  - name: chocolate chips
+    amount: 475ml
   steps:
   - Preheat oven to 350°F (175°C).
   - Combine all ingredients in a large bowl.
@@ -1322,19 +1247,20 @@
     end up with about 22 balls of dough.
   - Bake for 10 - 12 minutes.
   - Remove from oven and let cool for at least 15 minutes.
+
 - title: Pan-Seared Ribeye
   prep_time: 0
   cook_time: 8
   servings: 1
   ingredients:
-  - name: 1 1in thick (2.5cm) ribeye steak
-    amount: 1 1in thick (2.5cm
-  - name: Kosher salt
-    amount: Kosher salt
-  - name: Freshly ground black pepper (medium grind)
-    amount: Freshly ground black pepper (medium grind
-  - name: 2 tablespoons (30ml) vegetable oil
-    amount: 2 tablespoons (30ml
+  - name: ribeye steak
+    amount: 200g
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
+  - name: vegetable oil
+    amount: 30ml
   steps:
   - Get your thickest frying pan (preferably a cast-iron skillet) hot on the stovetop
     on medium-high heat.
@@ -1347,21 +1273,20 @@
     will be cooked about medium at this point.
   - Remove the steak, cover in tin foil and let rest for at least 5 minutes before
     serving.
+
 - title: Chicken Taco Meat
   prep_time: 0
   cook_time: 25
   servings: 4
   ingredients:
-  - name: 1 pound (1/2kg) boneless skinless chicken thighs
-    amount: 1 pound (1/2kg
-  - name: 1oz (30ml) packet of taco meat seasoning (your choice of brand)
-    amount: 1oz (30ml
-  - name: 8oz (230ml) salsa (your choice of brand)
-    amount: 8oz (230ml
-  - name: Salt (to taste)
-    amount: Salt (to taste
-  - name: Fresh cilantro
-    amount: Fresh cilantro
+  - name: chicken thighs
+    amount: 500g
+  - name: salsa
+    amount: 230ml
+  - name: salt
+    amount: null
+  - name: cilantro
+    amount: null
   steps:
   - Heat your largest skillet on high.
   - Once the skillet is up to temperature, add the chicken thighs and cook until browned.
