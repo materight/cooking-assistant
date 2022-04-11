@@ -1327,40 +1327,38 @@
   - After about two minutes coffee should start slowly trickling out of the top. When
     you see this turn the heat down low.
   - When the coffee begins to bubble, close the lid and take it off the burner.
+
 - title: Minestrone Soup
   prep_time: 15
   cook_time: 60
   servings: 12
   ingredients:
-  - name: 3 large carrots
-    amount: 3 large carrots
-  - name: 1 large yellow onion
-    amount: 1 large yellow onion
-  - name: 1 head celery
-    amount: 1 head celery
-  - name: 1 bulb garlic
-    amount: 1 bulb garlic
-  - name: 10 teaspoon (50ml) granulated chicken bouillon (or 10 cups (2.4 L) chicken
-      stock)
-    amount: 10 teaspoon (50ml
-  - name: 1 28oz (800g) can of San Marzano whole tomatoes
-    amount: 1 28oz (800g
-  - name: 1 16oz (450g) can of dark red kiney beans
-    amount: 1 16oz (450g
-  - name: 8oz (225g) tomato paste
-    amount: 8oz (225g
-  - name: 2 tsp (10ml) dried oregano
-    amount: 2 tsp (10ml
-  - name: 2 tsp (10ml) dried basil
-    amount: 2 tsp (10ml
-  - name: 1/2 tsp (2.5ml) red chili flakes
-    amount: 1/2 tsp (2.5ml
-  - name: 6 oz green beans
-    amount: 6 oz green beans
-  - name: 8oz (225g) ditalini pasta
-    amount: 8oz (225g
-  - name: 6 teaspoons (30ml) olive oil
-    amount: 6 teaspoons (30ml
+  - name: carrots
+    amount: 3
+  - name: onion
+    amount: 1
+  - name: celery
+    amount: 1
+  - name: garlic
+    amount: 1 clove
+  - name: chicken stock
+    amount: 50ml
+  - name: tomatoes
+    amount: 800g
+  - name: beans
+    amount: 450g
+  - name: oregano
+    amount: 10ml
+  - name: basil
+    amount: 10ml
+  - name: red chili
+    amount: 2.5ml
+  - name: green beans
+    amount: 100g
+  - name: pasta
+    amount: 225g
+  - name: olive oil
+    amount: 30ml
   steps:
   - Heat your largest stockpot over medium-high heat and add the olive oil.
   - Dice the carrots, onions, and celery into approximatley 1cm size pieces and add
@@ -1379,25 +1377,26 @@
   - Once the carrots are softened add the pasta and cook until the pasta is cooked
     (approximatley 15-20 minutes).
   - Garnish with olive oil and parmesan cheese.
+
 - title: Asian Green Beans
   prep_time: 5
   cook_time: 15
   servings: 4
   ingredients:
-  - name: 1 pound (1/2 kg) green beans (cleaned and trimmed)
-    amount: 1 pound (1/2 kg
-  - name: 2 tablespoons (30 ml) vegetable oil
-    amount: 2 tablespoons (30 ml
-  - name: 2 tablespoons (30 ml) soy sauce
-    amount: 2 tablespoons (30 ml
-  - name: 1 tablespoon (15ml) honey
-    amount: 1 tablespoon (15ml
-  - name: 1 teaspoon (5ml) red chili flakes
-    amount: 1 teaspoon (5ml
-  - name: 1 teaspoon (5ml) ground black pepper
-    amount: 1 teaspoon (5ml
-  - name: Salt (to taste)
-    amount: Salt (to taste
+  - name: green beans
+    amount: 500g
+  - name: vegetable oil
+    amount: 30 ml
+  - name: soy sauce
+    amount: 30 ml
+  - name: honey
+    amount: 15ml
+  - name: red chili
+    amount: 5ml
+  - name: pepper
+    amount: 5ml
+  - name: salt
+    amount: null
   steps:
   - Put your largest skillet on medium heat and add olive oil.
   - Once the oil comes up to temperature add the green beans along with the soy sauce,
@@ -1405,34 +1404,34 @@
   - Cook on medium heat for approximatley 10 - 15 minutes or until desired doneness
     is achieved.
   - Taste the green beans and add salt if necessary.
+
 - title: Minimalist Chicken and Rice Soup
   prep_time: 10
   cook_time: 40
   servings: 12
   ingredients:
-  - name: 1 large yellow onion
-    amount: 1 large yellow onion
-  - name: 3 large carrots
-    amount: 3 large carrots
-  - name: 1 bunch of celery (about 8 stalks)
-    amount: 1 bunch of celery (about 8 stalks
-  - name: 4 sprigs of fresh parsley
-    amount: 4 sprigs of fresh parsley
-  - name: 10 teaspoon (50ml) granulated chicken bouillon (or 10 cups (2.4 L) chicken
-      stock)
-    amount: 10 teaspoon (50ml
-  - name: 8 boneless, skinless chicken thighs
-    amount: 8 boneless, skinless chicken thighs
-  - name: 2 cups white rice
-    amount: 2 cups white rice
-  - name: 1 teaspoon (5ml) pepper
-    amount: 1 teaspoon (5ml
-  - name: 6 teaspoons (30ml) olive oil
-    amount: 6 teaspoons (30ml
-  - name: 1 bay leaf
-    amount: 1 bay leaf
-  - name: Salt (to taste)
-    amount: Salt (to taste
+  - name: onion
+    amount: 1
+  - name: carrots
+    amount: 3
+  - name: celery
+    amount: 8
+  - name: parsley
+    amount: 4 sprigs
+  - name: chicken stock
+    amount: 50ml
+  - name: chicken thighs
+    amount: 8
+  - name: rice
+    amount: 500g
+  - name: pepper
+    amount: 5ml
+  - name: olive oil
+    amount: 30ml
+  - name: bay leaf
+    amount: 1
+  - name: salt
+    amount: null
   steps:
   - Put your largest stock pot on medium high heat and add olive oil to coat the bottom
     of the pot.
@@ -1455,24 +1454,23 @@
   - At this point the soup is done but still too hot to eat. To serve, add as much
     rice as you want to a bowl then pour the soup over the rice. As the soup cools
     the rice will continue to heat through and absorb the flavor.
+
 - title: Oven Baked Meatballs
   prep_time: 15
   cook_time: 30
   servings: 4
   ingredients:
-  - name: 1 pound (.5 kg) 80/20 ground beef (or beef/veal/pork blend)
-    amount: 1 pound (.5 kg
-  - name: 1 cup (250ml) plain breadcrumbs
-    amount: 1 cup (250ml
-  - name: 1 cup (250ml) milk
-    amount: 1 cup (250ml
-  - name: 1 teaspoon (5ml) salt
-    amount: 1 teaspoon (5ml
-  - name: 3 teaspoons (15ml) dried Italian seasoning
-    amount: 3 teaspoons (15ml
-  - name: 1/4 cup (60ml) grated pecorino romano cheese (or parmesan)
-    amount: 1/4 cup (60ml
-  - name: 1/2 teaspoon (2.5 ml) black pepper
+  - name: ground beef
+    amount: 500g
+  - name: breadcrumbs
+    amount: 250ml
+  - name: milk
+    amount: 250ml
+  - name: salt
+    amount: 5ml
+  - name: pecorino romano cheese
+    amount: 60ml
+  - name: pepper
     amount: 1/2 teaspoon (2.5 ml
   - name: 1 egg
     amount: 1 egg
