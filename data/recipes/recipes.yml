@@ -1471,9 +1471,9 @@
   - name: pecorino romano cheese
     amount: 60ml
   - name: pepper
-    amount: 1/2 teaspoon (2.5 ml
-  - name: 1 egg
-    amount: 1 egg
+    amount: 2.5ml
+  - name: egg
+    amount: 1
   steps:
   - Preheat oven to 400°F (205°C).
   - In a mixing bowl, combine breadcrumbs, milk, salt, italian seasoning, cheese,
@@ -1490,101 +1490,24 @@
   - After 20 minutes turn on your broiler and put the meatballs under the broiler
     turning every 5 minutes until you get the brown color you're looking for.
   - Serve as is or transfer into some red sauce for meatballs and pasta.
-- title: Oven Roasted Broccoli
-  prep_time: 5
-  cook_time: 30
-  servings: 6
-  ingredients:
-  - name: Broccoli heads
-    amount: Broccoli heads
-  - name: Olive oil
-    amount: Olive oil
-  - name: Everything bagel seasoning (or just salt and pepper)
-    amount: Everything bagel seasoning (or just salt and pepper
-  steps:
-  - Preheat oven to 400°F (205°C).
-  - Line a baking sheet with parchment paper or tin foil.
-  - Rinse broccoli in cold water to remove any dirt.
-  - Using a paring knife, cut the broccoli off the head into small florets.
-  - Place broccoli on the baking tray and drizzle genorously with olive oil.
-  - Sprinkle broccoli with everything bagel seasoning.
-  - Bake for 25 - 30 minutes or until desired doneness is reached. Edges should be
-    slightly crispy.
-- title: 'Chemex (Pour Over) Coffee '
-  prep_time: 5
-  cook_time: 5
-  servings: 8
-  ingredients:
-  - name: Chemex Coffeemaker
-    amount: Chemex Coffeemaker
-  - name: Digital food scale
-    amount: Digital food scale
-  - name: Burr coffee grinder (optional)
-    amount: Burr coffee grinder (optional
-  - name: Electric gooseneck kettle
-    amount: Electric gooseneck kettle
-  - name: 50g freshly ground coffee (Medium grind. Setting 12 on the grinder listed
-      above. If you don't own a grinder, get your local coffee shop to grind some
-      for you.)
-    amount: 50g freshly ground coffee (Medium grind. Setting 12 on the grinder listed
-      above. If you don't own a grinder, get your local coffee shop to grind some
-      for you.
-  - name: 700g water (1:14 ratio of coffee to water)
-    amount: 700g water (1:14 ratio of coffee to water
-  steps:
-  - Bring water to a full boil in the kettle.
-  - Rinse a Chemex coffee filter under warm water to get the paper taste out of it.
-  - Open a single flap of the folded filter so it looks like a cone and place it in
-    the chemex.
-  - Align the thick side of the filter with the groove in the glass.
-  - Add the grinds to the coffeemaker.
-  - Place the coffeemaker on the scale and tare it to 0g.
-  - Pour 100g of hot water onto the grinds to get them fully submerged.
-  - Wait 1 minute for the grinds to soak.
-  - Pour another 600 grams of hot water onto the grounds in stages until the scale
-    reaches 700g total weight. Make sure to get all the grinds evenly soaked.
-  - Wait until all the water has filtered through the grinds. Total brew time should
-    be around 3-4 minutes.
-- title: Crusty Serrano Ham and Provolone Sandwich
-  prep_time: 5
-  cook_time: 5
-  servings: 1
-  ingredients:
-  - name: Crusty french baguette
-    amount: Crusty french baguette
-  - name: Serrano ham
-    amount: Serrano ham
-  - name: Provolone cheese
-    amount: Provolone cheese
-  - name: Spinach
-    amount: Spinach
-  - name: Olive oil
-    amount: Olive oil
-  steps:
-  - Slice the baguette down the middle long ways using a bread knife.
-  - Pour olive oil on the soft side of the bread.
-  - Bake in a hot oven until the bread is heated through and crusty on the outside.
-  - Pile on ham, cheese, and spinch to meet your desired portion size.
-  - Serve with kettle cooked chips such as salt and vinegar.
-- title: Sort of Sticky Sesame Chicken
+
+- title: Sesame Chicken
   prep_time: 5
   cook_time: 60
   servings: 4
   ingredients:
-  - name: 2 pounds (1kg) boneless chicken thighs
-    amount: 2 pounds (1kg
-  - name: 6 tablespoons (100g) honey
-    amount: 6 tablespoons (100g
-  - name: 3 tablespoons (50g) soy sauce
-    amount: 3 tablespoons (50g
-  - name: 1 tablespoon (15g) garlic chili sauce (Huy Fong if you have it)
-    amount: 1 tablespoon (15g
-  - name: 1 tablespoon (15g) everything bagel seasoning
-    amount: 1 tablespoon (15g
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
+  - name: chicken thighs
+    amount: 1000g
+  - name: honey
+    amount: 100g
+  - name: soy sauce
+    amount: 50g
+  - name: garlic chili sauce
+    amount: 15g
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - Preheat your oven to 425°F (220°C).
   - Season the chicken liberally with the everything bagel seasoning.
@@ -1601,21 +1524,22 @@
   - Flip the chicken and glaze the other size, then back in the oven.
   - Keep doing this until the chicken has reached your desired doneness.
   - Serve with rice and garnish with green onions.
+
 - title: Oven Roasted Potatoes
   prep_time: 5
   cook_time: 60
   servings: 4
   ingredients:
-  - name: 2 large russet potatoes
-    amount: 2 large russet potatoes
-  - name: Seasoning salt
-    amount: Seasoning salt
-  - name: Pepper
-    amount: Pepper
-  - name: Paprika
-    amount: Paprika
-  - name: Olive oil
-    amount: Olive oil
+  - name: potatoes
+    amount: 8
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
+  - name: paprika
+    amount: null
+  - name: olive oil
+    amount: null
   steps:
   - Cut the potatoes into bite sized pieces.
   - Preheat your oven to 400°F 205°C.
@@ -1626,59 +1550,59 @@
     salt, pepper, and paprika.
   - Bake at least 30 minutes turning once or twice until a solid crust forms on the
     potatoes.
+
 - title: Lazy Red Thai Curry Chicken
   prep_time: 5
   cook_time: 10
   servings: 3
   ingredients:
-  - name: 4 tablespoons Maesri Red Curry Paste
-    amount: 4 tablespoons Maesri Red Curry Paste
-  - name: 1/2 can full fat coconut milk
-    amount: 1/2 can full fat coconut milk
-  - name: 2 pounds leftover rotisserie chicken
-    amount: 2 pounds leftover rotisserie chicken
-  - name: 2 dashes of fish sauce
-    amount: 2 dashes of fish sauce
-  - name: 1 teaspoon dried basil
-    amount: 1 teaspoon dried basil
-  - name: 2 tablespoons green onions
-    amount: 2 tablespoons green onions
+  - name: curry paste
+    amount: 60ml
+  - name: coconut milk
+    amount: 200ml
+  - name: rotisserie chicken
+    amount: 1000g
+  - name: fish sauce
+    amount: 20ml
+  - name: basil
+    amount: null
+  - name: onions
+    amount: 2
   steps:
   - Remove the bones from the rotisserie chicken and cut it up into large chunks
   - In a saucepan, combine curry paste, coconut milk, basil, and bring to a simmer.
   - Add the rotisserie chicken and cook until heated through.
   - Serve over rice or if you're feeling adventerous with ou Thai Green Papaya Salad
+
 - title: Chicken with cream sauce and roasted potatoes
   prep_time: 20
   cook_time: 60
   servings: 4
   ingredients:
-  - name: 3 lbs boneless chicken thighs
-    amount: 3 lbs boneless chicken thighs
-  - name: 1 tsp Italian seasoning
-    amount: 1 tsp Italian seasoning
-  - name: 2 tablespoons butter
-    amount: 2 tablespoons butter
-  - name: 3 tomatoes
-    amount: 3 tomatoes
-  - name: 1 yellow onion
-    amount: 1 yellow onion
-  - name: 3 cloves garlic
-    amount: 3 cloves garlic
-  - name: 2/3 cup heavy cream
-    amount: 2/3 cup heavy cream
-  - name: 2/3 cup chicken broth
-    amount: 2/3 cup chicken broth
-  - name: 5 handfulls fresh spinach
-    amount: 5 handfulls fresh spinach
-  - name: 1/3 cup parmesan cheese
-    amount: 1/3 cup parmesan cheese
-  - name: 5 russet potatoes
-    amount: 5 russet potatoes
-  - name: 1 pinch salt
-    amount: 1 pinch salt
-  - name: 1 pinch pepper
-    amount: 1 pinch pepper
+  - name: chicken thighs
+    amount: 1300g
+  - name: butter
+    amount: 30ml
+  - name: tomatoes
+    amount: 3
+  - name: onion
+    amount: 1
+  - name: garlic
+    amount: 3 cloves
+  - name: heavy cream
+    amount: 500ml
+  - name: chicken broth
+    amount: 500ml
+  - name: spinach
+    amount: 200g
+  - name: parmesan cheese
+    amount: 75ml
+  - name: potatoes
+    amount: 5
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - Melt butter in a large skillet
   - Season chicken with salt, pepper, italian seasoning
@@ -1695,31 +1619,32 @@
   - Bake for 20 minutes then flip.
   - Bake for another 20 minutes.
   - Serve with chicken.
+
 - title: Tres Leches Cake
   prep_time: 30
   cook_time: 30
   servings: 12
   ingredients:
-  - name: 6 room temperature eggs
-    amount: 6 room temperature eggs
-  - name: 3/4 cup sugar
-    amount: 3/4 cup sugar
-  - name: 1 1/4 cup all purpose flower
-    amount: 1 1/4 cup all purpose flower
-  - name: 1 1/2 teaspoon baking powder
-    amount: 1 1/2 teaspoon baking powder
-  - name: 4 tablespoons vanilla extract
-    amount: 4 tablespoons vanilla extract
-  - name: 3 tablespoons vegetable oil
-    amount: 3 tablespoons vegetable oil
-  - name: 1 12ox can of evaporated milk
-    amount: 1 12ox can of evaporated milk
-  - name: 1 14oz can of condensed milk
-    amount: 1 14oz can of condensed milk
-  - name: 1 pint of heavy or light whipping cream
-    amount: 1 pint of heavy or light whipping cream
-  - name: 3 tablespoons powdered sugar
-    amount: 3 tablespoons powdered sugar
+  - name: eggs
+    amount: 6
+  - name: sugar
+    amount: 100g
+  - name: flower
+    amount: 400g
+  - name: baking powder
+    amount: 100g
+  - name: vanilla extract
+    amount: 60ml
+  - name: vegetable oil
+    amount: 45ml
+  - name: evaporated milk
+    amount: 200ml
+  - name: condensed milk
+    amount: 200ml
+  - name: whipping cream
+    amount: 100g
+  - name: sugar
+    amount: null
   steps:
   - Preheat oven to 340°F (171°C).
   - Prepare a 9" springform round pan by cutting a piece of parchment paper that will
@@ -1749,37 +1674,38 @@
     dish.
   - Slide the baking paper out from underneath the cake.
   - Ice the cake with the whipped topping and garnish with chocolate or fruit.
+
 - title: Tomato Pesto Stuffed Chicken with Pasta Alfredo
   prep_time: 15
   cook_time: 30
   servings: 4
   ingredients:
-  - name: 4 chicken breasts
-    amount: 4 chicken breasts
-  - name: 8 cloves garlic
-    amount: 8 cloves garlic
-  - name: 1 jar of sun-dried tomato pesto
-    amount: 1 jar of sun-dried tomato pesto
-  - name: 1 cup heavy cream
-    amount: 1 cup heavy cream
-  - name: 1 cup whole milk
-    amount: 1 cup whole milk
-  - name: 1 1/2 cups pecorino romano cheese
-    amount: 1 1/2 cups pecorino romano cheese
-  - name: 2 tablespoons butter
-    amount: 2 tablespoons butter
-  - name: 2 tablespoons garlic powder
-    amount: 2 tablespoons garlic powder
-  - name: 2 tablespoons olive oil
-    amount: 2 tablespoons olive oil
-  - name: 1/2 package of pasta noodles (linguine or larger)
-    amount: 1/2 package of pasta noodles (linguine or larger
-  - name: 1 tablespoon salt
-    amount: 1 tablespoon salt
-  - name: 1 tablespoon pepper
-    amount: 1 tablespoon pepper
-  - name: 1 tablespoon dried basil
-    amount: 1 tablespoon dried basil
+  - name: chicken breasts
+    amount: 4
+  - name: garlic
+    amount: 8 cloves
+  - name: tomato pesto
+    amount: 100g
+  - name: heavy cream
+    amount: 200ml
+  - name: whole milk
+    amount: 250ml
+  - name: pecorino romano cheese
+    amount: 100g
+  - name: butter
+    amount: 30ml
+  - name: garlic powder
+    amount: 30ml
+  - name: olive oil
+    amount: 30ml
+  - name: spaghetti
+    amount: 250g
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
+  - name: basil
+    amount: null
   steps:
   - Cut a pocket in each of the chicken breasts and stuff with 2 sliced cloves of
     garlic and 1 tablespoon of pesto.
@@ -1793,31 +1719,32 @@
   - When the pasta is done cooking transfer it into the alfredo sauce and combine.
     If the sauce is runny let it sit - it will thicken.
   - Remove the chicken from the oven and allow to rest for 10 minutes before serving.
+
 - title: Jalapeño Cheddar Cornbread
   prep_time: 10
   cook_time: 20
   servings: 16
   ingredients:
-  - name: 1 cup (250ml) all-purpose flour
-    amount: 1 cup (250ml
-  - name: 1 cup (250ml) yellow cornmeal
-    amount: 1 cup (250ml
-  - name: 1 cup (250ml) milk
-    amount: 1 cup (250ml
-  - name: 1/3 cup (70ml) white sugar
-    amount: 1/3 cup (70ml
-  - name: 1 tsp (5ml) salt
-    amount: 1 tsp (5ml
-  - name: 3.5 tsp (17.5ml) baking powder
-    amount: 3.5 tsp (17.5ml
-  - name: 1/3 cup (70ml) melted butter
-    amount: 1/3 cup (70ml
-  - name: 4 oz (120ml) grated extra sharp cheddar cheese
-    amount: 4 oz (120ml
-  - name: 4 oz (120ml) canned jalapeños
-    amount: 4 oz (120ml
-  - name: 1 egg
-    amount: 1 egg
+  - name: flour
+    amount: 250ml
+  - name: cornmeal
+    amount: 250ml
+  - name: milk
+    amount: 250ml
+  - name: white sugar
+    amount: 70ml
+  - name: salt
+    amount: 5ml
+  - name: baking powder
+    amount: 18ml
+  - name: butter
+    amount: 70ml
+  - name: cheddar cheese
+    amount: 120ml
+  - name: canned jalapeños
+    amount: 120ml
+  - name: egg
+    amount: 1
   steps:
   - Dice the jalapeños into small pieces.
   - Combine all the ingredients except for the cheese and jalapeños in a large bowl
@@ -1826,32 +1753,33 @@
     into the mix.
   - Grease a 10 inch cast iron skillet liberally with butter.
   - Bake at 400°F (204°C) for about 20 minutes or until done.
-  - Serve with butter, hot sauce, or honey as a side. Goes well with Chili con Carne
+  - Serve with butter, hot sauce, or honey as a side. Goes well with Chili con Carne.
+
 - title: Thai Chili Tomato Soup
   prep_time: 10
   cook_time: 60
   servings: 6
   ingredients:
-  - name: Tomatoes, the big round ones (8)
-    amount: Tomatoes, the big round ones (8
-  - name: Yellow onion (1 large)
-    amount: Yellow onion (1 large
-  - name: Garlic (6 cloves)
-    amount: Garlic (6 cloves
-  - name: Chicken stock (32 oz)
-    amount: Chicken stock (32 oz
-  - name: Butter (3 tablespoons)
-    amount: Butter (3 tablespoons
-  - name: Flour (3 tablespoons)
-    amount: Flour (3 tablespoons
-  - name: Thai chilis (2 red)
-    amount: Thai chilis (2 red
-  - name: Sugar (2 tablespoons)
-    amount: Sugar (2 tablespoons
-  - name: Salt (1 tablespoon)
-    amount: Salt (1 tablespoon
-  - name: Basil (1 tablespoon)
-    amount: Basil (1 tablespoon
+  - name: tomatoes
+    amount: 8
+  - name: onion
+    amount: 1
+  - name: garlic
+    amount: 6 cloves
+  - name: chicken stock
+    amount: 200ml
+  - name: butter
+    amount: 45ml
+  - name: flour
+    amount: 45ml
+  - name: chilis
+    amount: 2
+  - name: sugar
+    amount: 30ml
+  - name: salt
+    amount: null
+  - name: basil
+    amount: null
   steps:
   - Cut the tomatoes into large chunks, dice the onion, and mince the garlic.
   - Add the ingredients to a pot and turn the heat up.
@@ -1866,35 +1794,34 @@
   - Add salt and sugar to taste. The soup should be spicy, but not acidic.
   - Stir in basil and simmer for 20 minutes.
   - Serve with grilled cheese.
+
 - title: Chili con Carne
   prep_time: 20
   cook_time: 120
   servings: 12
   ingredients:
-  - name: Ground beef (4 pounds)
-    amount: Ground beef (4 pounds
-  - name: Yellow onions (2 large)
-    amount: Yellow onions (2 large
-  - name: Garlic (6 cloves)
-    amount: Garlic (6 cloves
-  - name: Dark red kiney beans (4 cans, drained and rinsed)
-    amount: Dark red kiney beans (4 cans, drained and rinsed
-  - name: Diced tomatoes with chilis such as Rotel (4 cans)
-    amount: Diced tomatoes with chilis such as Rotel (4 cans
-  - name: McCormick Medium Chili spice packets (4)
-    amount: McCormick Medium Chili spice packets (4
-  - name: 2 cans hatch green chilis (or whatever chilis you want)
-    amount: 2 cans hatch green chilis (or whatever chilis you want
-  - name: Tomato paste (1 can)
-    amount: Tomato paste (1 can
-  - name: Cumin powder
-    amount: Cumin powder
-  - name: Chili powder
-    amount: Chili powder
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
+  - name: ground beef
+    amount: 2000g
+  - name: onions
+    amount: 2
+  - name: garlic
+    amount: 6 cloves
+  - name: beans
+    amount: 400g
+  - name: tomatoes
+    amount: 8
+  - name: chilis
+    amount: 100g
+  - name: tomato paste
+    amount: 100ml
+  - name: cumin powder
+    amount: null
+  - name: chili powder
+    amount: null
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - Sweat down the onions and garlic in you largest pot.
   - Brown ground beef in a separate skillet, drain the fat, and add to pot
@@ -1907,27 +1834,28 @@
     hot sauce or whatever chilis you have.
   - Simmer on low for one hour.
   - Serve with jalapeno cornbread (see our recipe), shredded cheese, and oyster crackers.
+
 - title: Chimichurri Sauce (Argentinian Pesto)
   prep_time: 15
   cook_time: 0
   servings: 4
   ingredients:
-  - name: Parsley (1 huge bunch)
-    amount: Parsley (1 huge bunch
-  - name: Extra virgin olive oil (1 cup)
-    amount: Extra virgin olive oil (1 cup
-  - name: White wine vinegar (2 tablespoons)
-    amount: White wine vinegar (2 tablespoons
-  - name: Minced garlic (4 cloves)
-    amount: Minced garlic (4 cloves
-  - name: Oregano (1 teaspoon)
-    amount: Oregano (1 teaspoon
-  - name: Red pepper flakes (1/2 teaspoon)
-    amount: Red pepper flakes (1/2 teaspoon
-  - name: Pepper (to taste)
-    amount: Pepper (to taste
-  - name: Salt (to taste)
-    amount: Salt (to taste
+  - name: parsley
+    amount: null
+  - name: olive oil
+    amount: 200ml
+  - name: vinegar
+    amount: 50ml
+  - name: garlic
+    amount: 4 cloves
+  - name: oregano
+    amount: null
+  - name: red pepper flakes
+    amount: 10ml
+  - name: pepper
+    amount: null
+  - name: salt
+    amount: null
   steps:
   - Using a good chef knife, finely chop the parseley very fine. Do not under any
     circumstances use a food processor or blender.
@@ -1935,29 +1863,28 @@
     to that of the picture. It should be drippy but not watery.
   - Mix in the rest of the ingredients then adjust the seasoning to your taste.
   - Serve as a sauce on top of chicken or carne asada.
+
 - title: Everything Bagel Slider Burgers
   prep_time: 30
   cook_time: 30
   servings: 12
   ingredients:
-  - name: 80/20 Ground beef (2 pounds)
-    amount: 80/20 Ground beef (2 pounds
-  - name: Package of 12 brioche rolls (or hawaiian sweet rolls)
-    amount: Package of 12 brioche rolls (or hawaiian sweet rolls
-  - name: Sliced cheese (your choice)
-    amount: Sliced cheese (your choice
-  - name: Yellow onions (4)
-    amount: Yellow onions (4
-  - name: Mushrooms
-    amount: Mushrooms
-  - name: Butter
-    amount: Butter
-  - name: Everything bagel seasoning
-    amount: Everything bagel seasoning
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
+  - name: ground beef
+    amount: 1000g
+  - name: brioche rolls
+    amount: 12
+  - name: cheese
+    amount: 120g
+  - name: onions
+    amount: 4
+  - name: mushrooms
+    amount: 100g
+  - name: butter
+    amount: 20ml
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - If you want onions, cut them into rings and sautee in olive oil for 30 minutes
     until dark brown in color then set aside.
@@ -1972,61 +1899,61 @@
   - Coat the tops of the buns with melted butter and sprinkle on everything bagel
     seasoning.
   - Bake until cheese is melted and the tops of the bun becomes crispy.
+
 - title: Thai Green Papaya Salad
   prep_time: 15
   cook_time: 0
   servings: 6
   ingredients:
-  - name: Cherry tomatoes (15)
-    amount: Cherry tomatoes (15
-  - name: Thai chili peppers (6)
-    amount: Thai chili peppers (6
-  - name: Dried shrimp (3 tablespoons)
-    amount: Dried shrimp (3 tablespoons
-  - name: Fish sauce (4.5 tablespoons)
-    amount: Fish sauce (4.5 tablespoons
-  - name: Garlic (3 cloves)
-    amount: Garlic (3 cloves
-  - name: Green beans (18)
-    amount: Green beans (18
-  - name: Shredded green papaya (6 cups)
-    amount: Shredded green papaya (6 cups
-  - name: Lime juice (3 limes)
-    amount: Lime juice (3 limes
-  - name: Palm sugar (4.5 tablespoons)
-    amount: Palm sugar (4.5 tablespoons
-  - name: Peanuts (6 peanuts)
-    amount: Peanuts (6 peanuts
+  - name: tomatoes
+    amount: 15
+  - name: chili peppers
+    amount: 6
+  - name: shrimp
+    amount: 45ml
+  - name: fish sauce
+    amount: 60ml
+  - name: garlic
+    amount: 3 cloves
+  - name: green beans
+    amount: 18
+  - name: papayas
+    amount: 6
+  - name: limes
+    amount: 3
+  - name: sugar
+    amount: 50ml
+  - name: peanuts
+    amount: 6
   steps:
   - Cut the cherry tomatoes in half
   - Finely dice the thai chili pepper and garlic
   - Shred 6 cups of green papaya
   - Combine all ingredients together in a bowl
   - Serve as a side to any Thai main course
+
 - title: Slow Cooker Thanksgiving Turkey
   prep_time: 15
   cook_time: 300
   servings: 8
   ingredients:
-  - name: Large turkey breasts with the skin on (2)
-    amount: Large turkey breasts with the skin on (2
-  - name: Turkey gravy packets (3)
-    amount: Turkey gravy packets (3
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
-  - name: Thyme
-    amount: Thyme
-  - name: Onion Powder
-    amount: Onion Powder
-  - name: Garlic Powder
-    amount: Garlic Powder
+  - name: turkey breasts
+    amount: 2
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
+  - name: thyme
+    amount: null
+  - name: onion powder
+    amount: null
+  - name: garlic powder
+    amount: null
   steps:
   - Season the turkey breasts liberally with salt, pepper, thyme, onion powder, and
-    garlic powder
-  - On the stovetop, prepare two packets of turkey gravy and get it hot
-  - Place the turkey breasts in the slow cooker, skin side up, and pour gravy on top
+    garlic powder.
+  - On the stovetop, prepare two packets of turkey gravy and get it hot.
+  - Place the turkey breasts in the slow cooker, skin side up, and pour gravy on top.
   - Cook on high for 4 hours, possibly longer depending on your desired tenderness.
     Aim for the general tenderness of thanksgiving turkey. If you cook it too long
     it will start to pull apart which is not what you want.
@@ -2037,86 +1964,83 @@
     to serve.
   - When serving, slice the turkey breast carefully in the crock pot so the gravy
     sits in the turkey while people are serving themselves.
+
 - title: Mediterranean Charcuterie Board
   prep_time: 15
   cook_time: 0
   servings: 12
   ingredients:
-  - name: Nuts
-    amount: Nuts
-  - name: Candied walnuts
-    amount: Candied walnuts
-  - name: Cava spicy hummus
-    amount: Cava spicy hummus
-  - name: Tapenade (roughly chopped Greek olive blend)
-    amount: Tapenade (roughly chopped Greek olive blend
-  - name: Whole mixed olives
-    amount: Whole mixed olives
-  - name: 4 types of cheese (your choice, just get strong flavored cheeses)
-    amount: 4 types of cheese (your choice, just get strong flavored cheeses
-  - name: Fig butter
-    amount: Fig butter
-  - name: Grapes
-    amount: Grapes
-  - name: Strawberries
-    amount: Strawberries
-  - name: Cured meats
-    amount: Cured meats
-  - name: Peaches
-    amount: Peaches
-  - name: Olive oil, butter, pecorino romano, and red pepper mixture
-    amount: Olive oil, butter, pecorino romano, and red pepper mixture
-  - name: Toasted bread
-    amount: Toasted bread
-  - name: Pita chips
-    amount: Pita chips
+  - name: nuts
+    amount: 100g
+  - name: walnuts
+    amount: 100g
+  - name: hummus
+    amount: 100g
+  - name: tapenade
+    amount: 100g
+  - name: olives
+    amount: 50g
+  - name: cheese
+    amount: 100g
+  - name: butter
+    amount: 20ml
+  - name: grapes
+    amount: 100g
+  - name: strawberries
+    amount: 100g
+  - name: peaches
+    amount: 6
+  - name: olive oil
+    amount: null
+  - name: bread
+    amount: 12
   steps:
   - Lay it out and try to make it look nice. This step shouldn't be hard.
+
 - title: Baby Carrot Fries
   prep_time: 5
   cook_time: 30
   servings: 4
   ingredients:
-  - name: Baby carrots (1 bag)
-    amount: Baby carrots (1 bag
-  - name: Olive oil
-    amount: Olive oil
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
+  - name: carrots
+    amount: 250g
+  - name: olive oil
+    amount: null
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
-  - Cut the baby carrots lengthwise into shoestring size strips
-  - Toss with olive oil, salt, and pepper
+  - Cut the baby carrots lengthwise into shoestring size strips.
+  - Toss with olive oil, salt, and pepper.
   - Place on greased aluminum foil
   - Bake at 425°F (220°C) for approximatley 30 minutes or until desired doneness is
     achieved. Flip halway through.
   - Serve as a side for any hearty meal.
+
 - title: Slow Cooker Chicken Enchiladas
   prep_time: 5
   cook_time: 540
   servings: 12
   ingredients:
-  - name: Chicken breasts (4 large ones)
-    amount: Chicken breasts (4 large ones
-  - name: Flour tortillas
-    amount: Flour tortillas
-  - name: Shredded taco cheese blend
-    amount: Shredded taco cheese blend
-  - name: Chili powder
-    amount: Chili powder
-  - name: Garlic powder
-    amount: Garlic powder
-  - name: Ground cumin
-    amount: Ground cumin
-  - name: 2 cans of enchilada sauce
-    amount: 2 cans of enchilada sauce
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
-  - name: Liquid smoke (optional)
-    amount: Liquid smoke (optional
+  - name: chicken breasts
+    amount: 4 large ones
+  - name: tortillas
+    amount: 300g
+  - name: cheese
+    amount: 100g
+  - name: chili powder
+    amount: 30ml
+  - name: garlic powder
+    amount: 30ml
+  - name: cumin
+    amount: 20ml
+  - name: enchilada sauce
+    amount: 50ml
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - Add the chicken breasts along with 1 tbsp each of chili powder, garlic powder,
     ground cumin into the slow cooker.
@@ -2138,109 +2062,20 @@
   - Sprinkle more cheese over the top.
   - Bake covered for 15-30 minutes until cheese is melted or desired doneness is reached.
   - Serve with beans, rice, and your favorite hot sauce.
-- title: Burrata and Black Truffle Toast
-  prep_time: 10
-  cook_time: 15
-  servings: 6
-  ingredients:
-  - name: French bread
-    amount: French bread
-  - name: 'Belgioioso Burrata with Black Truffles (alternative: fresh mozzarella)'
-    amount: 'Belgioioso Burrata with Black Truffles (alternative: fresh mozzarella'
-  - name: Sun dried tomatoes
-    amount: Sun dried tomatoes
-  - name: Balsamic vinegar
-    amount: Balsamic vinegar
-  - name: Fresh basil
-    amount: Fresh basil
-  - name: Garlic powder
-    amount: Garlic powder
-  - name: Parmigiano-Reggiano cheese
-    amount: Parmigiano-Reggiano cheese
-  steps:
-  - Cut the bread horizontally down the middle to make two flat pieces
-  - Butter the bread side
-  - Sprinkle on garlic powder and salt
-  - Sprinkle on cheese
-  - Slice into the burrata and spread both the cheese and the gooey center all over
-    the bread
-  - Add sun dried tomatoes, basil, and drizzle on balsamic
-  - Bake at 375°F (190°C) until the sides are crusty and the cheese has melted on
-    top.
-  - Slice into stick and serve as an appetizer.
-- title: Lasagna
-  prep_time: 30
-  cook_time: 60
-  servings: 18
-  ingredients: []
-  steps:
-  - Lasagna noodles (1 box)
-  - San Marizano tomatoes with basil (2, 28oz cans)
-  - Tomato paste (1 can)
-  - Meatball mix (beef, pork, veal, equal parts - 2 pounds)
-  - Fresh basil (10 leaves)
-  - Pecorino romano cheese (1 cup)
-  - Whole Milk Ricotta (1 big tub)
-  - Eggs (2 large)
-  - Italian Seasoning
-  - Grated mozzarella (1 big bag)
-  - Yellow onion (1)
-  - Minced garlic (4 tablespoons)
-  - Olive oil
-  - Salt
-  - Pepper
-  - Red Chili flakes
-  - Balsamic vinegar
-  - Dice the onion finely and sauté in a liberal amount of olive oil until softened
-    and begins to take on color
-  - Add the garlic and cook until fragrant
-  - Add the two cans of tomatoes, smash with a spoon. If you want finer you can crush
-    them with your hands as you add them in.
-  - While the sauce is simmering, brown the meatball mix in your biggest skillet on
-    high heat.
-  - Dice the basil and add to the sauce
-  - Once the meat is browned, used a slotted spoon to drain off the fat and add the
-    meat to the sauce.
-  - Add a drizzle of balsamic vinegar, the tomato paste, red chili flakes (to taste),
-    salt, and pepper little by little until you get the taste you want. I like mine
-    a little on the sweeter side. Don't oversalt because you'll get salt from the
-    other ingredients.
-  - Move the sauce to the back burner and simmer on low
-  - Mix the ricotta, a handful of the mozzarella, pecorino romano, 2 eggs, a dash
-    of salt, pepper, and a dash of italian seasoning together in a separate bowl
-  - Set aside for assembly
-  - In your biggest pot get a lot of water to a rapid boil
-  - Add some salt
-  - Add the lasagna noodles and cook until they're almost done
-  - Drain the noodles and put them back in the pot with some room temperature water
-    so they don't stick
-  - Preheat your oven to 400°F (205°C) - you must do this in advance so your glass
-    baking dish doesn't explode
-  - In a glass baking dish add a small amount of the sauce to the bottom of the pan
-  - Cover with noodles
-  - Add 2 inch dollops of the cheese filling all over the noodles
-  - Add a little sauce inbetween each of the dollops of cheese filling
-  - Repeat steps 3, 4, and 5.
-  - Now that you're at the top of the dish add whatever sauce you have left and cover
-    with the mozarella cheese and sprinkle with italian seasoning.
-  - Cover with foil
-  - Bake for an hour or until you can see it bubbling from the sides
-  - Turn on your broiler and move to one of the upper oven racks and broil until the
-    cheese starts to brown on top. Watch carefully so you don't burn it.
-  - Remove from the oven and let sit for 20 minutes before diving in.
+
 - title: Perfect Sunny Side Up Eggs
   prep_time: 0
   cook_time: 10
   servings: 1
   ingredients:
-  - name: Eggs (2)
-    amount: Eggs (2
-  - name: Cooking oil or butter (any kind is fine)
-    amount: Cooking oil or butter (any kind is fine
+  - name: eggs
+    amount: 2
+  - name: butter
+    amount: 10ml
   - name: salt
-    amount: salt
+    amount: null
   - name: pepper
-    amount: pepper
+    amount: null
   steps:
   - Grease a good non-stick skillet
   - Heat up the skillet on medium heat
@@ -2249,23 +2084,24 @@
     the heat down to low
   - Wait until the eggs have reached your desired doneness. Don't rush it.
   - Garnish with salt and pepper and serve with toast.
+
 - title: Slow Cooker Mongolian Beef
   prep_time: 15
   cook_time: 240
   servings: 6
   ingredients:
-  - name: 3 pounds beef (country ribs, eye, whatever)
-    amount: 3 pounds beef (country ribs, eye, whatever
-  - name: soy sauce (1 cup)
-    amount: soy sauce (1 cup
-  - name: brown sugar (1 cup)
-    amount: brown sugar (1 cup
-  - name: ginger powder (1 tbsp)
-    amount: ginger powder (1 tbsp
-  - name: minced garlic (2 tbsp)
-    amount: minced garlic (2 tbsp
-  - name: red chili flakes (1 tsp)
-    amount: red chili flakes (1 tsp
+  - name: beef
+    amount: 1500g
+  - name: soy sauce
+    amount: 50ml
+  - name: sugar
+    amount: 50g
+  - name: ginger powder
+    amount: 15ml
+  - name: garlic powder
+    amount: 30ml
+  - name: red chili flakes
+    amount: 15ml
   steps:
   - Sear the beef on all sides on high heat until crust forms
   - While the beef is cooking combine rest of ingredients in a slow cooker
@@ -2273,35 +2109,36 @@
     has the desired tenderness. Do not cook too long or it will fall apart.
   - Serve over rice with broccoli.
   - Garnish with green onions and chili garlic sauce
+
 - title: Cottage Pie
   prep_time: 15
   cook_time: 60
   servings: 6
   ingredients:
-  - name: Potatoes (3)
-    amount: Potatoes (3
-  - name: Butter (half stick)
-    amount: Butter (half stick
-  - name: Whole Milk (2 cups)
-    amount: Whole Milk (2 cups
-  - name: Ground beef (2 pounds)
-    amount: Ground beef (2 pounds
-  - name: Carrots (2)
-    amount: Carrots (2
-  - name: Yellow Onion (1 large)
-    amount: Yellow Onion (1 large
-  - name: Garlic (4 cloves)
-    amount: Garlic (4 cloves
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
-  - name: Olive oil
-    amount: Olive oil
-  - name: can of tomato paste (1)
-    amount: can of tomato paste (1
-  - name: large can of beef broth (1)
-    amount: large can of beef broth (1
+  - name: potatoes
+    amount: 3
+  - name: butter
+    amount: 50ml
+  - name: milk
+    amount: 250ml
+  - name: ground beef
+    amount: 1000g
+  - name: carrots
+    amount: 2
+  - name: onion
+    amount: 1
+  - name: garlic
+    amount: 4 cloves
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
+  - name: olive oil
+    amount: null
+  - name: tomato paste
+    amount: 50ml
+  - name: beef broth
+    amount: 200ml
   steps:
   - Dice the onion and carrot finely
   - In an oven-proof skillet (cast iron is good) sautee onions and carrot on medium
@@ -2324,31 +2161,32 @@
   - Add the potatoes on top of the beef and cook through in the oven until the potatoes
     have a nice golden top.
   - Wait 20 minutes or so to cool.
+
 - title: Shrimp Scampi
   prep_time: 10
   cook_time: 10
   servings: 2
   ingredients:
-  - name: Frozen pre-cooked shrimp (1 pound)
-    amount: Frozen pre-cooked shrimp (1 pound
-  - name: Butter (3 tablespoons)
-    amount: Butter (3 tablespoons
-  - name: Olive Oil (3 tablespoons)
-    amount: Olive Oil (3 tablespoons
-  - name: Garlic, minced (4 cloves)
-    amount: Garlic, minced (4 cloves
-  - name: White wine (1/2 cup)
-    amount: White wine (1/2 cup
-  - name: Chopped parsley (handful)
-    amount: Chopped parsley (handful
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
-  - name: Onion powder (1 tablespoon)
-    amount: Onion powder (1 tablespoon
-  - name: Red chili flakes (pinch)
-    amount: Red chili flakes (pinch
+  - name: shrimp
+    amount: 500g
+  - name: butter
+    amount: 45ml
+  - name: olive oil
+    amount: 45ml
+  - name: garlic
+    amount: 4 cloves
+  - name: wine
+    amount: 50ml
+  - name: parsley
+    amount: null
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
+  - name: onion powder
+    amount: 15ml
+  - name: chili flakes
+    amount: null
   steps:
   - Melt the butter in a large saute pan over medium heat
   - Add olive oil so the butter doesn't burn
@@ -2359,27 +2197,24 @@
   - If you screwed up and the sauce is too watery you can make it thicker with more
     onion powder
   - Serve over rice, toast, or pasta
+
 - title: Cave Aged Cheddar Twice Baked Potatoes
   prep_time: 0
   cook_time: 120
   servings: 4
   ingredients:
-  - name: Russet potatoes (4)
-    amount: Russet potatoes (4
-  - name: Olive oil
-    amount: Olive oil
-  - name: Cream cheese
-    amount: Cream cheese
-  - name: Scallions
-    amount: Scallions
-  - name: Salt
-    amount: Salt
-  - name: Pepper
-    amount: Pepper
-  - name: Sharp Cheddar cheese
-    amount: Sharp Cheddar cheese
-  - name: A bit of fancy earthy tasting cheese (we chose aged cheddar)
-    amount: A bit of fancy earthy tasting cheese (we chose aged cheddar
+  - name: potatoes
+    amount: 4
+  - name: olive oil
+    amount: null
+  - name: cheese
+    amount: 200g
+  - name: scallions
+    amount: 2
+  - name: salt
+    amount: null
+  - name: pepper
+    amount: null
   steps:
   - Rub the potatoes with oil and coat liberally with salt and pepper
   - Bake at 400 F° for 1 hour.
@@ -2389,17 +2224,18 @@
   - Put the mixture back into one half of the potato and cover with cheese and more
     scallions.
   - Put the potato back in the oven and heat until the cheese on top is melted.
+
 - title: Crispy Baked Chicken Wings
   prep_time: 10
   cook_time: 60
   servings: 6
   ingredients:
-  - name: Chicken wings (2 pounds)
-    amount: Chicken wings (2 pounds
+  - name: chicken wings
+    amount: 1000g
   - name: salt
-    amount: salt
+    amount: null
   - name: pepper
-    amount: pepper
+    amount: null
   steps:
   - Preheat oven to 400 deg (F)
   - Cut the wings up into flats and drums
@@ -2407,47 +2243,47 @@
   - Place on a wire rack
   - Bake for 1 hour, turning halfway through.
   - Extend the cooking time a little longer if you want even crispier on the outside.
+
 - title: Sriracha Baked Chicken Wings
   prep_time: 10
   cook_time: 60
   servings: 8
   ingredients:
-  - name: 2lbs Chicken wings (buy the whole ones and save money)
-    amount: 2lbs Chicken wings (buy the whole ones and save money
+  - name: chicken wings
+    amount: 800g
   - name: salt
-    amount: salt
+    amount: null
   - name: pepper
-    amount: pepper
-  - name: 3/4 cup sriracha sauce
-    amount: 3/4 cup sriracha sauce
-  - name: 1/4 cup melted butter
-    amount: 1/4 cup melted butter
-  - name: 1 tbsp Huy Fong chili garlic sauce (if you want more kick)
-    amount: 1 tbsp Huy Fong chili garlic sauce (if you want more kick
+    amount: null
+  - name: sriracha sauce
+    amount: 100g
+  - name: butter
+    amount: 25ml
   steps:
-  - Preheat oven to 400 deg (F)
-  - Cut the wings up into flats and drums
-  - Salt and pepper liberally
-  - Place on a wire rack
+  - Preheat oven to 400 deg (F).
+  - Cut the wings up into flats and drums.
+  - Salt and pepper liberally.
+  - Place on a wire rack.
   - Bake for 1 hour, turning halfway through.
   - Extend the cooking time a little longer if you want even crispier on the outside.
   - Mix the sriracha, melted butter, and chili garlic sauce together in a large bowl.
-  - Toss the cooked wings in the sauce and serve
+  - Toss the cooked wings in the sauce and serve.
+
 - title: Miso Chicken Wings
   prep_time: 10
   cook_time: 60
   servings: 6
   ingredients:
-  - name: 2lbs Chicken wings
-    amount: 2lbs Chicken wings
-  - name: 2oz Miso paste
-    amount: 2oz Miso paste
-  - name: 2oz Teriyaki sauce (or any sweet asian flavored sauce)
-    amount: 2oz Teriyaki sauce (or any sweet asian flavored sauce
-  - name: 20z Rice Wine vinegar
-    amount: 20z Rice Wine vinegar
-  - name: 2tbs sriracha or whatever asian hot sauce you want
-    amount: 2tbs sriracha or whatever asian hot sauce you want
+  - name: chicken wings
+    amount: 1000g
+  - name: miso paste
+    amount: 50ml
+  - name: teriyaki sauce
+    amount: 30ml
+  - name: vinegar
+    amount: 20ml
+  - name: sriracha sauce
+    amount: 30ml
   steps:
   - Preheat oven to 400 deg (F)
   - Place the wings on a wire rack
