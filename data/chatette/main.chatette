@@ -13,6 +13,8 @@
     ~[&greet?] ~[can you] ~[please?] ~[search] recipes for @[recipe]?
     ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe]?
 
-
 %[search_cuisine](10)
     ~[&greet?] ~[i want to] ~[eat] @[cuisine_type] [cuisine|food] ~[time?].
+
+%[search_cuisine](10)
+    ~[&greet?] ~[i want to] ~[eat] ~[something] ~[containing] @[ingredient] ~[time?].

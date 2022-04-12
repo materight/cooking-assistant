@@ -1,17 +1,9 @@
 """Simple script to generate data using chatette and convert it to the rasa YAML format."""
 import os
-import re
-import yaml
-import requests
-from tqdm import tqdm
-from bs4 import BeautifulSoup
 from chatette.facade import Facade as ChatetteFacade
 from rasa.nlu.convert import convert_training_data
 
-RECIPES_URI = 'https://justthedarnrecipe.com'
-
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-CACHE_DIR = os.path.join(PROJECT_ROOT, '.cache')
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 
 # Generate NLU data with Chatette

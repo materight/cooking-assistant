@@ -2,6 +2,9 @@
     pizza
     pasta
 
+@[ingredient]
+    garlic
+
 @[cuisine_type]
     italian
     french
