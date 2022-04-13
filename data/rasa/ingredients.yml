@@ -1,0 +1,168 @@
+version: '3.1'
+nlu:
+- lookup: ingredients
+  examples:
+  - spaghetti
+  - olive oil
+  - parsley
+  - garlic
+  - chili flakes
+  - bacon
+  - eggs
+  - pecorino romano cheese
+  - pepper
+  - Fritos
+  - ground beef
+  - beans
+  - salsa
+  - shredded cheese
+  - chili powder
+  - cumin
+  - jasmine rice
+  - water
+  - salt
+  - tomatoes
+  - tomato sauce
+  - onion
+  - garlic powder
+  - cumin powder
+  - tobasco
+  - filet of salmon
+  - lentils
+  - chicken broth
+  - heavy cream
+  - curry powder
+  - feta cheese
+  - pasta
+  - thyme
+  - basil
+  - chicken breast
+  - curry paste
+  - fish sauce
+  - yuca root
+  - paprika
+  - flour
+  - sliced almonds
+  - butter
+  - sugar
+  - almond extract
+  - chicken thighs
+  - oregano
+  - onion powder
+  - potatoes
+  - bay leaves
+  - bell peppers
+  - chicken stock
+  - tilapia
+  - egg yolk
+  - cornstarch
+  - green beans
+  - basil leaves
+  - vegetable oil
+  - arugula greens
+  - orange bitters
+  - milk
+  - egg
+  - apples
+  - cinnamon sticks
+  - lemon
+  - frozen puff pastry
+  - canned chickpeas
+  - red peppers
+  - tahini
+  - lemon juice
+  - espresso
+  - steamed milk
+  - peppermint syrup
+  - dark chocolate syrup
+  - whipped cream
+  - pears
+  - red wine
+  - cinnamnon sticks
+  - orange juice
+  - bananas
+  - walnuts
+  - raisins
+  - baking soda
+  - vanilla extract
+  - gnocchi
+  - leaves sage
+  - parmesan cheese
+  - shortening
+  - molasses
+  - ginger
+  - cinnamon
+  - beef roast
+  - beef broth
+  - carrots
+  - mushrooms
+  - onions
+  - tomato paste
+  - parsley flakes
+  - rice cereal
+  - nutella
+  - blueberries
+  - baking powder
+  - tilapia filets
+  - breadcrumbs
+  - pecans
+  - leeks
+  - peanut butter
+  - brown sugar
+  - cheese
+  - cheddar cheese
+  - crackers
+  - cranberries
+  - bourbon
+  - chocolate chips
+  - ribeye steak
+  - cilantro
+  - celery
+  - red chili
+  - soy sauce
+  - honey
+  - rice
+  - bay leaf
+  - garlic chili sauce
+  - coconut milk
+  - rotisserie chicken
+  - spinach
+  - flower
+  - evaporated milk
+  - condensed milk
+  - whipping cream
+  - chicken breasts
+  - tomato pesto
+  - whole milk
+  - cornmeal
+  - white sugar
+  - "canned jalape\xC3\xB1os"
+  - chilis
+  - vinegar
+  - red pepper flakes
+  - brioche rolls
+  - chili peppers
+  - shrimp
+  - papayas
+  - limes
+  - peanuts
+  - turkey breasts
+  - nuts
+  - hummus
+  - tapenade
+  - olives
+  - grapes
+  - strawberries
+  - peaches
+  - bread
+  - tortillas
+  - enchilada sauce
+  - beef
+  - ginger powder
+  - red chili flakes
+  - wine
+  - scallions
+  - chicken wings
+  - sriracha sauce
+  - miso paste
+  - teriyaki sauce

@@ -14,7 +14,7 @@ nlu:
     - hello there
     - hey
     - hi
-- intent: search_recipe
+- intent: search_by_title
   examples: |
     - Good evening can you please find me recipes for [pasta](recipe)?
     - Good evening can you please search recipes for [pasta](recipe)?
@@ -36,7 +36,7 @@ nlu:
     - i'd really like to taste [pizza](recipe) this evening.
     - may you please find me [pasta](recipe) recipes?
     - may you search [pasta](recipe) recipes?
-- intent: search_cuisine
+- intent: search_by_cuisine
   examples: |
     - Hey i would love to try [mexican](cuisine_type) cuisine.
     - I want to taste [mexican](cuisine_type) cuisine today.
@@ -48,3 +48,15 @@ nlu:
     - i want to eat [japanese](cuisine_type) food tomorrow.
     - i want to try [japanese](cuisine_type) food.
     - i would like to eat [chinese](cuisine_type) cuisine.
+- intent: search_by_ingredients
+  examples: |
+    - Hey i'd really like to try something containing [garlic](ingredient) tomorrow.
+    - Hi I'd really like to try a recipe containing [garlic](ingredient) this morning.
+    - I want to eat a recipe with [garlic](ingredient) this evening.
+    - I would love to eat food with [garlic](ingredient) for dinner.
+    - I would really love to try a recipe containing [garlic](ingredient) for launch.
+    - hi I would really love to try something containing [garlic](ingredient).
+    - i want to try food with [garlic](ingredient).
+    - i'd love to try something with [garlic](ingredient).
+    - i'd really like to eat something with [garlic](ingredient).
+    - i'd really like to taste something containing [garlic](ingredient).

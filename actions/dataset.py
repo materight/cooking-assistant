@@ -74,11 +74,6 @@ class Dataset():
         """Returns a list of all the available ingredients."""
         return self._df_ingredients.name.unique().tolist()
 
-    @property
-    def ingredient_units(self) -> List[Text]:
-        """Returns a list of all the available ingredient units."""
-        return self._df_ingredients.unit.unique().tolist()
-
     def search_by_title(self, query: Text) -> List[Recipe]:
         """Search for a recipe by title."""
         recipes_ids = self._df_recipes[self._df_recipes['title'].str.contains(query, case=False)].index.to_list()
