@@ -10,7 +10,7 @@
   - name: parsley
     amount: 240ml
   - name: garlic
-    amount: 1 clove
+    amount: 1
   - name: chili flakes
     amount: 5ml
   steps:
@@ -69,7 +69,7 @@
   - name: beans
     amount: 450g
   - name: salsa
-    amount: 1 jar
+    amount: 50ml
   - name: shredded cheese
     amount: 225g
   - name: chili powder
@@ -132,7 +132,7 @@
   - name: water
     amount: 240ml
   - name: tobasco
-    amount: 2 dashes
+    amount: 8ml
   - name: olive oil
     amount: 15ml
   steps:
@@ -186,7 +186,7 @@
   - name: heavy cream
     amount: 60ml
   - name: garlic
-    amount: 5 cloves
+    amount: 5
   - name: curry powder
     amount: 15ml
   - name: pepper
@@ -216,9 +216,9 @@
   - name: tomatoes
     amount: 500g
   - name: thyme
-    amount: 6 sprigs
+    amount: null
   - name: garlic
-    amount: 6 cloves
+    amount: 6
   - name: olive oil
     amount: 15ml
   - name: basil
@@ -379,7 +379,7 @@
   - name: onion
     amount: 1
   - name: garlic
-    amount: 1 clove
+    amount: 1
   - name: olive oil
     amount: 15ml
   - name: salt
@@ -413,7 +413,7 @@
   - name: chicken stock
     amount: 1000ml
   - name: garlic
-    amount: 1 clove
+    amount: 1
   - name: onion
     amount: 1
   - name: butter
@@ -493,7 +493,7 @@
   - name: olive oil
     amount: 15ml
   - name: orange bitters
-    amount: 2 dashes
+    amount: 4ml
   - name: salt
     amount: null
   - name: pepper
@@ -592,7 +592,7 @@
   - name: pepper
     amount: 2ml
   - name: garlic
-    amount: 2 cloves
+    amount: 2
   steps:
   - Drain the chickpeas and rinse under cold water until clean. No need to remove
     the skins.
@@ -776,13 +776,13 @@
   - name: flour
     amount: 280ml
   - name: ginger
-    amount: 3.5ml
+    amount: 3ml
   - name: baking soda
     amount: 10ml
   - name: cinnamon
     amount: 5ml
   - name: salt
-    amount: 2.5ml
+    amount: 2ml
   - name: sugar
     amount: null
   steps:
@@ -815,7 +815,7 @@
   - name: onions
     amount: 2
   - name: garlic
-    amount: 6 cloves
+    amount: 6
   - name: tomato paste
     amount: 30ml
   - name: butter
@@ -1310,7 +1310,7 @@
   - name: celery
     amount: 1
   - name: garlic
-    amount: 1 clove
+    amount: 1
   - name: chicken stock
     amount: 50ml
   - name: tomatoes
@@ -1322,7 +1322,7 @@
   - name: basil
     amount: 10ml
   - name: red chili
-    amount: 2.5ml
+    amount: 2ml
   - name: green beans
     amount: 100g
   - name: pasta
@@ -1356,9 +1356,9 @@
   - name: green beans
     amount: 500g
   - name: vegetable oil
-    amount: 30 ml
+    amount: 30ml
   - name: soy sauce
-    amount: 30 ml
+    amount: 30ml
   - name: honey
     amount: 15ml
   - name: red chili
@@ -1387,7 +1387,7 @@
   - name: celery
     amount: 8
   - name: parsley
-    amount: 4 sprigs
+    amount: 4
   - name: chicken stock
     amount: 50ml
   - name: chicken thighs
@@ -1441,7 +1441,7 @@
   - name: pecorino romano cheese
     amount: 60ml
   - name: pepper
-    amount: 2.5ml
+    amount: 2ml
   - name: egg
     amount: 1
   steps:
@@ -1558,7 +1558,7 @@
   - name: onion
     amount: 1
   - name: garlic
-    amount: 3 cloves
+    amount: 3
   - name: heavy cream
     amount: 500ml
   - name: chicken broth
@@ -1653,7 +1653,7 @@
   - name: chicken breasts
     amount: 4
   - name: garlic
-    amount: 8 cloves
+    amount: 8
   - name: tomato pesto
     amount: 100g
   - name: heavy cream
@@ -1735,7 +1735,7 @@
   - name: onion
     amount: 1
   - name: garlic
-    amount: 6 cloves
+    amount: 6
   - name: chicken stock
     amount: 200ml
   - name: butter
@@ -1775,7 +1775,7 @@
   - name: onions
     amount: 2
   - name: garlic
-    amount: 6 cloves
+    amount: 6
   - name: beans
     amount: 400g
   - name: tomatoes
@@ -1817,7 +1817,7 @@
   - name: vinegar
     amount: 50ml
   - name: garlic
-    amount: 4 cloves
+    amount: 4
   - name: oregano
     amount: null
   - name: red pepper flakes
@@ -1884,7 +1884,7 @@
   - name: fish sauce
     amount: 60ml
   - name: garlic
-    amount: 3 cloves
+    amount: 3
   - name: green beans
     amount: 18
   - name: papayas
@@ -1994,7 +1994,7 @@
   servings: 12
   ingredients:
   - name: chicken breasts
-    amount: 4 large ones
+    amount: 4
   - name: tortillas
     amount: 300g
   - name: cheese
@@ -2098,7 +2098,7 @@
   - name: onion
     amount: 1
   - name: garlic
-    amount: 4 cloves
+    amount: 4
   - name: salt
     amount: null
   - name: pepper
@@ -2144,7 +2144,7 @@
   - name: olive oil
     amount: 45ml
   - name: garlic
-    amount: 4 cloves
+    amount: 4
   - name: wine
     amount: 50ml
   - name: parsley
