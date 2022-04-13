@@ -19,6 +19,11 @@ responses:
   utter_recipe_found:
   - text: "Great! Here's the recipe I found for {recipe}"
 
+# Actions
+actions:
+  - action_search_by_title
+  - action_search_by_ingredient
+
 # Entities
 entities:
   - recipe
