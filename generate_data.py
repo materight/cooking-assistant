@@ -24,6 +24,4 @@ dataset = Dataset()
 with open(os.path.join(DATA_DIR, 'rasa', 'ingredients.yml'), 'w', encoding='utf-8') as file:
     yaml.dump(dict(version='3.1', nlu=[
         dict(lookup='ingredients', examples=dataset.ingredients)
-    ]), file, sort_keys=False)
-
-print('Done')
+    ]), file, sort_keys=False, allow_unicode=True)

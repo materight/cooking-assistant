@@ -40,7 +40,7 @@ class Dataset():
     def __init__(self):
         # Load the data
         recipes_path = os.path.join(PROJECT_ROOT, 'data', 'recipes', 'recipes.yml')
-        with open(recipes_path, 'r') as f:
+        with open(recipes_path, 'r', encoding='utf-8') as f:
             raw_recipes = yaml.load(f, Loader=yaml.FullLoader)
         # Convert to DataFrame
         self._df_recipes = pd.DataFrame([ dict(id=i, **r) for i, r in enumerate(raw_recipes)])
