@@ -21,7 +21,7 @@ convert_training_data(os.path.join(DATA_DIR, 'chatette', '.out'), os.path.join(D
 # Generate base file for chatette with entity synonyms and lookup tables
 print('Generating lookup tables and regex from dataset...')
 dataset = Dataset()
-with open(os.path.join(DATA_DIR, 'rasa', 'ingredients.yml'), 'w') as file:
+with open(os.path.join(DATA_DIR, 'rasa', 'ingredients.yml'), 'w', encoding='utf-8') as file:
     yaml.dump(dict(version='3.1', nlu=[
         dict(lookup='ingredients', examples=dataset.ingredients)
     ]), file, sort_keys=False)
