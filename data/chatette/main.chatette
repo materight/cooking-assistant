@@ -1,19 +1,25 @@
-
 |aliases.chatette
 |entities.chatette
 
 //================== Intent definitions =======================
-%[greet]
+%[greet](10)
     ~[&greet]
 
-%[search_by_title](50)
-    ~[&greet?] ~[i want to] ~[eat] @[recipe] ~[time?].
-    ~[&greet?] ~[can you] ~[please?] ~[search] @[recipe] recipes?
-    ~[&greet?] ~[can you] ~[please?] ~[search] recipes for @[recipe]?
-    ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe]?
+%[goodbye](10)
+    ~[&goodbye]
 
-%[search_by_cuisine](10)
-    ~[&greet?] ~[i want to] ~[eat] @[cuisine_type] [cuisine|food] ~[time?].
+%[affirm](10)
+    ~[&affirm] ~[thanks?]
+
+%[deny](10)
+    ~[&deny] ~[thanks?]
+
+%[search_by_keyword](50)
+    ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[time?].
+    ~[&greet?] ~[can you] ~[please?] ~[search] @[recipe_keyword] recipes?
+    ~[&greet?] ~[can you] ~[please?] ~[search] recipes for @[recipe_keyword]?
+    ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
 
 %[search_by_ingredients](50)
     ~[&greet?] ~[i want to] ~[eat] ~[something] ~[containing] @[ingredient] ~[time?].
+

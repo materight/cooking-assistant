@@ -1,13 +1,5 @@
-@[recipe]
+@[recipe_keyword]
     pizza
 
 @[ingredient]
-    garlic
-
-@[cuisine_type]
-    italian
-    french
-    indian
-    chinese
-    japanese
-    mexican
+    egg

@@ -6,7 +6,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: search_recipe
+  - intent: search_by_keyword
     entities:
-      - recipe
-  - action: utter_recipe_found
+      - recipe_keyword
+  - action: action_search_by_keyword
+

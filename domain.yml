@@ -6,34 +6,40 @@ intents:
   - goodbye
   - affirm
   - deny
-  - search_recipe
+  - search_by_keyword
 
 # Responses
 responses:
   utter_greet:
-  - text: "Hey! What would you like me to do?"
+  - text: "Hi! What would you like me to do?"
 
   utter_goodbye:
   - text: "Bye!"
 
   utter_recipe_found:
-  - text: "Great! Here's the recipe I found for {recipe}"
+  - text: "I found a recipe for {recipe_title}, would you like to know more?"
+
+  utter_recipe_not_found:
+  - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
 
 # Actions
 actions:
-  - action_search_by_title
-  - action_search_by_ingredient
+  - action_search_by_keyword
+  - action_search_by_ingredients
 
 # Entities
 entities:
-  - recipe
+  - recipe_title
+  - recipe_keyword
+  - ingredient
 
 # Slots
-slots:
-  recipe:
-    type: text
-    mappings:
-    - type: custom
+# slots:
+#   recipe_keyword:
+#     type: text
+#     mappings:
+#     - type: from_entity
+#       entity: recipe_keyword
 
 # Other configs
 session_config:

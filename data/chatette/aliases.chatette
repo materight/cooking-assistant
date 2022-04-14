@@ -2,8 +2,20 @@
 ~[greet]
     [hi|hello|hey|hello there|good morning|good evening]
 
+~[goodbye]
+    [goodbye|by|see you|that's it]
+
+~[affirm]
+    [y|yes|yeah|yep|sure|ok]
+
+~[deny]
+    [n|no|nope]
+
 ~[please]
     [please]
+
+~[thanks]
+    [thanks|thank you]
 
 ~[search]
     search [for?]
