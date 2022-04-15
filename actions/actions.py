@@ -5,27 +5,31 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
-from .dataset import Dataset
+from .dataset import Dataset, Ingredient
 
 # Load dataset globally
 dataset = Dataset()
 
-class ActionSearchByTitle(Action):
-    """Search for a recipe by title."""
+
+class ActionSearchByIngredients(Action):
+    """Search for a recipe by ingredients."""
 
     def name(self) -> Text:
-        return 'action_search_by_keyword'
+        return 'action_search_by_ingredients'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        recipe_keyword = tracker.get_latest_entity_values('recipe_keyword', None)
+        ingredient = next(tracker.get_latest_entity_values('ingredient'), None)
+        print(ingredient)
         
-        recipe_results = dataset.search_by_keyword(recipe_keyword)
+        recipes_ids = dataset.search_by_ingredients([ingredient])
 
-        if len(recipe_results) == 0:
-            dispatcher.utter_message(template='utter_recipe_not_found')
+        if len(recipes_ids) == 0:
+            dispatcher.utter_message(response='utter_recipe_not_found')
         else:
-            dispatcher.utter_message(template='utter_recipe_found')
-            return [SlotSet('found_recipes', recipe_results)]
+            recipe = dataset.get_recipe(recipes_ids[0])
+            print(recipe.title)
+            dispatcher.utter_message(response='utter_recipe_found', recipe_title=recipe.title)
+            return []# [SlotSet('found_recipes', recipe_results)]
 
 
 

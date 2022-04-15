@@ -7,6 +7,9 @@ intents:
   - affirm
   - deny
   - search_by_keyword
+  - search_by_ingredients:
+      use_entities: 
+        - ingredient
 
 # Responses
 responses:
@@ -17,7 +20,7 @@ responses:
   - text: "Bye!"
 
   utter_recipe_found:
-  - text: "I found a recipe for {recipe_title}, would you like to know more?"
+  - text: "I found a recipe for \"{recipe_title}\", would you like to know more?"
 
   utter_recipe_not_found:
   - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
@@ -29,7 +32,6 @@ actions:
 
 # Entities
 entities:
-  - recipe_title
   - recipe_keyword
   - ingredient
 
