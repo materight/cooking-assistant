@@ -2,27 +2,28 @@
 |entities.chatette
 
 //================== Intent definitions =======================
-%[greet](10)
+%[greet](20)
     ~[&greet]
 
-%[goodbye](10)
+%[goodbye](20)
     ~[&goodbye]
 
-%[affirm](10)
+%[affirm](20)
     ~[&affirm] ~[thanks?]
 
-%[deny](10)
+%[deny](20)
     ~[&deny] ~[thanks?]
 
-%[next](10)
+%[next](20)
     ~[&affirm?] ~[next] ~[thanks?]
 
 %[search_by_keyword](50)
     ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[time?].
     ~[&greet?] ~[can you] ~[please?] ~[search] @[recipe_keyword] recipes?
-    ~[&greet?] ~[can you] ~[please?] ~[search] recipes for @[recipe_keyword]?
+    ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
     ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
 
 %[search_by_ingredients](50)
-    ~[&greet?] ~[i want to] ~[eat] ~[something] ~[containing] @[ingredient] ~[time?].
+    ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient] ~[time?].
+    ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] with @[ingredient]?
 
