@@ -62,7 +62,7 @@ class ActionListStepsLoop(FormValidationAction):
     def name(self) -> Text:
         return 'validate_list_steps_loop'
 
-    def validate_feedback(self, value, dispatcher, tracker, domain):
+    def validate_list_steps_done(self, value, dispatcher, tracker, domain):
         current_recipe_id = tracker.get_slot('current_recipe_id')
         current_step_idx = tracker.get_slot('current_step_idx')
         current_step_idx += 1 # Go to the next step
@@ -73,9 +73,9 @@ class ActionListStepsLoop(FormValidationAction):
             return dict(current_step_idx=-1, list_steps_done=True)
         else:
             # Read next step
-            current_step_descr = recipe.steps[current_step_idx]
+            current_step_descr = recipe.steps[current_step_idx].description
             if current_step_idx == 0:
                 dispatcher.utter_message(response='utter_list_steps/first', step_description=current_step_descr)
             else:
                 dispatcher.utter_message(response='utter_list_steps/next', step_description=current_step_descr)
-            return dict(current_step_idx=current_step_idx)
+            return dict(current_step_idx=current_step_idx, list_steps_done=None)

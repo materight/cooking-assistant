@@ -87,13 +87,19 @@ slots:
     initial_value: -1
     mappings:
     - type: custom
-      action: action_search_by_ingredients
+      action: validate_list_steps_loop
 
   list_steps_done:
     type: bool
     mappings:
-    - type: custom
-      action: action_search_by_ingredients
+    - type: from_trigger_intent
+      intent: affirm
+      value: true
+    - type: from_intent
+      intent: next
+      value: true
+      conditions:
+      - active_loop: list_steps_loop
 
 # Forms
 forms:
