@@ -2,17 +2,6 @@ version: "3.1"
 
 stories:
 
-- story: search for a recipe by keyword
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: search_by_keyword
-    entities:
-      - recipe_keyword
-  - action: action_search_by_keyword
-
-
-
 - story: search for a recipe by ingredients
   steps:
   - intent: greet
@@ -21,3 +10,10 @@ stories:
     entities:
       - ingredient
   - action: action_search_by_ingredients
+  - slot_was_set:
+      - found_recipes_ids: [1, 2, 3]
+      - current_recipe_id: 0
+  - intent: affirm
+  - action: action_list_ingredients
+  - intent: goodbye
+  - action: utter_goodbye  

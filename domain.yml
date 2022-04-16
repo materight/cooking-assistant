@@ -7,9 +7,6 @@ intents:
   - affirm
   - deny
   - next
-  - search_by_keyword:
-      use_entities:
-        - recipe_keyword
   - search_by_ingredients:
       use_entities:
         - ingredient
@@ -29,7 +26,7 @@ responses:
   - text: "Bye!"
 
   utter_search_recipe/found:
-  - text: "I found a recipe for \"{recipe_title}\", would you like to know more or look at some alternatives?"
+  - text: "I found a recipe for \"{recipe_title}\", would you like to know more?"
 
   utter_search_recipe/alternatives:
   - text: "Here are the other recipes I was able to find:\n{recipes_list}. Which recipe would you like to know more about?"
@@ -63,18 +60,12 @@ responses:
   
 # Actions
 actions:
-  - action_search_by_keyword
   - action_search_by_ingredients
-  - action_list_alternatives
-  - action_select_recipe
   - action_list_ingredients
-  - action_read_step
 
 # Entities
 entities:
-  - recipe_keyword
   - ingredient
-  - recipe_index
 
 # Slots
 slots:
@@ -82,19 +73,13 @@ slots:
     type: list
     mappings:
     - type: custom
-      action: action_search_by_keyword
+      action: action_search_by_ingredients
+
   current_recipe_id:
     type: text
     mappings:
     - type: custom
-      action: action_select_recipe
-  current_step_index:
-    type: text
-    initial_value: -1
-    mappings:
-    - type: custom
-      action: action_read_step
-
+      action: action_search_by_ingredients
 
 # Other configs
 session_config:

@@ -14,6 +14,9 @@
 %[deny](10)
     ~[&deny] ~[thanks?]
 
+%[next](10)
+    ~[&affirm?] ~[next] ~[thanks?]
+
 %[search_by_keyword](50)
     ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[time?].
     ~[&greet?] ~[can you] ~[please?] ~[search] @[recipe_keyword] recipes?

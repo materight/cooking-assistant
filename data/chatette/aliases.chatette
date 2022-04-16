@@ -11,6 +11,9 @@
 ~[deny]
     [n|no|nope]
 
+~[next]
+    [next|I'm done|done|finished|proceed|go on]
+
 ~[please]
     [please]
 

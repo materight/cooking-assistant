@@ -1,6 +1,7 @@
 
 import os
 import yaml
+import numpy as np
 import pandas as pd
 from dataclasses import dataclass
 from typing import List, Text, Optional
@@ -14,7 +15,12 @@ class Ingredient:
     amount: Optional[float]
     unit: Optional[Text]
     def __str__(self) -> str:
-        return f'{self.amount} {self.unit} {self.name}'
+        res = ''
+        if not np.isnan(self.amount): res += f'{self.amount:{ ".0f" if self.amount.is_integer else ".2f"}}'
+        if self.unit is not None: res += f'{self.unit}'
+        if len(res) > 0: res += ' '
+        res += self.name
+        return res
 
 @dataclass
 class Step:
@@ -22,7 +28,7 @@ class Step:
     step_index: int
     description: Text
     def __str__(self) -> str:
-        return f'{self.description}'
+        return self.description
 
 @dataclass
 class Recipe:
