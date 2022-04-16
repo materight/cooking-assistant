@@ -5,3 +5,4 @@ __pycache__
 .cache
 models
 data/chatette/.out
+story_graph.dot
