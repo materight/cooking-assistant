@@ -6,42 +6,95 @@ intents:
   - goodbye
   - affirm
   - deny
-  - search_by_keyword
+  - next
+  - search_by_keyword:
+      use_entities:
+        - recipe_keyword
   - search_by_ingredients:
-      use_entities: 
+      use_entities:
         - ingredient
+
 
 # Responses
 responses:
   utter_greet:
   - text: "Hi! What would you like me to do?"
+  - text: "Hello! What can I do for you today?"
+
+  utter_info:
+  - text: "I can help you find cooking recipes."
 
   utter_goodbye:
+  - text: "Thanks for talking with me. Bye!"
   - text: "Bye!"
 
-  utter_recipe_found:
-  - text: "I found a recipe for \"{recipe_title}\", would you like to know more?"
+  utter_search_recipe/found:
+  - text: "I found a recipe for \"{recipe_title}\", would you like to know more or look at some alternatives?"
 
-  utter_recipe_not_found:
+  utter_search_recipe/alternatives:
+  - text: "Here are the other recipes I was able to find:\n{recipes_list}. Which recipe would you like to know more about?"
+
+  utter_search_recipe/not_found:
   - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
 
+  utter_search_recipe/no_alternatives:
+  - text: "Sorry I wasn't able to find any alternative. Would you like to search for something else?"
+
+  utter_ask_people_count:
+  - text: "Great! How many people are you cooking for?"
+  - text: "Thank you. How many people will be eating?"
+
+  utter_list_ingredients:
+  - text: "Here are the ingredients you'll need for this recipe:\n{ingredients_list}\nDo you have everything ready?"
+
+  utter_list_steps/first:
+  - text: "Ok let's start! First, {step_description}. Let me know when you're done."
+  - text: "Let's cook. To begin, {step_description}. Tell me when you're ready for the next step"
+
+  utter_list_steps/next:
+  - text: "{step_description}"
+  - text: "Perfect, now {step_description}"
+  - text: "Then {step_description}"
+  - text: "Now {step_description}"
+
+  utter_list_steps/end:
+  - text: "Great! That was the last step, enjoy your meal!"
+  - text: "And we are done! Have a nice meal!"
+  
 # Actions
 actions:
   - action_search_by_keyword
   - action_search_by_ingredients
+  - action_list_alternatives
+  - action_select_recipe
+  - action_list_ingredients
+  - action_read_step
 
 # Entities
 entities:
   - recipe_keyword
   - ingredient
+  - recipe_index
 
 # Slots
-# slots:
-#   recipe_keyword:
-#     type: text
-#     mappings:
-#     - type: from_entity
-#       entity: recipe_keyword
+slots:
+  found_recipes_ids:
+    type: list
+    mappings:
+    - type: custom
+      action: action_search_by_keyword
+  current_recipe_id:
+    type: text
+    mappings:
+    - type: custom
+      action: action_select_recipe
+  current_step_index:
+    type: text
+    initial_value: -1
+    mappings:
+    - type: custom
+      action: action_read_step
+
 
 # Other configs
 session_config:
