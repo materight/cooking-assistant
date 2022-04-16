@@ -62,6 +62,7 @@ responses:
 actions:
   - action_search_by_ingredients
   - action_list_ingredients
+  - validate_list_steps_loop
 
 # Entities
 entities:
@@ -80,6 +81,26 @@ slots:
     mappings:
     - type: custom
       action: action_search_by_ingredients
+
+  current_step_idx:
+    type: text
+    initial_value: -1
+    mappings:
+    - type: custom
+      action: action_search_by_ingredients
+
+  list_steps_done:
+    type: bool
+    mappings:
+    - type: custom
+      action: action_search_by_ingredients
+
+# Forms
+forms:
+  list_steps_loop:
+    required_slots:
+      - current_step_idx
+      - list_steps_done
 
 # Other configs
 session_config:

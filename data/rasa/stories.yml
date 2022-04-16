@@ -11,9 +11,12 @@ stories:
       - ingredient
   - action: action_search_by_ingredients
   - slot_was_set:
-      - found_recipes_ids: [1, 2, 3]
-      - current_recipe_id: 0
+      - found_recipes_ids
+      - current_recipe_id
   - intent: affirm
   - action: action_list_ingredients
+  - intent: affirm
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
   - intent: goodbye
   - action: utter_goodbye  

@@ -2,7 +2,7 @@
 import logging
 from typing import Any, Text, Dict, List
 
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -23,13 +23,12 @@ class ActionSearchByIngredients(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         ingredients = list(tracker.get_latest_entity_values('ingredient'))
-        
+        logger.info('Search recipe for ingredients %s', ingredients)
         if len(ingredients) == 0:
             dispatcher.utter_message(response='utter_search_recipe/not_found')
             return []
-        
         recipes_ids = dataset.search_by_ingredients(ingredients)
-
+        logger.info('Found %d recipes',len(recipes_ids))
         if len(recipes_ids) == 0:
             dispatcher.utter_message(response='utter_search_recipe/not_found')
             return []
@@ -56,3 +55,27 @@ class ActionListIngredients(Action):
             dispatcher.utter_message(response='utter_search_recipe/not_found')
         return []
 
+
+class ActionListStepsLoop(FormValidationAction):
+    """Form validator to read step-by-step the instructions for a recipe."""
+
+    def name(self) -> Text:
+        return 'validate_list_steps_loop'
+
+    def validate_feedback(self, value, dispatcher, tracker, domain):
+        current_recipe_id = tracker.get_slot('current_recipe_id')
+        current_step_idx = tracker.get_slot('current_step_idx')
+        current_step_idx += 1 # Go to the next step
+        recipe = dataset.get_recipe(current_recipe_id)
+        if current_step_idx >= len(recipe.steps):
+            # All the steps have been read
+            dispatcher.utter_message(response='utter_list_steps/end', step_description=current_step_descr)
+            return dict(current_step_idx=-1, list_steps_done=True)
+        else:
+            # Read next step
+            current_step_descr = recipe.steps[current_step_idx]
+            if current_step_idx == 0:
+                dispatcher.utter_message(response='utter_list_steps/first', step_description=current_step_descr)
+            else:
+                dispatcher.utter_message(response='utter_list_steps/next', step_description=current_step_descr)
+            return dict(current_step_idx=current_step_idx)
