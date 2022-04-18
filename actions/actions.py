@@ -46,9 +46,10 @@ class ActionListIngredients(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         current_recipe_id = tracker.get_slot('current_recipe_id')
+        logger.info('Listing ingredients for recipe %s', current_recipe_id)
         if current_recipe_id is not None:
-            logger.info('Listing ingredients for recipe %s', current_recipe_id)
             recipe = dataset.get_recipe(current_recipe_id)
+            logger.info('Found %d ingredients', len(recipe.ingredients))
             ingredients_list = '\n'.join([ f'  - {i}' for i in recipe.ingredients ])
             dispatcher.utter_message(response='utter_list_ingredients', ingredients_list=ingredients_list)
         else:
@@ -62,18 +63,20 @@ class ActionListStepsLoop(FormValidationAction):
     def name(self) -> Text:
         return 'validate_list_steps_loop'
 
-    def validate_list_steps_done(self, value, dispatcher, tracker, domain):
+    def validate_list_steps_done(self, value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> Dict[Text, Any]:
         current_recipe_id = tracker.get_slot('current_recipe_id')
         current_step_idx = tracker.get_slot('current_step_idx')
         current_step_idx += 1 # Go to the next step
         recipe = dataset.get_recipe(current_recipe_id)
+        logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), current_recipe_id)
         if current_step_idx >= len(recipe.steps):
             # All the steps have been read
-            dispatcher.utter_message(response='utter_list_steps/end', step_description=current_step_descr)
+            dispatcher.utter_message(response='utter_list_steps/end')
             return dict(current_step_idx=-1, list_steps_done=True)
         else:
             # Read next step
             current_step_descr = recipe.steps[current_step_idx].description
+            current_step_descr = current_step_descr[0].lower() + current_step_descr[1:]
             if current_step_idx == 0:
                 dispatcher.utter_message(response='utter_list_steps/first', step_description=current_step_descr)
             else:

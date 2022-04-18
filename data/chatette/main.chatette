@@ -25,5 +25,7 @@
 
 %[search_by_ingredients](50)
     ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient] ~[time?].
-    ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] with @[ingredient]?
+    ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
 
+%[people_count](10)
+    @[CARDINAL] [people?]

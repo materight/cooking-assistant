@@ -10,7 +10,9 @@ intents:
   - search_by_ingredients:
       use_entities:
         - ingredient
-
+  - people_count:
+      use_entities:
+        - CARDINAL
 
 # Responses
 responses:
@@ -45,11 +47,11 @@ responses:
   - text: "Here are the ingredients you'll need for this recipe:\n{ingredients_list}\nDo you have everything ready?"
 
   utter_list_steps/first:
-  - text: "Ok let's start! First, {step_description}. Let me know when you're done."
-  - text: "Let's cook. To begin, {step_description}. Tell me when you're ready for the next step"
+  - text: "Ok let's start! First, {step_description} Let me know when you're done."
+  - text: "Let's cook. To begin, {step_description} Tell me when you're ready for the next step"
 
   utter_list_steps/next:
-  - text: "{step_description}"
+  - text: "Great, now please {step_description}"
   - text: "Perfect, now {step_description}"
   - text: "Then {step_description}"
   - text: "Now {step_description}"
@@ -74,30 +76,33 @@ slots:
     type: list
     mappings:
     - type: custom
-      action: action_search_by_ingredients
 
   current_recipe_id:
-    type: text
+    type: any
     mappings:
     - type: custom
-      action: action_search_by_ingredients
+
+  people_count:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: CARDINAL
 
   current_step_idx:
-    type: text
+    type: any
     initial_value: -1
     mappings:
     - type: custom
-      action: validate_list_steps_loop
 
   list_steps_done:
     type: bool
     mappings:
-    - type: from_trigger_intent
+    - type: from_trigger_intent # affirm intent that triggers form
       intent: affirm
-      value: true
+      value: false # Set slot value so that validate_list_steps_loop is triggered
     - type: from_intent
       intent: next
-      value: true
+      value: false # Set slot value so that validate_list_steps_loop is triggered
       conditions:
       - active_loop: list_steps_loop
 

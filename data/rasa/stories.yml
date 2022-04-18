@@ -2,7 +2,7 @@ version: "3.1"
 
 stories:
 
-- story: search for a recipe by ingredients
+- story: Search for a recipe by ingredients
   steps:
   - intent: greet
   - action: utter_greet
@@ -11,12 +11,18 @@ stories:
       - ingredient
   - action: action_search_by_ingredients
   - slot_was_set:
-      - found_recipes_ids
-      - current_recipe_id
+    - found_recipes_ids
+    - current_recipe_id
+  - checkpoint: recipe_selected
+  
+  
+- story: Read recipe details
+  steps:
+  - checkpoint: recipe_selected  
   - intent: affirm
+  - action: utter_ask_people_count
+  - intent: people_count
   - action: action_list_ingredients
   - intent: affirm
   - action: list_steps_loop
   - active_loop: list_steps_loop
-  - intent: goodbye
-  - action: utter_goodbye  

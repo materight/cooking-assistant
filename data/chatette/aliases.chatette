@@ -1,24 +1,49 @@
 //================== Alias definitions =======================
 ~[greet]
-    [hi|hello|hey|hello there|good morning|good evening]
+    hi
+    hello
+    hey
+    hello there
+    good morning
+    good evening
 
 ~[goodbye]
-    [goodbye|by|see you|that's it]
+    goodbye
+    bye
+    see you
+    that's it
 
 ~[affirm]
-    [y|yes|yeah|yep|sure|ok]
+    y
+    yes
+    yeah
+    yep
+    sure
+    ok
+    okay
 
 ~[deny]
-    [n|no|nope]
+    n
+    no
+    nope
+    nah
+    not
 
 ~[next]
-    [next|I'm done|done|finished|proceed|go on]
+    next
+    next step
+    done
+    I'm done
+    finished
+    proceed
+    go on
 
 ~[please]
-    [please]
+    please
 
 ~[thanks]
-    [thanks|thank you]
+    thanks
+    thank you
 
 ~[search]
     search [for?]
@@ -52,6 +77,7 @@
 ~[containing]
     containing
     with
+    using
 
 ~[eat]
     eat
@@ -66,3 +92,9 @@
     for dinner
     this morning
     this evening
+
+~[people]
+    people
+    persons
+    friends
+    relatives

@@ -10,3 +10,13 @@ rules:
     steps:
     - intent: goodbye
     - action: utter_goodbye
+
+  # - rule: Interruption on reading step loop
+  #   condition:
+  #   - active_loop: list_steps_loop
+  #   steps:
+  #   - intent: chitchat
+  #   - action: utter_chitchat
+  #   # Return to loop after handling the interruption intent
+  #   - action: list_steps_loop
+  #   - active_loop: list_steps_loop

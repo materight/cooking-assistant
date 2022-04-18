@@ -3,3 +3,12 @@
 
 @[ingredient]
     egg
+
+// Use spacy named entity recognition to extract numbers
+@[CARDINAL]
+    1
+    one
+    2
+    two
+    3
+    three
