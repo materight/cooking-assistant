@@ -81,7 +81,7 @@ class ActionListStepsLoop(FormValidationAction):
         return 'validate_list_steps_loop'
 
     def validate_list_steps_done(self, value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> Dict[Text, Any]:
-        recipe = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
+        recipe = tracker.get_slot('current_recipe') # TODO: handle None recipe
         current_step_idx = tracker.get_slot('current_step_idx')
         current_step_idx += 1 # Go to the next step
         logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), recipe.id)
