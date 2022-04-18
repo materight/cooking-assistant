@@ -26,7 +26,7 @@ with open(os.path.join(DATA_DIR, 'rasa', 'ingredients.yml'), 'w', encoding='utf-
     # Write ingredients in rasa format (with yaml.dump is not possible to get the correct formatting)
     file.write('version: \'3.1\'\n'
                'nlu:\n'
-               '- lookup: ingredients\n'
+               '- lookup: ingredient\n'
                '  examples: |\n')
     for ingredient in dataset.ingredients:
         file.write(f'    - {ingredient}\n')

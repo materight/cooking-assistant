@@ -12,6 +12,7 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
+
   # - rule: Interruption on reading step loop
   #   condition:
   #   - active_loop: list_steps_loop

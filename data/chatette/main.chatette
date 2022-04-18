@@ -3,6 +3,8 @@
 |aliases.chatette
 |entities.chatette
 
+//================== Intents definitions =======================
+
 %[greet](20)
     ~[&greet]
 
@@ -14,6 +16,9 @@
 
 %[deny](20)
     ~[&deny] ~[thanks?]
+
+%[idk](20)
+    ~[&affirm?] ~[idk]
 
 %[next](20)
     ~[&affirm?] ~[next] ~[thanks?]

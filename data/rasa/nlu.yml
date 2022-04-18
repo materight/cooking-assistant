@@ -68,137 +68,159 @@ nlu:
     - N thank you
     - nope thanks
     - Nope thank you
+- intent: idk
+  examples: |
+    - Iam not sure
+    - Ok do no know
+    - Sure do no know
+    - Yeah iam not sure
+    - Yep boh
+    - Yep do no know
+    - Yep not sure
+    - don't know
+    - i do no know
+    - i don't know
+    - iam not sure
+    - idk
+    - okay Iam not sure
+    - sure idk
+    - sure not sure
+    - y boh
+    - yeah boh
+    - yes boh
+    - yes i don't know
+    - yes idk
 - intent: next
   examples: |
-    - I'm done
-    - I'm done thanks
-    - Ok done thanks
-    - Okay done
-    - Yeah I'm done
-    - Yep next step thank you
+    - Iam done thanks
+    - Okay done thanks
+    - Sure next thank you
+    - Y next step
+    - Yeah go on thank you
+    - Yeah next step
+    - Yep done
     - done
-    - done thank you
-    - finished
-    - finished thanks
-    - go on
-    - go on thank you
-    - go on thanks
+    - iam done thank you
+    - next step
+    - next thank you
     - ok done
-    - ok go on
-    - ok next step
+    - proceed
     - sure go on thank you
-    - sure proceed
-    - yeah I'm done thanks
+    - yeah done
+    - yeah iam done
     - yep done
+    - yep proceed
+    - yes next step
+    - yes proceed thanks
 - intent: search_by_keyword
   examples: |
-    - Good evening can you please search something for [pizza](recipe_keyword)?
-    - Good morning I want to taste [pizza](recipe_keyword).
-    - Good morning I'd really love to taste [pizza](recipe_keyword).
-    - Good morning i'd really love to taste [pizza](recipe_keyword).
-    - Hello may you please find how to make [pizza](recipe_keyword)?
-    - Hello may you please search food for [pizza](recipe_keyword)?
+    - Good evening I want to eat [pizza](recipe_keyword).
+    - Good evening may you please find how to cook a [pizza](recipe_keyword)?
+    - Good evening may you please search something for [pizza](recipe_keyword)?
+    - Good evening would you find me [pizza](recipe_keyword) recipes?
+    - Hello may you search [pizza](recipe_keyword) recipes?
     - Hello there I want to taste [pizza](recipe_keyword).
-    - Hey I'd really love to try [pizza](recipe_keyword).
-    - Hey could you please find how to cook a [pizza](recipe_keyword)?
-    - Hi I'd like to taste [pizza](recipe_keyword).
-    - Hi can you search for recipe for [pizza](recipe_keyword)?
-    - I would really like to eat [pizza](recipe_keyword).
-    - I'd like to try [pizza](recipe_keyword).
-    - can you find me [pizza](recipe_keyword) recipes?
+    - Hello there could you please find recipe for [pizza](recipe_keyword)?
+    - Hey could you please find me how to make [pizza](recipe_keyword)?
+    - Hey would you please find me something for [pizza](recipe_keyword)?
+    - I 'd really love to try [pizza](recipe_keyword) today.
+    - I want to taste [pizza](recipe_keyword) for breakfast.
+    - I would really like to taste [pizza](recipe_keyword).
+    - can you please find me how to cook [pizza](recipe_keyword)?
     - can you please search food for [pizza](recipe_keyword)?
-    - can you search for how to bake a [pizza](recipe_keyword)?
-    - can you search for how to make [pizza](recipe_keyword)?
-    - can you search recipe for [pizza](recipe_keyword)?
-    - could you find me something for [pizza](recipe_keyword)?
-    - could you please find how to bake a [pizza](recipe_keyword)?
-    - could you please search for [pizza](recipe_keyword) recipes?
-    - could you search for how to cook a [pizza](recipe_keyword)?
-    - could you search for [pizza](recipe_keyword) recipes?
-    - could you search how to bake a [pizza](recipe_keyword)?
-    - good evening can you please search for recipe for [pizza](recipe_keyword)?
-    - good evening could you find how to cook a [pizza](recipe_keyword)?
-    - good morning I would really love to eat [pizza](recipe_keyword) this morning.
-    - good morning may you find [pizza](recipe_keyword) recipes?
-    - hello could you find how to cook [pizza](recipe_keyword)?
-    - hello could you please search for recipe for [pizza](recipe_keyword)?
-    - hello could you search [pizza](recipe_keyword) recipes?
-    - hello i'd love to taste [pizza](recipe_keyword) this evening.
-    - hello may you please find me how to make [pizza](recipe_keyword)?
-    - hello there can you please search for [pizza](recipe_keyword) recipes?
-    - hello there could you please find [pizza](recipe_keyword) recipes?
-    - hello there may you find me recipe for [pizza](recipe_keyword)?
-    - hey can you please search recipe for [pizza](recipe_keyword)?
-    - hi could you search for how to bake a [pizza](recipe_keyword)?
-    - hi i'd love to taste [pizza](recipe_keyword).
-    - i want to eat [pizza](recipe_keyword) this morning.
-    - i want to eat [pizza](recipe_keyword) tomorrow.
-    - i want to try [pizza](recipe_keyword) for dinner.
-    - i want to try [pizza](recipe_keyword).
-    - i would love to taste [pizza](recipe_keyword) for breakfast.
-    - may you find me how to cook a [pizza](recipe_keyword)?
-    - may you please find food for [pizza](recipe_keyword)?
-    - may you please search for food for [pizza](recipe_keyword)?
-    - may you please search [pizza](recipe_keyword) recipes?
-    - may you search for [pizza](recipe_keyword) recipes?
-    - may you search how to prepare [pizza](recipe_keyword)?
+    - can you please search for recipe for [pizza](recipe_keyword)?
+    - can you please search how to make a [pizza](recipe_keyword)?
+    - can you please search how to make [pizza](recipe_keyword)?
+    - can you search for [pizza](recipe_keyword) recipes?
+    - could you please find me food for [pizza](recipe_keyword)?
+    - could you please search recipe for [pizza](recipe_keyword)?
+    - good evening would you search for how to cook [pizza](recipe_keyword)?
+    - good morning i 'd love to try [pizza](recipe_keyword).
+    - good morning may you find me how to bake [pizza](recipe_keyword)?
+    - good morning would you please find how to bake [pizza](recipe_keyword)?
+    - hello I want to taste [pizza](recipe_keyword) today.
+    - hello I want to try [pizza](recipe_keyword) today.
+    - hello could you please find food for [pizza](recipe_keyword)?
+    - hello there can you find me how to make [pizza](recipe_keyword)?
+    - hello there could you find me how to cook [pizza](recipe_keyword)?
+    - hello there would you please search how to cook a [pizza](recipe_keyword)?
+    - hey I would really love to eat [pizza](recipe_keyword) today.
+    - hey could you find me [pizza](recipe_keyword) recipes?
+    - hey i want to eat [pizza](recipe_keyword) today.
+    - hey may you find me how to prepare [pizza](recipe_keyword)?
+    - i 'd love to try [pizza](recipe_keyword).
+    - i 'd really like to eat [pizza](recipe_keyword).
+    - i want to taste [pizza](recipe_keyword).
+    - i would really love to taste [pizza](recipe_keyword) today.
+    - i would really love to taste [pizza](recipe_keyword).
+    - may you please find me how to bake a [pizza](recipe_keyword)?
+    - may you please find me something for [pizza](recipe_keyword)?
+    - may you please search for [pizza](recipe_keyword) recipes?
+    - may you search [pizza](recipe_keyword) recipes?
+    - may you search something for [pizza](recipe_keyword)?
+    - would you find me food for [pizza](recipe_keyword)?
+    - would you please search how to prepare a [pizza](recipe_keyword)?
+    - would you search for how to make [pizza](recipe_keyword)?
+    - would you search for [pizza](recipe_keyword) recipes?
+    - would you search for something for [pizza](recipe_keyword)?
+    - would you search recipe for [pizza](recipe_keyword)?
 - intent: search_by_ingredients
   examples: |
+    - Good evening I 'd really love to eat something using [egg](ingredient) this dinner.
     - Good evening can you search for food using [egg](ingredient)?
-    - Good morning I want to taste something using [egg](ingredient).
-    - Good morning could you search recipe using [egg](ingredient)?
-    - Good morning i would really like to eat something containing [egg](ingredient).
-    - Hello i would really love to eat something with [egg](ingredient) [egg](ingredient) for breakfast.
-    - Hello there i'd like to try food with [egg](ingredient).
-    - Hello there i'd really love to eat food containing [egg](ingredient) and [egg](ingredient).
-    - Hey can you please find me recipe using [egg](ingredient)?
-    - Hey could you please find me food with [egg](ingredient)?
-    - Hey i'd really like to eat food with [egg](ingredient) [egg](ingredient) today.
-    - Hey i'd really love to taste recipe using [egg](ingredient) for breakfast.
-    - I want to taste something using [egg](ingredient).
-    - I want to try something containing [egg](ingredient) for breakfast.
-    - I would like to try recipe using [egg](ingredient).
-    - I would like to try something using [egg](ingredient) and [egg](ingredient).
-    - I'd like to try food using [egg](ingredient).
-    - I'd really like to eat food containing [egg](ingredient).
-    - I'd really love to eat food containing [egg](ingredient).
-    - can you find me food containing [egg](ingredient)?
-    - can you find recipe containing [egg](ingredient)?
-    - can you please search for something containing [egg](ingredient)?
-    - can you search something using [egg](ingredient)?
-    - could you please find something with [egg](ingredient)?
-    - could you please search something containing [egg](ingredient)?
-    - good evening I'd like to try something containing [egg](ingredient).
-    - good evening I'd love to taste recipe with [egg](ingredient) and [egg](ingredient) for breakfast.
-    - good evening I'd love to try something with [egg](ingredient) this morning.
-    - good evening can you find food with [egg](ingredient)?
-    - good evening may you search for recipe using [egg](ingredient)?
-    - good morning I'd like to taste something with [egg](ingredient) [egg](ingredient) for launch.
-    - good morning I'd really love to taste food containing [egg](ingredient) [egg](ingredient) for launch.
-    - hello can you please find me something using [egg](ingredient)?
-    - hello there I would love to eat recipe containing [egg](ingredient) for launch.
-    - hello there I'd like to try recipe using [egg](ingredient) for launch.
-    - hello there may you please find me food containing [egg](ingredient)?
-    - hello there may you please find something with [egg](ingredient)?
-    - hey can you please search for recipe containing [egg](ingredient)?
-    - hey i would like to taste food with [egg](ingredient) for launch.
-    - hi I'd love to taste recipe containing [egg](ingredient) this morning.
-    - hi could you search for something using [egg](ingredient)?
-    - hi i'd love to taste recipe using [egg](ingredient).
-    - i want to eat recipe containing [egg](ingredient) [egg](ingredient) for breakfast.
-    - i want to taste food using [egg](ingredient) today.
-    - i want to try something containing [egg](ingredient) [egg](ingredient) tomorrow.
-    - i would like to try something using [egg](ingredient).
-    - i would really like to eat food using [egg](ingredient).
-    - i'd really like to eat recipe with [egg](ingredient) for breakfast.
+    - Good evening could you please find food using [egg](ingredient)?
+    - Good evening would you please search something with [egg](ingredient)?
+    - Good morning could you search food using [egg](ingredient)?
+    - Hello i want to taste food using [egg](ingredient) [egg](ingredient).
+    - Hello there may you please search for food using [egg](ingredient)?
+    - Hey i want to taste something containing [egg](ingredient).
+    - I 'd really love to try food containing [egg](ingredient) tomorrow.
+    - I want to eat something using [egg](ingredient) for launch.
+    - I want to try recipe with [egg](ingredient) [egg](ingredient) tomorrow.
+    - I want to try something with [egg](ingredient) [egg](ingredient) this morning.
+    - I would like to eat recipe with [egg](ingredient) and [egg](ingredient) for evening.
+    - can you please search something containing [egg](ingredient)?
+    - could you find something containing [egg](ingredient)?
+    - could you search for recipe containing [egg](ingredient)?
+    - could you search something using [egg](ingredient)?
+    - good evening I 'd really like to try something with [egg](ingredient) for evening.
+    - good evening I want to try food containing [egg](ingredient).
+    - good evening i want to eat food with [egg](ingredient) [egg](ingredient) this morning.
+    - good morning I want to try something using [egg](ingredient) [egg](ingredient).
+    - good morning can you please find me recipe containing [egg](ingredient)?
+    - good morning could you find food using [egg](ingredient)?
+    - good morning could you find recipe using [egg](ingredient)?
+    - hello I want to try something with [egg](ingredient) this dinner.
+    - hello i want to eat food containing [egg](ingredient) tomorrow.
+    - hello may you find recipe with [egg](ingredient)?
+    - hello there I would love to eat something with [egg](ingredient) [egg](ingredient).
+    - hello would you find me recipe using [egg](ingredient)?
+    - hey I 'd really like to try recipe using [egg](ingredient) [egg](ingredient) for evening.
+    - hey i want to eat food using [egg](ingredient) tomorrow.
+    - hey would you find food with [egg](ingredient)?
+    - hi I 'd like to eat food using [egg](ingredient) and [egg](ingredient) for launch.
+    - hi i 'd love to eat food using [egg](ingredient).
+    - i 'd like to taste food containing [egg](ingredient).
+    - i 'd like to try something with [egg](ingredient) and [egg](ingredient).
+    - i 'd love to eat food using [egg](ingredient) and [egg](ingredient).
+    - i 'd love to eat recipe with [egg](ingredient) tomorrow.
+    - i want to taste something using [egg](ingredient) [egg](ingredient) today.
+    - i want to try something with [egg](ingredient) today.
+    - i would really like to taste food containing [egg](ingredient) today.
     - may you find me food containing [egg](ingredient)?
-    - may you find me something using [egg](ingredient)?
-    - may you search for food containing [egg](ingredient)?
+    - may you find me recipe containing [egg](ingredient)?
+    - may you please find something with [egg](ingredient)?
+    - may you please search recipe using [egg](ingredient)?
+    - may you search recipe with [egg](ingredient)?
+    - would you find food using [egg](ingredient)?
+    - would you please search food using [egg](ingredient)?
+    - would you please search for something with [egg](ingredient)?
+    - would you search food containing [egg](ingredient)?
 - intent: people_count
   examples: |
-    - [one](CARDINAL) persons
     - [one](CARDINAL) people
-    - [one](CARDINAL) person
-    - [one](CARDINAL) friends
-    - [one](CARDINAL) relatives
     - [one](CARDINAL)
+    - [one](CARDINAL) person
+    - [one](CARDINAL) relatives
+    - [one](CARDINAL) friends
+    - [one](CARDINAL) persons

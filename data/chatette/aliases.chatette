@@ -1,101 +1,65 @@
 //================== Alias definitions =======================
 ~[greet]
-    hi
-    hello
-    hey
-    hello there
-    good morning
-    good evening
+    {hi/hello/hey/hello there/good morning/good evening}
 
 ~[goodbye]
-    goodbye
-    bye
-    see you
-    that's it
+    {goodbye/bye/see you/that's it}
 
 ~[affirm]
-    y
-    yes
-    yeah
-    yep
-    sure
-    ok
-    okay
+    {y/yes/yeah/yep/sure/ok/okay}
 
 ~[deny]
-    n
-    no
-    nope
-    nah
-    not
+   {n/no/nope/nah/not}
+
+~[i am]
+    [&I]{'m/am}
+
+~[idk]
+    {idk/boh}
+    [&I?] {don't/do no} know
+    ~[i am?] not sure
 
 ~[next]
-    next
-    next step
-    done
-    I'm done
-    finished
-    proceed
-    go on
+    {next/next step/finished/proceed/go on}
+    ~[i am?] done
 
 ~[please]
-    please
+    {please}
+
+~[sorry]
+    {excuse me}
+    ~[i am?] sorry
+    
 
 ~[thanks]
-    thanks
-    thank you
+    {thanks/thank you}
 
 ~[search]
     search [for?]
     find [me?]
 
 ~[cook]
-    cook
-    prepare
-    make
-    bake
+    {cook/prepare/make/bake}
 
 ~[can you]
-    can you
-    could you
-    may you
+    {can you/could you/may you/would you}
 
 ~[i want to]
-    [&i] ~[want#no elision]
-    [&I]~[want#elision]
-~[want#no elision]
-    want to
-    would [really?] [like|love] to
-~[want#elision]
-    'd [really?] [like|love] to
+    [&I] {'d/would} [really?] [like|love] to
+    [&I] want to
 
 ~[recipe]
-    something
-    recipe
-    food
+    {recipe/something/food}
 
 ~[containing]
-    containing
-    with
-    using
+    {containing/with/using}
 
 ~[eat]
-    eat
-    try
-    taste
+    {eat/try/taste}
 
 ~[time]
-    today
-    tomorrow
-    for breakfast
-    for launch
-    for dinner
-    this morning
-    this evening
+    {today/tomorrow}
+    {for/this} {breakfast/launch/dinner/morning/evening}
 
 ~[people]
-    people
-    person
-    persons
-    friends
-    relatives
+    {people/person/persons/friends/relatives}
