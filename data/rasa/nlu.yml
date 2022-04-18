@@ -216,11 +216,67 @@ nlu:
     - would you please search food using [egg](ingredient)?
     - would you please search for something with [egg](ingredient)?
     - would you search food containing [egg](ingredient)?
+- intent: expected_time
+  examples: |
+    - thank you how long going to it take to prepare?
+    - how long time will it take to bake?
+    - thank you how much will it take to make?
+    - thanks how long going to it take to cook?
+    - thank you how long will it take to bake?
+    - thank you how much time gonna it take to cook?
+    - thank you how long time gonna it take to cook?
+    - thank you how much time 'll it take to make?
+    - how much to bake?
+    - thanks how much time to make?
+    - thank you how long gonna it take to make?
+    - thanks how long time going to it take to bake?
+    - how long time gonna it take to make?
+    - how much time gonna it take to cook?
+    - how much going to it take to prepare?
+    - thank you how long going to it take to cook?
+    - how much time gonna it take to bake?
+    - thank you how long will it take to cook?
+    - thanks how much to prepare?
+    - thanks how much time going to it take to make?
+    - how much gonna it take to cook?
+    - thanks how long time 'll it take to cook?
+    - thank you how long time to cook?
+    - thank you how much going to it take to bake?
+    - thanks how long gonna it take to bake?
+    - thanks how much to cook?
+    - thanks how much 'll it take to cook?
+    - thanks how long will it take to bake?
+    - thank you how much time going to it take to cook?
+    - thanks how much 'll it take to bake?
+    - how long time going to it take to prepare?
+    - thank you how long time will it take to prepare?
+    - thanks how long 'll it take to cook?
+    - thanks how much time gonna it take to prepare?
+    - thank you how long time will it take to make?
+    - thank you how much time gonna it take to make?
+    - thanks how much time gonna it take to make?
+    - how long will it take to bake?
+    - thanks how much time 'll it take to bake?
+    - how much time will it take to cook?
+    - thank you how much going to it take to make?
+    - thanks how long time will it take to cook?
+    - how much going to it take to make?
+    - thank you how long 'll it take to cook?
+    - thanks how much gonna it take to bake?
+    - how long 'll it take to make?
+    - thanks how long to cook?
+    - thanks how long to make?
+    - thanks how long gonna it take to cook?
+    - thank you how long time 'll it take to make?
 - intent: people_count
   examples: |
-    - [one](CARDINAL) people
+    - We [one](CARDINAL)
+    - We [one](CARDINAL) friends
+    - gonna be [one](CARDINAL) friends
     - [one](CARDINAL)
-    - [one](CARDINAL) person
-    - [one](CARDINAL) relatives
-    - [one](CARDINAL) friends
-    - [one](CARDINAL) persons
+    - thank you going to be [one](CARDINAL)
+    - thank you we will be [one](CARDINAL) relatives
+    - thank you will be [one](CARDINAL) person
+    - thanks We [one](CARDINAL)
+    - we going to be [one](CARDINAL)
+    - we [one](CARDINAL)

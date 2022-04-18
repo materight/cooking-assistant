@@ -24,14 +24,16 @@
     ~[&affirm?] ~[next] ~[thanks?]
 
 %[search_by_keyword](50)
-    ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[time?].
+    ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[day time?].
     ~[&greet?] ~[can you] ~[please?] ~[search] @[recipe_keyword] recipes?
     ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
     ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
 
 %[search_by_ingredients](50)
-    ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[time?].
+    ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].
     ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
 
+%[expected_time](50)
+    ~[thanks?] how {long/much} [time?] [~[will] it take?] to ~[cook]?
 %[people_count](10)
-    @[CARDINAL] ~[people?]
+    ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]

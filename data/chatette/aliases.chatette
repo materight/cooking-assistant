@@ -14,6 +14,9 @@
 ~[i am]
     [&I]{'m/ am}
 
+~[will]
+    {'ll/ will/ going to/ gonna}
+
 ~[idk]
     {idk/boh}
     [&I?] {don't/do no} know
@@ -56,7 +59,7 @@
 ~[eat]
     {eat/try/taste}
 
-~[time]
+~[day time]
     {today/tomorrow}
     {for/this} {breakfast/launch/dinner/morning/evening}
 

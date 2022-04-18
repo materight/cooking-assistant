@@ -13,17 +13,19 @@ stories:
   - action: action_search_by_ingredients
   - slot_was_set:
     - found_recipes_ids
-    - current_recipe_id
+    - current_recipe
   - checkpoint: recipe_selected
   
   
 - story: Read recipe details
   steps:
-  - checkpoint: recipe_selected  
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
   - intent: affirm
   - action: utter_ask_people_count
   - intent: people_count
   - action: action_list_ingredients
+  - action: utter_ask_start_cooking
   - intent: affirm
   - action: list_steps_loop
   - active_loop: list_steps_loop

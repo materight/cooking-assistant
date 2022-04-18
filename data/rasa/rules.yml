@@ -12,6 +12,22 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
+  - rule: Search by ingredients
+    steps:
+    - intent: search_by_ingredients
+    - action: action_search_by_ingredients
+    - action: utter_ask_want_more_info
+
+  - rule: Ask for expected preparation time
+    condition:
+    - slot_was_set:
+      - current_recipe
+    steps:
+    - intent: search_by_ingredients
+    - action: action_search_by_ingredients
+    - action: utter_ask_want_more_info
+
+
 
   # - rule: Interruption on reading step loop
   #   condition:
