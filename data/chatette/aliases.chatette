@@ -12,7 +12,7 @@
    {n/no/nope/nah/not}
 
 ~[i am]
-    [&I]{'m/am}
+    [&I]{'m/ am}
 
 ~[idk]
     {idk/boh}
@@ -30,7 +30,6 @@
     {excuse me}
     ~[i am?] sorry
     
-
 ~[thanks]
     {thanks/thank you}
 
@@ -45,7 +44,7 @@
     {can you/could you/may you/would you}
 
 ~[i want to]
-    [&I] {'d/would} [really?] [like|love] to
+    [&I]{'d/ would} [really?] [like|love] to
     [&I] want to
 
 ~[recipe]
