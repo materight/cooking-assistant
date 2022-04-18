@@ -1,6 +1,6 @@
 version: "3.1"
 
-# Intents
+# Intents, check https://rasa.com/docs/rasa/domain/#intents for more info
 intents:
   - greet
   - goodbye
@@ -8,13 +8,11 @@ intents:
   - deny
   - next
   - search_by_ingredients:
-      use_entities:
-        - ingredient
+      use_entities: [ ingredient ]
   - people_count:
-      use_entities:
-        - CARDINAL
+      use_entities: [ CARDINAL ]
 
-# Responses
+# Responses, check https://rasa.com/docs/rasa/responses for more info
 responses:
   utter_greet:
   - text: "Hi! What would you like me to do?"
@@ -60,17 +58,18 @@ responses:
   - text: "Great! That was the last step, enjoy your meal!"
   - text: "And we are done! Have a nice meal!"
   
-# Actions
+# Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
   - action_search_by_ingredients
   - action_list_ingredients
   - validate_list_steps_loop
 
-# Entities
+# Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
 entities:
   - ingredient
+  - CARDINAL
 
-# Slots
+# Slots, check https://rasa.com/docs/rasa/domain/#slots for more info
 slots:
   found_recipes_ids:
     type: list
@@ -87,6 +86,7 @@ slots:
     mappings:
     - type: from_entity
       entity: CARDINAL
+      intent: people_count
 
   current_step_idx:
     type: any
@@ -106,7 +106,7 @@ slots:
       conditions:
       - active_loop: list_steps_loop
 
-# Forms
+# Forms, check https://rasa.com/docs/rasa/forms for more info
 forms:
   list_steps_loop:
     required_slots:

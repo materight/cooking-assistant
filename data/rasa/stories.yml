@@ -1,5 +1,6 @@
 version: "3.1"
 
+# Training stories, check https://rasa.com/docs/rasa/stories/ for more info
 stories:
 
 - story: Search for a recipe by ingredients

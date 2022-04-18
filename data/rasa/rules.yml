@@ -1,5 +1,6 @@
 version: "3.1"
 
+# Rules, check https://rasa.com/docs/rasa/rules/ for more info
 rules:
   - rule: Say hello anytime the user says hello
     steps:

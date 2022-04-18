@@ -1,14 +1,10 @@
 @[recipe_keyword]
     pizza
 
+// Ingredients handled by a lookup table (no need for multiple examples)
 @[ingredient]
     egg
 
-// Use spacy named entity recognition to extract numbers
+// Use spacy named entity recognition to extract numbers (no need for multiple examples)
 @[CARDINAL]
-    1
     one
-    2
-    two
-    3
-    three

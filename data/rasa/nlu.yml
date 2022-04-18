@@ -144,65 +144,61 @@ nlu:
     - may you search how to prepare [pizza](recipe_keyword)?
 - intent: search_by_ingredients
   examples: |
-    - Good evening can you please search food containing [egg](ingredient)?
-    - Good evening can you please search something containing [egg](ingredient)?
+    - Good evening can you search for food using [egg](ingredient)?
     - Good morning I want to taste something using [egg](ingredient).
-    - Good morning I want to try something containing [egg](ingredient) for breakfast.
     - Good morning could you search recipe using [egg](ingredient)?
-    - Hello there I want to taste something with [egg](ingredient).
+    - Good morning i would really like to eat something containing [egg](ingredient).
+    - Hello i would really love to eat something with [egg](ingredient) [egg](ingredient) for breakfast.
     - Hello there i'd like to try food with [egg](ingredient).
-    - Hello there may you please find me food containing [egg](ingredient)?
-    - Hey I'd really like to taste recipe containing [egg](ingredient).
+    - Hello there i'd really love to eat food containing [egg](ingredient) and [egg](ingredient).
     - Hey can you please find me recipe using [egg](ingredient)?
-    - Hi can you please find me recipe using [egg](ingredient)?
-    - I would like to try something using [egg](ingredient) today.
-    - I would really like to eat food containing [egg](ingredient).
-    - I would really love to eat recipe containing [egg](ingredient).
-    - I'd like to try food containing [egg](ingredient).
-    - I'd like to try recipe using [egg](ingredient).
-    - I'd love to taste recipe containing [egg](ingredient).
-    - I'd love to taste something with [egg](ingredient).
+    - Hey could you please find me food with [egg](ingredient)?
+    - Hey i'd really like to eat food with [egg](ingredient) [egg](ingredient) today.
+    - Hey i'd really love to taste recipe using [egg](ingredient) for breakfast.
+    - I want to taste something using [egg](ingredient).
+    - I want to try something containing [egg](ingredient) for breakfast.
+    - I would like to try recipe using [egg](ingredient).
+    - I would like to try something using [egg](ingredient) and [egg](ingredient).
+    - I'd like to try food using [egg](ingredient).
     - I'd really like to eat food containing [egg](ingredient).
+    - I'd really love to eat food containing [egg](ingredient).
+    - can you find me food containing [egg](ingredient)?
     - can you find recipe containing [egg](ingredient)?
-    - can you please find something containing [egg](ingredient)?
     - can you please search for something containing [egg](ingredient)?
-    - can you please search recipe containing [egg](ingredient)?
-    - could you please find recipe using [egg](ingredient)?
+    - can you search something using [egg](ingredient)?
     - could you please find something with [egg](ingredient)?
     - could you please search something containing [egg](ingredient)?
     - good evening I'd like to try something containing [egg](ingredient).
-    - good evening i'd like to try something with [egg](ingredient) tomorrow.
-    - good morning I'd like to taste something with [egg](ingredient) this evening.
+    - good evening I'd love to taste recipe with [egg](ingredient) and [egg](ingredient) for breakfast.
+    - good evening I'd love to try something with [egg](ingredient) this morning.
+    - good evening can you find food with [egg](ingredient)?
+    - good evening may you search for recipe using [egg](ingredient)?
+    - good morning I'd like to taste something with [egg](ingredient) [egg](ingredient) for launch.
+    - good morning I'd really love to taste food containing [egg](ingredient) [egg](ingredient) for launch.
+    - hello can you please find me something using [egg](ingredient)?
+    - hello there I would love to eat recipe containing [egg](ingredient) for launch.
+    - hello there I'd like to try recipe using [egg](ingredient) for launch.
     - hello there may you please find me food containing [egg](ingredient)?
     - hello there may you please find something with [egg](ingredient)?
-    - hey can you find me recipe using [egg](ingredient)?
     - hey can you please search for recipe containing [egg](ingredient)?
-    - hey can you please search something with [egg](ingredient)?
-    - hey i would like to taste food with [egg](ingredient).
-    - hi can you find me food with [egg](ingredient)?
-    - hi can you find something using [egg](ingredient)?
+    - hey i would like to taste food with [egg](ingredient) for launch.
+    - hi I'd love to taste recipe containing [egg](ingredient) this morning.
     - hi could you search for something using [egg](ingredient)?
-    - hi could you search recipe using [egg](ingredient)?
-    - i want to eat food containing [egg](ingredient).
-    - i want to eat recipe containing [egg](ingredient) this evening.
-    - i want to eat recipe using [egg](ingredient) for launch.
-    - i would like to try recipe using [egg](ingredient).
+    - hi i'd love to taste recipe using [egg](ingredient).
+    - i want to eat recipe containing [egg](ingredient) [egg](ingredient) for breakfast.
+    - i want to taste food using [egg](ingredient) today.
+    - i want to try something containing [egg](ingredient) [egg](ingredient) tomorrow.
     - i would like to try something using [egg](ingredient).
-    - i'd like to try something containing [egg](ingredient) for launch.
-    - i'd love to eat something with [egg](ingredient).
-    - may you please find food containing [egg](ingredient)?
-    - may you please search for food containing [egg](ingredient)?
-    - may you please search for food using [egg](ingredient)?
-    - may you please search something containing [egg](ingredient)?
+    - i would really like to eat food using [egg](ingredient).
+    - i'd really like to eat recipe with [egg](ingredient) for breakfast.
+    - may you find me food containing [egg](ingredient)?
+    - may you find me something using [egg](ingredient)?
+    - may you search for food containing [egg](ingredient)?
 - intent: people_count
   examples: |
-    - [three](CARDINAL)
-    - [2](CARDINAL) people
-    - [1](CARDINAL) people
-    - [two](CARDINAL)
-    - [three](CARDINAL) people
-    - [1](CARDINAL)
-    - [3](CARDINAL)
+    - [one](CARDINAL) persons
     - [one](CARDINAL) people
-    - [2](CARDINAL)
-    - [two](CARDINAL) people
+    - [one](CARDINAL) person
+    - [one](CARDINAL) friends
+    - [one](CARDINAL) relatives
+    - [one](CARDINAL)

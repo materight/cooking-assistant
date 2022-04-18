@@ -1,7 +1,8 @@
+// Check https://github.com/SimGus/Chatette/blob/master/syntax-specs.md for syntax specs
+
 |aliases.chatette
 |entities.chatette
 
-//================== Intent definitions =======================
 %[greet](20)
     ~[&greet]
 
@@ -24,8 +25,8 @@
     ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
 
 %[search_by_ingredients](50)
-    ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient] ~[time?].
+    ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[time?].
     ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
 
 %[people_count](10)
-    @[CARDINAL] [people?]
+    @[CARDINAL] ~[people?]
