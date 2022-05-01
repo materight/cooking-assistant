@@ -68,6 +68,9 @@
 ~[recipe]
     {recipe/something/food}
 
+~[alternative]
+    {alternative/substitute/replacement/surrogate}
+
 ~[ingredient]
     {ingredient/item/thing/compononet}
 

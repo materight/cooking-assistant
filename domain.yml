@@ -11,6 +11,8 @@ intents:
       use_entities: [ ingredient ]
   - ask_ingredients_list
   - ask_expected_time
+  - ask_alternative_ingredient:
+      use_entities: [ ingredient ]
   - tell_people_count:
       use_entities: [ CARDINAL ]
   

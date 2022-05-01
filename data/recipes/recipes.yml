@@ -1,3 +1,5 @@
+# List of cooking recipes
+
 - title: Pasta Aglio e Olio
   prep_time: 15
   cook_time: 15
@@ -56,37 +58,6 @@
     add additional pasta water until you get a creamy consistency.
   - Check for seasoning and add salt and pepper if necessary.
   - Stir in the crispy bacon and garnish with parsley and additional cheese.
-
-- title: Frito Pie
-  prep_time: 0
-  cook_time: 30
-  servings: 6
-  ingredients:
-  - name: Fritos
-    amount: 400g
-  - name: ground beef
-    amount: 500g
-  - name: beans
-    amount: 450g
-  - name: salsa
-    amount: 50ml
-  - name: shredded cheese
-    amount: 225g
-  - name: chili powder
-    amount: null
-  - name: cumin
-    amount: null
-  steps:
-  - Preheat oven to 350°F (175°C).
-  - Brown ground beef in a skillet then add taco seasoning and a little bit of the
-    salsa to make it moist then set aside.
-  - In the same skillet heat up the refried beans until smooth and bubbling.
-  - In a greased glass baking dish, pour most of the fritos onto the bottom to make
-    an even layer.
-  - Sprinkle the ground beef on top followed by the beans.
-  - Dot the surface with some of the salsa and cover with most of the cheese.
-  - Add remainder of the Fritos along with more salsa and cheese.
-  - Bake for 20 minutes or until heated through.
 
 - title: Instant Pot White Rice
   prep_time: 0
@@ -296,7 +267,7 @@
   ingredients:
   - name: flour
     amount: 240ml
-  - name: sliced almonds
+  - name: almonds
     amount: 240ml
   - name: butter
     amount: 120ml

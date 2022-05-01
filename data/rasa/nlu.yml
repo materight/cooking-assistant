@@ -322,105 +322,105 @@ nlu:
     - how much time 'll it take to prepare?
 - intent: ask_alternative_ingredient
   examples: |
-    - I do not own any [egg](ingredient), what else can I utilize instead?
-    - I do not own any [egg](ingredient), what other ingredient may i use?
     - I do not possess any [egg](ingredient), what else can i use instead?
-    - I not have any [egg](ingredient), what can i utilize?
-    - I not have any [egg](ingredient), what else may i use instead?
-    - i do not own any [egg](ingredient), what would I utilize instead?
-    - i do not possess [egg](ingredient), what  thing can I utilize instead?
-    - i don't own any [egg](ingredient), what else can I use?
+    - I don't have any [egg](ingredient), what could I use?
+    - I not have any [egg](ingredient), what may I utilize instead?
+    - I not own any [egg](ingredient), what else can i use instead?
+    - i do not have [egg](ingredient), what else may i use instead?
+    - i do not possess any [egg](ingredient), what item would i utilize instead?
+    - i do not possess any [egg](ingredient), what would i utilize?
+    - i do not possess [egg](ingredient), what ingredient would i utilize instead?
+    - i don't possess any [egg](ingredient), what could i use instead?
     - i not own any [egg](ingredient), what else would i utilize?
-    - i not possess any [egg](ingredient), what may i employ?
-    - thank you I do not possess any [egg](ingredient), what other thing can I utilize?
-    - thank you I don't own [egg](ingredient), what else may I utilize?
-    - thank you I don't own [egg](ingredient), what other alternative could i utilize instead?
+    - thank you I do not own any [egg](ingredient), what compononet would I employ instead?
+    - thank you I don't have any [egg](ingredient), what would I use instead?
     - thank you I not have [egg](ingredient), what would I use?
-    - thank you i do not own any [egg](ingredient), what can I employ?
-    - thank you what  alternative may I employ instead of [egg](ingredient)?
-    - thank you what can I use instead of [egg](ingredient)?
-    - thank you what else would i use instead of [egg](ingredient)?
-    - thank you what is an alternative for [egg](ingredient)?
-    - thank you what other alternative would i utilize instead of [egg](ingredient)?
-    - thank you what other item would I use instead of [egg](ingredient)?
-    - thank you what's an alternative for [egg](ingredient)?
-    - thank you what's an alternative to [egg](ingredient)?
-    - thanks I do not have any [egg](ingredient), what else may I use?
-    - thanks I not possess [egg](ingredient), what could i employ?
-    - thanks i do not own [egg](ingredient), what else may I employ instead?
-    - thanks i not own any [egg](ingredient), what could I utilize?
-    - thanks what can I use instead of [egg](ingredient)?
-    - thanks what can i employ instead of [egg](ingredient)?
-    - thanks what could I employ instead of [egg](ingredient)?
-    - thanks what else may i use instead of [egg](ingredient)?
-    - thanks what is an alternative for [egg](ingredient)?
-    - thanks what is an alternative to [egg](ingredient)?
-    - thanks what may i use instead of [egg](ingredient)?
-    - thanks what's an alternative to [egg](ingredient)?
-    - what  alternative may I use instead of [egg](ingredient)?
-    - what else could I use instead of [egg](ingredient)?
-    - what else may I use instead of [egg](ingredient)?
-    - what else would i utilize instead of [egg](ingredient)?
-    - what is an alternative for [egg](ingredient)?
+    - thank you i don't possess [egg](ingredient), what else may i employ instead?
+    - thank you i not have any [egg](ingredient), what can i utilize?
+    - thank you what compononet can I employ instead of [egg](ingredient)?
+    - thank you what compononet may i employ instead of [egg](ingredient)?
+    - thank you what replacement can i employ instead of [egg](ingredient)?
+    - thank you what would I utilize instead of [egg](ingredient)?
+    - thank you what's an surrogate to [egg](ingredient)?
+    - thanks I do not have any [egg](ingredient), what would i employ instead?
+    - thanks I do not have [egg](ingredient), what thing may i use?
+    - thanks I do not possess any [egg](ingredient), what replacement could I use instead?
+    - thanks I not own any [egg](ingredient), what surrogate would i utilize?
+    - thanks i don't possess any [egg](ingredient), what would I utilize instead?
+    - thanks i don't possess [egg](ingredient), what may I use?
+    - thanks what can i utilize instead of [egg](ingredient)?
+    - thanks what compononet can i use instead of [egg](ingredient)?
+    - thanks what else would I employ instead of [egg](ingredient)?
+    - thanks what is an surrogate for [egg](ingredient)?
+    - thanks what may I utilize instead of [egg](ingredient)?
+    - thanks what substitute may I employ instead of [egg](ingredient)?
+    - thanks what's an alternative for [egg](ingredient)?
+    - thanks what's an replacement to [egg](ingredient)?
+    - thanks what's an substitute to [egg](ingredient)?
     - what is an alternative to [egg](ingredient)?
-    - what may I employ instead of [egg](ingredient)?
-    - what may I use instead of [egg](ingredient)?
-    - what other alternative could I employ instead of [egg](ingredient)?
-    - what other alternative would i use instead of [egg](ingredient)?
-    - what other thing can I employ instead of [egg](ingredient)?
-    - what other thing could i use instead of [egg](ingredient)?
+    - what is an replacement to [egg](ingredient)?
+    - what is an substitute for [egg](ingredient)?
+    - what is an substitute to [egg](ingredient)?
+    - what is an surrogate to [egg](ingredient)?
+    - what substitute may i employ instead of [egg](ingredient)?
+    - what surrogate can i utilize instead of [egg](ingredient)?
+    - what surrogate could i employ instead of [egg](ingredient)?
+    - what thing would I use instead of [egg](ingredient)?
+    - what thing would i use instead of [egg](ingredient)?
     - what would I utilize instead of [egg](ingredient)?
+    - what would i utilize instead of [egg](ingredient)?
     - what's an alternative for [egg](ingredient)?
     - what's an alternative to [egg](ingredient)?
+    - what's an replacement for [egg](ingredient)?
 - intent: tell_people_count
   examples: |
+    - 'll be [one](CARDINAL) friends
     - 'll be [one](CARDINAL) people
     - We are in [one](CARDINAL)
     - We are in [one](CARDINAL) friends
     - We are in [one](CARDINAL) people
     - We are in [one](CARDINAL) person
-    - We are [one](CARDINAL)
     - We are [one](CARDINAL) friends
     - We going to be [one](CARDINAL) person
     - We [one](CARDINAL)
-    - We [one](CARDINAL) relatives
+    - are in [one](CARDINAL)
     - are in [one](CARDINAL) friends
     - are in [one](CARDINAL) person
     - are in [one](CARDINAL) persons
     - are in [one](CARDINAL) relatives
     - going to be [one](CARDINAL) person
+    - going to be [one](CARDINAL) persons
     - gonna be [one](CARDINAL)
+    - gonna be [one](CARDINAL) relatives
     - [one](CARDINAL)
     - [one](CARDINAL) friends
-    - thank you We 'll be [one](CARDINAL) friends
+    - [one](CARDINAL) persons
     - thank you We are in [one](CARDINAL)
     - thank you We are in [one](CARDINAL) relatives
     - thank you We [one](CARDINAL)
     - thank you are in [one](CARDINAL)
+    - thank you are in [one](CARDINAL) persons
     - thank you are [one](CARDINAL) friends
-    - thank you we are in [one](CARDINAL) person
     - thank you we [one](CARDINAL)
     - thank you we [one](CARDINAL) persons
     - thanks We are in [one](CARDINAL) relatives
     - thanks We are [one](CARDINAL)
-    - thanks We going to be [one](CARDINAL) relatives
-    - thanks We [one](CARDINAL)
     - thanks are in [one](CARDINAL)
     - thanks are in [one](CARDINAL) friends
     - thanks are [one](CARDINAL) persons
     - thanks are [one](CARDINAL) relatives
     - thanks going to be [one](CARDINAL) friends
     - thanks [one](CARDINAL)
+    - thanks [one](CARDINAL) persons
     - thanks we are in [one](CARDINAL)
     - thanks we are in [one](CARDINAL) relatives
     - thanks we are [one](CARDINAL)
-    - thanks we are [one](CARDINAL) persons
     - we are in [one](CARDINAL)
+    - we are in [one](CARDINAL) relatives
     - we are [one](CARDINAL)
     - we are [one](CARDINAL) people
     - we gonna be [one](CARDINAL) people
     - we [one](CARDINAL) people
     - we [one](CARDINAL) persons
-    - we [one](CARDINAL) relatives
     - we will be [one](CARDINAL) relatives
     - will be [one](CARDINAL) relatives

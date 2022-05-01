@@ -42,9 +42,9 @@
     ~[thanks?] what{ is/'s} the {cooking/preparation} time?
 
 %[ask_alternative_ingredient](50)
-    ~[thanks?] [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/[other?] {~[ingredient]/alternative}}?] ~[can] [&I] ~[use] [instead?]?
-    ~[thanks?] what [{else/[other?] {~[ingredient]/alternative}}?] ~[can] [&I] ~[use] instead of @[ingredient]?
-    ~[thanks?] what{ is/'s} an alternative {for/to} @[ingredient]?
+    ~[thanks?] [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] [instead?]?
+    ~[thanks?] what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] instead of @[ingredient]?
+    ~[thanks?] what{ is/'s} an ~[alternative] {for/to} @[ingredient]?
 
 %[tell_people_count](50)
     ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]
