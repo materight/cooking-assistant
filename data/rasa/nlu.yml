@@ -320,7 +320,7 @@ nlu:
     - thank you how long 'll it take to bake?
     - thanks how much time 'll it take to prepare?
     - how much time 'll it take to prepare?
-- intent: ask_alternative_ingredient
+- intent: ask_ingredient_substitute
   examples: |
     - I do not possess any [egg](ingredient), what else can i use instead?
     - I don't have any [egg](ingredient), what could I use?

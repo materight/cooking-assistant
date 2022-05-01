@@ -77,6 +77,25 @@ class ActionListIngredients(Action):
         return []
 
 
+class ActionSearchIngredientSubstitute(Action):
+    """Search for an alternative to the given ingredient."""
+
+    def name(self) -> Text:
+        return 'action_search_ingredient_substitute'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        ingredients = list(tracker.get_latest_entity_values('ingredient')) # TODO: handle multiple ingredients
+        substitute = None
+        if len(ingredients) > 0:
+            ingredient = ingredients[0]
+            substitute = dataset.search_ingredient_substitute(ingredient)
+            logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)        
+        if substitute is not None:
+            dispatcher.utter_message(response='utter_ingredient_substitute/found', ingredient=ingredient, substitute=substitute)
+        else:
+            dispatcher.utter_message(response='utter_ingredient_substitute/not_found', ingredient=ingredient)
+        return []
+
 class ActionListStepsLoop(FormValidationAction):
     """Form validator to read step-by-step the instructions for a recipe."""
 

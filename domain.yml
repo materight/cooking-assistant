@@ -11,7 +11,7 @@ intents:
       use_entities: [ ingredient ]
   - ask_ingredients_list
   - ask_expected_time
-  - ask_alternative_ingredient:
+  - ask_ingredient_substitute:
       use_entities: [ ingredient ]
   - tell_people_count:
       use_entities: [ CARDINAL ]
@@ -45,10 +45,6 @@ responses:
   utter_ask_want_more_info:
   - text: "Would you like to know more?"
 
-  utter_ask_start_cooking:
-  - text: "Shall we start cooking?"
-  - text: "Do you have everything ready?"
-
   utter_ask_people_count:
   - text: "Great! How many people are you cooking for?"
   - text: "Thank you. How many people will be eating?"
@@ -56,9 +52,19 @@ responses:
   utter_expected_time:
   - text: "This recipe requires {prep_time}min for preparation and {cook_time}min for cooking."
 
+  utter_ingredient_substitute/not_found:
+  - text: "Sorry, I couldn't find any substitute for {ingredient}."
+
+  utter_ingredient_substitute/found:
+  - text: "You may use {substitute} as a substitute to {ingredient}."
+
   utter_list_ingredients:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
   - text: "For {people_count_str} you'll need:\n{ingredients_list}"
+
+  utter_ask_start_cooking:
+  - text: "Shall we start cooking?"
+  - text: "Do you have everything ready?"
 
   utter_list_steps/first:
   - text: "Ok let's start! First, {step_description} Let me know when you're done."
@@ -78,6 +84,7 @@ responses:
 actions:
   - action_search_by_ingredients
   - action_tell_expected_time
+  - action_search_ingredient_substitute
   - action_list_ingredients
   - validate_list_steps_loop
 

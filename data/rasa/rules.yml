@@ -30,6 +30,12 @@ rules:
     wait_for_user_input: false
 
 
+  - rule: Ask for ingredients substitute
+    steps:
+    - intent: ask_ingredient_substitute
+    - action: action_search_ingredient_substitute
+
+
   - rule: Ask for ingredients list
     condition:
     - slot_was_set: [ current_recipe ]

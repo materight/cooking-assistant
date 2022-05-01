@@ -41,7 +41,7 @@
     ~[thanks?] how {long/much time} [~[will] it take?] to ~[cook]?
     ~[thanks?] what{ is/'s} the {cooking/preparation} time?
 
-%[ask_alternative_ingredient](50)
+%[ask_ingredient_substitute](50)
     ~[thanks?] [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] [instead?]?
     ~[thanks?] what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] instead of @[ingredient]?
     ~[thanks?] what{ is/'s} an ~[alternative] {for/to} @[ingredient]?
