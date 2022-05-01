@@ -11,18 +11,15 @@ nlu:
     - eggs
     - pecorino romano cheese
     - pepper
-    - ground beef
-    - beans
-    - salsa
-    - shredded cheese
-    - chili powder
-    - cumin
     - jasmine rice
     - water
     - salt
+    - ground beef
     - tomatoes
+    - beans
     - tomato sauce
     - onion
+    - chili powder
     - garlic powder
     - cumin powder
     - tobasco
@@ -41,7 +38,7 @@ nlu:
     - yuca root
     - paprika
     - flour
-    - sliced almonds
+    - almonds
     - butter
     - sugar
     - almond extract
@@ -70,6 +67,7 @@ nlu:
     - red peppers
     - tahini
     - lemon juice
+    - cumin
     - espresso
     - steamed milk
     - peppermint syrup
@@ -115,6 +113,7 @@ nlu:
     - bourbon
     - chocolate chips
     - ribeye steak
+    - salsa
     - cilantro
     - celery
     - red chili
