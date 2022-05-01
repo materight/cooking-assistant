@@ -7,10 +7,12 @@ rules:
     - intent: greet
     - action: utter_greet
 
+
   - rule: Say goodbye anytime the user says goodbye
     steps:
     - intent: goodbye
     - action: utter_goodbye
+
 
   - rule: Search by ingredients
     steps:
@@ -18,15 +20,23 @@ rules:
     - action: action_search_by_ingredients
     - action: utter_ask_want_more_info
 
+
   - rule: Ask for expected preparation time
     condition:
-    - slot_was_set:
-      - current_recipe
+    - slot_was_set: [ current_recipe ]
     steps:
-    - intent: search_by_ingredients
-    - action: action_search_by_ingredients
-    - action: utter_ask_want_more_info
+    - intent: ask_expected_time
+    - action: action_tell_expected_time
+    wait_for_user_input: false
 
+
+  - rule: Ask for ingredients list
+    condition:
+    - slot_was_set: [ current_recipe ]
+    steps:
+    - intent: ask_ingredients_list
+    - action: action_list_ingredients
+    wait_for_user_input: false
 
 
   # - rule: Interruption on reading step loop

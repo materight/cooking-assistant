@@ -37,7 +37,7 @@
   - name: eggs
     amount: 2
   - name: pecorino romano cheese
-    amount: 120ml
+    amount: 60g
   - name: pepper
     amount: null
   steps:
@@ -87,6 +87,7 @@
   - Dot the surface with some of the salsa and cover with most of the cheese.
   - Add remainder of the Fritos along with more salsa and cheese.
   - Bake for 20 minutes or until heated through.
+
 - title: Instant Pot White Rice
   prep_time: 0
   cook_time: 6

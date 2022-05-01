@@ -2,6 +2,7 @@
 import logging
 from typing import Any, Text, Dict, List
 
+from word2number import w2n
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
@@ -35,7 +36,7 @@ class ActionSearchByIngredients(Action):
         else:
             recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
             dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title)
-            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe) ]
+            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe.id) ]
 
 
 class ActionTellExpectedTime(Action):
@@ -45,8 +46,9 @@ class ActionTellExpectedTime(Action):
         return 'action_tell_expected_time'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        recipe: Recipe = tracker.get_slot('current_recipe') # TODO: handle None recipe
-        dispatcher.utter_message(response='utter_expected_time', prep_time=recipe.prep_time, cook_time=recipe.cook_time)
+        recipe_id = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        recipe = dataset.get_recipe(recipe_id)
+        dispatcher.utter_message(response='utter_expected_time', prep_time=str(recipe.prep_time), cook_time=str(recipe.cook_time))
         return []
 
 class ActionListIngredients(Action):
@@ -56,8 +58,9 @@ class ActionListIngredients(Action):
         return 'action_list_ingredients'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        recipe = tracker.get_slot('current_recipe')  # TODO: handle None recipe
-        people_count = tracker.get_slot('people_count')
+        recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
+        recipe = dataset.get_recipe(recipe_id)
+        people_count = w2n.word_to_num(tracker.get_slot('people_count'))
         logger.info('Found %d ingredients', len(recipe.ingredients))
         if people_count is None:
             logger.info('Use default recipe servings: %d people', recipe.servings)
@@ -81,7 +84,8 @@ class ActionListStepsLoop(FormValidationAction):
         return 'validate_list_steps_loop'
 
     def validate_list_steps_done(self, value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> Dict[Text, Any]:
-        recipe = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        recipe_id = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        recipe = dataset.get_recipe(recipe_id)
         current_step_idx = tracker.get_slot('current_step_idx')
         current_step_idx += 1 # Go to the next step
         logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), recipe.id)

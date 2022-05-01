@@ -3,29 +3,76 @@ version: "3.1"
 # Training stories, check https://rasa.com/docs/rasa/stories/ for more info
 stories:
 
+
+####################### Phase 1: Search recipe #######################
+
 - story: Search for a recipe by ingredients
   steps:
   - intent: greet
   - action: utter_greet
   - intent: search_by_ingredients
-    entities:
-      - ingredient
+    entities: [ ingredient ]
   - action: action_search_by_ingredients
-  - slot_was_set:
-    - found_recipes_ids
-    - current_recipe
+  - slot_was_set: [ found_recipes_ids, current_recipe ]
   - checkpoint: recipe_selected
   
-  
-- story: Read recipe details
+
+####################### Phase 2: Get more infos about the recipe #######################
+
+- story: Ask for ingredient lists
   steps:
   - checkpoint: recipe_selected
   - action: utter_ask_want_more_info
-  - intent: affirm
-  - action: utter_ask_people_count
-  - intent: people_count
+  - or:
+    - intent: ask_ingredients_list
+    - intent: affirm
   - action: action_list_ingredients
+  - action: utter_ask_want_more_info
+
+
+- story: Ask for expected preoparation time
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: ask_expected_time
+  - action: action_tell_expected_time
+  - action: utter_ask_want_more_info
+
+
+- story: Update people count in recipe
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: tell_people_count
+    entities: [ CARDINAL ]
+  - slot_was_set: [ people_count ]
+  - action: action_list_ingredients
+  - action: utter_ask_want_more_info
+
+
+- story: Start cooking
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: deny
   - action: utter_ask_start_cooking
   - intent: affirm
+  - checkpoint: cooking_started
+
+
+- story: Do not start cooking
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: deny
+  - action: utter_ask_start_cooking
+  - intent: deny
+  - action: utter_ask_want_more_info
+
+####################### Phase 3: Start cooking #######################
+
+- story: Start reading recipe steps
+  steps:
+  - checkpoint: cooking_started
   - action: list_steps_loop
   - active_loop: list_steps_loop

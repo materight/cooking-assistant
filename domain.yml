@@ -9,9 +9,11 @@ intents:
   - next
   - search_by_ingredients:
       use_entities: [ ingredient ]
-  - expected_time
-  - people_count:
+  - ask_ingredients_list
+  - ask_expected_time
+  - tell_people_count:
       use_entities: [ CARDINAL ]
+  
 
 # Responses, check https://rasa.com/docs/rasa/responses for more info
 responses:
@@ -53,12 +55,12 @@ responses:
   - text: "This recipe requires {prep_time}min for preparation and {cook_time}min for cooking."
 
   utter_list_ingredients:
-  - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}."
-  - text: "For {people_count_str} you'll need:\n{ingredients_list}."
+  - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
+  - text: "For {people_count_str} you'll need:\n{ingredients_list}"
 
   utter_list_steps/first:
   - text: "Ok let's start! First, {step_description} Let me know when you're done."
-  - text: "Let's cook. To begin, {step_description} Tell me when you're ready for the next step"
+  - text: "Let's cook! To begin, {step_description} Tell me when you're ready for the next step"
 
   utter_list_steps/next:
   - text: "Great, now please {step_description}"
@@ -95,11 +97,11 @@ slots:
     - type: custom
 
   people_count:
-    type: any
+    type: text
     mappings:
     - type: from_entity
       entity: CARDINAL
-      intent: people_count
+      intent: tell_people_count
 
   current_step_idx:
     type: any

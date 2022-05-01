@@ -25,15 +25,27 @@
 
 %[search_by_keyword](50)
     ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[day time?].
-    ~[&greet?] ~[can you] ~[please?] ~[search] @[recipe_keyword] recipes?
-    ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
-    ~[&greet?] ~[can you] ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
+    ~[&greet?] ~[can] you ~[please?] ~[search] @[recipe_keyword]?
+    ~[&greet?] ~[can] you ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
+    ~[&greet?] ~[can] you ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
 
 %[search_by_ingredients](50)
     ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].
-    ~[&greet?] ~[can you] ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
+    ~[&greet?] ~[can] you ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
 
-%[expected_time](50)
-    ~[thanks?] how {long/much} [time?] [~[will] it take?] to ~[cook]?
-%[people_count](10)
+%[ask_ingredients_list](50)
+    ~[thanks?] {what/which} ~[ingredient]s are ~[needed]?
+    ~[thanks?] {what/which} ~[ingredient]s do [&I] ~[need]?
+
+%[ask_expected_time](50)
+    ~[thanks?] how {long/much time} [~[will] it take?] to ~[cook]?
+    ~[thanks?] what{ is/'s} the {cooking/preparation} time?
+
+%[ask_alternative_ingredient](50)
+    ~[thanks?] [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/[other?] {~[ingredient]/alternative}}?] ~[can] [&I] ~[use] [instead?]?
+    ~[thanks?] what [{else/[other?] {~[ingredient]/alternative}}?] ~[can] [&I] ~[use] instead of @[ingredient]?
+    ~[thanks?] what{ is/'s} an alternative {for/to} @[ingredient]?
+
+%[tell_people_count](50)
     ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]
+    ~[thanks?] [&we?] are [in?] @[CARDINAL] ~[people?]

@@ -14,6 +14,9 @@
 ~[i am]
     [&I]{'m/ am}
 
+~[do not]
+    {don't/do not/not}
+
 ~[will]
     {'ll/ will/ going to/ gonna}
 
@@ -40,11 +43,23 @@
     search [for?]
     find [me?]
 
+~[have]
+    {have/possess/own}
+
+~[use]
+    {use/utilize/employ}
+
 ~[cook]
     {cook/prepare/make/bake}
 
-~[can you]
-    {can you/could you/may you/would you}
+~[needed]
+    {needed/required}
+
+~[need]
+    {need/require}
+
+~[can]
+    {can/could/may/would}
 
 ~[i want to]
     [&I]{'d/ would} [really?] [like|love] to
@@ -52,6 +67,9 @@
 
 ~[recipe]
     {recipe/something/food}
+
+~[ingredient]
+    {ingredient/item/thing/compononet}
 
 ~[containing]
     {containing/with/using}
