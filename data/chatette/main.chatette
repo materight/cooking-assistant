@@ -49,3 +49,7 @@
 %[tell_people_count](50)
     ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]
     ~[thanks?] [&we?] are [in?] @[CARDINAL] ~[people?]
+
+%[start_cooking](50)
+    ~[thanks?] ~[can] [&we] [{go ahead/get going} and?] ~[start] ~[cooking] [now?]?
+    ~[thanks?] [let's?] {~[start] ~[cooking]/~[cook]} [now?]

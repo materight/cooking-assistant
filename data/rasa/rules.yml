@@ -34,6 +34,7 @@ rules:
     steps:
     - intent: ask_ingredient_substitute
     - action: action_search_ingredient_substitute
+    wait_for_user_input: false
 
 
   - rule: Ask for ingredients list
@@ -43,6 +44,15 @@ rules:
     - intent: ask_ingredients_list
     - action: action_list_ingredients
     wait_for_user_input: false
+
+
+  - rule: Start cooking
+    condition:
+    - slot_was_set: [ current_recipe ]
+    steps:
+    - intent: start_cooking
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
 
 
   # - rule: Interruption on reading step loop

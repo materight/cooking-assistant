@@ -114,313 +114,365 @@ nlu:
     - yes proceed thanks
 - intent: search_by_keyword
   examples: |
-    - Good evening I want to eat [pizza](recipe_keyword).
-    - Good evening may you please find how to cook a [pizza](recipe_keyword)?
+    - Good evening may you please search for how to bake [pizza](recipe_keyword)?
     - Good evening may you please search something for [pizza](recipe_keyword)?
-    - Good evening would you find me [pizza](recipe_keyword)?
-    - Hello may you search [pizza](recipe_keyword)?
-    - Hello there I want to taste [pizza](recipe_keyword).
-    - Hello there could you please find recipe for [pizza](recipe_keyword)?
-    - Hey could you please find me how to make [pizza](recipe_keyword)?
+    - Hello should you please search for [pizza](recipe_keyword)?
+    - Hey can you find [pizza](recipe_keyword)?
+    - Hey should you please search how to make [pizza](recipe_keyword)?
     - Hey would you please find me something for [pizza](recipe_keyword)?
-    - I want to taste [pizza](recipe_keyword) for breakfast.
+    - Hi i'd really like to taste [pizza](recipe_keyword) for morning.
+    - I would like to taste [pizza](recipe_keyword) today.
     - I would really like to taste [pizza](recipe_keyword).
+    - I'd really love to eat [pizza](recipe_keyword).
     - I'd really love to try [pizza](recipe_keyword) today.
-    - can you please find me how to cook [pizza](recipe_keyword)?
-    - can you please search food for [pizza](recipe_keyword)?
+    - can you find [pizza](recipe_keyword)?
+    - can you please search for how to cook [pizza](recipe_keyword)?
     - can you please search for recipe for [pizza](recipe_keyword)?
     - can you please search how to make a [pizza](recipe_keyword)?
     - can you please search how to make [pizza](recipe_keyword)?
-    - can you search for [pizza](recipe_keyword)?
+    - can you search for how to bake a [pizza](recipe_keyword)?
     - could you please find me food for [pizza](recipe_keyword)?
+    - could you please search food for [pizza](recipe_keyword)?
     - could you please search recipe for [pizza](recipe_keyword)?
-    - good evening would you search for how to cook [pizza](recipe_keyword)?
+    - could you search food for [pizza](recipe_keyword)?
+    - good evening may you find me how to prepare [pizza](recipe_keyword)?
+    - good morning I want to taste [pizza](recipe_keyword) tomorrow.
     - good morning i'd love to try [pizza](recipe_keyword).
-    - good morning may you find me how to bake [pizza](recipe_keyword)?
-    - good morning would you please find how to bake [pizza](recipe_keyword)?
-    - hello I want to taste [pizza](recipe_keyword) today.
-    - hello I want to try [pizza](recipe_keyword) today.
+    - good morning should you find how to bake a [pizza](recipe_keyword)?
     - hello could you please find food for [pizza](recipe_keyword)?
-    - hello there can you find me how to make [pizza](recipe_keyword)?
-    - hello there could you find me how to cook [pizza](recipe_keyword)?
+    - hello may you please search for how to prepare a [pizza](recipe_keyword)?
     - hello there would you please search how to cook a [pizza](recipe_keyword)?
     - hey I would really love to eat [pizza](recipe_keyword) today.
-    - hey could you find me [pizza](recipe_keyword)?
-    - hey i want to eat [pizza](recipe_keyword) today.
-    - hey may you find me how to prepare [pizza](recipe_keyword)?
-    - i want to taste [pizza](recipe_keyword).
-    - i would really love to taste [pizza](recipe_keyword) today.
+    - hi I'd really love to try [pizza](recipe_keyword).
+    - i want to taste [pizza](recipe_keyword) for breakfast.
     - i would really love to taste [pizza](recipe_keyword).
     - i'd love to try [pizza](recipe_keyword).
     - i'd really like to eat [pizza](recipe_keyword).
+    - i'd really love to taste [pizza](recipe_keyword) this evening.
+    - may you find something for [pizza](recipe_keyword)?
     - may you please find me how to bake a [pizza](recipe_keyword)?
-    - may you please find me something for [pizza](recipe_keyword)?
+    - may you please search for how to bake [pizza](recipe_keyword)?
     - may you please search for [pizza](recipe_keyword)?
-    - may you search [pizza](recipe_keyword)?
     - may you search something for [pizza](recipe_keyword)?
+    - should you find me recipe for [pizza](recipe_keyword)?
+    - should you find [pizza](recipe_keyword)?
+    - should you search recipe for [pizza](recipe_keyword)?
     - would you find me food for [pizza](recipe_keyword)?
+    - would you find something for [pizza](recipe_keyword)?
     - would you please search how to prepare a [pizza](recipe_keyword)?
-    - would you search for how to make [pizza](recipe_keyword)?
-    - would you search for [pizza](recipe_keyword)?
+    - would you please search something for [pizza](recipe_keyword)?
+    - would you search for how to make a [pizza](recipe_keyword)?
     - would you search for something for [pizza](recipe_keyword)?
-    - would you search recipe for [pizza](recipe_keyword)?
+    - would you search how to cook [pizza](recipe_keyword)?
 - intent: search_by_ingredients
   examples: |
     - Good evening I'd really love to eat something using [egg](ingredient) this dinner.
     - Good evening can you search for food using [egg](ingredient)?
     - Good evening could you please find food using [egg](ingredient)?
+    - Good evening i would really love to eat food containing [egg](ingredient) tomorrow.
     - Good evening would you please search something with [egg](ingredient)?
     - Good morning could you search food using [egg](ingredient)?
-    - Hello i want to taste food using [egg](ingredient) [egg](ingredient).
+    - Hello could you please search for recipe with [egg](ingredient)?
     - Hello there may you please search for food using [egg](ingredient)?
-    - Hey i want to taste something containing [egg](ingredient).
+    - Hey could you search recipe with [egg](ingredient)?
     - I want to eat something using [egg](ingredient) for launch.
     - I want to try recipe with [egg](ingredient) [egg](ingredient) tomorrow.
     - I want to try something with [egg](ingredient) [egg](ingredient) this morning.
     - I would like to eat recipe with [egg](ingredient) and [egg](ingredient) for evening.
+    - I would love to eat something with [egg](ingredient) tomorrow.
+    - I'd love to try something containing [egg](ingredient) today.
     - I'd really love to try food containing [egg](ingredient) tomorrow.
-    - can you please search something containing [egg](ingredient)?
+    - I'd really love to try food using [egg](ingredient) tomorrow.
+    - can you find something with [egg](ingredient)?
+    - can you please search for food using [egg](ingredient)?
     - could you find something containing [egg](ingredient)?
     - could you search for recipe containing [egg](ingredient)?
     - could you search something using [egg](ingredient)?
-    - good evening I want to try food containing [egg](ingredient).
     - good evening I'd really like to try something with [egg](ingredient) for evening.
-    - good evening i want to eat food with [egg](ingredient) [egg](ingredient) this morning.
     - good morning I want to try something using [egg](ingredient) [egg](ingredient).
     - good morning can you please find me recipe containing [egg](ingredient)?
-    - good morning could you find food using [egg](ingredient)?
-    - good morning could you find recipe using [egg](ingredient)?
-    - hello I want to try something with [egg](ingredient) this dinner.
-    - hello i want to eat food containing [egg](ingredient) tomorrow.
+    - good morning should you search recipe containing [egg](ingredient)?
+    - hello I want to eat food using [egg](ingredient) for morning.
+    - hello can you find me food with [egg](ingredient)?
     - hello may you find recipe with [egg](ingredient)?
-    - hello there I would love to eat something with [egg](ingredient) [egg](ingredient).
-    - hello would you find me recipe using [egg](ingredient)?
-    - hey I'd really like to try recipe using [egg](ingredient) [egg](ingredient) for evening.
     - hey i want to eat food using [egg](ingredient) tomorrow.
-    - hey would you find food with [egg](ingredient)?
-    - hi I'd like to eat food using [egg](ingredient) and [egg](ingredient) for launch.
-    - hi i'd love to eat food using [egg](ingredient).
+    - hi may you search for food containing [egg](ingredient)?
+    - hi should you please find food using [egg](ingredient)?
+    - i want to taste food with [egg](ingredient).
+    - i want to taste recipe with [egg](ingredient) and [egg](ingredient).
     - i want to taste something using [egg](ingredient) [egg](ingredient) today.
+    - i want to try food containing [egg](ingredient) [egg](ingredient) today.
+    - i want to try food using [egg](ingredient).
+    - i want to try recipe with [egg](ingredient) and [egg](ingredient).
     - i want to try something with [egg](ingredient) today.
-    - i would really like to taste food containing [egg](ingredient) today.
     - i'd like to taste food containing [egg](ingredient).
     - i'd like to try something with [egg](ingredient) and [egg](ingredient).
     - i'd love to eat food using [egg](ingredient) and [egg](ingredient).
     - i'd love to eat recipe with [egg](ingredient) tomorrow.
     - may you find me food containing [egg](ingredient)?
-    - may you find me recipe containing [egg](ingredient)?
     - may you please find something with [egg](ingredient)?
-    - may you please search recipe using [egg](ingredient)?
-    - may you search recipe with [egg](ingredient)?
+    - should you please search recipe containing [egg](ingredient)?
     - would you find food using [egg](ingredient)?
-    - would you please search food using [egg](ingredient)?
+    - would you please find me food with [egg](ingredient)?
     - would you please search for something with [egg](ingredient)?
     - would you search food containing [egg](ingredient)?
 - intent: ask_ingredients_list
   examples: |
-    - thanks what things do i require?
-    - thank you what items are needed?
-    - what ingredients do I need?
-    - thanks which items are required?
-    - which ingredients do i need?
-    - thanks what ingredients do I need?
-    - thanks which compononets do I need?
-    - thank you what ingredients are needed?
-    - thank you which things do I require?
-    - thank you which ingredients are required?
-    - thanks what things do I require?
-    - thank you which things do I need?
-    - what ingredients do I require?
-    - which things do I require?
-    - thank you which ingredients do I require?
-    - thanks which items do i require?
-    - what things do I need?
-    - thanks which things do I require?
-    - thanks what things do I need?
-    - which compononets do i require?
-    - thank you which ingredients do i need?
-    - thanks which items are needed?
-    - thanks which ingredients do i need?
-    - which compononets do i need?
-    - thanks what compononets do i need?
-    - what items do i need?
-    - what things are required?
-    - thank you which items do I require?
-    - thanks what items do i need?
-    - thank you what items do I need?
-    - what items do I need?
-    - thanks what ingredients are required?
-    - thank you which things are needed?
-    - thank you what compononets are needed?
-    - what items do I require?
-    - thank you what things are needed?
-    - thank you which things do i require?
-    - thanks which ingredients are needed?
-    - thank you what ingredients are required?
-    - thank you which compononets are needed?
-    - what compononets do I require?
-    - thanks which items do I need?
-    - thank you what compononets do I require?
-    - thanks which ingredients do I need?
-    - which things do I need?
-    - what ingredients do i need?
-    - what things do I require?
-    - which items do i require?
-    - which things do i require?
+    - thank you what ingredients do i need?
+    - thank you which things do i need?
     - thanks which compononets do i need?
+    - thanks what compononets do I require?
+    - thank you what things do I need?
+    - thanks what ingredients do i need?
+    - thanks what things do i need?
+    - what things do I need?
+    - thank you which compononets do I need?
+    - which items do i require?
+    - thank you which ingredients do i need?
+    - what things do i need?
+    - thank you what compononets do I require?
+    - thanks what ingredients do i require?
+    - thank you which compononets do i require?
+    - thanks what items do I need?
+    - thank you what ingredients do I require?
+    - thanks which compononets are needed?
+    - thanks which things are needed?
+    - thank you what items do i need?
+    - thank you which ingredients do i require?
+    - what ingredients do I require?
+    - thank you which ingredients are needed?
+    - which items do I need?
+    - which compononets are needed?
+    - which items are required?
+    - thank you which items do i require?
+    - thanks what ingredients are required?
+    - what things are needed?
+    - thanks which items are required?
+    - what things are required?
+    - thanks what ingredients do I need?
+    - thank you which compononets are needed?
+    - thanks which ingredients do i require?
+    - what ingredients do i need?
+    - thanks what items are required?
+    - thank you what compononets do i require?
+    - thanks which compononets are required?
+    - thank you which items are needed?
+    - thank you what compononets are required?
+    - what items do i need?
+    - thanks what things are needed?
+    - thank you which things are required?
+    - thank you which compononets do I require?
+    - thank you which compononets do i need?
+    - thank you what things do i require?
+    - which items do I require?
+    - thanks which items do I require?
+    - thanks what items do i require?
+    - thank you which items do i need?
 - intent: ask_expected_time
   examples: |
-    - thank you how much time gonna it take to prepare?
-    - thank you how long to prepare?
-    - how long will it take to bake?
-    - thanks how long going to it take to make?
-    - how long gonna it take to bake?
-    - thanks how much time gonna it take to bake?
-    - thank you how much time will it take to bake?
-    - thanks how long will it take to prepare?
-    - how long 'll it take to prepare?
-    - thanks how much time to make?
-    - thanks how long to bake?
-    - thank you how long 'll it take to make?
-    - how much time gonna it take to prepare?
-    - how long 'll it take to make?
-    - thanks how long 'll it take to prepare?
-    - thanks how much time gonna it take to make?
-    - how long to cook?
-    - how long will it take to make?
-    - thank you how long to bake?
-    - what's the cooking time?
-    - thank you how much time will it take to cook?
-    - thanks what's the preparation time?
-    - thanks how long to prepare?
-    - how much time will it take to make?
-    - thanks how much time 'll it take to cook?
-    - how much time to cook?
-    - how long 'll it take to bake?
-    - how much time will it take to cook?
-    - thank you how much time gonna it take to bake?
-    - thanks how much time will it take to bake?
-    - how much time going to it take to bake?
-    - how long going to it take to bake?
-    - thank you how much time going to it take to make?
-    - thanks what's the cooking time?
-    - thank you how long to make?
-    - thanks how much time going to it take to make?
-    - how long to make?
-    - thank you how long 'll it take to prepare?
-    - thank you how long 'll it take to cook?
-    - thank you what is the cooking time?
-    - how long to prepare?
-    - thanks how long to cook?
-    - thanks how much time to prepare?
-    - thanks how much time gonna it take to cook?
-    - thank you how much time 'll it take to prepare?
     - thanks how long gonna it take to bake?
-    - thank you how long will it take to make?
+    - thanks how long to prepare?
+    - thank you how much time will it take to bake?
+    - thanks how much time 'll it take to cook?
+    - thanks how much time will it take to bake?
+    - thank you how much time will it take to make?
+    - thank you how long will it take to prepare?
+    - thanks how long 'll it take to cook?
+    - thanks what is the preparation time?
+    - thanks how much time 'll it take to bake?
+    - how long to bake?
+    - thank you how long 'll it take to prepare?
+    - thanks how much time will it take to cook?
+    - how much time going to it take to cook?
+    - thanks how much time gonna it take to prepare?
+    - thanks how much time going to it take to make?
+    - thanks how long going to it take to prepare?
+    - thanks how long going to it take to make?
+    - thanks how long to bake?
+    - how much time 'll it take to bake?
+    - thank you how much time gonna it take to make?
+    - thank you how much time going to it take to prepare?
+    - thanks how much time going to it take to cook?
+    - how long going to it take to cook?
+    - thank you how much time to prepare?
+    - thank you how much time 'll it take to bake?
     - thank you how long 'll it take to bake?
-    - thanks how much time 'll it take to prepare?
-    - how much time 'll it take to prepare?
+    - how much time 'll it take to cook?
+    - how much time gonna it take to prepare?
+    - how much time to prepare?
+    - what is the preparation time?
+    - how much time going to it take to bake?
+    - thank you how much time to make?
+    - thanks how long will it take to bake?
+    - how much time will it take to prepare?
+    - how long will it take to bake?
+    - thank you what's the cooking time?
+    - thanks how long 'll it take to bake?
+    - thanks how much time gonna it take to make?
+    - thank you how much time going to it take to cook?
+    - thanks how long to cook?
+    - thank you how long will it take to bake?
+    - thank you how much time gonna it take to prepare?
+    - thanks how long will it take to cook?
+    - thanks how much time 'll it take to make?
+    - thank you how much time to bake?
+    - thanks what's the cooking time?
+    - how long gonna it take to bake?
+    - thanks how much time will it take to make?
+    - how much time to cook?
 - intent: ask_ingredient_substitute
   examples: |
+    - I do not own any [egg](ingredient), what else can I utilize instead?
     - I do not possess any [egg](ingredient), what else can i use instead?
-    - I don't have any [egg](ingredient), what could I use?
-    - I not have any [egg](ingredient), what may I utilize instead?
-    - I not own any [egg](ingredient), what else can i use instead?
-    - i do not have [egg](ingredient), what else may i use instead?
-    - i do not possess any [egg](ingredient), what item would i utilize instead?
-    - i do not possess any [egg](ingredient), what would i utilize?
-    - i do not possess [egg](ingredient), what ingredient would i utilize instead?
-    - i don't possess any [egg](ingredient), what could i use instead?
-    - i not own any [egg](ingredient), what else would i utilize?
-    - thank you I do not own any [egg](ingredient), what compononet would I employ instead?
-    - thank you I don't have any [egg](ingredient), what would I use instead?
-    - thank you I not have [egg](ingredient), what would I use?
-    - thank you i don't possess [egg](ingredient), what else may i employ instead?
-    - thank you i not have any [egg](ingredient), what can i utilize?
-    - thank you what compononet can I employ instead of [egg](ingredient)?
+    - I don't have [egg](ingredient), what item would I use instead?
+    - I not possess [egg](ingredient), what can i employ instead?
+    - i do not possess any [egg](ingredient), what item should i use?
+    - i don't own any [egg](ingredient), what else could i employ instead?
+    - i not have any [egg](ingredient), what may I use?
+    - i not have [egg](ingredient), what could I use?
+    - thank you I not own [egg](ingredient), what may I employ?
+    - thank you i do not have any [egg](ingredient), what could I employ instead?
+    - thank you i do not own any [egg](ingredient), what would I utilize instead?
+    - thank you i don't have [egg](ingredient), what should I employ instead?
+    - thank you what can I use instead of [egg](ingredient)?
     - thank you what compononet may i employ instead of [egg](ingredient)?
-    - thank you what replacement can i employ instead of [egg](ingredient)?
     - thank you what would I utilize instead of [egg](ingredient)?
+    - thank you what would i use instead of [egg](ingredient)?
+    - thank you what's an alternative for [egg](ingredient)?
+    - thank you what's an substitute to [egg](ingredient)?
+    - thank you what's an surrogate for [egg](ingredient)?
     - thank you what's an surrogate to [egg](ingredient)?
-    - thanks I do not have any [egg](ingredient), what would i employ instead?
-    - thanks I do not have [egg](ingredient), what thing may i use?
-    - thanks I do not possess any [egg](ingredient), what replacement could I use instead?
-    - thanks I not own any [egg](ingredient), what surrogate would i utilize?
-    - thanks i don't possess any [egg](ingredient), what would I utilize instead?
-    - thanks i don't possess [egg](ingredient), what may I use?
-    - thanks what can i utilize instead of [egg](ingredient)?
-    - thanks what compononet can i use instead of [egg](ingredient)?
-    - thanks what else would I employ instead of [egg](ingredient)?
-    - thanks what is an surrogate for [egg](ingredient)?
-    - thanks what may I utilize instead of [egg](ingredient)?
-    - thanks what substitute may I employ instead of [egg](ingredient)?
-    - thanks what's an alternative for [egg](ingredient)?
-    - thanks what's an replacement to [egg](ingredient)?
-    - thanks what's an substitute to [egg](ingredient)?
-    - what is an alternative to [egg](ingredient)?
+    - thanks I do not have any [egg](ingredient), what alternative could i utilize?
+    - thanks I don't possess [egg](ingredient), what may i utilize instead?
+    - thanks i don't possess any [egg](ingredient), what should I utilize instead?
+    - thanks i don't possess [egg](ingredient), what should I use?
+    - thanks i not own any [egg](ingredient), what could I utilize?
+    - thanks what can I utilize instead of [egg](ingredient)?
+    - thanks what compononet should i use instead of [egg](ingredient)?
+    - thanks what may I employ instead of [egg](ingredient)?
+    - thanks what should I utilize instead of [egg](ingredient)?
+    - thanks what should i utilize instead of [egg](ingredient)?
+    - thanks what's an replacement for [egg](ingredient)?
+    - what alternative should i use instead of [egg](ingredient)?
+    - what compononet should I use instead of [egg](ingredient)?
+    - what could i use instead of [egg](ingredient)?
+    - what else should I utilize instead of [egg](ingredient)?
+    - what is an replacement for [egg](ingredient)?
     - what is an replacement to [egg](ingredient)?
     - what is an substitute for [egg](ingredient)?
     - what is an substitute to [egg](ingredient)?
-    - what is an surrogate to [egg](ingredient)?
-    - what substitute may i employ instead of [egg](ingredient)?
+    - what item can I utilize instead of [egg](ingredient)?
+    - what may i use instead of [egg](ingredient)?
+    - what should i employ instead of [egg](ingredient)?
+    - what substitute should i employ instead of [egg](ingredient)?
     - what surrogate can i utilize instead of [egg](ingredient)?
-    - what surrogate could i employ instead of [egg](ingredient)?
-    - what thing would I use instead of [egg](ingredient)?
-    - what thing would i use instead of [egg](ingredient)?
-    - what would I utilize instead of [egg](ingredient)?
+    - what surrogate could i utilize instead of [egg](ingredient)?
     - what would i utilize instead of [egg](ingredient)?
     - what's an alternative for [egg](ingredient)?
     - what's an alternative to [egg](ingredient)?
-    - what's an replacement for [egg](ingredient)?
+    - what's an replacement to [egg](ingredient)?
+    - what's an surrogate to [egg](ingredient)?
 - intent: tell_people_count
   examples: |
     - 'll be [one](CARDINAL) friends
     - 'll be [one](CARDINAL) people
-    - We are in [one](CARDINAL)
-    - We are in [one](CARDINAL) friends
     - We are in [one](CARDINAL) people
-    - We are in [one](CARDINAL) person
+    - We are [one](CARDINAL)
     - We are [one](CARDINAL) friends
     - We going to be [one](CARDINAL) person
     - We [one](CARDINAL)
     - are in [one](CARDINAL)
     - are in [one](CARDINAL) friends
     - are in [one](CARDINAL) person
-    - are in [one](CARDINAL) persons
     - are in [one](CARDINAL) relatives
+    - are [one](CARDINAL)
+    - are [one](CARDINAL) persons
     - going to be [one](CARDINAL) person
     - going to be [one](CARDINAL) persons
-    - gonna be [one](CARDINAL)
     - gonna be [one](CARDINAL) relatives
     - [one](CARDINAL)
     - [one](CARDINAL) friends
     - [one](CARDINAL) persons
+    - [one](CARDINAL) relatives
+    - thank you 'll be [one](CARDINAL) relatives
     - thank you We are in [one](CARDINAL)
-    - thank you We are in [one](CARDINAL) relatives
     - thank you We [one](CARDINAL)
     - thank you are in [one](CARDINAL)
     - thank you are in [one](CARDINAL) persons
+    - thank you are [one](CARDINAL)
     - thank you are [one](CARDINAL) friends
-    - thank you we [one](CARDINAL)
+    - thank you [one](CARDINAL) persons
+    - thank you we are in [one](CARDINAL) people
     - thank you we [one](CARDINAL) persons
-    - thanks We are in [one](CARDINAL) relatives
-    - thanks We are [one](CARDINAL)
+    - thanks 'll be [one](CARDINAL) friends
     - thanks are in [one](CARDINAL)
     - thanks are in [one](CARDINAL) friends
     - thanks are [one](CARDINAL) persons
-    - thanks are [one](CARDINAL) relatives
-    - thanks going to be [one](CARDINAL) friends
     - thanks [one](CARDINAL)
     - thanks [one](CARDINAL) persons
     - thanks we are in [one](CARDINAL)
     - thanks we are in [one](CARDINAL) relatives
-    - thanks we are [one](CARDINAL)
+    - thanks we [one](CARDINAL) person
+    - thanks will be [one](CARDINAL)
     - we are in [one](CARDINAL)
+    - we are in [one](CARDINAL) persons
     - we are in [one](CARDINAL) relatives
-    - we are [one](CARDINAL)
-    - we are [one](CARDINAL) people
+    - we going to be [one](CARDINAL)
     - we gonna be [one](CARDINAL) people
     - we [one](CARDINAL) people
     - we [one](CARDINAL) persons
+    - we will be [one](CARDINAL)
     - we will be [one](CARDINAL) relatives
     - will be [one](CARDINAL) relatives
+- intent: start_cooking
+  examples: |
+    - begin baking now
+    - begin preparing now
+    - can We get going and initiate cooking?
+    - cook
+    - cook now
+    - could We begin baking?
+    - could We get going and begin baking now?
+    - could We initiate preparing?
+    - could we begin cooking?
+    - could we begin preparing?
+    - could we get going and start preparing?
+    - initiate baking now
+    - let's bake
+    - let's begin preparing now
+    - let's commence cooking
+    - let's make now
+    - may We go ahead and start baking now?
+    - may we get going and initiate preparing now?
+    - may we get going and start baking?
+    - should We get going and initiate preparing now?
+    - should we go ahead and initiate making?
+    - start preparing
+    - thank you begin baking
+    - thank you can We initiate preparing now?
+    - thank you cook
+    - thank you could we commence cooking now?
+    - thank you could we get going and initiate baking now?
+    - thank you let's cook
+    - thank you let's initiate preparing now
+    - thank you let's start making now
+    - thank you may We begin making now?
+    - thank you may We get going and commence making?
+    - thank you may We initiate making now?
+    - thank you prepare now
+    - thank you should we initiate preparing now?
+    - thank you start baking now
+    - thanks let's commence cooking now
+    - thanks let's initiate making now
+    - thanks let's make
+    - thanks let's prepare now
+    - thanks let's start baking
+    - thanks make
+    - thanks may We start making?
+    - thanks should We get going and start making now?
+    - thanks should We start cooking?
+    - thanks should we get going and commence preparing now?
+    - thanks should we go ahead and start making?
+    - thanks would we get going and start baking?
+    - would We go ahead and initiate cooking?
+    - would we commence preparing?

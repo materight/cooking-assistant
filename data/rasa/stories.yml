@@ -39,6 +39,15 @@ stories:
   - action: utter_ask_want_more_info
 
 
+- story: Ask for ingredient substitute
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: ask_ingredient_substitute
+  - action: action_search_ingredient_substitute
+  - action: utter_ask_want_more_info
+
+
 - story: Update people count in recipe
   steps:
   - checkpoint: recipe_selected
@@ -50,13 +59,21 @@ stories:
   - action: utter_ask_want_more_info
 
 
-- story: Start cooking
+- story: Start cooking (system inititiative)
   steps:
   - checkpoint: recipe_selected
   - action: utter_ask_want_more_info
   - intent: deny
   - action: utter_ask_start_cooking
   - intent: affirm
+  - checkpoint: cooking_started
+
+
+- story: Start cooking (user initiative)
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: start_cooking
   - checkpoint: cooking_started
 
 
@@ -68,6 +85,7 @@ stories:
   - action: utter_ask_start_cooking
   - intent: deny
   - action: utter_ask_want_more_info
+
 
 ####################### Phase 3: Start cooking #######################
 

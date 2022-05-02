@@ -60,13 +60,14 @@ class ActionListIngredients(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
-        people_count = w2n.word_to_num(tracker.get_slot('people_count'))
+        people_count = tracker.get_slot('people_count')
         logger.info('Found %d ingredients', len(recipe.ingredients))
         if people_count is None:
             logger.info('Use default recipe servings: %d people', recipe.servings)
             people_count = recipe.servings  # Use recipe's servings as people_count value
         else:
             # Update ingredients amount to adapt to the specified people_count
+            people_count = w2n.word_to_num(people_count)
             logger.info('Update recipe to adapt to %d people', people_count)
             for i in recipe.ingredients:
                 i.amount = i.amount * (people_count / recipe.servings)
@@ -85,15 +86,17 @@ class ActionSearchIngredientSubstitute(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         ingredients = list(tracker.get_latest_entity_values('ingredient')) # TODO: handle multiple ingredients
-        substitute = None
+        ingredient, substitute = None, None
         if len(ingredients) > 0:
             ingredient = ingredients[0]
             substitute = dataset.search_ingredient_substitute(ingredient)
             logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)        
         if substitute is not None:
             dispatcher.utter_message(response='utter_ingredient_substitute/found', ingredient=ingredient, substitute=substitute)
-        else:
+        elif ingredient is not None:
             dispatcher.utter_message(response='utter_ingredient_substitute/not_found', ingredient=ingredient)
+        else:
+            dispatcher.utter_message(response='utter_ingredient_substitute/no_ingredient')
         return []
 
 class ActionListStepsLoop(FormValidationAction):

@@ -101,7 +101,3 @@ class Dataset():
         if len(results) == 0: 
             return None
         return results[0]
-
-
-dataset = Dataset()
-print('ok')

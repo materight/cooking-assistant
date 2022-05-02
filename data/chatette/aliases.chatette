@@ -52,14 +52,20 @@
 ~[cook]
     {cook/prepare/make/bake}
 
+~[cooking]
+    {cooking/preparing/making/baking}
+
 ~[needed]
     {needed/required}
 
 ~[need]
     {need/require}
 
+~[start]
+    {start/begin/initiate/commence}
+
 ~[can]
-    {can/could/may/would}
+    {can/could/may/would/should}
 
 ~[i want to]
     [&I]{'d/ would} [really?] [like|love] to
