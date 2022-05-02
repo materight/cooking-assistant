@@ -9,6 +9,7 @@ intents:
   - next
   - search_by_ingredients:
       use_entities: [ ingredient ]
+  - ask_alternative_recipe
   - ask_ingredients_list
   - ask_expected_time
   - ask_ingredient_substitute:
@@ -34,13 +35,13 @@ responses:
   utter_search_recipe/found:
   - text: "I found a recipe for \"{recipe_title}\"."
 
-  utter_search_recipe/alternatives:
-  - text: "Here are the other recipes I was able to find:\n{recipes_list}. Which recipe would you like to know more about?"
+  utter_search_recipe/found_alternative:
+  - text: "I found a recipe for \"{recipe_title}\"."
 
   utter_search_recipe/not_found:
   - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
 
-  utter_search_recipe/no_alternatives:
+  utter_search_recipe/not_found_alternative:
   - text: "Sorry I wasn't able to find any alternative. Would you like to search for something else?"
 
   utter_ask_want_more_info:
@@ -87,6 +88,7 @@ responses:
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
   - action_search_by_ingredients
+  - action_search_alternative_recipe
   - action_tell_expected_time
   - action_search_ingredient_substitute
   - action_list_ingredients

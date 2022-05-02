@@ -33,6 +33,9 @@
     ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].
     ~[&greet?] ~[can] you ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
 
+%[ask_alternative_recipe](50)
+    ~[thanks?] [no?] {is/are} there {any/some/an} ~[alternative] ~[recipe?]?
+
 %[ask_ingredients_list](50)
     ~[thanks?] {what/which} ~[ingredient]s are ~[needed]?
     ~[thanks?] {what/which} ~[ingredient]s do [&I] ~[need]?

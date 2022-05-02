@@ -21,6 +21,13 @@ rules:
     - action: utter_ask_want_more_info
 
 
+  - rule: Ask for alternative recipe
+    steps:
+    - intent: ask_alternative_recipe
+    - action: action_search_alternative_recipe
+    - action: utter_ask_want_more_info
+
+
   - rule: Ask for expected preparation time
     condition:
     - slot_was_set: [ current_recipe ]

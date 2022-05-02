@@ -39,6 +39,24 @@ class ActionSearchByIngredients(Action):
             return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe.id) ]
 
 
+class ActionSearchAlternativeRecipe(Action):
+    """Give the user an alternative to the selected recipe."""
+    def name(self) -> Text:
+        return 'action_search_alternative_recipe'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        current_recipe_id = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        found_recipes_ids = tracker.get_slot('found_recipes_ids') # TODO: handle None recipe_ids
+        if len(found_recipes_ids) <= 1:
+            dispatcher.utter_message(response='utter_search_recipe/not_found_alternative')
+            return []
+        current_recipe_idx = found_recipes_ids.index(current_recipe_id)
+        new_recipe_id = found_recipes_ids[(current_recipe_idx + 1) % len(found_recipes_ids)]
+        recipe = dataset.get_recipe(new_recipe_id)
+        dispatcher.utter_message(response='utter_search_recipe/found_alternative', recipe_title=recipe.title)
+        return [ SlotSet('current_recipe', new_recipe_id) ]
+        
+
 class ActionTellExpectedTime(Action):
     """Tell the user the expected preparation and cooking time."""
 
@@ -50,6 +68,7 @@ class ActionTellExpectedTime(Action):
         recipe = dataset.get_recipe(recipe_id)
         dispatcher.utter_message(response='utter_expected_time', prep_time=str(recipe.prep_time), cook_time=str(recipe.cook_time))
         return []
+
 
 class ActionListIngredients(Action):
     """List all the ingredients needed for the selected recipe."""
@@ -98,6 +117,7 @@ class ActionSearchIngredientSubstitute(Action):
         else:
             dispatcher.utter_message(response='utter_ingredient_substitute/no_ingredient')
         return []
+
 
 class ActionListStepsLoop(FormValidationAction):
     """Form validator to read step-by-step the instructions for a recipe."""
