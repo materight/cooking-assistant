@@ -16,7 +16,7 @@ class Ingredient:
     unit: Optional[Text]
     def __str__(self) -> str:
         res = ''
-        if not np.isnan(self.amount): res += f'{self.amount:{ ".0f" if self.amount.is_integer else ".2f"}}'
+        if not np.isnan(self.amount): res += f'{self.amount:{ ".0f" if self.amount.is_integer() else ".1f"}}'
         if self.unit is not None: res += f'{self.unit}'
         if len(res) > 0: res += ' '
         res += self.name
@@ -58,7 +58,7 @@ class Dataset():
         self._df_ingredients_substitutes = pd.DataFrame([next(iter(i.items())) for i  in raw_ingredients_substitutes], columns=['name', 'substitute'])
         # Post-processing
         self._df_recipes = self._df_recipes.drop(['ingredients', 'steps'], axis=1).set_index('id')
-        self._df_ingredients[['amount', 'unit']] = self._df_ingredients.amount.fillna('').astype(str).str.split(r'(\d+)(.*)', expand=True)[[1,2]].replace('', None)
+        self._df_ingredients[['amount', 'unit']] = self._df_ingredients.amount.fillna('').astype(str).str.split(r'(\d+)(.*)', expand=True)[[1,2]]
         self._df_ingredients['amount'] = self._df_ingredients['amount'].astype(float)
 
     @property

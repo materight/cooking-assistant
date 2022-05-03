@@ -80,13 +80,14 @@ class ActionListIngredients(Action):
         recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
         people_count = tracker.get_slot('people_count')
+        logger.info('Listing ingredients for recipe %s and "%s" people', recipe.id, people_count)
         logger.info('Found %d ingredients', len(recipe.ingredients))
         if people_count is None:
             logger.info('Use default recipe servings: %d people', recipe.servings)
             people_count = recipe.servings  # Use recipe's servings as people_count value
         else:
             # Update ingredients amount to adapt to the specified people_count
-            people_count = w2n.word_to_num(people_count)
+            people_count = w2n.word_to_num(str(people_count))
             logger.info('Update recipe to adapt to %d people', people_count)
             for i in recipe.ingredients:
                 i.amount = i.amount * (people_count / recipe.servings)
