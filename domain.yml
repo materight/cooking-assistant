@@ -16,6 +16,7 @@ intents:
       use_entities: [ ingredient ]
   - tell_people_count:
       use_entities: [ CARDINAL ]
+  - tell_people_count_one
   - start_cooking
   
 
@@ -36,7 +37,8 @@ responses:
   - text: "I found a recipe for \"{recipe_title}\"."
 
   utter_search_recipe/found_alternative:
-  - text: "I found a recipe for \"{recipe_title}\"."
+  - text: "What about \"{recipe_title}\"?"
+  - text: "I also found a recipe for \"{recipe_title}\"."
 
   utter_search_recipe/not_found:
   - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
@@ -117,6 +119,9 @@ slots:
     - type: from_entity
       entity: CARDINAL
       intent: tell_people_count
+    - type: from_intent
+      value: 1
+      intent: tell_people_count_one
 
   current_step_idx:
     type: any

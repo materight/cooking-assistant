@@ -14,6 +14,9 @@
 ~[i am]
     [&I]{'m/ am}
 
+~[it is]
+    [&it]{'s/ is}
+
 ~[do not]
     {don't/do not/not}
 
@@ -92,3 +95,6 @@
 
 ~[people]
     {people/person/persons/friends/relatives}
+
+~[alone]
+    {alone/only/by myself}

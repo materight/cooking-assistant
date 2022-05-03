@@ -17,6 +17,21 @@ stories:
   - checkpoint: recipe_selected
   
 
+- story: Search for an alternative recipe
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_by_ingredients
+    entities: [ ingredient ]
+  - action: action_search_by_ingredients
+  - slot_was_set: [ found_recipes_ids, current_recipe ]
+  - action: utter_ask_want_more_info
+  - intent: ask_alternative_recipe
+  - action: action_search_alternative_recipe
+  - slot_was_set: [ current_recipe ]
+  - checkpoint: recipe_selected
+
+
 ####################### Phase 2: Get more infos about the recipe #######################
 
 - story: Ask for ingredient lists
@@ -30,7 +45,7 @@ stories:
   - action: utter_ask_want_more_info
 
 
-- story: Ask for expected preoparation time
+- story: Ask for expected preparation time
   steps:
   - checkpoint: recipe_selected
   - action: utter_ask_want_more_info
@@ -52,8 +67,10 @@ stories:
   steps:
   - checkpoint: recipe_selected
   - action: utter_ask_want_more_info
-  - intent: tell_people_count
-    entities: [ CARDINAL ]
+  - or:
+    - intent: tell_people_count
+      entities: [ CARDINAL ]
+    - intent: tell_people_count_one
   - slot_was_set: [ people_count ]
   - action: action_list_ingredients
   - action: utter_ask_want_more_info

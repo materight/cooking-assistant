@@ -476,27 +476,77 @@ nlu:
     - we are [one](CARDINAL) relatives
     - we [one](CARDINAL)
     - we [one](CARDINAL) person
+- intent: tell_people_count_one
+  examples: |
+    - i'm only
+    - thanks I am by myself
+    - it is only me
+    - thanks i am alone
+    - thanks i am by myself
+    - thank you I am by myself
+    - thank you i am alone
+    - I'm by myself
+    - thank you I am only
+    - thank you i'm by myself
+    - i'm alone
+    - thank you It's only me
+    - thanks I'm alone
+    - i'm by myself
+    - thanks It is just me
+    - thanks I am only
+    - thanks i'm alone
+    - thank you it is just me
+    - I'm only
+    - thanks i'm by myself
+    - thanks i am only
+    - thank you It's just me
+    - thank you it's just me
+    - it is just me
+    - thank you i'm only
+    - I am by myself
+    - thank you I'm only
+    - thanks I am alone
+    - thank you it is only me
+    - thanks it's only me
+    - thanks i'm only
+    - thank you It is only me
+    - thanks I'm only
+    - thank you i am by myself
+    - thank you It is just me
+    - It's only me
+    - thank you it's only me
+    - i am by myself
+    - thanks It is only me
+    - I'm alone
+    - It is just me
+    - thanks it's just me
+    - thanks it is just me
+    - thank you I'm alone
+    - thank you i am only
+    - It is only me
+    - I am only
+    - it's only me
+    - thanks it is only me
+    - it's just me
 - intent: start_cooking
   examples: |
     - bake
     - can We get going and initiate preparing?
     - can We go ahead and commence baking now?
     - can We initiate baking now?
+    - can we get going and initiate preparing now?
     - can we start preparing now?
     - could We begin cooking?
     - could we go ahead and begin preparing now?
     - could we initiate baking now?
     - let's bake now
     - let's begin baking
-    - let's commence cooking
     - let's cook now
     - let's initiate cooking now
     - let's prepare
     - let's start making now
     - make
     - make now
-    - may We commence preparing?
-    - may we go ahead and commence preparing?
     - prepare now
     - should We get going and commence preparing now?
     - should We go ahead and initiate baking now?
@@ -505,14 +555,16 @@ nlu:
     - start baking now
     - thank you bake
     - thank you could We go ahead and initiate preparing?
-    - thank you could We start baking now?
     - thank you could we commence baking?
+    - thank you initiate cooking
     - thank you let's bake
     - thank you let's initiate preparing now
     - thank you let's make now
     - thank you let's start baking now
-    - thank you make now
+    - thank you may we initiate baking?
     - thank you should we go ahead and start baking?
+    - thank you start preparing
+    - thank you would We start baking?
     - thank you would we get going and commence baking?
     - thank you would we go ahead and commence making?
     - thank you would we go ahead and initiate cooking?
@@ -520,10 +572,10 @@ nlu:
     - thanks cook
     - thanks could we begin baking now?
     - thanks could we get going and begin preparing?
-    - thanks let's bake
     - thanks may We begin baking now?
     - thanks should We begin making?
     - thanks start cooking now
+    - would We commence making?
     - would We get going and start cooking now?
     - would we commence making?
     - would we go ahead and commence cooking?
