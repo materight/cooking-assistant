@@ -53,6 +53,12 @@ rules:
     wait_for_user_input: false
 
 
+  - rule: Set timer
+    steps:
+    - intent: set_timer
+    - action: action_set_timer
+
+
   - rule: Start cooking
     condition:
     - slot_was_set: [ current_recipe ]
@@ -91,6 +97,15 @@ rules:
     steps:
     - intent: ask_expected_time
     - action: action_tell_expected_time
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
+
+  - rule: Interruption - set timer
+    condition:
+    - active_loop: list_steps_loop
+    steps:
+    - intent: set_timer
+    - action: action_set_timer
     - action: list_steps_loop
     - active_loop: list_steps_loop
 

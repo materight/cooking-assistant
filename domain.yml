@@ -17,9 +17,10 @@ intents:
   - tell_people_count:
       use_entities: [ CARDINAL ]
   - tell_people_count_one
-  - start_cooking
   - set_timer:
       use_entities: [ TIME ]
+  - start_cooking
+
   
 
 # Responses, check https://rasa.com/docs/rasa/responses for more info
@@ -76,6 +77,17 @@ responses:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
   - text: "For {people_count_str} you'll need:\n{ingredients_list}"
 
+  utter_set_timer/done:
+  - text: "I've set a timer for {time}."
+  - text: "Ok I'll remind you in {time}."
+
+  utter_set_timer/error:
+  - text: "I'm sorry I couldn't undesterstand."
+
+  utter_set_timer/expired:
+  - text: "Are you still there? The {time} are over!"
+  - text: "Hey, your {time] timer has expired!"
+
   utter_ask_start_cooking:
   - text: "Shall we start cooking?"
   - text: "Do you have everything ready?"
@@ -105,6 +117,7 @@ actions:
   - action_search_ingredient_substitute
   - action_list_ingredients
   - validate_list_steps_loop
+  - action_set_timer
   - action_reset_slots
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info

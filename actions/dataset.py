@@ -39,7 +39,12 @@ class Recipe:
     servings: int
     ingredients: List[Ingredient]
     steps: List[Step]
-    
+
+    def set_servings(self, servings: int):
+        for ingredient in self.ingredients:
+            ingredient.amount = ingredient.amount * (servings / self.servings)
+        self.servings = servings
+
 class Dataset():
     """Dataset containing the recipes data used by the agent."""
 

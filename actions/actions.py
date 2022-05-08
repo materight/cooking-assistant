@@ -1,12 +1,14 @@
-"""Custom actions."""
+"""Custom Rasa actions."""
 import logging
+from datetime import datetime, timedelta
 from typing import Any, Text, Dict, List
 
 from word2number import w2n
 from rasa_sdk import Action, Tracker, FormValidationAction
-from rasa_sdk.events import SlotSet, AllSlotsReset
+from rasa_sdk.events import SlotSet, AllSlotsReset, ReminderScheduled
 from rasa_sdk.executor import CollectingDispatcher
 
+from . import utils
 from .dataset import Dataset
 
 # Logger
@@ -90,9 +92,7 @@ class ActionListIngredients(Action):
             # Update ingredients amount to adapt to the specified people_count
             people_count = w2n.word_to_num(str(people_count))
             logger.info('Update recipe to adapt to %d people', people_count)
-            for i in recipe.ingredients:
-                i.amount = i.amount * (people_count / recipe.servings)
-            recipe.servings = people_count
+            recipe.set_servings(people_count)
         ingredients_list = '\n'.join([ f'  - {i}' for i in recipe.ingredients ])
         people_count_str = f'{people_count} people' if people_count > 1 else '1 person'
         dispatcher.utter_message(response='utter_list_ingredients', ingredients_list=ingredients_list, people_count_str=people_count_str)
@@ -106,7 +106,7 @@ class ActionSearchIngredientSubstitute(Action):
         return 'action_search_ingredient_substitute'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        ingredients = list(tracker.get_latest_entity_values('ingredient')) # TODO: handle multiple ingredients
+        ingredients = list(tracker.get_latest_entity_values('ingredient')) # TODO: handle multiple ingredients and None case
         ingredient, substitute = None, None
         if len(ingredients) > 0:
             ingredient = ingredients[0]
@@ -140,13 +140,32 @@ class ActionListStepsLoop(FormValidationAction):
         else:
             # Read next step
             logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), recipe.id)
-            current_step_descr = recipe.steps[current_step_idx].description
-            current_step_descr = current_step_descr[0].lower() + current_step_descr[1:]
+            current_step_descr = utils.lower_first_letter(recipe.steps[current_step_idx].description)
             if current_step_idx == 0:
                 dispatcher.utter_message(response='utter_list_steps/first', step_description=current_step_descr)
             else:
                 dispatcher.utter_message(response='utter_list_steps/next', step_description=current_step_descr)
             return dict(current_step_idx=current_step_idx, list_steps_done=None)
+
+
+class ActionSetTimer(Action):
+    """Set a timer as reminder."""
+    
+    def name(self) -> Text:
+        return 'action_set_timer'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        time_str = next(tracker.get_latest_entity_values('TIME'), None)  #TODO: handle None case
+        if time_str is not None:
+            dispatcher.utter_message(response='utter_set_timer/done', time=time_str)
+            amount, unit = utils.parse_time_str(time_str)
+            if amount is not None and unit is not None:
+                logger.info('Set a timer with amount=%d unit=%s', amount, unit)
+                trigger_time = datetime.now() + timedelta(**{unit: amount})
+                return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='utter_set_timer/expired', entities=dict(time=f'{amount} {unit}')) ]
+        logger.info('Timer not set for time_str "%s"', time_str)
+        dispatcher.utter_message(response='utter_set_timer/error', time=time_str)
+        return [ ]
 
 
 class ActionResetSlots(Action):
