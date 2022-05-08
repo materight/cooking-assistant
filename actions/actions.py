@@ -162,17 +162,7 @@ class ActionSetTimer(Action):
                 trigger_time = datetime.now() + timedelta(**{unit: amount})
                 logger.info('Set a timer for %d %s, trigger at %s', amount, unit, trigger_time)
                 dispatcher.utter_message(response='utter_set_timer/done', time=time_str)
-                return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='EXTERNAL_timer_expired') ]
+                return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='EXTERNAL_timer_expired', kill_on_user_message=False) ]
         logger.info('Could not set timer for entity "%s"', time_str)
         dispatcher.utter_message(response='utter_set_timer/error', time=time_str)
         return [ ]
-
-
-class ActionResetSlots(Action):
-    """Reset all the slots to the default values."""
-    
-    def name(self) -> Text:
-        return 'action_reset_slots'
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        return [ AllSlotsReset() ]

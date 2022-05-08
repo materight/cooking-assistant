@@ -119,7 +119,6 @@ actions:
   - action_list_ingredients
   - validate_list_steps_loop
   - action_set_timer
-  - action_reset_slots
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
 entities:

@@ -83,8 +83,8 @@ rules:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: action_reset_slots
     - action: utter_greet/finish
+    - action: action_restart
 
 
   # Reading cooking steps interruptions 
@@ -97,6 +97,7 @@ rules:
     - action: list_steps_loop
     - active_loop: list_steps_loop
 
+
   - rule: Interruption - ask for expected preparation time
     condition:
     - active_loop: list_steps_loop
@@ -105,6 +106,7 @@ rules:
     - action: action_tell_expected_time
     - action: list_steps_loop
     - active_loop: list_steps_loop
+
 
   - rule: Interruption - set timer
     condition:
