@@ -4,10 +4,10 @@ from typing import Any, Text, Dict, List
 
 from word2number import w2n
 from rasa_sdk import Action, Tracker, FormValidationAction
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, AllSlotsReset
 from rasa_sdk.executor import CollectingDispatcher
 
-from .dataset import Dataset, Ingredient, Recipe
+from .dataset import Dataset
 
 # Logger
 logger = logging.getLogger(__name__)
@@ -41,6 +41,7 @@ class ActionSearchByIngredients(Action):
 
 class ActionSearchAlternativeRecipe(Action):
     """Give the user an alternative to the selected recipe."""
+
     def name(self) -> Text:
         return 'action_search_alternative_recipe'
 
@@ -131,13 +132,14 @@ class ActionListStepsLoop(FormValidationAction):
         recipe = dataset.get_recipe(recipe_id)
         current_step_idx = tracker.get_slot('current_step_idx')
         current_step_idx += 1 # Go to the next step
-        logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), recipe.id)
         if current_step_idx >= len(recipe.steps):
             # All the steps have been read
+            logger.info('All the steps of recipe %s have been read', recipe.id)
             dispatcher.utter_message(response='utter_list_steps/end')
             return dict(current_step_idx=-1, list_steps_done=True)
         else:
             # Read next step
+            logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), recipe.id)
             current_step_descr = recipe.steps[current_step_idx].description
             current_step_descr = current_step_descr[0].lower() + current_step_descr[1:]
             if current_step_idx == 0:
@@ -145,3 +147,13 @@ class ActionListStepsLoop(FormValidationAction):
             else:
                 dispatcher.utter_message(response='utter_list_steps/next', step_description=current_step_descr)
             return dict(current_step_idx=current_step_idx, list_steps_done=None)
+
+
+class ActionResetSlots(Action):
+    """Reset all the slots to the default values."""
+    
+    def name(self) -> Text:
+        return 'action_reset_slots'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        return [ AllSlotsReset() ]

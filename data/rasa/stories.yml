@@ -111,3 +111,27 @@ stories:
   - checkpoint: cooking_started
   - action: list_steps_loop
   - active_loop: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 0
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 1
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 2
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: next 
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+    - requested_slot: null
+  - action: utter_greet/finish

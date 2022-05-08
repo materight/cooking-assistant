@@ -62,12 +62,35 @@ rules:
     - active_loop: list_steps_loop
 
 
-  # - rule: Interruption on reading step loop
-  #   condition:
-  #   - active_loop: list_steps_loop
-  #   steps:
-  #   - intent: chitchat
-  #   - action: utter_chitchat
-  #   # Return to loop after handling the interruption intent
-  #   - action: list_steps_loop
-  #   - active_loop: list_steps_loop
+  - rule: Finish cooking
+    condition:
+    - slot_was_set: [ current_recipe ]
+    - active_loop: list_steps_loop
+    steps:
+    - action: list_steps_loop
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_reset_slots
+    - action: utter_greet/finish
+
+
+  # Reading cooking steps interruptions 
+  - rule: Interruption - ask for alternative ingredient
+    condition:
+    - active_loop: list_steps_loop
+    steps:
+    - intent: ask_ingredient_substitute
+    - action: action_search_ingredient_substitute
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
+
+  - rule: Interruption - ask for expected preparation time
+    condition:
+    - active_loop: list_steps_loop
+    steps:
+    - intent: ask_expected_time
+    - action: action_tell_expected_time
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
+

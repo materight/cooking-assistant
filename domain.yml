@@ -26,6 +26,10 @@ responses:
   - text: "Hi! What would you like me to do?"
   - text: "Hello! What can I do for you today?"
 
+  utter_greet/finish:
+  - text: "What else can I do for you?"
+  - text: "Would you like to cook something else?"
+
   utter_info:
   - text: "I can help you find cooking recipes."
 
@@ -48,6 +52,7 @@ responses:
 
   utter_ask_want_more_info:
   - text: "Would you like to know more?"
+  - text: "Would you like more information?"
 
   utter_ask_people_count:
   - text: "Great! How many people are you cooking for?"
@@ -95,6 +100,7 @@ actions:
   - action_search_ingredient_substitute
   - action_list_ingredients
   - validate_list_steps_loop
+  - action_reset_slots
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
 entities:
