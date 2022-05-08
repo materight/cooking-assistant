@@ -53,7 +53,7 @@
     ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]
     ~[thanks?] [&we?] are [in?] @[CARDINAL] ~[people?]
 
-%[tell_people_count_one](50)
+%[tell_people_count\/one](50)
     ~[thanks?] ~[i am] ~[alone]
     ~[thanks?] ~[it is] {only/just} me
 

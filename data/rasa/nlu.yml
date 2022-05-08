@@ -476,7 +476,7 @@ nlu:
     - we will be [one](CARDINAL) relatives
     - will be [one](CARDINAL)
     - will be [one](CARDINAL) persons
-- intent: tell_people_count_one
+- intent: tell_people_count/one
   examples: |
     - thank you i am by myself
     - i am alone
