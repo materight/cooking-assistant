@@ -6,7 +6,13 @@
     pip install -r requirements.txt
     python -m spacy download en_core_web_md
     ```
-- Regenerate the NLU data (if modified): `python generate_data.py`
-- Train the Rasa pipeline: `python -m rasa train`
-- Start the Rasa actions server in a separate terminal: `python -m rasa run actions`
-- Run the trained model: `python -m rasa shell`
+- Regenerate the NLU data and train the Rasa pipeline:
+    ```shell
+    python -m rasa train
+    python generate_data.py
+    ```
+- In two separate terminals, run the actions server and the trained model:
+    ```shell
+    python -m rasa run actions
+    python -m rasa shell
+    ```
