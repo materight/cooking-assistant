@@ -52,11 +52,20 @@
 ~[use]
     {use/utilize/employ}
 
+~[eat]
+    {eat/try/taste}
+
 ~[cook]
     {cook/prepare/make/bake}
 
 ~[cooking]
     {cooking/preparing/making/baking}
+
+~[set]
+    {set/set up/create/activate/configure/add}
+
+~[remind]
+    {remind/remember/notify/alert/warn}
 
 ~[needed]
     {needed/required}
@@ -83,11 +92,11 @@
 ~[ingredient]
     {ingredient/item/thing/compononet}
 
+~[timer]
+    {timer/reminder/countdown/alarm/chronometer}
+
 ~[containing]
     {containing/with/using}
-
-~[eat]
-    {eat/try/taste}
 
 ~[day time]
     {today/tomorrow}

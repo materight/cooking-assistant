@@ -8,3 +8,7 @@
 // Use spacy named entity recognition to extract numbers (no need for multiple examples)
 @[CARDINAL]
     one
+
+// Use spacy named entity recognition to extract time intervals (no need for multiple examples)
+@[TIME]
+    40 min

@@ -134,4 +134,8 @@ stories:
     - current_step_idx: -1
     - list_steps_done: True
     - requested_slot: null
+  - action: action_reset_slots
   - action: utter_greet/finish
+
+
+- story: Interruptions while reading recipe steps

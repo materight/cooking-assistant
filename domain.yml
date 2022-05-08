@@ -18,6 +18,8 @@ intents:
       use_entities: [ CARDINAL ]
   - tell_people_count_one
   - start_cooking
+  - set_timer:
+      use_entities: [ TIME ]
   
 
 # Responses, check https://rasa.com/docs/rasa/responses for more info
@@ -83,10 +85,13 @@ responses:
   - text: "Perfect let's cook! To begin, {step_description} Tell me when you're ready for the next step."
 
   utter_list_steps/next:
-  - text: "Great, now please {step_description}"
+  - text: "Great, now {step_description}"
   - text: "Perfect, now {step_description}"
+  - text: "Okay, now {step_description}"
+  - text: "After that {step_description}"
   - text: "Then {step_description}"
   - text: "Now {step_description}"
+  - text: "Next {step_description}"
 
   utter_list_steps/end:
   - text: "Great! That was the last step, enjoy your meal!"
@@ -106,6 +111,7 @@ actions:
 entities:
   - ingredient
   - CARDINAL
+  - TIME
 
 # Slots, check https://rasa.com/docs/rasa/domain/#slots for more info
 slots:
