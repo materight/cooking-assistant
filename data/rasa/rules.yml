@@ -59,6 +59,12 @@ rules:
     - action: action_set_timer
 
 
+  - rule: Notify timer has expired
+    steps:
+    - intent: EXTERNAL_timer_expired
+    - action: utter_set_timer/expired
+
+
   - rule: Start cooking
     condition:
     - slot_was_set: [ current_recipe ]

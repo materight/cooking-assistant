@@ -19,6 +19,7 @@ intents:
   - tell_people_count_one
   - set_timer:
       use_entities: [ TIME ]
+  - EXTERNAL_timer_expired
   - start_cooking
 
   
@@ -82,11 +83,11 @@ responses:
   - text: "Ok I'll remind you in {time}."
 
   utter_set_timer/error:
-  - text: "I'm sorry I couldn't undesterstand."
+  - text: "I'm sorry, I couldn't undesterstand."
 
   utter_set_timer/expired:
-  - text: "Are you still there? The {time} are over!"
-  - text: "Hey, your {time] timer has expired!"
+  - text: "Are you still there? The timer is over!"
+  - text: "Hey your timer has expired!"
 
   utter_ask_start_cooking:
   - text: "Shall we start cooking?"

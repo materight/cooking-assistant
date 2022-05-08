@@ -157,13 +157,13 @@ class ActionSetTimer(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         time_str = next(tracker.get_latest_entity_values('TIME'), None)  #TODO: handle None case
         if time_str is not None:
-            dispatcher.utter_message(response='utter_set_timer/done', time=time_str)
             amount, unit = utils.parse_time_str(time_str)
             if amount is not None and unit is not None:
-                logger.info('Set a timer with amount=%d unit=%s', amount, unit)
                 trigger_time = datetime.now() + timedelta(**{unit: amount})
-                return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='utter_set_timer/expired', entities=dict(time=f'{amount} {unit}')) ]
-        logger.info('Timer not set for time_str "%s"', time_str)
+                logger.info('Set a timer for %d %s, trigger at %s', amount, unit, trigger_time)
+                dispatcher.utter_message(response='utter_set_timer/done', time=time_str)
+                return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='EXTERNAL_timer_expired') ]
+        logger.info('Could not set timer for entity "%s"', time_str)
         dispatcher.utter_message(response='utter_set_timer/error', time=time_str)
         return [ ]
 
