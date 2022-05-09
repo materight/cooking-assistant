@@ -1,145 +1,49 @@
-version: "3.1"
-
-# Intents, check https://rasa.com/docs/rasa/domain/#intents for more info
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - next
-  - search_by_ingredients:
-      use_entities: [ ingredient ]
-  - ask_alternative_recipe
-  - ask_ingredients_list
-  - ask_expected_time
-  - ask_ingredient_substitute:
-      use_entities: [ ingredient ]
-  - tell_people_count:
-      use_entities: [ CARDINAL ]
-  - tell_people_count_one
-  - set_timer:
-      use_entities: [ TIME ]
-  - EXTERNAL_timer_expired
-  - start_cooking
-
-  
-
-# Responses, check https://rasa.com/docs/rasa/responses for more info
-responses:
-  utter_greet:
-  - text: "Hi! What would you like me to do?"
-  - text: "Hello! What can I do for you today?"
-
-  utter_greet/finish:
-  - text: "What else can I do for you?"
-  - text: "Would you like to cook something else?"
-
-  utter_info:
-  - text: "I can help you find cooking recipes."
-
-  utter_goodbye:
-  - text: "Thanks for talking with me. Bye!"
-  - text: "Bye!"
-
-  utter_search_recipe/found:
-  - text: "I found a recipe for \"{recipe_title}\"."
-
-  utter_search_recipe/found_alternative:
-  - text: "What about \"{recipe_title}\"?"
-  - text: "I also found a recipe for \"{recipe_title}\"."
-
-  utter_search_recipe/not_found:
-  - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
-
-  utter_search_recipe/not_found_alternative:
-  - text: "Sorry I wasn't able to find any alternative. Would you like to search for something else?"
-
-  utter_ask_want_more_info:
-  - text: "Would you like to know more?"
-  - text: "Would you like more information?"
-
-  utter_ask_people_count:
-  - text: "Great! How many people are you cooking for?"
-  - text: "Thank you. How many people will be eating?"
-
-  utter_expected_time:
-  - text: "This recipe requires {prep_time}min for preparation and {cook_time}min for cooking."
-
-  utter_ingredient_substitute/not_found:
-  - text: "Sorry, I couldn't find any substitute for {ingredient}."
-
-  utter_ingredient_substitute/no_ingredient:
-  - text: "Sorry, I couldn't find any alternative."
-
-  utter_ingredient_substitute/found:
-  - text: "You may use {substitute} as a substitute to {ingredient}."
-
-  utter_list_ingredients:
-  - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
-  - text: "For {people_count_str} you'll need:\n{ingredients_list}"
-
-  utter_set_timer/done:
-  - text: "I've set a timer for {time}."
-  - text: "Ok I'll remind you in {time}."
-
-  utter_set_timer/error:
-  - text: "I'm sorry, I couldn't undesterstand."
-
-  utter_set_timer/expired:
-  - text: "Are you still there? The timer is over!"
-  - text: "Hey your timer has expired!"
-
-  utter_ask_start_cooking:
-  - text: "Shall we start cooking?"
-  - text: "Do you have everything ready?"
-
-  utter_list_steps/first:
-  - text: "Ok let's start! First, {step_description} Let me know when you're done."
-  - text: "Perfect let's cook! To begin, {step_description} Tell me when you're ready for the next step."
-
-  utter_list_steps/next:
-  - text: "Great, now {step_description}"
-  - text: "Perfect, now {step_description}"
-  - text: "Okay, now {step_description}"
-  - text: "After that {step_description}"
-  - text: "Then {step_description}"
-  - text: "Now {step_description}"
-  - text: "Next {step_description}"
-
-  utter_list_steps/end:
-  - text: "Great! That was the last step, enjoy your meal!"
-  - text: "And we are done! Have a nice meal!"
-  
-# Actions, check https://rasa.com/docs/rasa/actions for more info
-actions:
-  - action_search_by_ingredients
-  - action_search_alternative_recipe
-  - action_tell_expected_time
-  - action_search_ingredient_substitute
-  - action_list_ingredients
-  - validate_list_steps_loop
-  - action_set_timer
-
-# Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
+- greet
+- goodbye
+- affirm
+- deny
+- next
+- search_by_ingredients:
+    use_entities:
+    - ingredient
+- ask_alternative_recipe
+- ask_ingredients_list
+- ask_expected_time
+- ask_ingredient_substitute:
+    use_entities:
+    - ingredient
+- tell_people_count:
+    use_entities:
+    - CARDINAL
+- tell_people_count_one
+- set_timer:
+    use_entities:
+    - TIME
+- EXTERNAL_timer_expired
+- start_cooking
 entities:
-  - ingredient
-  - CARDINAL
-  - TIME
-
-# Slots, check https://rasa.com/docs/rasa/domain/#slots for more info
+- ingredient
+- CARDINAL
+- TIME
 slots:
   found_recipes_ids:
     type: list
+    influence_conversation: true
     mappings:
     - type: custom
-
   current_recipe:
     type: any
+    influence_conversation: false
     mappings:
     - type: custom
-
   people_count:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: CARDINAL
@@ -147,33 +51,101 @@ slots:
     - type: from_intent
       value: 1
       intent: tell_people_count_one
-
   current_step_idx:
     type: any
     initial_value: -1
+    influence_conversation: false
     mappings:
     - type: custom
-
   list_steps_done:
     type: bool
+    influence_conversation: true
     mappings:
-    - type: from_trigger_intent # affirm intent that triggers form
+    - type: from_trigger_intent
       intent: affirm
-      value: false # Set slot value so that validate_list_steps_loop is triggered
+      value: false
     - type: from_intent
       intent: next
-      value: false # Set slot value so that validate_list_steps_loop is triggered
+      value: false
       conditions:
       - active_loop: list_steps_loop
-
-# Forms, check https://rasa.com/docs/rasa/forms for more info
+responses:
+  utter_greet:
+  - text: Hi! What would you like me to do?
+  - text: Hello! What can I do for you today?
+  utter_greet/finish:
+  - text: What else can I do for you?
+  - text: Would you like to cook something else?
+  utter_info:
+  - text: I can help you find cooking recipes.
+  utter_goodbye:
+  - text: Thanks for talking with me. Bye!
+  - text: Bye!
+  utter_search_recipe/found:
+  - text: I found a recipe for "{recipe_title}".
+  utter_search_recipe/found_alternative:
+  - text: What about "{recipe_title}"?
+  - text: I also found a recipe for "{recipe_title}".
+  utter_search_recipe/not_found:
+  - text: Sorry, I couldn't find any recipe. Would you like to search for something else?
+  utter_search_recipe/not_found_alternative:
+  - text: Sorry I wasn't able to find any alternative. Would you like to search for something else?
+  utter_ask_want_more_info:
+  - text: Would you like to know more?
+  - text: Would you like more information?
+  utter_ask_people_count:
+  - text: Great! How many people are you cooking for?
+  - text: Thank you. How many people will be eating?
+  utter_expected_time:
+  - text: This recipe requires {prep_time}min for preparation and {cook_time}min for cooking.
+  utter_ingredient_substitute/not_found:
+  - text: Sorry, I couldn't find any substitute for {ingredient}.
+  utter_ingredient_substitute/no_ingredient:
+  - text: Sorry, I couldn't find any alternative.
+  utter_ingredient_substitute/found:
+  - text: You may use {substitute} as a substitute to {ingredient}.
+  utter_list_ingredients:
+  - text: |-
+      Here are the ingredients you'll need for {people_count_str}:
+      {ingredients_list}
+  - text: |-
+      For {people_count_str} you'll need:
+      {ingredients_list}
+  utter_set_timer/done:
+  - text: I've set a timer for {time}.
+  - text: Ok I'll remind you in {time}.
+  utter_set_timer/error:
+  - text: I'm sorry, I couldn't undesterstand.
+  utter_set_timer/expired:
+  - text: Are you still there? The timer is over!
+  - text: Hey your timer has expired!
+  utter_ask_start_cooking:
+  - text: Shall we start cooking?
+  - text: Do you have everything ready?
+  utter_list_steps/first:
+  - text: Ok let's start! First, {step_description} Let me know when you're done.
+  - text: Perfect let's cook! To begin, {step_description} Tell me when you're ready for the next step.
+  utter_list_steps/next:
+  - text: Great, now {step_description}
+  - text: Perfect, now {step_description}
+  - text: Okay, now {step_description}
+  - text: After that {step_description}
+  - text: Then {step_description}
+  - text: Now {step_description}
+  - text: Next {step_description}
+  utter_list_steps/end:
+  - text: Great! That was the last step, enjoy your meal!
+  - text: And we are done! Have a nice meal!
+actions:
+- action_search_by_ingredients
+- action_search_alternative_recipe
+- action_tell_expected_time
+- action_search_ingredient_substitute
+- action_list_ingredients
+- validate_list_steps_loop
+- action_set_timer
 forms:
   list_steps_loop:
     required_slots:
-      - current_step_idx
-      - list_steps_done
-
-# Other configs
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+    - current_step_idx
+    - list_steps_done

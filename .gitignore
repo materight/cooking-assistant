@@ -7,3 +7,5 @@ env
 models
 data/chatette/.out
 story_graph.dot
+events.db*
+rasa.db
