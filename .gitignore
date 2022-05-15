@@ -3,6 +3,7 @@ __pycache__
 env
 
 .rasa
+.rasactl
 .cache
 models
 data/chatette/.out
