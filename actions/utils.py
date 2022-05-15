@@ -24,12 +24,17 @@ def parse_time_unit(unit_str: Text):
                 return key, unit
     return None, None
 
+
 def parse_time_str(time_str: Text):
     """Parse a time string into the corresponding time amount and unit."""
     unit, original_unit = parse_time_unit(time_str)
     amount = None
-    if unit is not None and original_unit is not None:
-        try:
-            amount = w2n.word_to_num(time_str.replace(original_unit, '').strip())
-        except: pass
+    # If the unit is missing, assume minutes
+    if unit is None:
+        unit, original_unit = 'minutes', ''
+    # Try to parse time amount
+    try:
+        amount = w2n.word_to_num(time_str.replace(original_unit, '').strip())
+    except:
+        amount, unit = None, None
     return amount, unit

@@ -113,7 +113,7 @@ class ActionSearchIngredientSubstitute(Action):
             substitute = dataset.search_ingredient_substitute(ingredient)
             logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)        
         if substitute is not None:
-            dispatcher.utter_message(response='utter_ingredient_substitute/found', ingredient=ingredient, substitute=substitute)
+            dispatcher.utter_message(response='utter_ingredient_substitute/found', substitute=substitute)
         elif ingredient is not None:
             dispatcher.utter_message(response='utter_ingredient_substitute/not_found', ingredient=ingredient)
         else:

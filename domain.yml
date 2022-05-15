@@ -21,6 +21,7 @@ intents:
       use_entities: [ TIME ]
   - EXTERNAL_timer_expired
   - start_cooking
+  - stop_cooking
 
   
 
@@ -72,7 +73,7 @@ responses:
   - text: "Sorry, I couldn't find any alternative."
 
   utter_ingredient_substitute/found:
-  - text: "You may use {substitute} as a substitute to {ingredient}."
+  - text: "You may use {substitute} as a substitute."
 
   utter_list_ingredients:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
@@ -86,8 +87,8 @@ responses:
   - text: "I'm sorry, I couldn't undesterstand."
 
   utter_set_timer/expired:
-  - text: "Are you still there? The timer is over!"
-  - text: "Hey your timer has expired!"
+  - text: "Are you still there? The timer you set is over!"
+  - text: "Hey, your cooking timer has expired!"
 
   utter_ask_start_cooking:
   - text: "Shall we start cooking?"

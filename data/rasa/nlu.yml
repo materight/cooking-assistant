@@ -374,167 +374,168 @@ nlu:
     - thanks how long will it take to make?
 - intent: ask_ingredient_substitute
   examples: |
-    - I do not have [egg](ingredient), what would I use?
-    - I do not own [egg](ingredient), what alternative should i use?
-    - I do not possess any [egg](ingredient), what else could i employ instead?
-    - I do not possess [egg](ingredient), what ingredient can I employ?
-    - I don't own any [egg](ingredient), what can i utilize instead?
-    - I don't possess any [egg](ingredient), what thing may I utilize instead?
-    - I not have any [egg](ingredient), what substitute should i use instead?
-    - i do not own any [egg](ingredient), what alternative may i employ?
+    - I do not have any [egg](ingredient), what thing could I use instead?
+    - I not own any [egg](ingredient), what replacement may I employ?
+    - I not own any [egg](ingredient), what should i use instead?
+    - I not own [egg](ingredient), what compononet can i employ?
+    - I not own [egg](ingredient), what may i use?
+    - any alternative to [egg](ingredient)?
+    - any replacement for [egg](ingredient)?
+    - any substitute for [egg](ingredient)?
+    - any substitute to [egg](ingredient)?
+    - any surrogate to [egg](ingredient)?
+    - i do not have [egg](ingredient), what else could I use instead?
     - i do not own any [egg](ingredient), what else may i employ?
-    - i do not possess any [egg](ingredient), what surrogate would i utilize instead?
-    - i do not possess [egg](ingredient), what ingredient would I employ?
-    - i don't have any [egg](ingredient), what else may I utilize?
-    - i not have any [egg](ingredient), what alternative may i employ instead?
-    - i not have [egg](ingredient), what replacement could I use?
-    - i not possess any [egg](ingredient), what surrogate can I use?
-    - thank you I do not own any [egg](ingredient), what else can I utilize instead?
-    - thank you I not possess any [egg](ingredient), what could i utilize?
-    - thank you i do not possess any [egg](ingredient), what item would I employ instead?
-    - thank you i don't have any [egg](ingredient), what may I use?
-    - thank you what else should i utilize instead of [egg](ingredient)?
-    - thank you what is an alternative for [egg](ingredient)?
-    - thank you what is an replacement for [egg](ingredient)?
-    - thank you what is an surrogate for [egg](ingredient)?
-    - thank you what may I utilize instead of [egg](ingredient)?
-    - thank you what should i employ instead of [egg](ingredient)?
-    - thank you what thing can I utilize instead of [egg](ingredient)?
-    - thank you what would I employ instead of [egg](ingredient)?
-    - thank you what's an surrogate for [egg](ingredient)?
-    - thanks I don't have any [egg](ingredient), what substitute should I employ?
-    - thanks what else could I employ instead of [egg](ingredient)?
-    - thanks what thing can I employ instead of [egg](ingredient)?
-    - thanks what would i utilize instead of [egg](ingredient)?
-    - thanks what's an alternative for [egg](ingredient)?
-    - thanks what's an alternative to [egg](ingredient)?
+    - i do not own any [egg](ingredient), what surrogate would i use?
+    - thank you I do not have any [egg](ingredient), what thing should I employ instead?
+    - thank you I don't possess [egg](ingredient), what should i employ instead?
+    - thank you any replacement to [egg](ingredient)?
+    - thank you any surrogate to [egg](ingredient)?
+    - thank you i don't have any [egg](ingredient), what else may I utilize?
+    - thank you i don't own any [egg](ingredient), what else would i employ?
+    - thank you i not own any [egg](ingredient), what thing may I employ instead?
+    - thank you what else can I utilize instead of [egg](ingredient)?
+    - thank you what else may i use instead of [egg](ingredient)?
+    - thank you what is an alternative to [egg](ingredient)?
+    - thank you what is an substitute for [egg](ingredient)?
+    - thank you what is an substitute to [egg](ingredient)?
+    - thank you what substitute can I utilize instead of [egg](ingredient)?
+    - thank you what surrogate may i utilize instead of [egg](ingredient)?
+    - thanks I do not own any [egg](ingredient), what replacement can I utilize?
+    - thanks I don't possess any [egg](ingredient), what could i utilize instead?
+    - thanks I don't possess [egg](ingredient), what could i use?
+    - thanks I not have [egg](ingredient), what may I employ?
+    - thanks any alternative for [egg](ingredient)?
+    - thanks what can I utilize instead of [egg](ingredient)?
+    - thanks what is an substitute for [egg](ingredient)?
+    - thanks what is an surrogate for [egg](ingredient)?
+    - thanks what substitute should i utilize instead of [egg](ingredient)?
     - thanks what's an substitute for [egg](ingredient)?
-    - thanks what's an surrogate for [egg](ingredient)?
-    - what else can I utilize instead of [egg](ingredient)?
-    - what else should I utilize instead of [egg](ingredient)?
-    - what else would I utilize instead of [egg](ingredient)?
-    - what is an alternative to [egg](ingredient)?
-    - what is an replacement for [egg](ingredient)?
+    - what compononet should I use instead of [egg](ingredient)?
+    - what else can i use instead of [egg](ingredient)?
+    - what ingredient would i utilize instead of [egg](ingredient)?
+    - what is an alternative for [egg](ingredient)?
     - what is an substitute for [egg](ingredient)?
     - what is an substitute to [egg](ingredient)?
-    - what is an surrogate to [egg](ingredient)?
-    - what may I employ instead of [egg](ingredient)?
-    - what replacement can i utilize instead of [egg](ingredient)?
-    - what should I use instead of [egg](ingredient)?
-    - what substitute can I utilize instead of [egg](ingredient)?
-    - what's an substitute to [egg](ingredient)?
-    - what's an surrogate to [egg](ingredient)?
+    - what item may I use instead of [egg](ingredient)?
+    - what replacement may I utilize instead of [egg](ingredient)?
+    - what should i employ instead of [egg](ingredient)?
+    - what surrogate may I employ instead of [egg](ingredient)?
+    - what would i utilize instead of [egg](ingredient)?
+    - what's an alternative for [egg](ingredient)?
+    - what's an surrogate for [egg](ingredient)?
 - intent: tell_people_count
   examples: |
-    - 'll be [one](CARDINAL)
-    - 'll be [one](CARDINAL) relatives
-    - We are in [one](CARDINAL)
     - We are in [one](CARDINAL) friends
-    - We are in [one](CARDINAL) people
-    - We are in [one](CARDINAL) relatives
     - We are [one](CARDINAL) friends
+    - We going to be [one](CARDINAL)
     - We going to be [one](CARDINAL) relatives
+    - and for [one](CARDINAL) person
+    - and for [one](CARDINAL) relatives
+    - are in [one](CARDINAL)
     - are in [one](CARDINAL) person
-    - are in [one](CARDINAL) relatives
     - are [one](CARDINAL)
-    - are [one](CARDINAL) people
+    - for [one](CARDINAL)
+    - for [one](CARDINAL) people
     - gonna be [one](CARDINAL)
-    - gonna be [one](CARDINAL) person
+    - [one](CARDINAL)
     - [one](CARDINAL) friends
-    - [one](CARDINAL) person
     - [one](CARDINAL) relatives
-    - thank you We are [one](CARDINAL) person
-    - thank you are in [one](CARDINAL)
-    - thank you are in [one](CARDINAL) relatives
-    - thank you going to be [one](CARDINAL)
-    - thank you going to be [one](CARDINAL) people
-    - thank you we are in [one](CARDINAL)
-    - thank you we are in [one](CARDINAL) people
-    - thank you we [one](CARDINAL) friends
-    - thank you we [one](CARDINAL) relatives
-    - thank you will be [one](CARDINAL) relatives
-    - thanks 'll be [one](CARDINAL)
+    - thank you 'll be [one](CARDINAL)
+    - thank you We are [one](CARDINAL) friends
+    - thank you We going to be [one](CARDINAL) relatives
+    - thank you and for [one](CARDINAL)
+    - thank you we 'll be [one](CARDINAL) people
+    - thank you we gonna be [one](CARDINAL)
+    - thank you what about for [one](CARDINAL)
     - thanks We are in [one](CARDINAL) person
-    - thanks We are [one](CARDINAL)
+    - thanks We are in [one](CARDINAL) persons
+    - thanks We are [one](CARDINAL) persons
+    - thanks We will be [one](CARDINAL)
+    - thanks and for [one](CARDINAL)
     - thanks are in [one](CARDINAL) friends
+    - thanks are in [one](CARDINAL) person
     - thanks are [one](CARDINAL)
-    - thanks are [one](CARDINAL) people
-    - thanks are [one](CARDINAL) person
-    - thanks are [one](CARDINAL) persons
-    - thanks going to be [one](CARDINAL) persons
+    - thanks for [one](CARDINAL)
     - thanks [one](CARDINAL)
     - thanks [one](CARDINAL) friends
     - thanks [one](CARDINAL) people
     - thanks [one](CARDINAL) persons
-    - thanks we 'll be [one](CARDINAL)
-    - we are in [one](CARDINAL)
-    - we are in [one](CARDINAL) people
-    - we are in [one](CARDINAL) relatives
+    - thanks we are in [one](CARDINAL) friends
+    - thanks we are [one](CARDINAL) people
+    - thanks what about for [one](CARDINAL)
+    - thanks what about for [one](CARDINAL) friends
+    - thanks what about for [one](CARDINAL) person
+    - thanks will be [one](CARDINAL)
+    - we are [one](CARDINAL) friends
+    - we are [one](CARDINAL) people
     - we are [one](CARDINAL) relatives
+    - we going to be [one](CARDINAL) friends
+    - we going to be [one](CARDINAL) people
     - we going to be [one](CARDINAL) persons
-    - we [one](CARDINAL)
-    - we will be [one](CARDINAL) relatives
+    - we will be [one](CARDINAL)
+    - what about for [one](CARDINAL) person
     - will be [one](CARDINAL)
-    - will be [one](CARDINAL) persons
 - intent: tell_people_count_one
   examples: |
-    - thank you i am by myself
-    - i am alone
+    - It's just me
+    - thanks It's only me
+    - it is only me
+    - thanks it's only me
+    - I am alone
     - thanks i'm by myself
+    - thanks I am alone
+    - thanks it is only me
+    - I'm by myself
+    - i am only
+    - thank you I am alone
+    - i am alone
     - i am by myself
-    - thanks It's just me
+    - thank you It's only me
+    - thanks It is only me
+    - thanks it is just me
+    - thank you i am by myself
+    - thanks i am only
+    - it is just me
+    - thank you I'm alone
+    - thank you it's just me
     - i'm only
-    - thanks it's just me
+    - it's only me
+    - thanks I'm by myself
+    - thank you It's just me
+    - thanks i am alone
+    - thank you i'm only
+    - thank you It is just me
+    - thank you I'm only
+    - It's only me
+    - thanks i'm alone
+    - thanks i am by myself
+    - i'm alone
+    - thank you It is only me
     - thank you it is only me
-    - thank you i'm alone
-    - It is just me
+    - thank you it's only me
+    - thanks I'm only
+    - thanks i'm only
+    - thank you i am only
+    - thanks I'm alone
     - thanks It is just me
     - I am only
-    - thanks I'm by myself
-    - thank you I am alone
-    - thanks i'm alone
     - I'm alone
-    - it is just me
-    - thank you It's just me
-    - it is only me
-    - thank you It's only me
-    - thank you i'm by myself
-    - thank you It is only me
-    - thanks It is only me
-    - I am by myself
-    - thanks I am by myself
-    - thank you I am by myself
-    - thank you it's just me
-    - i'm alone
-    - it's just me
-    - thanks I am alone
-    - thank you it's only me
     - It is only me
-    - thanks i am alone
-    - I'm only
-    - thank you It is just me
-    - thanks it's only me
-    - thank you i'm only
-    - It's just me
-    - thanks I'm alone
-    - i am only
-    - I am alone
-    - thanks It's only me
+    - thank you I am by myself
     - thanks I am only
-    - thanks I'm only
-    - thank you i am only
-    - thanks it is only me
-    - thanks i am by myself
-    - thank you I'm alone
-    - thanks i am only
-    - thank you I'm by myself
+    - thanks I am by myself
+    - I'm only
+    - thank you it is just me
+    - i'm by myself
 - intent: start_cooking
   examples: |
     - begin cooking
+    - begin preparing now
     - can We go ahead and start preparing now?
     - can we go ahead and begin preparing?
     - can we go ahead and commence baking?
-    - commence cooking now
+    - cook
     - could We begin cooking now?
     - could We get going and begin baking now?
     - initiate cooking
@@ -548,7 +549,6 @@ nlu:
     - let's prepare now
     - make now
     - may We commence baking now?
-    - may We commence preparing?
     - may We go ahead and commence baking now?
     - may we get going and commence cooking now?
     - may we get going and commence cooking?
@@ -562,8 +562,6 @@ nlu:
     - thank you begin preparing
     - thank you cook now
     - thank you could we go ahead and start preparing now?
-    - thank you let's begin cooking
-    - thank you let's begin preparing now
     - thank you let's initiate baking now
     - thank you let's initiate making now
     - thank you let's make now
@@ -573,62 +571,116 @@ nlu:
     - thanks can We get going and begin making?
     - thanks could We begin baking now?
     - thanks could we begin cooking?
+    - thanks could we commence cooking now?
     - thanks let's cook
     - thanks let's cook now
     - thanks let's initiate making
     - thanks let's make
+    - thanks let's prepare
     - thanks may We get going and commence baking?
     - would We commence making?
     - would we commence cooking now?
+- intent: stop_cooking
+  examples: |
+    - I am sorry please would I end cooking
+    - I am sorry would you end making
+    - I want to cancel preparing
+    - I would like to halt making
+    - I would like to stop baking
+    - I'm sorry please may you halt cooking
+    - can we halt cooking
+    - could I halt baking
+    - could we stop baking
+    - excuse me I want to cancel preparing
+    - excuse me I would like to cancel cooking
+    - excuse me I would really like to cancel cooking
+    - excuse me i want to end baking
+    - excuse me may we end cooking
+    - excuse me please can I cancel baking
+    - excuse me please could I halt preparing
+    - excuse me please could you stop cooking
+    - excuse me please i want to stop preparing
+    - excuse me please may we cancel preparing
+    - excuse me please should we halt baking
+    - excuse me please would I stop preparing
+    - i am sorry please may we cancel cooking
+    - i want to stop baking
+    - i'm sorry may you stop preparing
+    - may I stop cooking
+    - please I want to end making
+    - please I want to halt baking
+    - please I want to halt making
+    - please I would really love to stop preparing
+    - please can we halt making
+    - please can you stop making
+    - please could we halt baking
+    - please could you cancel cooking
+    - please could you end preparing
+    - please could you halt cooking
+    - please i would really like to end making
+    - please may we cancel cooking
+    - please may we end preparing
+    - please may you cancel making
+    - please may you cancel preparing
+    - please should you end making
+    - please would we halt baking
+    - please would you cancel preparing
+    - please would you stop preparing
+    - should I cancel preparing
+    - sorry please I would really love to halt making
+    - sorry please should I cancel making
+    - sorry should you halt preparing
+    - would we halt preparing
+    - would you halt cooking
 - intent: set_timer
   examples: |
+    - can alert me in [40 min](TIME)
+    - can notify in [40 min](TIME)
     - can you activate reminder for [40 min](TIME)?
-    - could remember in [40 min](TIME)
-    - could you remind in [40 min](TIME)
-    - may add a countdown of [40 min](TIME)?
-    - may set timer in [40 min](TIME)?
-    - please activate chronometer in [40 min](TIME)?
-    - please add reminder in [40 min](TIME)?
-    - please alert me in [40 min](TIME)
-    - please can notify in [40 min](TIME)
-    - please can you alert in [40 min](TIME)
-    - please could you warn in [40 min](TIME)
-    - please may set up timer in [40 min](TIME)?
-    - please may warn in [40 min](TIME)
-    - please would you set up a timer of [40 min](TIME)?
-    - please you remind me in [40 min](TIME)
-    - remind in [40 min](TIME)
-    - should set up countdown in [40 min](TIME)?
-    - should warn me in [40 min](TIME)
-    - should you remember in [40 min](TIME)
-    - should you warn me in [40 min](TIME)
+    - can you add chronometer of [40 min](TIME)?
+    - can you configure a countdown for [40 min](TIME)?
+    - can you set chronometer in [40 min](TIME)?
+    - could warn me in [40 min](TIME)
+    - notify me in [40 min](TIME)
+    - please can notify me in [40 min](TIME)
+    - please could you set up reminder of [40 min](TIME)?
+    - please create alarm of [40 min](TIME)?
+    - please may set up timer for [40 min](TIME)?
+    - please warn me in [40 min](TIME)
+    - please you add a chronometer of [40 min](TIME)?
+    - please you add reminder of [40 min](TIME)?
+    - thank you add a chronometer for [40 min](TIME)?
+    - thank you alert in [40 min](TIME)
+    - thank you can remember me in [40 min](TIME)
+    - thank you may set reminder in [40 min](TIME)?
     - thank you notify me in [40 min](TIME)
-    - thank you please create chronometer of [40 min](TIME)?
-    - thank you please create reminder in [40 min](TIME)?
-    - thank you please may activate a reminder of [40 min](TIME)?
-    - thank you please remind in [40 min](TIME)
-    - thank you please should create a reminder for [40 min](TIME)?
-    - thank you please would activate alarm of [40 min](TIME)?
-    - thank you please you alert me in [40 min](TIME)
-    - thank you please you configure a reminder of [40 min](TIME)?
-    - thank you please you remind in [40 min](TIME)
-    - thank you set up chronometer of [40 min](TIME)?
-    - thank you should add timer of [40 min](TIME)?
-    - thank you should you create alarm of [40 min](TIME)?
-    - thank you should you remind me in [40 min](TIME)
-    - thanks can add countdown in [40 min](TIME)?
-    - thanks could you warn me in [40 min](TIME)
-    - thanks please alert in [40 min](TIME)
-    - thanks please could warn in [40 min](TIME)
-    - thanks please may set countdown in [40 min](TIME)?
-    - thanks please should remember me in [40 min](TIME)
-    - thanks would notify me in [40 min](TIME)
-    - thanks would remember in [40 min](TIME)
-    - thanks you set a timer of [40 min](TIME)?
-    - warn me in [40 min](TIME)
-    - would activate a timer of [40 min](TIME)?
-    - would add a chronometer for [40 min](TIME)?
-    - would you activate countdown in [40 min](TIME)?
-    - would you set up a alarm for [40 min](TIME)?
-    - you create alarm in [40 min](TIME)?
-    - you remind me in [40 min](TIME)
+    - thank you please add a countdown of [40 min](TIME)?
+    - thank you please can remind in [40 min](TIME)
+    - thank you please may create countdown in [40 min](TIME)?
+    - thank you please may you activate chronometer of [40 min](TIME)?
+    - thank you please notify in [40 min](TIME)
+    - thank you please set up countdown in [40 min](TIME)?
+    - thank you please you activate a countdown of [40 min](TIME)?
+    - thank you please you configure timer in [40 min](TIME)?
+    - thank you please you create timer in [40 min](TIME)?
+    - thank you remind in [40 min](TIME)
+    - thank you set a countdown in [40 min](TIME)?
+    - thank you you warn in [40 min](TIME)
+    - thanks activate reminder for [40 min](TIME)?
+    - thanks can you add a chronometer in [40 min](TIME)?
+    - thanks could create a timer for [40 min](TIME)?
+    - thanks may set reminder of [40 min](TIME)?
+    - thanks may you remind in [40 min](TIME)
+    - thanks notify in [40 min](TIME)
+    - thanks please create a reminder in [40 min](TIME)?
+    - thanks please may warn in [40 min](TIME)
+    - thanks please notify me in [40 min](TIME)
+    - thanks please you alert me in [40 min](TIME)
+    - thanks would you notify in [40 min](TIME)
+    - thanks you activate a alarm in [40 min](TIME)?
+    - thanks you alert me in [40 min](TIME)
+    - warn in [40 min](TIME)
+    - you alert me in [40 min](TIME)
+    - you configure a alarm of [40 min](TIME)?
+    - you create countdown for [40 min](TIME)?
+    - you remember me in [40 min](TIME)

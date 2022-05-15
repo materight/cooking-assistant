@@ -34,14 +34,12 @@ rules:
     steps:
     - intent: ask_expected_time
     - action: action_tell_expected_time
-    wait_for_user_input: false
 
 
   - rule: Ask for ingredients substitute
     steps:
     - intent: ask_ingredient_substitute
     - action: action_search_ingredient_substitute
-    wait_for_user_input: false
 
 
   - rule: Ask for ingredients list
@@ -84,6 +82,17 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: utter_greet/finish
+    - action: action_restart
+
+  - rule: Stop cooking
+    condition:
+    - slot_was_set: [ current_recipe ]
+    - active_loop: list_steps_loop
+    steps:
+    - intent: stop_cooking
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
     - action: action_restart
 
 

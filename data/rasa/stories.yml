@@ -26,7 +26,9 @@ stories:
   - action: action_search_by_ingredients
   - slot_was_set: [ found_recipes_ids, current_recipe ]
   - action: utter_ask_want_more_info
-  - intent: ask_alternative_recipe
+  - or:
+    - intent: ask_alternative_recipe
+    - intent: deny
   - action: action_search_alternative_recipe
   - slot_was_set: [ current_recipe ]
   - checkpoint: recipe_selected
@@ -42,7 +44,7 @@ stories:
     - intent: ask_ingredients_list
     - intent: affirm
   - action: action_list_ingredients
-  - action: utter_ask_want_more_info
+  - action: utter_ask_start_cooking
 
 
 - story: Ask for expected preparation time
@@ -51,7 +53,6 @@ stories:
   - action: utter_ask_want_more_info
   - intent: ask_expected_time
   - action: action_tell_expected_time
-  - action: utter_ask_want_more_info
 
 
 - story: Ask for ingredient substitute
@@ -60,7 +61,6 @@ stories:
   - action: utter_ask_want_more_info
   - intent: ask_ingredient_substitute
   - action: action_search_ingredient_substitute
-  - action: utter_ask_want_more_info
 
 
 - story: Update people count in recipe
@@ -73,8 +73,7 @@ stories:
     - intent: tell_people_count_one
   - slot_was_set: [ people_count ]
   - action: action_list_ingredients
-  - action: utter_ask_want_more_info
-
+  - action: utter_ask_start_cooking
 
 
 - story: Start cooking (system inititiative)
@@ -95,16 +94,6 @@ stories:
   - checkpoint: cooking_started
 
 
-- story: Do not start cooking
-  steps:
-  - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
-  - intent: deny
-  - action: utter_ask_start_cooking
-  - intent: deny
-  - action: utter_ask_want_more_info
-
-
 ####################### Phase 3: Start cooking #######################
 
 - story: Start reading recipe steps
@@ -112,30 +101,49 @@ stories:
   - checkpoint: cooking_started
   - action: list_steps_loop
   - active_loop: list_steps_loop
-  - slot_was_set: 
-    - current_step_idx: 0
-    - list_steps_done: null
-    - requested_slot: list_steps_done
-  - intent: next
+
+
+- story: Exit reading recipe steps if the user changes his mind
+  steps:
+  - checkpoint: cooking_started
   - action: list_steps_loop
-  - slot_was_set: 
-    - current_step_idx: 1
-    - list_steps_done: null
-    - requested_slot: list_steps_done
-  - intent: next
-  - action: list_steps_loop
-  - slot_was_set: 
-    - current_step_idx: 2
-    - list_steps_done: null
-    - requested_slot: list_steps_done
-  - intent: next 
-  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - intent: stop_cooking
   - active_loop: null
-  - slot_was_set: 
-    - current_step_idx: -1
-    - list_steps_done: True
+  - slot_was_set:
     - requested_slot: null
-  - action: utter_greet/finish
-  - action: restart
+  - action: action_restart
+
+
+# - story: Start reading recipe steps
+#   steps:
+#   - checkpoint: cooking_started
+#   - action: list_steps_loop
+#   - active_loop: list_steps_loop
+#   - slot_was_set: 
+#     - current_step_idx: 0
+#     - list_steps_done: null
+#     - requested_slot: list_steps_done
+#   - intent: next
+#   - action: list_steps_loop
+#   - slot_was_set: 
+#     - current_step_idx: 1
+#     - list_steps_done: null
+#     - requested_slot: list_steps_done
+#   - intent: next
+#   - action: list_steps_loop
+#   - slot_was_set: 
+#     - current_step_idx: 2
+#     - list_steps_done: null
+#     - requested_slot: list_steps_done
+#   - intent: next 
+#   - action: list_steps_loop
+#   - active_loop: null
+#   - slot_was_set: 
+#     - current_step_idx: -1
+#     - list_steps_done: True
+#     - requested_slot: null
+#   - action: utter_greet/finish
+#   - action: restart
 
 
