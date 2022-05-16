@@ -1,9 +1,0 @@
-# Rasa X values file coniguration
-rasax:
-  tag: "1.1.0"
-eventService:
-  tag: "1.1.0"
-dbMigrationService:
-  tag: "1.1.0"
-rasa:
-   tag: "3.1.0-full"

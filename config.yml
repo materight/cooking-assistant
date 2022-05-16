@@ -1,5 +1,3 @@
-recipe: default.v1
-
 language: en
 
 # Pipeline components, check https://rasa.com/docs/rasa/components for more info

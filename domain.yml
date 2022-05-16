@@ -1,4 +1,4 @@
-version: "3.0"
+version: "2.0"
 
 # Intents, check https://rasa.com/docs/rasa/domain/#intents for more info
 intents:
@@ -131,49 +131,44 @@ entities:
 slots:
   found_recipes_ids:
     type: list
-    mappings:
-    - type: custom
 
   current_recipe:
     type: any
-    mappings:
-    - type: custom
 
   people_count:
     type: text
-    mappings:
-    - type: from_entity
-      entity: CARDINAL
-      intent: tell_people_count
-    - type: from_intent
-      value: 1
-      intent: tell_people_count_one
+    # TODO:
+    # mappings:
+    # - type: from_entity
+    #   entity: CARDINAL
+    #   intent: tell_people_count
+    # - type: from_intent
+    #   value: 1
+    #   intent: tell_people_count_one
 
   current_step_idx:
     type: any
     initial_value: -1
-    mappings:
-    - type: custom
 
   list_steps_done:
     type: bool
-    mappings:
-    - type: from_trigger_intent # affirm intent that triggers form
-      intent: affirm
-      value: false # Set slot value so that validate_list_steps_loop is triggered
-    - type: from_intent
-      intent: next
-      value: false # Set slot value so that validate_list_steps_loop is triggered
-      conditions:
-      - active_loop: list_steps_loop
 
 # Forms, check https://rasa.com/docs/rasa/forms for more info
 forms:
   list_steps_loop:
     required_slots:
-      - current_step_idx
-      - list_steps_done
-
+      current_step_idx:
+      - type: custom
+      list_steps_done:
+      - type: from_trigger_intent # affirm intent that triggers form
+        intent: affirm
+        value: false # Set slot value so that validate_list_steps_loop is triggered
+      - type: from_intent
+        intent: next
+        value: false # Set slot value so that validate_list_steps_loop is triggered
+        conditions:
+        - active_loop: list_steps_loop
+    
 # Other configs
 session_config:
   session_expiration_time: 60
