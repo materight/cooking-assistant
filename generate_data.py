@@ -24,7 +24,7 @@ print('Generating lookup tables and regex from dataset...')
 dataset = Dataset()
 with open(os.path.join(DATA_DIR, 'ingredients.yml'), 'w', encoding='utf-8') as file:
     # Write ingredients in rasa format (with yaml.dump is not possible to get the correct formatting)
-    file.write('version: "3.1"\n'
+    file.write('version: "3.0"\n'
                'nlu:\n'
                '- lookup: ingredient\n'
                '  examples: |\n')

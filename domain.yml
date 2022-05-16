@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.0"
 
 # Intents, check https://rasa.com/docs/rasa/domain/#intents for more info
 intents:
