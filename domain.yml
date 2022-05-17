@@ -1,31 +1,73 @@
 version: "2.0"
 
+# Session configs
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
 # Intents, check https://rasa.com/docs/rasa/domain/#intents for more info
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - next
-  - search_by_keyword:
-      use_entities: [ recipe_keyword ]
-  - search_by_ingredients:
-      use_entities: [ ingredient ]
-  - ask_alternative_recipe
-  - ask_ingredients_list
-  - ask_expected_time
-  - ask_ingredient_substitute:
-      use_entities: [ ingredient ]
-  - tell_people_count:
-      use_entities: [ CARDINAL ]
-  - tell_people_count_one
-  - set_timer:
-      use_entities: [ TIME ]
-  - EXTERNAL_timer_expired
-  - start_cooking
-  - stop_cooking
+- EXTERNAL_timer_expired
+- affirm
+- ask_alternative_recipe
+- ask_expected_time
+- ask_ingredient_substitute:
+    use_entities: [ ingredient ]
+- ask_ingredients_list
+- deny
+- goodbye
+- greet
+- idk
+- next
+- search_by_ingredients:
+    use_entities: [ ingredient ]
+- search_by_keyword:
+    use_entities: [ recipe_keyword ]
+- set_timer:
+    use_entities: [ TIME ]
+- start_cooking
+- stop_cooking
+- tell_people_count:
+    use_entities: [ CARDINAL ]
+- tell_people_count_one
 
-  
+
+# Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
+entities:
+  - recipe_keyword
+  - ingredient
+  - CARDINAL
+  - TIME
+
+
+# Slots, check https://rasa.com/docs/rasa/domain/#slots for more info
+slots:
+  found_recipes_ids:
+    type: list
+    influence_conversation: false
+
+  current_recipe:
+    type: any
+    influence_conversation: false
+
+  people_count:
+    type: text
+    influence_conversation: true
+
+  current_step_idx:
+    type: any
+    initial_value: -1
+    influence_conversation: false
+
+  list_steps_done:
+    type: bool
+    influence_conversation: false
+
+  requested_slot:
+    type: text
+    influence_conversation: false
+
 
 # Responses, check https://rasa.com/docs/rasa/responses for more info
 responses:
@@ -113,6 +155,7 @@ responses:
   - text: "Great! That was the last step, enjoy your meal!"
   - text: "And we are done! Have a nice meal!"
   
+
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
   - action_search_by_keyword
@@ -124,40 +167,6 @@ actions:
   - action_list_ingredients
   - validate_list_steps_loop
   - action_set_timer
-
-# Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
-entities:
-  - recipe_keyword
-  - ingredient
-  - CARDINAL
-  - TIME
-
-# Slots, check https://rasa.com/docs/rasa/domain/#slots for more info
-slots:
-  found_recipes_ids:
-    type: list
-    influence_conversation: false
-
-  current_recipe:
-    type: any
-    influence_conversation: false
-
-  people_count:
-    type: text
-    influence_conversation: true
-
-  current_step_idx:
-    type: any
-    initial_value: -1
-    influence_conversation: false
-
-  list_steps_done:
-    type: bool
-    influence_conversation: false
-
-  requested_slot:
-    type: text
-    influence_conversation: false
 
 
 # Forms, check https://rasa.com/docs/rasa/forms for more info
@@ -174,7 +183,4 @@ forms:
         conditions:
         - active_loop: list_steps_loop
     
-# Other configs
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+

@@ -10,7 +10,7 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: search_by_keyword
-    entities: [ recipe_keyoword ]
+    entities: [ recipe_keyword ]
   - action: action_search_by_keyword
   - slot_was_set: [ found_recipes_ids, current_recipe ]
   - checkpoint: recipe_selected
