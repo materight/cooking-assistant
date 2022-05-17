@@ -78,6 +78,35 @@
     for ten minutes.
   - Open lid and fluff with a fork.
 
+- title: Pizza Margherita
+  prep_time: 25
+  cook_time: 10
+  servings: 2
+  ingredients:
+  - name: flour
+    amount: 300g
+  - name: water
+    amount: 200ml
+  - name: instant yeast
+    amount: 10ml
+  - name: tomato sauce
+    amount: 100ml
+  - name: mozzarella
+    amount: 150g
+  - name: basil
+    amount: null
+  - name: olive oil
+    amount: null
+  - name: salt
+    amount: null
+  steps:
+  - Mix the flour with the instant yeast and salt.
+  - Pour in the water and the olive oil and bring togheter until you have a soft dough.
+  - Cover the dough and set aside. Preheat the oven to 200°C.
+  - Split the dough into two balls and roll them out.
+  - Add the tomato sauce and the mozzarella on top.
+  - Bake in the oven for 8-10 minutes until crisp.
+
 - title: Instant Pot Chili
   prep_time: 5
   cook_time: 60

@@ -14,10 +14,14 @@ nlu:
     - jasmine rice
     - water
     - salt
+    - flour
+    - instant yeast
+    - tomato sauce
+    - mozzarella
+    - basil
     - ground beef
     - tomatoes
     - beans
-    - tomato sauce
     - onion
     - chili powder
     - garlic powder
@@ -31,13 +35,11 @@ nlu:
     - feta cheese
     - pasta
     - thyme
-    - basil
     - chicken breast
     - curry paste
     - fish sauce
     - yuca root
     - paprika
-    - flour
     - almonds
     - butter
     - sugar
