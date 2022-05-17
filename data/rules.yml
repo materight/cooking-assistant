@@ -49,6 +49,8 @@ rules:
         entities: [ CARDINAL ]
       - intent: tell_people_count_one
     - action: action_update_people_count
+    - action: action_list_ingredients
+    wait_for_user_input: false
 
 
   - rule: Ask for ingredients list
