@@ -145,14 +145,6 @@ slots:
   people_count:
     type: text
     influence_conversation: true
-    # TODO:
-    # mappings:
-    # - type: from_entity
-    #   entity: CARDINAL
-    #   intent: tell_people_count
-    # - type: from_intent
-    #   value: 1
-    #   intent: tell_people_count_one
 
   current_step_idx:
     type: any
