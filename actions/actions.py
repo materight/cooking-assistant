@@ -73,6 +73,23 @@ class ActionTellExpectedTime(Action):
         return []
 
 
+class ActionUpdatePeopleCount(Action):
+    def name(self) -> Text:
+        return 'action_update_people_count'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        intent = tracker.latest_message['intent'].get('name')
+        if intent == 'tell_people_count_one':
+            logger.info('Set people count to 1')
+            return [ SlotSet('people_count', str(1)) ]
+        people_count_str = next(tracker.get_latest_entity_values('CARDINAL'), None)
+        if people_count_str is not None:
+            logger.info('Set people count to %s', people_count_str)
+            return [ SlotSet('people_count', people_count_str) ]
+        logger.info('No people count found')
+        return []
+
+
 class ActionListIngredients(Action):
     """List all the ingredients needed for the selected recipe."""
 
@@ -161,7 +178,7 @@ class ActionSetTimer(Action):
             if amount is not None and unit is not None:
                 trigger_time = datetime.now() + timedelta(**{unit: amount})
                 logger.info('Set a timer for %d %s, trigger at %s', amount, unit, trigger_time)
-                dispatcher.utter_message(response='utter_set_timer/done', time=time_str)
+                dispatcher.utter_message(response='utter_set_timer/done', time=f'{amount} {unit}')
                 return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='EXTERNAL_timer_expired', kill_on_user_message=False) ]
         logger.info('Could not set timer for entity "%s"', time_str)
         dispatcher.utter_message(response='utter_set_timer/error', time=time_str)

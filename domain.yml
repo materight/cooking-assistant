@@ -116,6 +116,7 @@ actions:
   - action_search_by_ingredients
   - action_search_alternative_recipe
   - action_tell_expected_time
+  - action_update_people_count
   - action_search_ingredient_substitute
   - action_list_ingredients
   - validate_list_steps_loop
@@ -131,12 +132,15 @@ entities:
 slots:
   found_recipes_ids:
     type: list
+    influence_conversation: false
 
   current_recipe:
     type: any
+    influence_conversation: false
 
   people_count:
     type: text
+    influence_conversation: true
     # TODO:
     # mappings:
     # - type: from_entity
@@ -149,16 +153,17 @@ slots:
   current_step_idx:
     type: any
     initial_value: -1
+    influence_conversation: false
 
   list_steps_done:
     type: bool
+    influence_conversation: false
+
 
 # Forms, check https://rasa.com/docs/rasa/forms for more info
 forms:
   list_steps_loop:
     required_slots:
-      current_step_idx:
-      - type: custom
       list_steps_done:
       - type: from_trigger_intent # affirm intent that triggers form
         intent: affirm
