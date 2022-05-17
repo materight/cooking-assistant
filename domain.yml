@@ -163,6 +163,10 @@ slots:
     type: bool
     influence_conversation: false
 
+  requested_slot:
+    type: text
+    influence_conversation: false
+
 
 # Forms, check https://rasa.com/docs/rasa/forms for more info
 forms:
