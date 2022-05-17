@@ -12,6 +12,13 @@ DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 # Init dataset
 dataset = Dataset()
 
+# Generate entities for ingredient names
+print('Generating ingredients entities...')
+with open(os.path.join(DATA_DIR, 'chatette', 'ingredients.chatette'), 'w', encoding='utf-8') as file:
+    file.write('@[ingredient]\n')
+    for ingredient in dataset.ingredients:
+        file.write(f'    {ingredient}\n')
+
 # Generate entities for recipes names
 print('Generating recipes keyword entities...')
 with open(os.path.join(DATA_DIR, 'chatette', 'recipes.chatette'), 'w', encoding='utf-8') as file:
@@ -29,13 +36,15 @@ print('Converting data to YAML format...')
 convert_training_data(os.path.join(DATA_DIR, 'chatette', '.out'), os.path.join(DATA_DIR, 'nlu.yml'), 'yml', 'en')
 shutil.rmtree(os.path.join(DATA_DIR, 'chatette', '.out'))
 
+
+
 # Generate base file for chatette with entity synonyms and lookup tables
-print('Generating lookup tables and regex from dataset...')
-with open(os.path.join(DATA_DIR, 'ingredients.yml'), 'w', encoding='utf-8') as file:
-    # Write ingredients in rasa format (with yaml.dump is not possible to get the correct formatting)
-    file.write('version: "2.0"\n'
-               'nlu:\n'
-               '- lookup: ingredient\n'
-               '  examples: |\n')
-    for ingredient in dataset.ingredients:
-        file.write(f'    - {ingredient}\n')
+# print('Generating lookup tables and regex from dataset...')
+# with open(os.path.join(DATA_DIR, 'ingredients.yml'), 'w', encoding='utf-8') as file:
+#     # Write ingredients in rasa format (with yaml.dump is not possible to get the correct formatting)
+#     file.write('version: "2.0"\n'
+#                'nlu:\n'
+#                '- lookup: ingredient\n'
+#                '  examples: |\n')
+#     for ingredient in dataset.ingredients:
+#         file.write(f'    - {ingredient}\n')

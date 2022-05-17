@@ -5,52 +5,55 @@
 
 //================== Intents definitions =======================
 
-%[greet](20)
+%[greet](50)
     ~[&greet]
 
-%[goodbye](20)
+%[goodbye](50)
     ~[&goodbye]
 
-%[affirm](20)
+%[affirm](50)
     ~[&affirm] ~[thanks?]
 
-%[deny](20)
+%[deny](50)
     ~[&deny] ~[thanks?]
 
-%[idk](20)
+%[idk](50)
     ~[&affirm?] ~[idk]
 
-%[next](20)
+%[next](50)
     ~[&affirm?] ~[next] ~[thanks?]
 
-%[search_by_keyword](100)
-    ~[&greet?] ~[i want to] ~[eat] @[recipe_keyword] ~[day time?].
-    ~[&greet?] ~[can] you ~[please?] ~[search] @[recipe_keyword]?
-    ~[&greet?] ~[can] you ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
-    ~[&greet?] ~[can] you ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
+%[search_by_keyword](200)
+    ~[i want] to ~[eat] @[recipe_keyword] ~[day time?].
+    ~[can] you ~[please?] ~[search] @[recipe_keyword]?
+    ~[can] you ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
+    ~[can] you ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
 
-%[search_by_ingredients](100)
-    ~[&greet?] ~[i want to] ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].
-    ~[&greet?] ~[can] you ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient]?
+%[search_by_ingredients](200)
+    ~[i want] to ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].
+    ~[can] you ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?]?
+    [&I] ~[only?] ~[have] @[ingredient][, what ~[can] [&I] ~[cook]\??]
 
-%[ask_alternative_recipe](50)
-    ~[thanks?] [no?] {is/are} there {any/some/an} ~[alternative] ~[recipe?]?
+%[ask_alternative_recipe](100)
+    [no?] {is/are} there {any/some/an} ~[alternative] ~[recipe?]?
+    [no?] what {else/other ~[recipe]} {do you ~[have]/did you find}?
 
-%[ask_ingredients_list](50)
-    ~[thanks?] {what/which} ~[ingredient]s are ~[needed]?
-    ~[thanks?] {what/which} ~[ingredient]s do [&I] ~[need]?
+%[ask_ingredients_list](100)
+    {what/which} [other?] ~[ingredient]s {are ~[needed]/do [&I] ~[need]}?
+    ~[can] you ~[please?] ~[give] [me?] the list of [ingredient][s?] ~[needed?]
+    ~[&affirm?] ~[i want?] [the list of?] [ingredient][s?] ~[needed?]
 
-%[ask_expected_time](50)
-    ~[thanks?] how {long/much time} [~[will] it take?] to ~[cook]?
-    ~[thanks?] what{ is/'s} the {cooking/preparation} time?
+%[ask_expected_time](100)
+    how {long/much time} [~[will] it take?] to ~[cook]?
+    what{ is/'s} the {cooking/preparation} time?
 
-%[ask_ingredient_substitute](50)
-    ~[thanks?] [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] [instead?]?
-    ~[thanks?] what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] instead of @[ingredient]?
-    ~[thanks?] what{ is/'s} an ~[alternative] {for/to} @[ingredient]?
-    ~[thanks?] any ~[alternative] {for/to} @[ingredient]?
+%[ask_ingredient_substitute](200)
+    [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] [instead?]?
+    {what/which} [{else/[other?] ~[ingredient][s?]/~[alternative][s?]}?] ~[can] [&I] ~[use] instead of @[ingredient]?
+    {what/which}{ is/'s} an ~[alternative][s?] {for/to} @[ingredient]?
+    {any/some} ~[alternative][s?] {for/to} @[ingredient]?
 
-%[tell_people_count](50)
+%[tell_people_count](100)
     ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]
     ~[thanks?] [&we?] are [in?] @[CARDINAL] ~[people?]
     ~[thanks?] [{what about/and}?] for @[CARDINAL] ~[people?]
@@ -59,15 +62,16 @@
     ~[thanks?] ~[i am] ~[alone]
     ~[thanks?] ~[it is] {only/just} me
 
-%[start_cooking](50)
+%[start_cooking](100)
     ~[thanks?] ~[can] [&we] [{go ahead/get going} and?] ~[start] ~[cooking] [now?]?
     ~[thanks?] [let's?] {~[start] ~[cooking]/~[cook]} [now?]
+    ~[thanks?] ~[i am] ~[ready] to ~[cook] [now?]
 
-%[stop_cooking](50)
-    ~[sorry?] ~[please?] ~[i want to] ~[stop] ~[cooking]
+%[stop_cooking](100)
+    ~[sorry?] ~[please?] ~[i want] to ~[stop] ~[cooking]
     ~[sorry?] ~[please?] ~[can] {I/we/you} ~[stop] ~[cooking]
 
-%[set_timer](50)
+%[set_timer](100)
     ~[thanks?] ~[please?] ~[can?] [you?] ~[set] [a?] ~[timer] {for/in/of} @[TIME]?
     ~[thanks?] ~[please?] ~[can?] [you?] ~[remind] [me?] in @[TIME]
 

@@ -14,7 +14,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: SpacyEntityExtractor
-    dimensions: [ CARDINAL ] # Only for numbers
+    dimensions: [ CARDINAL, TIME ]
   - name: RegexEntityExtractor
     use_lookup_tables: True
   - name: DIETClassifier

@@ -1,7 +1,3 @@
-// Ingredients handled by a lookup table (no need for multiple examples)
-@[ingredient]
-    egg
-
 // Use spacy named entity recognition to extract numbers (no need for multiple examples)
 @[CARDINAL]
     one
@@ -9,6 +5,10 @@
 // Use spacy named entity recognition to extract time intervals (no need for multiple examples)
 @[TIME]
     40 min
+
+
+// Training data or ingredients
+|Ingredients.chatette
 
 // Training data for recipe names
 |recipes.chatette
