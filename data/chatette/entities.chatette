@@ -1,6 +1,3 @@
-@[recipe_keyword]
-    pizza
-
 // Ingredients handled by a lookup table (no need for multiple examples)
 @[ingredient]
     egg
@@ -12,3 +9,6 @@
 // Use spacy named entity recognition to extract time intervals (no need for multiple examples)
 @[TIME]
     40 min
+
+// Training data for recipe names
+|recipes.chatette

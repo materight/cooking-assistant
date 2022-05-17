@@ -114,56 +114,56 @@ nlu:
     - yes proceed
 - intent: search_by_keyword
   examples: |
-    - Good evening may you please search [pizza](recipe_keyword)?
-    - Good evening would you please search how to make [pizza](recipe_keyword)?
-    - Good morning can you please search for food for [pizza](recipe_keyword)?
-    - Good morning would you please find me something for [pizza](recipe_keyword)?
-    - Hello I would love to taste [pizza](recipe_keyword) this evening.
-    - Hello can you please find me food for [pizza](recipe_keyword)?
-    - Hello can you please find me [pizza](recipe_keyword)?
-    - Hello there I want to taste [pizza](recipe_keyword) tomorrow.
-    - Hello there would you find me how to prepare [pizza](recipe_keyword)?
-    - Hey would you please search for how to prepare [pizza](recipe_keyword)?
-    - Hey would you please search how to cook a [pizza](recipe_keyword)?
-    - Hi could you search [pizza](recipe_keyword)?
-    - Hi i would really love to eat [pizza](recipe_keyword) this dinner.
-    - I want to eat [pizza](recipe_keyword).
-    - I want to try [pizza](recipe_keyword).
-    - I'd really love to eat [pizza](recipe_keyword).
-    - I'd really love to try [pizza](recipe_keyword) today.
-    - can you find me how to make [pizza](recipe_keyword)?
-    - can you find something for [pizza](recipe_keyword)?
-    - can you please search for how to cook [pizza](recipe_keyword)?
-    - can you please search how to make a [pizza](recipe_keyword)?
-    - could you please find me food for [pizza](recipe_keyword)?
-    - could you please search food for [pizza](recipe_keyword)?
-    - could you please search recipe for [pizza](recipe_keyword)?
-    - good evening I'd love to try [pizza](recipe_keyword).
-    - good evening should you search [pizza](recipe_keyword)?
-    - good evening would you find how to bake a [pizza](recipe_keyword)?
-    - good morning I want to eat [pizza](recipe_keyword).
-    - good morning could you please find food for [pizza](recipe_keyword)?
-    - good morning could you search recipe for [pizza](recipe_keyword)?
-    - hello there could you please search for how to make a [pizza](recipe_keyword)?
-    - hey I would like to taste [pizza](recipe_keyword) today.
-    - hey should you please search how to make [pizza](recipe_keyword)?
-    - hi would you find [pizza](recipe_keyword)?
-    - hi would you please search for how to cook [pizza](recipe_keyword)?
-    - i'd love to try [pizza](recipe_keyword).
-    - may you find something for [pizza](recipe_keyword)?
-    - may you please find me how to bake a [pizza](recipe_keyword)?
-    - may you please search for how to bake [pizza](recipe_keyword)?
-    - may you please search for [pizza](recipe_keyword)?
-    - may you search for how to make a [pizza](recipe_keyword)?
-    - may you search [pizza](recipe_keyword)?
-    - should you find me recipe for [pizza](recipe_keyword)?
-    - should you search how to make [pizza](recipe_keyword)?
-    - should you search recipe for [pizza](recipe_keyword)?
-    - would you find me recipe for [pizza](recipe_keyword)?
-    - would you please search how to prepare a [pizza](recipe_keyword)?
-    - would you please search recipe for [pizza](recipe_keyword)?
-    - would you please search something for [pizza](recipe_keyword)?
-    - would you search for something for [pizza](recipe_keyword)?
+    - Good evening may you please search [Peanut Butter Cookies](recipe_keyword)?
+    - Good evening should you search how to bake [Everything Bagel Slider Burgers](recipe_keyword)?
+    - Good evening would you please search how to make [Air Fryer Potato Wedges](recipe_keyword)?
+    - Good morning I want to taste [Minestrone Soup](recipe_keyword).
+    - Good morning can you please search for food for [Chicken Thigh Cutlet](recipe_keyword)?
+    - Good morning may you please find me how to make a [Miso Chicken Wings](recipe_keyword)?
+    - Good morning should you please search food for [Banana Bread with Raisins and Walnuts](recipe_keyword)?
+    - Hello I would love to taste [Cave Aged Cheddar Twice Baked Potatoes](recipe_keyword) this evening.
+    - Hello can you please find me food for [Macaroni and Cheese with Goldfish Crust](recipe_keyword)?
+    - Hello there I want to taste [Christmas Cookies](recipe_keyword) tomorrow.
+    - Hello there may you please find how to cook [Breakfast Potatoes](recipe_keyword)?
+    - Hello there would you find me how to prepare [Refried Black Beans](recipe_keyword)?
+    - Hello there would you please find me [Gnocchi with butter and sage](recipe_keyword)?
+    - Hey would you please search how to cook a [Macaroni and Cheese with Goldfish Crust](recipe_keyword)?
+    - Hi i would really love to eat [Slow Cooker Chicken Enchiladas](recipe_keyword) this dinner.
+    - Hi would you search for how to cook [Spaghetti Carbonara](recipe_keyword)?
+    - I want to eat [Mediterranean Charcuterie Board](recipe_keyword) for launch.
+    - I'd like to try [Air Fryer Potato Wedges](recipe_keyword).
+    - I'd really love to eat [Oven Baked Meatballs](recipe_keyword).
+    - can you find me how to make [Crispy Baked Chicken Wings](recipe_keyword)?
+    - can you please find me [Breakfast Potatoes](recipe_keyword)?
+    - could you please find food for [Sesame Chicken](recipe_keyword)?
+    - could you please find me food for [Almond Sandies](recipe_keyword)?
+    - good evening would you find how to bake a [Tomato Pesto Stuffed Chicken with Pasta Alfredo](recipe_keyword)?
+    - good morning I want to eat [Almond Sandies](recipe_keyword).
+    - good morning could you search recipe for [Gnocchi with butter and sage](recipe_keyword)?
+    - hello can you please find me [Chicken Thigh Cutlet](recipe_keyword)?
+    - hello i want to try [Gingersnap Cookies](recipe_keyword).
+    - hello there could you please search for how to make a [Miso Chicken Wings](recipe_keyword)?
+    - hey can you find food for [Sesame Chicken](recipe_keyword)?
+    - hey can you please search recipe for [Lazy Red Thai Curry Chicken](recipe_keyword)?
+    - hey should you please search how to make [Miso Chicken Wings](recipe_keyword)?
+    - hey should you search how to cook [Chicken with cream sauce and roasted potatoes](recipe_keyword)?
+    - hey would you find me recipe for [Gnocchi with butter and sage](recipe_keyword)?
+    - hi would you please search for how to make a [Tres Leches Cake](recipe_keyword)?
+    - i'd love to try [Air Fried Chicken Thighs](recipe_keyword).
+    - may you please find me something for [Jalapeño Cheddar Cornbread](recipe_keyword)?
+    - may you please search for how to bake [Almond Sandies](recipe_keyword)?
+    - may you search [Mediterranean Charcuterie Board](recipe_keyword)?
+    - should you please find [Air Fryer Potato Wedges](recipe_keyword)?
+    - should you search how to make [Tres Leches Cake](recipe_keyword)?
+    - should you search recipe for [Chicken with cream sauce and roasted potatoes](recipe_keyword)?
+    - should you search recipe for [Peanut Butter Cookies](recipe_keyword)?
+    - would you find me recipe for [Thai Curry Blackened Chicken](recipe_keyword)?
+    - would you please find me recipe for [Air Fryer Potato Wedges](recipe_keyword)?
+    - would you please search how to prepare a [Crispy Baked Chicken Wings](recipe_keyword)?
+    - would you please search recipe for [Perfect Sunny Side Up Eggs](recipe_keyword)?
+    - would you please search something for [Cinnamon Bourbon Cranberry Sauce](recipe_keyword)?
+    - would you search for how to make [Tres Leches Cake](recipe_keyword)?
+    - would you search for something for [Curried Lentil Soup](recipe_keyword)?
 - intent: search_by_ingredients
   examples: |
     - Good evening I want to try something containing [egg](ingredient) [egg](ingredient).
