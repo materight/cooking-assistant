@@ -37,7 +37,7 @@ class ActionSearchByKeyword(Action):
             return []
         else:
             recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
-            dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title)
+            dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title, image="https://i.imgur.com/nGF1K8f.jpg")
             return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe.id) ]
 
 

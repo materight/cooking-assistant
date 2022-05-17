@@ -7,7 +7,6 @@ stories:
 
 - story: Search for a recipe by keyword
   steps:
-  - intent: greet
   - action: utter_greet
   - intent: search_by_keyword
     entities: [ recipe_keyword ]
@@ -18,7 +17,6 @@ stories:
 
 - story: Search for a recipe by ingredients
   steps:
-  - intent: greet
   - action: utter_greet
   - intent: search_by_ingredients
     entities: [ ingredient ]
@@ -29,7 +27,6 @@ stories:
 
 - story: Search for an alternative recipe
   steps:
-  - intent: greet
   - action: utter_greet
   - intent: search_by_ingredients
     entities: [ ingredient ]

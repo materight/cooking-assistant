@@ -72,8 +72,8 @@ slots:
 # Responses, check https://rasa.com/docs/rasa/responses for more info
 responses:
   utter_greet:
-  - text: "Hi! What would you like me to do?"
-  - text: "Hello! What can I do for you today?"
+  - text: Hi! What would you like to cook today?
+  - text: Hello! What recipe would you like to try today?
 
   utter_greet/finish:
   - text: "What else can I do for you?"
