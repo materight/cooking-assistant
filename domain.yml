@@ -7,6 +7,8 @@ intents:
   - affirm
   - deny
   - next
+  - search_by_keyword:
+      use_entities: [ recipe_keyword ]
   - search_by_ingredients:
       use_entities: [ ingredient ]
   - ask_alternative_recipe
@@ -113,6 +115,7 @@ responses:
   
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
+  - action_search_by_keyword
   - action_search_by_ingredients
   - action_search_alternative_recipe
   - action_tell_expected_time
@@ -124,6 +127,7 @@ actions:
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
 entities:
+  - recipe_keyword
   - ingredient
   - CARDINAL
   - TIME

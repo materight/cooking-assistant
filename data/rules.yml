@@ -13,6 +13,13 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
+  
+  - rule: Search by keyword
+    steps:
+    - intent: search_by_keyword
+    - action: action_search_by_keyword
+    - action: utter_ask_want_more_info
+
 
   - rule: Search by ingredients
     steps:

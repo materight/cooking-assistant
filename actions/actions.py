@@ -18,6 +18,29 @@ logger.setLevel(logging.DEBUG)
 # Load dataset globally
 dataset = Dataset()
 
+class ActionSearchByKeyword(Action):
+    """Search for a recipe by keyword."""
+
+    def name(self) -> Text:
+        return 'action_search_by_keyword'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        keyword = next(tracker.get_latest_entity_values('recipe_keyword'), None)
+        logger.info('Search recipe by keyword "%s"', keyword)
+        if keyword is None:
+            dispatcher.utter_message(response='utter_search_recipe/not_found')
+            return []
+        recipes_ids = dataset.search_by_keyword(keyword)
+        logger.info('Found %d recipes',len(recipes_ids))
+        if len(recipes_ids) == 0:
+            dispatcher.utter_message(response='utter_search_recipe/not_found')
+            return []
+        else:
+            recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
+            dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title)
+            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe.id) ]
+
+
 class ActionSearchByIngredients(Action):
     """Search for a recipe by ingredients."""
 
