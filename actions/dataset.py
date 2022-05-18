@@ -16,9 +16,9 @@ class Ingredient:
     unit: Optional[Text]
     def __str__(self) -> str:
         res = ''
-        if not np.isnan(self.amount): res += f'{self.amount:{ ".0f" if self.amount.is_integer() else ".1f"}}'
-        if self.unit is not None: res += f'{self.unit}'
-        if len(res) > 0: res += ' '
+        if not np.isnan(self.amount): 
+            res += f'{self.amount:{ ".0f" if self.amount.is_integer() else ".1f"}}'
+            res += f'{self.unit} ' if self.unit is not None else ' x '
         res += self.name
         return res
 
