@@ -574,7 +574,7 @@
   - Refrigerate for an hour to firm up texture further. It will be even better the
     next day.
 
-- title: Peppermint Mocha Latte
+- title: Peppermint Latte
   prep_time: 5
   cook_time: 0
   servings: 1
@@ -1045,7 +1045,7 @@
   - Repeat in batches until they're all cooked. You can also mix in chocolate chips
     if you want for variety.
 
-- title: Macaroni and Cheese with Goldfish
+- title: Macaroni and Cheese 
   prep_time: 0
   cook_time: 60
   servings: 10
@@ -1096,7 +1096,7 @@
     to start bubbling up around the sides and for the crust to take on color.
   - Allow to cool for a few minutes then serve and fall asleep.
 
-- title: Cinnamon Cranberry Sauce
+- title: Cranberry Sauce
   prep_time: 0
   cook_time: 15
   servings: 6
@@ -1293,7 +1293,7 @@
     (approximatley 15-20 minutes).
   - Garnish with olive oil and parmesan cheese.
 
-- title: Asian Green Beans
+- title: Green Beans
   prep_time: 5
   cook_time: 15
   servings: 4
@@ -1670,7 +1670,7 @@
   - Bake at 400°F (204°C) for about 20 minutes or until done.
   - Serve with butter, hot sauce, or honey as a side. Goes well with Chili con Carne.
 
-- title: Thai Chili Tomato Soup
+- title: Chili Tomato Soup
   prep_time: 10
   cook_time: 60
   servings: 6
@@ -1748,36 +1748,7 @@
     may need to add a lot so keep going until its spicy enough. For extra kick add
     hot sauce or whatever chilis you have.
   - Simmer on low for one hour.
-  - Serve with jalapeno cornbread (see our recipe), shredded cheese, and oyster crackers.
-
-- title: Chimichurri Sauce
-  prep_time: 15
-  cook_time: 0
-  servings: 4
-  ingredients:
-  - name: parsley
-    amount: null
-  - name: olive oil
-    amount: 200ml
-  - name: vinegar
-    amount: 50ml
-  - name: garlic
-    amount: 4
-  - name: oregano
-    amount: null
-  - name: red pepper flakes
-    amount: 10ml
-  - name: pepper
-    amount: null
-  - name: salt
-    amount: null
-  steps:
-  - Using a good chef knife, finely chop the parseley very fine. Do not under any
-    circumstances use a food processor or blender.
-  - Combine the parseley and olive oil in a bowl until it has a consistency similar
-    to that of the picture. It should be drippy but not watery.
-  - Mix in the rest of the ingredients then adjust the seasoning to your taste.
-  - Serve as a sauce on top of chicken or carne asada.
+  - Serve with jalapeno cornbread, shredded cheese, and oyster crackers.
 
 - title: Bagel Burgers
   prep_time: 30
@@ -1847,7 +1818,7 @@
   - Combine all ingredients together in a bowl.
   - Serve as a side to any Thai main course.
 
-- title: Turkey
+- title: Thanksgiving Turkey
   prep_time: 15
   cook_time: 300
   servings: 8
