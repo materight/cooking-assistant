@@ -18,7 +18,7 @@ class Ingredient:
         res = ''
         if not np.isnan(self.amount): 
             res += f'{self.amount:{ ".0f" if self.amount.is_integer() else ".1f"}}'
-            res += f'{self.unit} ' if self.unit is not None else ' x '
+            res += f'{self.unit} ' if self.unit else ' x '
         res += self.name
         return res
 
