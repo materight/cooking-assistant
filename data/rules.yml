@@ -2,11 +2,6 @@ version: "2.0"
 
 # Rules, check https://rasa.com/docs/rasa/rules/ for more info
 rules:
-  - rule: Let the agent start the conversation
-    conversation_start: true
-    steps:
-    - action: utter_greet
-
 
   - rule: Say hello anytime the user says hello
     steps:
