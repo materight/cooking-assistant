@@ -34,6 +34,7 @@ class Step:
 class Recipe:
     id: int
     title: Text
+    image: Optional[Text]
     prep_time: int
     cook_time: int
     servings: int

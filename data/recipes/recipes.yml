@@ -150,7 +150,7 @@
   - Turn to your pressure cook setting and pressure cook for 30 minutes.
   - Once time is up, vent the steam, allow a couple of minutes to cool and serve.
 
-- title: Slow-Baked Salmon
+- title: Baked Salmon
   prep_time: 0
   cook_time: 30
   servings: 6
@@ -206,38 +206,8 @@
     slightly grainy).
   - Add the heavy cream, stir, and allow to cool slightly.
   - Garnish with olive oil, pepper, and green onions if you have them.
-- title: Baked Feta and Tomato Pasta
-  prep_time: 5
-  cook_time: 30
-  servings: 4
-  ingredients:
-  - name: feta cheese
-    amount: 225g
-  - name: pasta
-    amount: 225g
-  - name: tomatoes
-    amount: 500g
-  - name: thyme
-    amount: null
-  - name: garlic
-    amount: 6
-  - name: olive oil
-    amount: 15ml
-  - name: basil
-    amount: 5ml
-  - name: pepper
-    amount: 2ml
-  steps:
-  - Preheat oven to 400°F (205°C).
-  - Add the brick of feta to the center of a cast iron pan (or ovenproof container).
-  - Add the cherry tomatoes around the edge along with the thyme, garlic, olive oil,
-    basil, and pepper.
-  - Place in oven and set a timer for 30 minutes.
-  - While the cheese is baking, cook the pasta until cooked through.
-  - Once the cheese is done stir until the sauce is well combined then add the pasta
-    and stir once more until incorporated.
 
-- title: Thai Curry Blackened Chicken
+- title: Thai Curry Chicken
   prep_time: 10
   cook_time: 20
   servings: 6
@@ -264,7 +234,7 @@
     minutes on each side until blackened.
   - Transfer to a 400°F (205°C) and cook an additional 10 minutes until done.
 
-- title: Air Fryer Yuca Fries
+- title: Yuca Fries
   prep_time: 5
   cook_time: 30
   servings: 3
@@ -290,7 +260,7 @@
   - Taste for seasoning and sprinkle with more salt as necessary.
   - Serve with your choice of spicy dipping sauce.
 
-- title: Almond Sandies
+- title: Almond Cookies
   prep_time: 10
   cook_time: 15
   servings: 9
@@ -317,7 +287,7 @@
   - Bake for 15 minutes.
   - Allow to cool and dust with powdered sugar or serve as is.
 
-- title: Air Fried Chicken Thighs
+- title: Fried Chicken Thighs
   prep_time: 5
   cook_time: 35
   servings: 4
@@ -341,7 +311,7 @@
   - Return to refrigerator and chill for 1 - 2 hours.
   - Air fry at 350°F (175°C) for 35 minutes, flipping once halfway though.
 
-- title: Air Fryer Potato Wedges
+- title: Potato Wedges
   prep_time: 5
   cook_time: 30
   servings: 2
@@ -371,7 +341,7 @@
   - Serve as is or toss with your choice of seasonings, we chose parmesan cheese,
     more garlic powder, and italian seasonings.
 
-- title: Refried Black Beans
+- title: Black Beans
   prep_time: 5
   cook_time: 540
   servings: 6
@@ -446,7 +416,7 @@
   - Taste for seasoning and adjust if necessary.
   - Serve with a couple dashes of tobasco sauce and cheese crackers.
 
-- title: Thai Fish Cakes
+- title: Fish Cakes
   prep_time: 15
   cook_time: 10
   servings: 5
@@ -485,7 +455,7 @@
   - Serve with Thai sweet chili dipping sauce. The Maesri brand is very good if you
     can find it.
 
-- title: Rocket and Bitter Orange Salad
+- title: Orange Salad
   prep_time: 5
   cook_time: 0
   servings: 2
@@ -534,7 +504,7 @@
   - Flip and cook an additional 1-2 minutes until the other side is browned as well.
   - Stuff with sweet or savory fillings of your choice.
 
-- title: Skillet Apple Tart
+- title: Apple Tart
   prep_time: 15
   cook_time: 35
   servings: 8
@@ -570,7 +540,7 @@
   - Wearing oven mitts, remove from the oven and invert onto a plate. Rearrange the
     apples as necessary so it looks nice again.
 
-- title: Spicy Roasted Red Pepper Hummus
+- title: Red Pepper Hummus
   prep_time: 15
   cook_time: 0
   servings: 8
@@ -604,7 +574,7 @@
   - Refrigerate for an hour to firm up texture further. It will be even better the
     next day.
 
-- title: Dark Peppermint Mocha Latte
+- title: Peppermint Mocha Latte
   prep_time: 5
   cook_time: 0
   servings: 1
@@ -661,7 +631,7 @@
     Give people a fork and a knife because although they're tender you'll still need
     to cut through them.
 
-- title: Banana Bread with Raisins and Walnuts
+- title: Banana Bread
   prep_time: 15
   cook_time: 60
   servings: 12
@@ -861,33 +831,6 @@
     mushrooms and a genorous portion of the sauce. Follow up with crispy bacon and
     parsley. This is also commonly served on top of mashed potatoes.
 
-- title: Nutella Muddy Buddies
-  prep_time: 10
-  cook_time: 0
-  servings: 12
-  ingredients:
-  - name: rice cereal
-    amount: 2000ml
-  - name: sugar
-    amount: 280ml
-  - name: nutella
-    amount: 240ml
-  - name: butter
-    amount: 120ml
-  - name: vanilla extract
-    amount: 3ml
-  steps:
-  - Microwave the nutella and butter together for 1 minute, 30 seconds.
-  - Stir together until evenly combined.
-  - In a large pot, add the Chex cereal then pour the chocolate mixture on top.
-  - Stir gently until evenly combined.
-  - Allow to cool for 5 minutes.
-  - Place the mixture in an extra large ziplock or paper bag along with 1 cup of the
-    powdered sugar and shake until well-combined.
-  - Add the second cup of powdered sugar and shake again until well-combined.
-  - Transfer to the storage container of your choice and add additional optional ingredients
-    such as m&m's, pretzels, or whatever you want.
-
 - title: Blueberry Muffins
   prep_time: 10
   cook_time: 30
@@ -923,7 +866,7 @@
   - Sprinkle the remaining 3 teaspoons of sugar over the tops of each muffin.
   - Bake for 25-30 minutes.
 
-- title: Perfect Jasmine Rice
+- title: Jasmine Rice
   prep_time: 3
   cook_time: 17
   servings: 4
@@ -955,7 +898,7 @@
     cup.
   - Garnish with spring onions and sesame seeds.
 
-- title: Pecan-Crusted Tilapia
+- title: Pecan Tilapia
   prep_time: 5
   cook_time: 15
   servings: 4
@@ -1102,7 +1045,7 @@
   - Repeat in batches until they're all cooked. You can also mix in chocolate chips
     if you want for variety.
 
-- title: Macaroni and Cheese with Goldfish Crust
+- title: Macaroni and Cheese with Goldfish
   prep_time: 0
   cook_time: 60
   servings: 10
@@ -1153,7 +1096,7 @@
     to start bubbling up around the sides and for the crust to take on color.
   - Allow to cool for a few minutes then serve and fall asleep.
 
-- title: Cinnamon Bourbon Cranberry Sauce
+- title: Cinnamon Cranberry Sauce
   prep_time: 0
   cook_time: 15
   servings: 6
@@ -1217,7 +1160,7 @@
   - Repeat the process until all the chicken is cooked.
   - Serve as is or add tomato sauce and mozzarella then broil to make chicken parmesan.
 
-- title: Chewy Chocolate Chunk Cookies
+- title: Chocolate Cookies
   prep_time: 15
   cook_time: 12
   servings: 20
@@ -1250,7 +1193,7 @@
   - Bake for 10 - 12 minutes.
   - Remove from oven and let cool for at least 15 minutes.
 
-- title: Pan-Seared Ribeye
+- title: Ribeye steak
   prep_time: 0
   cook_time: 8
   servings: 1
@@ -1276,7 +1219,7 @@
   - Remove the steak, cover in tin foil and let rest for at least 5 minutes before
     serving.
 
-- title: Chicken Taco Meat
+- title: Chicken Taco
   prep_time: 0
   cook_time: 25
   servings: 4
@@ -1377,7 +1320,7 @@
     is achieved.
   - Taste the green beans and add salt if necessary.
 
-- title: Minimalist Chicken and Rice Soup
+- title: Chicken and Rice Soup
   prep_time: 10
   cook_time: 40
   servings: 12
@@ -1427,7 +1370,7 @@
     rice as you want to a bowl then pour the soup over the rice. As the soup cools
     the rice will continue to heat through and absorb the flavor.
 
-- title: Oven Baked Meatballs
+- title: Baked Meatballs
   prep_time: 15
   cook_time: 30
   servings: 4
@@ -1497,7 +1440,7 @@
   - Keep doing this until the chicken has reached your desired doneness.
   - Serve with rice and garnish with green onions.
 
-- title: Oven Roasted Potatoes
+- title: Roasted Potatoes
   prep_time: 5
   cook_time: 60
   servings: 4
@@ -1523,7 +1466,7 @@
   - Bake at least 30 minutes turning once or twice until a solid crust forms on the
     potatoes.
 
-- title: Lazy Red Thai Curry Chicken
+- title: Red Thai Curry Chicken
   prep_time: 5
   cook_time: 10
   servings: 3
@@ -1546,7 +1489,7 @@
   - Add the rotisserie chicken and cook until heated through.
   - Serve over rice or if you're feeling adventerous with ou Thai Green Papaya Salad.
 
-- title: Chicken with cream sauce and roasted potatoes
+- title: Chicken with cream sauce
   prep_time: 20
   cook_time: 60
   servings: 4
@@ -1647,7 +1590,7 @@
   - Slide the baking paper out from underneath the cake.
   - Ice the cake with the whipped topping and garnish with chocolate or fruit.
 
-- title: Tomato Pesto Stuffed Chicken with Pasta Alfredo
+- title: Tomato Chicken with Pasta Alfredo
   prep_time: 15
   cook_time: 30
   servings: 4
@@ -1692,7 +1635,7 @@
     If the sauce is runny let it sit - it will thicken.
   - Remove the chicken from the oven and allow to rest for 10 minutes before serving.
 
-- title: Jalapeño Cheddar Cornbread
+- title: Jalapeño Cornbread
   prep_time: 10
   cook_time: 20
   servings: 16
@@ -1767,7 +1710,7 @@
   - Stir in basil and simmer for 20 minutes.
   - Serve with grilled cheese.
 
-- title: Chili con Carne
+- title: Meat Chili
   prep_time: 20
   cook_time: 120
   servings: 12
@@ -1807,7 +1750,7 @@
   - Simmer on low for one hour.
   - Serve with jalapeno cornbread (see our recipe), shredded cheese, and oyster crackers.
 
-- title: Chimichurri Sauce (Argentinian Pesto)
+- title: Chimichurri Sauce
   prep_time: 15
   cook_time: 0
   servings: 4
@@ -1836,7 +1779,7 @@
   - Mix in the rest of the ingredients then adjust the seasoning to your taste.
   - Serve as a sauce on top of chicken or carne asada.
 
-- title: Everything Bagel Slider Burgers
+- title: Bagel Burgers
   prep_time: 30
   cook_time: 30
   servings: 12
@@ -1872,7 +1815,7 @@
     seasoning.
   - Bake until cheese is melted and the tops of the bun becomes crispy.
 
-- title: Thai Green Papaya Salad
+- title: Papaya Salad
   prep_time: 15
   cook_time: 0
   servings: 6
@@ -1904,7 +1847,7 @@
   - Combine all ingredients together in a bowl.
   - Serve as a side to any Thai main course.
 
-- title: Slow Cooker Thanksgiving Turkey
+- title: Turkey
   prep_time: 15
   cook_time: 300
   servings: 8
@@ -1937,7 +1880,7 @@
   - When serving, slice the turkey breast carefully in the crock pot so the gravy
     sits in the turkey while people are serving themselves.
 
-- title: Mediterranean Charcuterie Board
+- title: Charcuterie Board
   prep_time: 15
   cook_time: 0
   servings: 12
@@ -1969,7 +1912,7 @@
   steps:
   - Lay it out and try to make it look nice. This step shouldn't be hard.
 
-- title: Baby Carrot Fries
+- title: Carrot Fries
   prep_time: 5
   cook_time: 30
   servings: 4
@@ -1990,7 +1933,7 @@
     achieved. Flip halway through.
   - Serve as a side for any hearty meal.
 
-- title: Slow Cooker Chicken Enchiladas
+- title: Chicken Enchiladas
   prep_time: 5
   cook_time: 540
   servings: 12
@@ -2035,7 +1978,7 @@
   - Bake covered for 15-30 minutes until cheese is melted or desired doneness is reached.
   - Serve with beans, rice, and your favorite hot sauce.
 
-- title: Perfect Sunny Side Up Eggs
+- title: Pan Eggs
   prep_time: 0
   cook_time: 10
   servings: 1
@@ -2057,7 +2000,7 @@
   - Wait until the eggs have reached your desired doneness. Don't rush it.
   - Garnish with salt and pepper and serve with toast.
 
-- title: Slow Cooker Mongolian Beef
+- title: Mongolian Beef
   prep_time: 15
   cook_time: 240
   servings: 6
@@ -2170,7 +2113,7 @@
     onion powder.
   - Serve over rice, toast, or pasta.
 
-- title: Cave Aged Cheddar Twice Baked Potatoes
+- title: Cheddar Baked Potatoes
   prep_time: 0
   cook_time: 120
   servings: 4
@@ -2197,7 +2140,7 @@
     scallions.
   - Put the potato back in the oven and heat until the cheese on top is melted.
 
-- title: Crispy Baked Chicken Wings
+- title: Chicken Wings
   prep_time: 10
   cook_time: 60
   servings: 6
@@ -2216,7 +2159,7 @@
   - Bake for 1 hour, turning halfway through.
   - Extend the cooking time a little longer if you want even crispier on the outside.
 
-- title: Sriracha Baked Chicken Wings
+- title: Sriracha Chicken Wings
   prep_time: 10
   cook_time: 60
   servings: 8
