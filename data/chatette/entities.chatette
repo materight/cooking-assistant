@@ -17,7 +17,7 @@
     ~[numbers#multiple] {h/hours}
 
 // Training data or ingredients
-|Ingredients.chatette
+|ingredients.chatette
 
 // Training data for recipe names
 |recipes.chatette
