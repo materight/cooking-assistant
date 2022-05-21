@@ -44,7 +44,7 @@
     ~[&affirm?] ~[i want?] the [list of?] [ingredient][s?] [that are?] ~[needed?]
 
 %[ask_expected_time](100)
-    how {long/much time} [~[will] it take?] to ~[cook]?
+    how {long/much time} [{will it/is going to} take?] to ~[cook]?
     what{ is/'s} the {cooking/preparation} time?
 
 %[ask_ingredient_substitute](200)

@@ -814,50 +814,34 @@ nlu:
     - yes i'd really love the ingredient needed
 - intent: ask_expected_time
   examples: |
-    - how long going to it take to cook?
-    - how much time 'll it take to cook?
-    - how long to bake?
-    - how much time gonna it take to make?
-    - how much time 'll it take to make?
-    - how long gonna it take to bake?
-    - how long to prepare?
-    - how long gonna it take to make?
-    - how long 'll it take to prepare?
-    - how much time will it take to cook?
-    - how much time will it take to prepare?
-    - how much time going to it take to make?
-    - how much time gonna it take to cook?
-    - how much time will it take to make?
-    - how long to cook?
-    - how long will it take to bake?
-    - how long 'll it take to make?
-    - how much time gonna it take to prepare?
-    - how much time will it take to bake?
-    - how long will it take to cook?
-    - how long gonna it take to prepare?
-    - how long to make?
-    - how much time going to it take to prepare?
-    - how much time 'll it take to bake?
-    - how much time going to it take to bake?
-    - how long going to it take to prepare?
-    - how long will it take to prepare?
-    - how much time 'll it take to prepare?
-    - how long gonna it take to cook?
-    - how long going to it take to make?
-    - how much time to make?
+    - how long is going to take to make?
+    - what is the cooking time?
     - how long will it take to make?
-    - how much time gonna it take to bake?
-    - how long going to it take to bake?
-    - what is the preparation time?
-    - how long 'll it take to cook?
-    - what's the preparation time?
-    - how long 'll it take to bake?
-    - how much time going to it take to cook?
+    - how long to make?
+    - how much time is going to take to prepare?
+    - how long will it take to prepare?
+    - how long to bake?
+    - how long to prepare?
+    - how long to cook?
+    - how long is going to take to cook?
+    - how much time will it take to bake?
+    - how much time will it take to make?
+    - how much time is going to take to cook?
+    - how much time to cook?
+    - how much time will it take to cook?
+    - what's the cooking time?
+    - how long will it take to bake?
+    - how much time to make?
+    - how much time is going to take to bake?
     - how much time to prepare?
     - how much time to bake?
-    - what's the cooking time?
-    - what is the cooking time?
-    - how much time to cook?
+    - how long is going to take to prepare?
+    - how long is going to take to bake?
+    - how much time will it take to prepare?
+    - what is the preparation time?
+    - what's the preparation time?
+    - how long will it take to cook?
+    - how much time is going to take to make?
 - intent: ask_ingredient_substitute
   examples: |
     - I do not have any [cumin powder](ingredient), what can I use?
@@ -867,19 +851,18 @@ nlu:
     - I do not own any [bananas](ingredient), what could i use?
     - I do not own any [instant yeast](ingredient), what compononet could I use instead?
     - I do not own any [parmesan cheese](ingredient), what could i use?
-    - I do not own [basil leaves](ingredient), what could I use?
     - I do not own [cornstarch](ingredient), what may I employ?
     - I do not own [instant yeast](ingredient), what surrogate may i use?
     - I do not own [nuts](ingredient), what substitute would I utilize?
     - I do not own [yuca root](ingredient), what ingredient may I utilize?
     - I don't have any [salsa](ingredient), what ingredient may i utilize?
     - I don't have [red peppers](ingredient), what else may i use instead?
+    - I don't have [water](ingredient), what could I use?
+    - I don't own any [nuts](ingredient), what could I utilize instead?
     - I don't own any [onion powder](ingredient), what surrogate would I use?
-    - I don't own any [vinegar](ingredient), what would i utilize instead?
     - I don't own [onion powder](ingredient), what can I use instead?
     - I not have any [red chili](ingredient), what may I use?
     - I not have any [tapenade](ingredient), what item could I utilize?
-    - I not have [hummus](ingredient), what may I use instead?
     - I not have [soy sauce](ingredient), what can i use?
     - I not have [tomatoes](ingredient), what else may i utilize instead?
     - I not have [whipped cream](ingredient), what could i employ?
@@ -889,17 +872,16 @@ nlu:
     - I not own any [pasta](ingredient), what thing would I use instead?
     - I not own any [peaches](ingredient), what item would i employ instead?
     - I not own any [raisins](ingredient), what thing could i utilize instead?
+    - I not own [curry paste](ingredient), what can i use?
     - any alternative for [cheddar cheese](ingredient)?
     - any alternative for [chicken wings](ingredient)?
     - any alternative for [green beans](ingredient)?
-    - any alternative for [pears](ingredient)?
     - any alternative to [instant yeast](ingredient)?
-    - any alternative to [lemon](ingredient)?
-    - any alternatives to [orange bitters](ingredient)?
     - any replacement for [canned chickpeas](ingredient)?
     - any replacement for [turkey breasts](ingredient)?
     - any replacement to [chicken breasts](ingredient)?
     - any replacement to [crackers](ingredient)?
+    - any replacements to [chicken stock](ingredient)?
     - any replacements to [garlic powder](ingredient)?
     - any substitute for [celery](ingredient)?
     - any substitute for [dark chocolate syrup](ingredient)?
@@ -908,26 +890,27 @@ nlu:
     - any substitute to [olive oil](ingredient)?
     - any substitute to [parsley flakes](ingredient)?
     - any substitute to [vanilla extract](ingredient)?
-    - any substitute to [water](ingredient)?
     - any substitutes for [scallions](ingredient)?
-    - any substitutes to [onion](ingredient)?
-    - any substitutes to [soy sauce](ingredient)?
     - any substitutes to [vegetable oil](ingredient)?
+    - any surrogate for [evaporated milk](ingredient)?
     - any surrogate for [ground beef](ingredient)?
     - any surrogate for [salt](ingredient)?
     - any surrogate to [bourbon](ingredient)?
     - any surrogate to [ginger powder](ingredient)?
     - any surrogate to [pecans](ingredient)?
     - any surrogates for [cilantro](ingredient)?
+    - any surrogates for [cumin](ingredient)?
+    - any surrogates to [cinnamnon sticks](ingredient)?
     - any surrogates to [tapenade](ingredient)?
     - i do not have any [pecans](ingredient), what could i utilize instead?
     - i do not have [chili peppers](ingredient), what would I employ?
     - i do not have [eggs](ingredient), what could I utilize?
     - i do not own any [gnocchi](ingredient), what else would I use?
+    - i do not own any [lentils](ingredient), what substitute may I utilize instead?
     - i do not own any [papayas](ingredient), what could I utilize instead?
     - i do not own any [raisins](ingredient), what can i utilize?
-    - i do not own any [strawberries](ingredient), what compononet could I employ?
     - i do not own [papayas](ingredient), what else may i employ instead?
+    - i do not own [pears](ingredient), what thing can i utilize?
     - i don't have any [nuts](ingredient), what else can i use instead?
     - i don't have [chicken breast](ingredient), what else could i utilize?
     - i don't have [cumin](ingredient), what could I use?
@@ -943,19 +926,22 @@ nlu:
     - i not own any [paprika](ingredient), what else may i utilize?
     - i not own any [vegetable oil](ingredient), what substitute could I use?
     - i not own [cinnamnon sticks](ingredient), what substitute may i employ instead?
+    - i not own [cornmeal](ingredient), what could i employ instead?
     - i not own [ground beef](ingredient), what alternative would I utilize?
-    - i not own [rotisserie chicken](ingredient), what else can I employ instead?
     - some alternative for [cranberries](ingredient)?
-    - some alternative for [garlic powder](ingredient)?
+    - some alternative for [gnocchi](ingredient)?
     - some alternative for [pepper](ingredient)?
     - some alternative for [red chili](ingredient)?
     - some alternative for [red peppers](ingredient)?
+    - some alternative to [fish sauce](ingredient)?
     - some alternatives for [frozen puff pastry](ingredient)?
+    - some alternatives to [lemon juice](ingredient)?
     - some alternatives to [red chili](ingredient)?
     - some replacement for [chocolate chips](ingredient)?
     - some replacement for [cinnamnon sticks](ingredient)?
     - some replacement to [basil](ingredient)?
     - some replacement to [leaves sage](ingredient)?
+    - some replacement to [vinegar](ingredient)?
     - some replacements for [evaporated milk](ingredient)?
     - some replacements for [pears](ingredient)?
     - some replacements for [vinegar](ingredient)?
@@ -965,7 +951,6 @@ nlu:
     - some substitute for [carrots](ingredient)?
     - some substitute for [olive oil](ingredient)?
     - some substitute for [orange bitters](ingredient)?
-    - some substitute for [ribeye steak](ingredient)?
     - some substitutes for [lemon](ingredient)?
     - some substitutes for [mozzarella](ingredient)?
     - some substitutes for [tomato paste](ingredient)?
@@ -974,10 +959,11 @@ nlu:
     - some substitutes to [onions](ingredient)?
     - some surrogate to [bell peppers](ingredient)?
     - some surrogate to [hummus](ingredient)?
-    - some surrogate to [papayas](ingredient)?
     - some surrogates for [apples](ingredient)?
     - some surrogates for [leeks](ingredient)?
-    - some surrogates to [lemon juice](ingredient)?
+    - some surrogates for [white sugar](ingredient)?
+    - some surrogates to [canned chickpeas](ingredient)?
+    - some surrogates to [instant yeast](ingredient)?
     - what  things would i use instead of [scallions](ingredient)?
     - what can i employ instead of [orange juice](ingredient)?
     - what can i employ instead of [tahini](ingredient)?
@@ -989,11 +975,10 @@ nlu:
     - what is an replacement for [canned chickpeas](ingredient)?
     - what is an replacement for [cornstarch](ingredient)?
     - what is an replacements to [egg](ingredient)?
+    - what is an replacements to [peaches](ingredient)?
     - what is an replacements to [red wine](ingredient)?
     - what is an substitute for [chicken breast](ingredient)?
-    - what is an substitute to [carrots](ingredient)?
-    - what is an substitutes to [bay leaf](ingredient)?
-    - what is an surrogate to [rice](ingredient)?
+    - what is an substitute to [pasta](ingredient)?
     - what is an surrogates for [basil](ingredient)?
     - what is an surrogates for [onions](ingredient)?
     - what is an surrogates for [orange juice](ingredient)?
@@ -1002,6 +987,7 @@ nlu:
     - what may I employ instead of [vegetable oil](ingredient)?
     - what may I utilize instead of [soy sauce](ingredient)?
     - what may i utilize instead of [beef roast](ingredient)?
+    - what other items would I utilize instead of [carrots](ingredient)?
     - what other thing may I employ instead of [ribeye steak](ingredient)?
     - what replacement can i utilize instead of [lentils](ingredient)?
     - what substitute can I use instead of [tomato paste](ingredient)?
@@ -1010,13 +996,14 @@ nlu:
     - what would i employ instead of [fish sauce](ingredient)?
     - what would i use instead of [beef](ingredient)?
     - what would i use instead of [ground beef](ingredient)?
+    - what's an alternative to [basil](ingredient)?
     - what's an alternatives for [garlic chili sauce](ingredient)?
     - what's an replacement for [ribeye steak](ingredient)?
     - what's an replacement to [mozzarella](ingredient)?
-    - what's an replacements to [miso paste](ingredient)?
     - what's an replacements to [tahini](ingredient)?
     - what's an substitute for [bell peppers](ingredient)?
     - what's an substitute to [ginger](ingredient)?
+    - what's an substitutes for [spinach](ingredient)?
     - what's an substitutes to [jasmine rice](ingredient)?
     - what's an surrogate to [walnuts](ingredient)?
     - what's an surrogates for [bananas](ingredient)?
@@ -1027,25 +1014,21 @@ nlu:
     - which alternatives can I utilize instead of [ribeye steak](ingredient)?
     - which can I use instead of [tobasco](ingredient)?
     - which can i utilize instead of [salt](ingredient)?
-    - which can i utilize instead of [white sugar](ingredient)?
     - which could i employ instead of [chicken thighs](ingredient)?
     - which could i employ instead of [garlic powder](ingredient)?
     - which else can i use instead of [canned chickpeas](ingredient)?
     - which else could i employ instead of [chili peppers](ingredient)?
     - which else would i use instead of [chicken stock](ingredient)?
     - which is an alternative for [green beans](ingredient)?
+    - which is an alternatives for [leeks](ingredient)?
     - which is an alternatives for [walnuts](ingredient)?
     - which is an replacement for [brown sugar](ingredient)?
-    - which is an replacement for [vegetable oil](ingredient)?
     - which is an replacement to [bell peppers](ingredient)?
     - which is an replacements for [bay leaf](ingredient)?
     - which is an substitute to [ribeye steak](ingredient)?
-    - which is an substitutes to [chocolate chips](ingredient)?
     - which is an substitutes to [heavy cream](ingredient)?
     - which is an surrogate for [almonds](ingredient)?
     - which is an surrogate for [tobasco](ingredient)?
-    - which is an surrogate to [scallions](ingredient)?
-    - which is an surrogates for [chicken broth](ingredient)?
     - which may I utilize instead of [shrimp](ingredient)?
     - which may I utilize instead of [spaghetti](ingredient)?
     - which surrogate would i utilize instead of [whipped cream](ingredient)?
@@ -1053,13 +1036,14 @@ nlu:
     - which would I utilize instead of [beef](ingredient)?
     - which would i employ instead of [vinegar](ingredient)?
     - which would i use instead of [mushrooms](ingredient)?
+    - which would i use instead of [pepper](ingredient)?
     - which's an alternatives for [garlic](ingredient)?
     - which's an replacement to [basil leaves](ingredient)?
     - which's an replacements for [canned chickpeas](ingredient)?
     - which's an replacements to [cumin](ingredient)?
-    - which's an substitute for [tomato paste](ingredient)?
     - which's an surrogate to [blueberries](ingredient)?
     - which's an surrogate to [scallions](ingredient)?
+    - which's an surrogates for [yuca root](ingredient)?
 - intent: tell_people_count
   examples: |
     - We 'll be [one](CARDINAL) person
@@ -1073,8 +1057,10 @@ nlu:
     - We are in [ten](CARDINAL)
     - We are [nine](CARDINAL) person
     - We are [one](CARDINAL) people
+    - We going to be [four](CARDINAL)
     - We going to be [one](CARDINAL)
     - We gonna be [four](CARDINAL) relatives
+    - We gonna be [two](CARDINAL) person
     - We [one](CARDINAL)
     - We [one](CARDINAL) people
     - and for [1](CARDINAL)
@@ -1087,6 +1073,7 @@ nlu:
     - for [five](CARDINAL)
     - for [one](CARDINAL)
     - for [one](CARDINAL) person
+    - for [six](CARDINAL) people
     - for [ten](CARDINAL)
     - for [ten](CARDINAL) person
     - for [ten](CARDINAL) persons
@@ -1107,10 +1094,10 @@ nlu:
     - thank you and for [9](CARDINAL) persons
     - thank you for [1](CARDINAL)
     - thank you for [2](CARDINAL)
+    - thank you for [3](CARDINAL) relatives
     - thank you for [4](CARDINAL) people
     - thank you for [four](CARDINAL) persons
     - thank you for [one](CARDINAL)
-    - thank you for [seven](CARDINAL)
     - thank you we 'll be [1](CARDINAL)
     - thank you we are in [6](CARDINAL) friends
     - thank you we are in [one](CARDINAL) person
@@ -1121,7 +1108,6 @@ nlu:
     - thank you what about for [4](CARDINAL) person
     - thank you what about for [9](CARDINAL)
     - thanks We 'll be [1](CARDINAL)
-    - thanks We [1](CARDINAL)
     - thanks We are in [six](CARDINAL)
     - thanks We going to be [1](CARDINAL) people
     - thanks We [six](CARDINAL) person
@@ -1134,7 +1120,6 @@ nlu:
     - thanks we [one](CARDINAL) person
     - thanks we [one](CARDINAL) persons
     - thanks we will be [nine](CARDINAL) relatives
-    - thanks what about for [1](CARDINAL)
     - thanks what about for [eight](CARDINAL)
     - we 'll be [five](CARDINAL) people
     - we [1](CARDINAL)
@@ -1148,7 +1133,6 @@ nlu:
     - we are in [nine](CARDINAL) people
     - we are in [nine](CARDINAL) relatives
     - we are in [one](CARDINAL) person
-    - we are [one](CARDINAL)
     - we going to be [2](CARDINAL)
     - we gonna be [1](CARDINAL)
     - we [one](CARDINAL)
@@ -1164,60 +1148,59 @@ nlu:
     - what about for [ten](CARDINAL)
 - intent: tell_people_count_one
   examples: |
-    - thank you it is just me
-    - thank you it's just me
-    - thanks I am by myself
-    - thank you I am alone
-    - i am alone
-    - thanks It is just me
-    - it is only me
-    - I'm only
-    - thanks i'm only
-    - thanks It's only me
-    - thanks i am only
-    - It is just me
-    - thanks I'm only
-    - thank you It is only me
-    - thank you It's only me
-    - i'm by myself
-    - thanks I'm alone
-    - thanks It is only me
-    - thank you It is just me
-    - It is only me
-    - thanks i am by myself
-    - i'm alone
-    - thanks I'm by myself
-    - I am by myself
-    - thank you I am by myself
-    - i am only
-    - It's only me
-    - i am by myself
-    - thanks i'm alone
-    - i'm only
+    - thanks I am alone
     - thank you i am by myself
-    - I am alone
-    - I'm by myself
-    - thank you I'm alone
-    - thanks it is just me
-    - thank you i am alone
-    - thanks i'm by myself
-    - thanks I am only
-    - thank you I'm by myself
-    - thanks it's just me
     - It's just me
-    - thank you i'm only
-    - thank you I'm only
-    - it's just me
     - thank you i'm by myself
-    - thank you i am only
+    - thank you i am alone
+    - thank you It is just me
+    - it is just me
+    - thanks I'm alone
+    - thanks i am by myself
+    - thanks i'm only
+    - thank you It is only me
     - thanks i am alone
-    - thanks it is only me
+    - thank you I'm by myself
+    - thanks It is just me
+    - thank you I am by myself
+    - it is only me
+    - It is just me
+    - I'm only
+    - thank you it is just me
+    - i am only
+    - thank you I am only
+    - i am by myself
+    - thanks it is just me
+    - thanks i'm by myself
+    - thank you i'm only
+    - thank you i'm alone
+    - thanks it's just me
+    - thanks I am only
+    - i'm by myself
+    - i'm alone
+    - thanks It's just me
+    - thanks It's only me
+    - i'm only
+    - thank you I'm only
+    - thank you It's only me
+    - i am alone
+    - thank you It's just me
+    - It is only me
     - thanks it's only me
+    - thanks it is only me
+    - I am alone
+    - thanks I am by myself
+    - thank you it's just me
+    - It's only me
+    - it's just me
+    - it's only me
     - thank you it is only me
+    - thanks I'm by myself
+    - thank you i am only
+    - I'm by myself
 - intent: start_cooking
   examples: |
     - I am prepared to prepare now
-    - I am ready to bake
     - I am ready to bake now
     - I am ready to cook now
     - I am ready to make now
@@ -1239,15 +1222,15 @@ nlu:
     - could we go ahead and initiate preparing now?
     - i am prepared to bake now
     - i am prepared to cook
+    - i am prepared to prepare
     - i am ready to bake now
     - i am ready to cook now
-    - i am ready to make
     - i am set to bake
     - i am set to bake now
     - i am set to make now
+    - i'm all set to bake
     - i'm ready to bake
     - i'm ready to make
-    - i'm ready to make now
     - i'm set to bake
     - i'm set to cook now
     - i'm set to prepare now
@@ -1258,7 +1241,6 @@ nlu:
     - let's commence baking now
     - let's commence cooking now
     - let's cook now
-    - let's initiate baking now
     - let's make
     - let's prepare
     - let's start preparing now
@@ -1273,8 +1255,8 @@ nlu:
     - thank you I am ready to make now
     - thank you I am set to prepare
     - thank you I'm set to make
-    - thank you bake now
     - thank you begin preparing
+    - thank you can We go ahead and initiate baking now?
     - thank you can we initiate making now?
     - thank you cook
     - thank you could we begin cooking?
@@ -1284,18 +1266,19 @@ nlu:
     - thank you i'm prepared to make now
     - thank you i'm set to make now
     - thank you initiate making now
-    - thank you let's commence making now
     - thank you let's cook now
     - thank you let's initiate baking
     - thank you let's prepare now
     - thank you let's start cooking
     - thank you let's start preparing now
+    - thank you may we begin making now?
     - thank you prepare now
     - thank you would We get going and initiate baking now?
     - thank you would we commence cooking?
     - thank you would we initiate baking?
     - thanks I am prepared to make now
     - thanks I am set to bake now
+    - thanks I'm set to bake now
     - thanks I'm set to make
     - thanks bake now
     - thanks begin cooking now
@@ -1312,6 +1295,7 @@ nlu:
     - thanks may we get going and commence making now?
     - thanks prepare now
     - thanks start cooking
+    - thanks start making
     - would We get going and begin cooking now?
     - would We get going and initiate making now?
     - would We go ahead and commence making?
@@ -1322,6 +1306,7 @@ nlu:
     - I want to halt cooking
     - I want to stop baking
     - I would love to end baking
+    - I'd like to stop preparing
     - I'm sorry could you end preparing
     - I'm sorry please I would really like to cancel preparing
     - I'm sorry please may you halt making
@@ -1334,8 +1319,8 @@ nlu:
     - could we end cooking
     - could we halt making
     - excuse me I want to end cooking
-    - excuse me I would love to stop baking
     - excuse me I would really love to cancel preparing
+    - excuse me I'd really love to stop making
     - excuse me can we end cooking
     - excuse me could I end baking
     - excuse me i want to end making
@@ -1357,6 +1342,7 @@ nlu:
     - excuse me please would we halt preparing
     - excuse me please would you stop baking
     - excuse me would you cancel baking
+    - excuse me would you cancel preparing
     - excuse me would you stop preparing
     - i am sorry please can we halt cooking
     - i am sorry please could you cancel baking
@@ -1367,21 +1353,19 @@ nlu:
     - i would really like to end preparing
     - i would really love to cancel cooking
     - i'd like to end baking
-    - i'd love to end making
     - i'm sorry can I cancel preparing
-    - i'm sorry please I'd love to end baking
     - i'm sorry please can you halt cooking
     - i'm sorry please may you stop cooking
     - may I stop making
     - may we stop baking
     - may you end baking
+    - may you stop baking
     - please I want to cancel making
     - please I want to end baking
     - please I want to stop baking
     - please I'd like to stop cooking
     - please I'd love to cancel cooking
     - please I'd love to end preparing
-    - please can I stop preparing
     - please can we halt making
     - please can you cancel cooking
     - please can you halt preparing
@@ -1401,6 +1385,7 @@ nlu:
     - please may you cancel preparing
     - please may you end preparing
     - please would I stop cooking
+    - please would we cancel making
     - please would we halt cooking
     - please would we stop making
     - please would we stop preparing
@@ -1414,109 +1399,108 @@ nlu:
     - sorry please I want to end preparing
     - sorry please could I stop baking
     - sorry please i want to stop preparing
-    - sorry please i'd really like to stop baking
-    - would I end making
+    - would we cancel preparing
     - would we stop making
     - would you halt making
 - intent: set_timer
   examples: |
-    - activate timer for [one h](TIME)?
     - add a timer of [ten hours](TIME)?
-    - add timer for [eight hours](TIME)?
     - can you add reminder for [one minute](TIME)?
     - can you create a chronometer in [1 minute](TIME)?
     - can you remember me in [one h](TIME)
-    - could activate alarm in [five h](TIME)?
-    - could alert me in [7 mins](TIME)
-    - could create a timer for [1 h](TIME)?
+    - could alert me in [1 minute](TIME)
     - could notify me in [one hour](TIME)
-    - could you add countdown of [4 minutes](TIME)?
+    - could you configure chronometer for [1 min](TIME)?
+    - could you notify me in [two hours](TIME)
     - create alarm for [six hours](TIME)?
     - may create a alarm for [one minute](TIME)?
+    - may remember me in [1 hour](TIME)
+    - may you notify me in [3 minutes](TIME)
     - may you set chronometer of [1 hour](TIME)?
-    - notify in [one h](TIME)
-    - notify me in [6 minutes](TIME)
     - please activate a countdown of [1 h](TIME)?
     - please alert in [one hour](TIME)
     - please alert me in [1 minute](TIME)
     - please can remind me in [1 minute](TIME)
     - please can set countdown of [three mins](TIME)?
     - please can you add a chronometer of [1 min](TIME)?
-    - please could remember in [one minute](TIME)
+    - please can you set a countdown of [9 hours](TIME)?
     - please could set chronometer for [one hour](TIME)?
-    - please could you warn me in [10 hours](TIME)
-    - please create timer of [one hour](TIME)?
+    - please create a countdown for [one hour](TIME)?
     - please may set a alarm of [two minutes](TIME)?
     - please may you activate reminder of [10 hours](TIME)?
-    - please may you remind me in [four mins](TIME)
     - please may you set up a reminder of [2 h](TIME)?
     - please remember in [one min](TIME)
-    - please would warn in [6 hours](TIME)
+    - please would you activate a chronometer for [8 minutes](TIME)?
+    - please would you activate a chronometer in [1 min](TIME)?
     - please you activate a timer of [10 mins](TIME)?
-    - please you activate chronometer of [2 hours](TIME)?
     - please you configure a timer in [1 h](TIME)?
     - please you configure reminder of [2 hours](TIME)?
-    - please you remember in [1 min](TIME)
-    - please you remember me in [two mins](TIME)
     - please you remind me in [1 h](TIME)
-    - remember in [1 min](TIME)
     - remind in [one h](TIME)
     - set a chronometer for [four h](TIME)?
     - thank you activate a chronometer for [5 h](TIME)?
     - thank you alert me in [one min](TIME)
+    - thank you notify in [4 minutes](TIME)
     - thank you please can notify in [nine h](TIME)
     - thank you please can you add a chronometer for [1 h](TIME)?
     - thank you please can you warn me in [8 mins](TIME)
     - thank you please configure alarm in [one hour](TIME)?
+    - thank you please could create alarm of [seven hours](TIME)?
+    - thank you please could warn me in [4 h](TIME)
     - thank you please could you set timer of [nine h](TIME)?
-    - thank you please may create a alarm of [one minute](TIME)?
+    - thank you please may you set timer for [3 minutes](TIME)?
+    - thank you please may you warn in [one minute](TIME)
+    - thank you please remember in [3 h](TIME)
+    - thank you please remind in [1 h](TIME)
     - thank you please set a alarm of [two minutes](TIME)?
-    - thank you please would you set up a countdown in [1 hour](TIME)?
+    - thank you please warn in [6 h](TIME)
+    - thank you please would alert in [1 minute](TIME)
+    - thank you please would warn in [9 mins](TIME)
+    - thank you please you configure a countdown of [1 hour](TIME)?
+    - thank you please you configure countdown of [1 minute](TIME)?
     - thank you please you remind me in [4 hours](TIME)
-    - thank you remind in [1 minute](TIME)
     - thank you set up a timer in [1 minute](TIME)?
-    - thank you set up chronometer of [eight minutes](TIME)?
     - thank you would configure timer for [one minute](TIME)?
+    - thank you would set a chronometer of [9 minutes](TIME)?
     - thank you would set timer of [8 h](TIME)?
     - thank you would you remember me in [6 hours](TIME)
-    - thank you you create chronometer of [one min](TIME)?
-    - thanks can notify me in [seven h](TIME)
-    - thanks can you set up countdown in [7 minutes](TIME)?
+    - thank you you activate a timer for [one h](TIME)?
+    - thanks could add a chronometer for [1 hour](TIME)?
     - thanks could remind me in [1 minute](TIME)
     - thanks could you add timer of [2 h](TIME)?
     - thanks create a chronometer of [6 h](TIME)?
-    - thanks may remember me in [1 hour](TIME)
     - thanks may remember me in [one h](TIME)
+    - thanks may you set up a alarm for [1 minute](TIME)?
     - thanks please activate a timer of [4 hours](TIME)?
+    - thanks please add timer of [one min](TIME)?
+    - thanks please can set up a reminder for [five minutes](TIME)?
     - thanks please can you remind in [5 minutes](TIME)
     - thanks please could remember in [7 minutes](TIME)
-    - thanks please could set timer of [six mins](TIME)?
     - thanks please could warn in [1 min](TIME)
     - thanks please could you remind in [one hour](TIME)
     - thanks please create a countdown of [4 minutes](TIME)?
-    - thanks please create countdown in [7 minutes](TIME)?
     - thanks please may alert in [1 hour](TIME)
     - thanks please may remember me in [four minutes](TIME)
     - thanks please may you create a alarm for [one hour](TIME)?
     - thanks please may you notify in [10 mins](TIME)
     - thanks please set a timer of [10 h](TIME)?
     - thanks please warn in [five minutes](TIME)
-    - thanks please would add a chronometer for [1 h](TIME)?
-    - thanks please you alert in [one h](TIME)
+    - thanks please you add timer in [four minutes](TIME)?
+    - thanks please you create a reminder in [7 minutes](TIME)?
+    - thanks set up chronometer for [nine minutes](TIME)?
     - thanks set up chronometer in [two mins](TIME)?
     - thanks would activate alarm in [seven h](TIME)?
-    - thanks you configure a reminder in [1 h](TIME)?
-    - thanks you set up a alarm for [3 mins](TIME)?
-    - warn in [1 min](TIME)
+    - thanks you activate a timer of [1 h](TIME)?
     - warn in [8 hours](TIME)
     - warn in [seven hours](TIME)
     - warn me in [one h](TIME)
     - you activate a timer in [3 minutes](TIME)?
     - you add a countdown for [two minutes](TIME)?
-    - you configure a chronometer for [nine mins](TIME)?
+    - you alert in [one h](TIME)
+    - you alert me in [1 h](TIME)
     - you notify me in [2 h](TIME)
-    - you remind me in [ten hours](TIME)
     - you set up a countdown for [one h](TIME)?
     - you set up timer of [three hours](TIME)?
     - you warn in [1 minute](TIME)
+    - you warn in [10 mins](TIME)
     - you warn me in [ten minutes](TIME)
