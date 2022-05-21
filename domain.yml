@@ -82,6 +82,12 @@ responses:
   utter_info:
   - text: "I can help you find cooking recipes."
 
+  utter_please_rephrase:
+  - text: "I'm sorry, I didn't understand that. Could you rephrase please?"
+
+  utter_default:
+  - text: I'm really sorry, I don't know how to help you.
+
   utter_goodbye:
   - text: "Thanks for talking with me. Bye!"
   - text: "Bye!"
