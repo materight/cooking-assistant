@@ -40,8 +40,8 @@
 
 %[ask_ingredients_list](100)
     {what/which} [other?] ~[ingredient]s {are ~[needed]/do [&I] ~[need]}?
-    ~[can] you ~[please?] ~[give] [me?] the list of [ingredient][s?] ~[needed?]
-    ~[&affirm?] ~[i want?] [the list of?] [ingredient][s?] ~[needed?]
+    ~[can] you ~[please?] ~[give] [me?] the [list of?] [ingredient][s?] [that are?] ~[needed?]
+    ~[&affirm?] ~[i want?] the [list of?] [ingredient][s?] [that are?] ~[needed?]
 
 %[ask_expected_time](100)
     how {long/much time} [~[will] it take?] to ~[cook]?
