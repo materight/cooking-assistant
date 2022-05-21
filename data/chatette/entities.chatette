@@ -1,11 +1,20 @@
-// Use spacy named entity recognition to extract numbers (no need for multiple examples)
+~[numbers#one]
+    {one/1}
+~[numbers#multiple]
+    {two/three/four/five/six/seven/eight/nine/ten}
+    {2/3/4/5/6/7/8/9/10}
+
+// Use spacy named entity recognition to extract numbers (no actual need for multiple examples, used only for nlu data generation)
 @[CARDINAL]
-    one
+    ~[numbers#one]
+    ~[numbers#multiple]
 
-// Use spacy named entity recognition to extract time intervals (no need for multiple examples)
+// Use spacy named entity recognition to extract time intervals (no actual need for multiple examples, used only for nlu data generation)
 @[TIME]
-    40 min
-
+    ~[numbers#one] {min/minute}
+    ~[numbers#multiple] {mins/minutes}
+    ~[numbers#one] {h/hour}
+    ~[numbers#multiple] {h/hours}
 
 // Training data or ingredients
 |Ingredients.chatette

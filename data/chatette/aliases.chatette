@@ -53,7 +53,7 @@
     {use/utilize/employ}
 
 ~[eat]
-    {eat/try/taste}
+    {eat/try}
 
 ~[cook]
     {cook/prepare/make/bake}
@@ -86,7 +86,7 @@
     {stop/end/halt/cancel}
 
 ~[can]
-    {can/could/may/would/should}
+    {can/could/may/would}
 
 ~[i want]
     [&I]{'d/ would} [really?] [like|love]

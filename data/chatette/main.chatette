@@ -24,7 +24,7 @@
     ~[&affirm?] ~[next] ~[thanks?]
 
 %[search_by_keyword](200)
-    ~[i want] to ~[eat] @[recipe_keyword] ~[day time?].
+    ~[i want] to ~[eat] [{a/the}?] @[recipe_keyword] ~[day time?].
     ~[can] you ~[please?] ~[search] @[recipe_keyword]?
     ~[can] you ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
     ~[can] you ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
@@ -54,8 +54,8 @@
     {any/some} ~[alternative][s?] {for/to} @[ingredient]?
 
 %[tell_people_count](100)
-    ~[thanks?] [&we?] [~[will] be?] @[CARDINAL] ~[people?]
-    ~[thanks?] [&we?] are [in?] @[CARDINAL] ~[people?]
+    ~[thanks?] [&we] [~[will] be?] @[CARDINAL] ~[people?]
+    ~[thanks?] [&we] are [in?] @[CARDINAL] ~[people?]
     ~[thanks?] [{what about/and}?] for @[CARDINAL] ~[people?]
 
 %[tell_people_count_one](50)
