@@ -122,7 +122,8 @@ class ActionListIngredients(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
-        people_count = tracker.get_slot('people_count')
+        people_count = next(tracker.get_latest_entity_values('CARDINAL'), 
+                            tracker.get_slot('people_count')) # Use value o entity or current slot as fallback
         logger.info('Listing ingredients for recipe %s and "%s" people', recipe.id, people_count)
         logger.info('Found %d ingredients', len(recipe.ingredients))
         if people_count is None:
