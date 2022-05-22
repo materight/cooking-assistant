@@ -4,14 +4,19 @@ import yaml
 import tempfile
 import argparse
 import subprocess
+from datetime import datetime
 
 from sklearn.model_selection import ParameterSampler
 
 HYPERPARAMS = dict(
     epochs=[20, 50, 100, 200],
+    embedding_dimension=[10, 20, 50],
+    learning_rate=[0.001, 0.01],
+    drop_rate=[0.1, 0.2, 0.3],
+    constrain_similarities=[True, False],
     max_history=[5, 10, 15],
     max_ngram=[3, 4, 5],
-    fallback_threshold=[0.3, 0.5],
+    fallback_threshold=[0.4, 0.7],
 )
 
 parser = argparse.ArgumentParser(description="Run hyperparameters optimization of a Rasa model.")
@@ -28,28 +33,32 @@ def set_hyperparams(config: dict, params: dict) -> dict:
     return config
 
 
-
 if __name__ == "__main__":
     args = parser.parse_args()
+    exp_name = datetime.now().strftime('%Y%m%d-%H%M%S')
+    work_dir = os.path.join('hyperopts', exp_name)
+    os.makedirs(work_dir)
+    print(f'Experiment name: {exp_name}')
     # Load hyperopt config
     with open('config.hyperopt.yml', 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
-    # Generate config files to compare
+    # Generate the config files to compare
     configs = []
     sampler = ParameterSampler(HYPERPARAMS, n_iter=args.n_iter, random_state=0)
+    os.makedirs(os.path.join(work_dir, 'configs'))
+    print(f'Generating {len(sampler)} pipeline configs...')
     for i, params in enumerate(sampler):
-        with tempfile.NamedTemporaryFile('w', delete=False) as tmp_config_file:
-            # Generate new temp conig
-            yaml.dump(set_hyperparams(config, params), tmp_config_file)
-            configs.append(tmp_config_file.name)
+        with open(os.path.join(work_dir, 'configs', f'{i+1}.yml'), 'w') as f:
+            yaml.dump(set_hyperparams(config, params), f)
+            configs.append(f.name)
     # Train and test NLU models with cross-validation
     print('Training and testing NLU models...')
     subprocess.run(['rasa', 'test', 'nlu',
         '--config', *configs,
         '--cross-validation',
         '--runs', '3',
-        '--out', 'results/nlu',
-        '--model', 'results/nlu/models'
+        '--out', f'{work_dir}/nlu',
+        '--model', f'{work_dir}/nlu/models'
     ], check=True).returncode
     # Train and test dialogue models
     print('Training and testing dialogue models...')
@@ -57,15 +66,15 @@ if __name__ == "__main__":
         '--config', *configs,
         '--cross-validation',
         '--runs', '3',
-        '--out', 'results/core/models'
+        '--out', f'{work_dir}/core/models'
     ], check=True).returncode
     for split, stories_dir in dict(train='data', test='tests').items():  # The previous models have been trained excluding a certain amount of training data, so we can evaluate also over the train set
         subprocess.call(['rasa test core',
-            '--model', 'results/core/models',
+            '--model', f'{work_dir}/core/models',
             '--stories', stories_dir,
             '--runs', '3',
             '--evaluate-model-directory'
-            '--out', f'results/core/{split}'
+            '--out', f'{work_dir}/core/{split}'
         ], check=True).returncode
     # Delete temp config files
     for config in configs:

@@ -16,11 +16,16 @@ pipeline:
     dimensions: [ CARDINAL, TIME ]
   - name: DIETClassifier
     epochs: $epochs
-    constrain_similarities: true
-  - name: EntitySynonymMapper
+    embedding_dimension: $embedding_dimension
+    learning_rate: $learning_rate
+    drop_rate: $drop_rate
+    constrain_similarities: $constrain_similarities
   - name: ResponseSelector
     epochs: $epochs
-    constrain_similarities: true
+    embedding_dimension: $embedding_dimension
+    learning_rate: $learning_rate
+    drop_rate: $drop_rate
+    constrain_similarities: $constrain_similarities
   - name: FallbackClassifier
     threshold: $fallback_threshold
     ambiguity_threshold: 0.1
@@ -28,10 +33,11 @@ pipeline:
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy
-  - name: UnexpecTEDIntentPolicy
-    max_history: $max_history
-    epochs: $epochs
+    core_fallback_threshold: $fallback_threshold
   - name: TEDPolicy
     max_history: $max_history
     epochs: $epochs
     constrain_similarities: true
+  - name: UnexpecTEDIntentPolicy
+    max_history: $max_history
+    epochs: $epochs
