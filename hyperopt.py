@@ -20,7 +20,7 @@ HYPERPARAMS = dict(
 )
 
 parser = argparse.ArgumentParser(description="Run hyperparameters optimization of a Rasa model.")
-parser.add_argument('--n-iter', '-n', type=int, default=3, help="Total number of iterations to run.")
+parser.add_argument('--n-iter', '-n', type=int, default=3, help="Total number of iterations to run (default: %(default)s).")
 
 def set_hyperparams(config: dict, params: dict) -> dict:
     """Set the given hyperparams in the config dictionary."""
