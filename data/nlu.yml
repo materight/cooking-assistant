@@ -242,7 +242,7 @@ nlu:
     - can you find recipe for [Apple Tart](recipe_keyword)?
     - can you find recipe for [Creamed Leeks](recipe_keyword)?
     - can you find recipe for [Tomato Chicken with Pasta Alfredo](recipe_keyword)?
-    - can you please find food for [Jalapeño Cornbread?]{"entity": "recipe_keyword", "value": "Jalape\u00f1o Cornbread"}
+    - can you please find food for [Jalapeno Cornbread](recipe_keyword)?
     - can you please find food for [Roasted Potatoes](recipe_keyword)?
     - can you please find how to cook [Instant Pot Chili](recipe_keyword)?
     - can you please find how to make [Chocolate Cookies](recipe_keyword)?
@@ -494,7 +494,7 @@ nlu:
     - can you please search something with [sriracha sauce](ingredient)?
     - can you search food with [orange bitters](ingredient)?
     - can you search for recipe using [egg yolk](ingredient)?
-    - can you search for something containing [canned jalapeños ]{"entity": "ingredient", "value": "canned jalape\u00f1os"}g[arlic powder?]{"entity": "ingredient", "value": "garlic powder"}
+    - can you search for something containing [jalapenos](ingredient) [garlic powder](ingredient)?
     - can you search recipe using [curry powder](ingredient)?
     - can you search something containing [grapes](ingredient)?
     - could you find me something using [grapes](ingredient) and [gnocchi](ingredient)?
@@ -533,14 +533,14 @@ nlu:
     - i own [red wine](ingredient), what can I prepare?
     - i own [scallions](ingredient)
     - i solely have [tahini](ingredient), what may I cook?
-    - i solely own [canned chickpeas](ingredient), what would i bake?
+    - i solely own [chickpeas](ingredient), what would i bake?
     - i want to eat food with [pears](ingredient).
     - i want to eat food with [wine](ingredient).
     - i want to eat recipe containing [enchilada sauce](ingredient) today.
     - i want to eat recipe containing [limes](ingredient) for evening.
     - i want to eat something containing [peppermint syrup](ingredient) [onions](ingredient) today.
     - i want to eat something using [tomato pesto](ingredient) tomorrow.
-    - i want to eat something using [tomatoes](ingredient) [canned jalapeños ]{"entity": "ingredient", "value": "canned jalape\u00f1os"}tomorrow.
+    - i want to eat something using [tomatoes](ingredient) [jalapenos](ingredient) tomorrow.
     - i want to eat something with [red chili flakes](ingredient).
     - i want to try food containing [hummus](ingredient) [dark chocolate syrup](ingredient) for morning.
     - i want to try food using [curry paste](ingredient) today.
@@ -562,7 +562,7 @@ nlu:
     - i would really like to try something containing [brown sugar](ingredient) and [apples](ingredient) today.
     - i would really like to try something containing [condensed milk](ingredient) and [grapes](ingredient).
     - i would really love to try recipe containing [parsley](ingredient) and [peanut butter](ingredient) today.
-    - i would really love to try recipe using [instant yeast](ingredient) and [canned chickpeas](ingredient) today.
+    - i would really love to try recipe using [instant yeast](ingredient) and [chickpeas](ingredient) today.
     - i would really love to try something containing [salt](ingredient) this morning.
     - i'd like to try something with [ginger](ingredient) and [chili powder](ingredient).
     - i'd love to try food containing [cornmeal](ingredient) [lemon](ingredient).
@@ -572,7 +572,7 @@ nlu:
     - may you find me recipe using [red chili](ingredient) and [gnocchi](ingredient)?
     - may you find me recipe with [cinnamon](ingredient)?
     - may you find me something using [orange bitters](ingredient) and [onion powder](ingredient)?
-    - may you find me something with [canned chickpeas](ingredient)?
+    - may you find me something with [chickpeas](ingredient)?
     - may you find recipe with [beans](ingredient)?
     - may you find something containing [vanilla extract](ingredient)?
     - may you please find me food using [cumin](ingredient) [almond extract](ingredient)?
@@ -856,7 +856,7 @@ nlu:
     - I do not own [turkey breasts](ingredient), what substitute would I utilize?
     - I don't have any [ribeye steak](ingredient), what ingredient may i utilize?
     - I don't have any [rice](ingredient), what item could I utilize instead?
-    - I don't have [canned chickpeas](ingredient), what else may i use instead?
+    - I don't have [chickpeas](ingredient), what else may i use instead?
     - I don't own any [oregano](ingredient), what surrogate would I use?
     - I don't own any [sriracha sauce](ingredient), what else may I utilize instead?
     - I don't own [hummus](ingredient), what alternative could i utilize instead?
@@ -931,8 +931,8 @@ nlu:
     - i not own any [yuca root](ingredient), what else may i utilize?
     - i not own [pepperoni](ingredient), what alternative would I utilize?
     - i not own [red wine](ingredient), what substitute may i employ instead?
-    - some alternative for [canned chickpeas](ingredient)?
     - some alternative for [celery](ingredient)?
+    - some alternative for [chickpeas](ingredient)?
     - some alternative for [crackers](ingredient)?
     - some alternatives for [lemon](ingredient)?
     - some alternatives to [celery](ingredient)?
