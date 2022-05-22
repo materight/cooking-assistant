@@ -33,7 +33,6 @@ rules:
     - intent: ask_to_repeat
     - action: action_repeat_last_utterance
 
-
   - rule: Ask for expected preparation time
     condition:
     - slot_was_set: [ current_recipe ]
@@ -80,11 +79,21 @@ rules:
     - action: utter_set_timer/expired
 
 
-  - rule: Start cooking
+  - rule: Start cooking (user inititiative)
     condition:
     - slot_was_set: [ current_recipe ]
     steps:
     - intent: start_cooking
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
+
+
+  - rule: Start cooking (system inititiative)
+    condition:
+    - slot_was_set: [ current_recipe ]
+    steps:
+    - action: utter_ask_start_cooking
+    - intent: affirm
     - action: list_steps_loop
     - active_loop: list_steps_loop
 

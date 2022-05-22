@@ -9,7 +9,7 @@ from rasa_sdk.events import SlotSet, AllSlotsReset, ReminderScheduled
 from rasa_sdk.executor import CollectingDispatcher
 
 from . import utils
-from .dataset import Dataset
+from .dataset import Dataset, Ingredient
 
 # Logger
 logger = logging.getLogger(__name__)
@@ -122,10 +122,8 @@ class ActionListIngredients(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
-        people_count = next(tracker.get_latest_entity_values('CARDINAL'), 
-                            tracker.get_slot('people_count')) # Use value o entity or current slot as fallback
-        logger.info('Listing ingredients for recipe %s and "%s" people', recipe.id, people_count)
-        logger.info('Found %d ingredients', len(recipe.ingredients))
+        people_count = next(tracker.get_latest_entity_values('CARDINAL'), tracker.get_slot('people_count')) # Use value o entity or current slot as fallback
+        logger.info('Listing ingredients for recipe %s and "%s" people, found %d ingredients', recipe.id, people_count, len(recipe.ingredients))
         if people_count is None:
             logger.info('Use default recipe servings: %d people', recipe.servings)
             people_count = recipe.servings  # Use recipe's servings as people_count value
@@ -134,7 +132,7 @@ class ActionListIngredients(Action):
             people_count = w2n.word_to_num(str(people_count))
             logger.info('Update recipe to adapt to %d people', people_count)
             recipe.set_servings(people_count)
-        ingredients_list = '\n'.join([ f'  - {i}' for i in recipe.ingredients ])
+        ingredients_list = '\n'.join([ f'  - {ingredient}' for ingredient in recipe.ingredients ])
         people_count_str = f'{people_count} people' if people_count > 1 else '1 person'
         dispatcher.utter_message(response='utter_list_ingredients', ingredients_list=ingredients_list, people_count_str=people_count_str)
         return []
@@ -152,13 +150,35 @@ class ActionSearchIngredientSubstitute(Action):
         if len(ingredients) > 0:
             ingredient = ingredients[0]
             substitute = dataset.search_ingredient_substitute(ingredient)
-            logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)        
+            logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)
+        # Utter substitute
         if substitute is not None:
             dispatcher.utter_message(response='utter_ingredient_substitute/found', substitute=substitute)
         elif ingredient is not None:
             dispatcher.utter_message(response='utter_ingredient_substitute/not_found', ingredient=ingredient)
         else:
             dispatcher.utter_message(response='utter_ingredient_substitute/no_ingredient')
+        return []
+
+
+class ActionTellIngredientAmount(Action):
+    def name(self) -> Text:
+        return 'action_tell_ingredient_amount'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
+        recipe = dataset.get_recipe(recipe_id)
+        people_count = next(tracker.get_latest_entity_values('CARDINAL'), tracker.get_slot('people_count'))  # Use value of entity or current slot as fallback
+        asked_ingredients = list(tracker.get_latest_entity_values('ingredient'))
+        if len(asked_ingredients) > 0:
+            if people_count is not None: # Update ingredients amount to adapt to the specified people_count
+                recipe.set_servings(w2n.word_to_num(str(people_count)))
+            amounts = [ ingr.__str__(sep=' of ') for ingr in recipe.ingredients if any(ingr.name in asked_ingr for asked_ingr in asked_ingredients) ]
+            if len(amounts) >= 2:
+                amounts_str = ','.join(amounts[:-1]) + ' and ' + amounts[-1]
+            else:
+                amounts_str = amounts[0]
+            dispatcher.utter_message(response='utter_ingredient_amount', amounts_str=amounts_str)
         return []
 
 

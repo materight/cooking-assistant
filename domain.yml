@@ -12,6 +12,8 @@ intents:
 - affirm
 - ask_alternative_recipe
 - ask_expected_time
+- ask_ingredient_amount:
+    use_entities: [ ingredient, CARDINAL ]
 - ask_ingredient_substitute:
     use_entities: [ ingredient ]
 - ask_ingredients_list
@@ -126,13 +128,16 @@ responses:
   utter_ingredient_substitute/found:
   - text: "You may use {substitute} as a substitute."
 
+  utter_ingredient_amount:
+  - text: "You need {amounts_str}."
+
   utter_list_ingredients:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
   - text: "For {people_count_str} you'll need:\n{ingredients_list}"
 
   utter_set_timer/done:
   - text: "I've set a timer for {time}."
-  - text: "Ok I'll remind you in {time}."
+  - text: "Ok I'll give you a reminder in {time}."
 
   utter_set_timer/error:
   - text: "I'm sorry, I couldn't undesterstand."
@@ -169,6 +174,7 @@ actions:
   - action_search_by_ingredients
   - action_search_alternative_recipe
   - action_tell_expected_time
+  - action_tell_ingredient_amount
   - action_update_people_count
   - action_search_ingredient_substitute
   - action_list_ingredients

@@ -44,14 +44,18 @@
     ~[&affirm?] ~[i want?] the [list of?] [ingredient][s?] [that are?] ~[needed?] [for @[CARDINAL] ~[people?]?]
 
 %[ask_expected_time](100)
-    how {long/much time} [{will it/is going to} take?] to ~[cook]?
-    what{ is/'s} the {cooking/preparation} time?
+    [&how] {long/much time} [{will it/is going to} take?] to ~[cook]?
+    [&what]{ is/'s} the {cooking/preparation} time?
 
 %[ask_ingredient_substitute](200)
     [&I] ~[do not] ~[have] [any?] @[ingredient], what [{else/~[ingredient]/~[alternative]}?] ~[can] [&I] ~[use] [instead?]?
     {what/which} [{else/[other?] ~[ingredient][s?]/~[alternative][s?]}?] ~[can] [&I] ~[use] instead of @[ingredient]?
     {what/which}{ is/'s} an ~[alternative][s?] {for/to} @[ingredient]?
     {any/some} ~[alternative][s?] {for/to} @[ingredient]?
+
+%[ask_ingredient_amount](200)
+    [&how] {much/many} [of?] @[ingredient] {do [&I]/does the recipe} ~[need] [for @[CARDINAL] ~[people?]?/80]?
+    [&how] {much/many} [of?] @[ingredient] {is/are} ~[needed] [for this [recipe?]?] [for @[CARDINAL] ~[people?]?/80]?
 
 %[tell_people_count](100)
     ~[thanks?] [&we] [~[will] be?] @[CARDINAL] ~[people?]
