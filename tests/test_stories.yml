@@ -1,7 +1,53 @@
 version: "2.0"
 stories:
-- story: happy path 1
+- story: Happy path 1
   steps:
-  - user: hello there!
+  - user: hi!
     intent: greet
   - action: utter_greet
+  - user: I'd like to prepare a [pizza](recipe_keyword)
+    intent: search_by_keyword
+  - action: action_search_recipe
+  - action: utter_ask_want_more_info
+  - slot_was_set:
+    - found_recipes_ids: [3, 4]
+    - current_recipe: 3
+  - user: I don't know, is there any other recipe?
+    intent: ask_alternative_recipe
+  - action: action_search_alternative_recipe
+  - action: utter_ask_want_more_info
+  - slot_was_set:
+    - current_recipe: 4
+  - user: Perfect, yes
+    intent: affirm
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: We'll be in [four](CARDINAL) people
+    intent: tell_people_count
+  - action: action_update_people_count
+  - slot_was_set:
+    - people_count: four
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: Wait, how long is it gonna take to prepare?
+    intent: ask_expected_time
+  - action: action_tell_expected_time
+  - user: Ok that's fine, let's start!
+    intent: start_cooking
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+  - user: Ok done
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 1
+  - user: I don't have any [pepperoni](ingredient) right now, what can I use instead?
+    intent: ask_ingredient_substitute
+  - action: action_search_ingredient_substitute
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Ok next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
