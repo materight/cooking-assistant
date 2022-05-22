@@ -9,7 +9,7 @@ from datetime import datetime
 from sklearn.model_selection import ParameterSampler
 
 HYPERPARAMS = dict(
-    epochs=[20, 50, 100, 200],
+    epochs=[20, 50, 100],
     embedding_dimension=[10, 20, 50],
     learning_rate=[0.001, 0.01],
     drop_rate=[0.1, 0.2, 0.3],

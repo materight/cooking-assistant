@@ -37,7 +37,12 @@ policies:
   - name: TEDPolicy
     max_history: $max_history
     epochs: $epochs
-    constrain_similarities: true
+    embedding_dimension: $embedding_dimension
+    learning_rate: $learning_rate
+    constrain_similarities: $constrain_similarities
   - name: UnexpecTEDIntentPolicy
     max_history: $max_history
     epochs: $epochs
+    embedding_dimension: $embedding_dimension
+    learning_rate: $learning_rate
+    constrain_similarities: $constrain_similarities

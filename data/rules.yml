@@ -22,6 +22,12 @@ rules:
     - active_loop: action_two_stage_fallback
 
 
+  - rule: Handle unlikely intents
+    steps:
+    - action: action_unlikely_intent
+    - action: utter_please_rephrase
+
+
   - rule: Ask for expected preparation time
     condition:
     - slot_was_set: [ current_recipe ]
