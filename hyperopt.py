@@ -50,7 +50,7 @@ if __name__ == "__main__":
         '--runs', '3',
         '--out', 'results/nlu',
         '--model', 'results/nlu/models'
-    ]).returncode
+    ], check=True).returncode
     # Train and test dialogue models
     print('Training and testing dialogue models...')
     subprocess.run(['rasa', 'train', 'core',
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         '--cross-validation',
         '--runs', '3',
         '--out', 'results/core/models'
-    ]).returncode
+    ], check=True).returncode
     for split, stories_dir in dict(train='data', test='tests').items():  # The previous models have been trained excluding a certain amount of training data, so we can evaluate also over the train set
         subprocess.call(['rasa test core',
             '--model', 'results/core/models',
@@ -66,7 +66,7 @@ if __name__ == "__main__":
             '--runs', '3',
             '--evaluate-model-directory'
             '--out', f'results/core/{split}'
-        ]).returncode
+        ], check=True).returncode
     # Delete temp config files
     for config in configs:
         os.remove(config)
