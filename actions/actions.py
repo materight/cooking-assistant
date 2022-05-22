@@ -207,3 +207,20 @@ class ActionSetTimer(Action):
         logger.info('Could not set timer for entity "%s"', time_str)
         dispatcher.utter_message(response='utter_set_timer/error', time=time_str)
         return [ ]
+
+
+class ActionRepeatLastUtterance(Action):
+    """Repeat the last utterance sent to the user."""
+
+    def name(self) -> Text:
+        return "action_repeat_last_utterance"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        texts = []
+        for event in reversed(tracker.events):
+            if event.get('event') != 'bot': # Get utterances until a user message is found
+                break
+            texts.append(event.get('text'))
+        for text in reversed(texts):
+            dispatcher.utter_message(text=text)
+        return []

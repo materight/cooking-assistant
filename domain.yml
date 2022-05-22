@@ -15,6 +15,7 @@ intents:
 - ask_ingredient_substitute:
     use_entities: [ ingredient ]
 - ask_ingredients_list
+- ask_to_repeat
 - deny
 - goodbye
 - greet
@@ -83,7 +84,7 @@ responses:
   - text: "I can help you find cooking recipes."
 
   utter_please_rephrase:
-  - text: "I'm sorry, I didn't understand that. Could you rephrase please?"
+  - text: "I'm sorry, I didn't understand that. Could you please rephrase?"
 
   utter_default:
   - text: I'm really sorry, I don't know how to help you.
@@ -114,7 +115,7 @@ responses:
   - text: "Thank you. How many people will be eating?"
 
   utter_expected_time:
-  - text: "This recipe requires {prep_time}min for preparation and {cook_time}min for cooking."
+  - text: "This recipe requires {prep_time} minutes for preparation and {cook_time} minutes for cooking."
 
   utter_ingredient_substitute/not_found:
   - text: "Sorry, I couldn't find any substitute for {ingredient}."
@@ -152,7 +153,7 @@ responses:
   - text: "Great, now {step_description}"
   - text: "Perfect, now {step_description}"
   - text: "Okay, now {step_description}"
-  - text: "After that {step_description}"
+  - text: "After that, {step_description}"
   - text: "Then {step_description}"
   - text: "Now {step_description}"
   - text: "Next {step_description}"
@@ -173,23 +174,29 @@ actions:
   - action_list_ingredients
   - validate_list_steps_loop
   - action_set_timer
+  - action_repeat_last_utterance
 
 
 # Forms, check https://rasa.com/docs/rasa/forms for more info
 forms:
   list_steps_loop:
     required_slots:
-      list_steps_done:
-      - type: from_trigger_intent # affirm intent that triggers form
+      list_steps_done:  # Set slot values based on intents so that validate_list_steps_loop is triggered
+      # Trigger validation when the form is activated 
+      - type: from_trigger_intent 
         intent: affirm
-        value: false # Set slot value so that validate_list_steps_loop is triggered
-      - type: from_trigger_intent # affirm intent that triggers form
+        value: false
+      - type: from_trigger_intent
         intent: start_cooking
-        value: false # Set slot value so that validate_list_steps_loop is triggered
+        value: false
+      # Trigger validation when the user asks for the next step
       - type: from_intent
         intent: next
-        value: false # Set slot value so that validate_list_steps_loop is triggered
+        value: false
         conditions:
         - active_loop: list_steps_loop
-    
-
+      - type: from_intent
+        intent: affirm
+        value: false
+        conditions:
+        - active_loop: list_steps_loop

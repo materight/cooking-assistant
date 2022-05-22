@@ -67,6 +67,9 @@
 ~[remind]
     {remind/remember/notify/alert/warn}
 
+~[repeat]
+    {repeat/say it again}
+
 ~[give]
     {give/deliver/send/tell/share with}
 

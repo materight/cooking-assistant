@@ -28,6 +28,12 @@ rules:
     - action: utter_please_rephrase
 
 
+  - rule: Repeat last message
+    steps:
+    - intent: ask_to_repeat
+    - action: action_repeat_last_utterance
+
+
   - rule: Ask for expected preparation time
     condition:
     - slot_was_set: [ current_recipe ]

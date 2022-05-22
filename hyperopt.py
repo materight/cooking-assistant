@@ -32,6 +32,11 @@ def set_hyperparams(config: dict, params: dict) -> dict:
         return params[config.lstrip('$')] # Set hyperparameter value
     return config
 
+def listdir(path: str, exclude: list = []):
+    """List all files in a directory."""
+    for d in os.listdir(path):
+        if os.path.isdir(d) and d not in exclude:
+            yield d, os.path.join(path, d)
 
 if __name__ == "__main__":
     args = parser.parse_args()
@@ -39,9 +44,11 @@ if __name__ == "__main__":
     work_dir = os.path.join('hyperopts', exp_name)
     os.makedirs(work_dir)
     print(f'Experiment name: {exp_name}')
+    
     # Load hyperopt config
     with open('config.hyperopt.yml', 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
+    
     # Generate the config files to compare
     configs = []
     sampler = ParameterSampler(HYPERPARAMS, n_iter=args.n_iter, random_state=0)
@@ -51,6 +58,7 @@ if __name__ == "__main__":
         with open(os.path.join(work_dir, 'configs', f'{i+1}.yml'), 'w') as f:
             yaml.dump(set_hyperparams(config, params), f)
             configs.append(f.name)
+    
     # Train and test NLU models with cross-validation
     print('Training and testing NLU models...')
     subprocess.run(['rasa', 'test', 'nlu',
@@ -60,6 +68,7 @@ if __name__ == "__main__":
         '--out', f'{work_dir}/nlu',
         '--model', f'{work_dir}/nlu/models'
     ], check=True).returncode
+    
     # Train and test dialogue models
     print('Training and testing dialogue models...')
     subprocess.run(['rasa', 'train', 'core',
@@ -76,6 +85,13 @@ if __name__ == "__main__":
             '--evaluate-model-directory'
             '--out', f'{work_dir}/core/{split}'
         ], check=True).returncode
+    
     # Delete temp config files
     for config in configs:
         os.remove(config)
+
+    # Read results from the output files
+    for run_name, run_path in listdir(os.path.join(work_dir, 'nlu')):
+        for fold_name, fold_path in listdir(run_path):
+            for model_name, model_path in listdir(fold_path, exclude='train'):
+                

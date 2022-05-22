@@ -75,3 +75,6 @@
     ~[thanks?] ~[please?] ~[can?] [you?] ~[set] [a?] ~[timer] {for/in/of} @[TIME]?
     ~[thanks?] ~[please?] ~[can?] [you?] ~[remind] [me?] in @[TIME]
 
+%[ask_to_repeat](50)
+    ~[can?] you ~[please?] ~[repeat] [that?]?
+    ~[please?] {come again/what did you say}?
