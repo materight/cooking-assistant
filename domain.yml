@@ -183,6 +183,9 @@ forms:
       - type: from_trigger_intent # affirm intent that triggers form
         intent: affirm
         value: false # Set slot value so that validate_list_steps_loop is triggered
+      - type: from_trigger_intent # affirm intent that triggers form
+        intent: start_cooking
+        value: false # Set slot value so that validate_list_steps_loop is triggered
       - type: from_intent
         intent: next
         value: false # Set slot value so that validate_list_steps_loop is triggered

@@ -6,6 +6,7 @@ env
 .rasactl
 .cache
 models
+results
 data/chatette/.out
 story_graph.dot
 events.db*

@@ -22,27 +22,6 @@ rules:
     - active_loop: action_two_stage_fallback
 
 
-  - rule: Search by keyword
-    steps:
-    - intent: search_by_keyword
-    - action: action_search_by_keyword
-    - action: utter_ask_want_more_info
-
-
-  - rule: Search by ingredients
-    steps:
-    - intent: search_by_ingredients
-    - action: action_search_by_ingredients
-    - action: utter_ask_want_more_info
-
-
-  - rule: Ask for alternative recipe
-    steps:
-    - intent: ask_alternative_recipe
-    - action: action_search_alternative_recipe
-    - action: utter_ask_want_more_info
-
-
   - rule: Ask for expected preparation time
     condition:
     - slot_was_set: [ current_recipe ]
