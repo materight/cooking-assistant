@@ -33,6 +33,7 @@ rules:
     - intent: ask_to_repeat
     - action: action_repeat_last_utterance
 
+
   - rule: Ask for expected preparation time
     condition:
     - slot_was_set: [ current_recipe ]
@@ -45,6 +46,14 @@ rules:
     steps:
     - intent: ask_ingredient_substitute
     - action: action_search_ingredient_substitute
+
+
+  - rule: Ask for ingredients amount
+    condition:
+    - slot_was_set: [ current_recipe ]
+    steps:
+    - intent: ask_ingredient_amount
+    - action: action_tell_ingredient_amount
 
 
   - rule: Update number of people
@@ -130,6 +139,16 @@ rules:
     steps:
     - intent: ask_ingredient_substitute
     - action: action_search_ingredient_substitute
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
+
+
+  - rule: Interruption - ask for ingredient amount
+    condition:
+    - active_loop: list_steps_loop
+    steps:
+    - intent: ask_ingredient_amount
+    - action: action_tell_ingredient_amount
     - action: list_steps_loop
     - active_loop: list_steps_loop
 

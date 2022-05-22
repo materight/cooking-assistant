@@ -1,6 +1,6 @@
 """General actions utilities."""
-from typing import Text
-
+from typing import Text, List, Optional
+import numpy as np
 from word2number import w2n
 
 
@@ -38,3 +38,28 @@ def parse_time_str(time_str: Text):
     except:
         amount, unit = None, None
     return amount, unit
+
+
+def join_list_str(list_str: List[Text]):
+    """Join a list of strings with commas and final "and"."""
+    if len(list_str) == 0:
+        return ''
+    elif len(list_str) == 1:
+        return list_str[0]
+    else:
+        return ', '.join(list_str[:-1]) + ' and ' + list_str[-1]
+
+
+def ingredient_to_str(name: Text, amount: Optional[Text], unit: Optional[Text], sep: Text = '', default_amount: Text = ''):
+    """Convert the ingredient informations to a single string."""
+    res = ''
+    if amount is not None and not np.isnan(amount): 
+        res += f'{amount:{ ".0f" if amount.is_integer() else ".1f"}}'
+        if unit:
+            res += f'{unit} {sep}'
+        else:
+            res += f' {sep}' if sep else ' x '
+    elif default_amount:
+        res += f'{default_amount} '
+    res += name
+    return res

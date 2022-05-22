@@ -1,10 +1,12 @@
 
 import os
 import yaml
-import numpy as np
 import pandas as pd
 from dataclasses import dataclass
 from typing import List, Text, Optional
+
+from . import utils
+
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
@@ -14,13 +16,8 @@ class Ingredient:
     name: Text
     amount: Optional[float]
     unit: Optional[Text]
-    def __str__(self, sep='') -> str:
-        res = ''
-        if not np.isnan(self.amount): 
-            res += f'{self.amount:{ ".0f" if self.amount.is_integer() else ".1f"}}'
-            res += f'{self.unit} {sep}' if self.unit else f' {sep}' if sep else ' x '
-        res += self.name
-        return res
+    def __str__(self) -> str:
+        utils.ingredient_to_str(self.name, self.amount, self.unit)
 
 @dataclass
 class Step:

@@ -73,6 +73,14 @@ stories:
   - action: action_search_ingredient_substitute
 
 
+- story: Ask for ingredients amount
+  steps:
+  - checkpoint: recipe_selected
+  - action: utter_ask_want_more_info
+  - intent: ask_ingredient_amount
+  - action: action_tell_ingredient_amount
+
+
 - story: Update people count in recipe
   steps:
   - checkpoint: recipe_selected

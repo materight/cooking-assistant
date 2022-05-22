@@ -119,17 +119,21 @@ responses:
   utter_expected_time:
   - text: "This recipe requires {prep_time} minutes for preparation and {cook_time} minutes for cooking."
 
+  utter_ingredient_substitute/found:
+  - text: "You may use {substitute} as a substitute."
+
   utter_ingredient_substitute/not_found:
   - text: "Sorry, I couldn't find any substitute for {ingredient}."
 
   utter_ingredient_substitute/no_ingredient:
   - text: "Sorry, I couldn't find any alternative."
 
-  utter_ingredient_substitute/found:
-  - text: "You may use {substitute} as a substitute."
-
-  utter_ingredient_amount:
+  utter_ingredient_amount/found:
   - text: "You need {amounts_str}."
+  - text: "For this recipe you need {amounts_str}."
+
+  utter_ingredient_amount/not_found:
+  - text: "You don't need {} for this recipe."
 
   utter_list_ingredients:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
