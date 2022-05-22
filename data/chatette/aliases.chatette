@@ -1,125 +1,126 @@
 //================== Alias definitions =======================
+
 ~[greet]
-    {hi/hello/hey/hello there/good morning/good evening}
+    [hi|hello|hey|hello there|good morning|good evening]
 
 ~[goodbye]
-    {goodbye/bye/see you/that's it}
+    [goodbye|bye|see you|that's it]
 
 ~[affirm]
-    {y/yes/yeah/yep/sure/ok/okay}
+    [y|yes|yeah|yep|sure|ok|okay]
 
 ~[deny]
-   {n/no/nope/nah/not}
+   [n|no|nope|nah|not]
 
 ~[i am]
-    [&I]{'m/ am}
+    [&I]['m| am]
 
 ~[it is]
-    [&it]{'s/ is}
+    [&it]['s| is]
 
 ~[do not]
-    {don't/do not/not}
+    [don't|do not|not]
 
 ~[will]
-    {'ll/ will/ going to/ gonna}
+    ['ll| will| going to| gonna]
 
 ~[idk]
-    {idk/boh}
-    [&I?] {don't/do no} know
+    [idk|boh]
+    [&I?] [don't|do no] know
     ~[i am?] not sure
 
 ~[next]
-    {next [step?]/finished/proceed/go on/after [that?]}
+    [next [step?]|finished|proceed|go on|after [that?]]
     ~[i am?] done
 
 ~[please]
-    {please}
+    [please]
 
 ~[sorry]
-    {excuse me}
+    [excuse me]
     ~[i am?] sorry
     
 ~[thanks]
-    {thanks/thank you}
+    [thanks|thank you]
 
 ~[search]
     search [for?]
     find [me?]
 
 ~[have]
-    {have/own}
+    [have|own]
 
 ~[use]
-    {use/utilize/employ}
+    [use|utilize|employ]
 
 ~[eat]
-    {eat/try}
+    [eat|try]
 
 ~[cook]
-    {cook/prepare/make/bake}
+    [cook|prepare|make|bake]
 
 ~[cooking]
-    {cooking/preparing/making/baking}
+    [cooking|preparing|making|baking]
 
 ~[set]
-    {set/set up/create/activate/configure/add}
+    [set|set up|create|activate|configure|add]
 
 ~[remind]
-    {remind/remember/notify/alert/warn}
+    [remind|remember|notify|alert|warn]
 
 ~[repeat]
-    {repeat/say it again}
+    [repeat|say it again]
 
 ~[give]
-    {give/deliver/send/tell/share with}
+    [give|deliver|send|tell|share with]
 
 ~[needed]
-    {needed/required}
+    [needed|required]
 
 ~[need]
-    {need/require}
+    [need|require]
 
 ~[ready]
-    {ready/set/all set/prepared}
+    [ready|set|all set|prepared]
 
 ~[start]
-    {start/begin/initiate/commence}
+    [start|begin|initiate|commence]
 
 ~[stop]
-    {stop/end/halt/cancel}
+    [stop|end|halt|cancel]
 
 ~[can]
-    {can/could/may/would}
+    [can|could|may|would]
 
 ~[i want]
-    [&I]{'d/ would} [really?] [like|love]
+    [&I]['d| would] [really?] [like|love]
     [&I] want
 
 ~[recipe]
-    {recipe/something/food}
+    [recipe|something|food]
 
 ~[alternative]
-    {alternative/substitute/replacement/surrogate}
+    [alternative|substitute|replacement|surrogate]
 
 ~[ingredient]
-    {ingredient/item/thing/compononet}
+    [ingredient|item|thing|compononet]
 
 ~[timer]
-    {timer/reminder/countdown/alarm/chronometer}
+    [timer|reminder|countdown|alarm|chronometer]
 
 ~[containing]
-    {containing/with/using}
+    [containing|with|using]
 
 ~[only]
-    {only/just/solely/exclusively}
+    [only|just|solely|exclusively]
 
 ~[day time]
-    {today/tomorrow}
-    {for/this} {breakfast/launch/dinner/morning/evening}
+    [today|tomorrow]
+    [for|this] [breakfast|launch|dinner|morning|evening]
 
 ~[people]
-    {people/person/persons/friends/relatives}
+    [people|person|persons|friends|relatives]
 
 ~[alone]
-    {alone/only/by myself}
+    [alone|only|by myself]
 
