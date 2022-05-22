@@ -216,11 +216,9 @@ class ActionRepeatLastUtterance(Action):
         return "action_repeat_last_utterance"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        texts = []
+        logger.info(f'Repeating last utterance')
         for event in reversed(tracker.events):
-            if event.get('event') != 'bot': # Get utterances until a user message is found
+            if event.get('event') == 'bot': # Get utterances until a user message is found
+                dispatcher.utter_message(text=event.get('text'))
                 break
-            texts.append(event.get('text'))
-        for text in reversed(texts):
-            dispatcher.utter_message(text=text)
         return []
