@@ -78,7 +78,7 @@ responses:
   - text: Hi! What would you like to cook today?
   - text: Hello! What recipe would you like to try today?
 
-  utter_greet/finish:
+  utter_greet_again:
   - text: "What else can I do for you?"
   - text: "Would you like to cook something else?"
 
@@ -146,7 +146,7 @@ responses:
   utter_set_timer/error:
   - text: "I'm sorry, I couldn't undesterstand."
 
-  utter_set_timer/expired:
+  utter_timer_expired:
   - text: "Are you still there? The timer you set is over!"
   - text: "Hey, your cooking timer has expired!"
 

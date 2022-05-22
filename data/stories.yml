@@ -162,7 +162,7 @@ stories:
 #     - current_step_idx: -1
 #     - list_steps_done: True
 #     - requested_slot: null
-#   - action: utter_greet/finish
+#   - action: utter_greet_again
 #   - action: restart
 
 

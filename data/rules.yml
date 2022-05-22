@@ -85,7 +85,7 @@ rules:
   - rule: Notify timer has expired
     steps:
     - intent: EXTERNAL_timer_expired
-    - action: utter_set_timer/expired
+    - action: utter_timer_expired
 
 
   - rule: Start cooking (user inititiative)
@@ -116,7 +116,7 @@ rules:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: utter_greet/finish
+    - action: utter_greet_again
     - action: action_restart
 
 
