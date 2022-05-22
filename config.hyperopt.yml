@@ -1,0 +1,37 @@
+language: en
+
+pipeline:
+  - name: SpacyNLP
+    model: en_core_web_md
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: $max_ngram
+  - name: SpacyEntityExtractor
+    dimensions: [ CARDINAL, TIME ]
+  - name: DIETClassifier
+    epochs: $epochs
+    constrain_similarities: true
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: $epochs
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: $fallback_threshold
+    ambiguity_threshold: 0.1
+
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: $max_history
+    epochs: $epochs
+  - name: TEDPolicy
+    max_history: $max_history
+    epochs: $epochs
+    constrain_similarities: true
