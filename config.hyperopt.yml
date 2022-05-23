@@ -20,6 +20,7 @@ pipeline:
     learning_rate: $learning_rate
     drop_rate: $drop_rate
     constrain_similarities: $constrain_similarities
+  - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: $epochs
     embedding_dimension: $embedding_dimension
