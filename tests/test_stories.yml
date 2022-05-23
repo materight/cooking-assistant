@@ -8,14 +8,12 @@ stories:
   - user: I'd like to prepare a [pizza](recipe_keyword)
     intent: search_by_keyword
   - action: action_search_by_keyword
-  - action: utter_ask_want_more_info
   - slot_was_set:
     - found_recipes_ids: [3, 4]
     - current_recipe: 3
   - user: I don't know, is there any other recipe?
     intent: ask_alternative_recipe
   - action: action_search_alternative_recipe
-  - action: utter_ask_want_more_info
   - slot_was_set:
     - current_recipe: 4
   - user: Perfect, yes

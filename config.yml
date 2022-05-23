@@ -15,6 +15,8 @@ pipeline:
     max_ngram: 4
   - name: SpacyEntityExtractor
     dimensions: [ CARDINAL, TIME ]
+  - name: RegexEntityExtractor
+    use_lookup_tables: True
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true

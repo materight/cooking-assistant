@@ -96,7 +96,7 @@ responses:
   - text: "Bye!"
 
   utter_search_recipe/found:
-  - text: "I found a recipe for \"{recipe_title}\"."
+  - text: "I found a recipe for \"{recipe_title}\". Would you like to know more?"
 
   utter_search_recipe/found_alternative:
   - text: "What about \"{recipe_title}\"?"
@@ -107,10 +107,6 @@ responses:
 
   utter_search_recipe/not_found_alternative:
   - text: "Sorry I wasn't able to find any alternative. Would you like to search for something else?"
-
-  utter_ask_want_more_info:
-  - text: "Would you like to know more?"
-  - text: "Would you like more information?"
 
   utter_ask_people_count:
   - text: "Great! How many people are you cooking for?"

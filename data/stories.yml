@@ -35,7 +35,6 @@ stories:
     entities: [ ingredient ]
   - action: action_search_by_ingredients
   - slot_was_set: [ found_recipes_ids, current_recipe ]
-  - action: utter_ask_want_more_info
   - or:
     - intent: ask_alternative_recipe
     - intent: deny
@@ -49,7 +48,6 @@ stories:
 - story: Ask for ingredient lists
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - or:
     - intent: ask_ingredients_list
     - intent: affirm
@@ -60,7 +58,6 @@ stories:
 - story: Ask for expected preparation time
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - intent: ask_expected_time
   - action: action_tell_expected_time
 
@@ -68,7 +65,6 @@ stories:
 - story: Ask for ingredient substitute
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - intent: ask_ingredient_substitute
   - action: action_search_ingredient_substitute
 
@@ -76,7 +72,6 @@ stories:
 - story: Ask for ingredients amount
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - intent: ask_ingredient_amount
   - action: action_tell_ingredient_amount
 
@@ -84,7 +79,6 @@ stories:
 - story: Update people count in recipe
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - or:
     - intent: tell_people_count
       entities: [ CARDINAL ]
@@ -98,7 +92,6 @@ stories:
 - story: Start cooking (system inititiative)
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - intent: deny
   - action: utter_ask_start_cooking
   - intent: affirm
@@ -108,7 +101,6 @@ stories:
 - story: Start cooking (user initiative)
   steps:
   - checkpoint: recipe_selected
-  - action: utter_ask_want_more_info
   - intent: start_cooking
   - checkpoint: cooking_started
 
