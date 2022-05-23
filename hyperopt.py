@@ -86,12 +86,8 @@ if __name__ == "__main__":
             '--out', f'{work_dir}/core/{split}'
         ], check=True).returncode
     
-    # Delete temp config files
-    for config in configs:
-        os.remove(config)
-
     # Read results from the output files
-    for run_name, run_path in listdir(os.path.join(work_dir, 'nlu')):
-        for fold_name, fold_path in listdir(run_path):
-            for model_name, model_path in listdir(fold_path, exclude='train'):
+#    for run_name, run_path in listdir(os.path.join(work_dir, 'nlu')):
+#        for fold_name, fold_path in listdir(run_path):
+#            for model_name, model_path in listdir(fold_path, exclude='train'):
                 
