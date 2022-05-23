@@ -22,6 +22,24 @@ rules:
     - active_loop: action_two_stage_fallback
 
 
+  - rule: Search by keyword
+    steps:
+    - intent: search_by_keyword
+    - action: action_search_by_keyword
+
+
+  - rule: Search by ingredients
+    steps:
+    - intent: search_by_ingredients
+    - action: action_search_by_ingredients
+
+
+  - rule: Ask for alternative recipe
+    steps:
+    - intent: ask_alternative_recipe
+    - action: action_search_alternative_recipe
+
+
   - rule: Handle unlikely intents
     steps:
     - action: action_unlikely_intent
