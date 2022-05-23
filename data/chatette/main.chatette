@@ -70,10 +70,12 @@
     ~[&thanks?] ~[can] [&we] [[go ahead|get going] and?] ~[start] ~[cooking] [now?]?
     ~[&thanks?] [let's?] [~[start] ~[cooking]|~[cook]] [now?]
     ~[&thanks?] ~[i am] ~[ready] to ~[cook] [now?]
+    ~[&thanks?] [~[can] you?] ~[give] me the [~[cooking]|~[recipe]?] ~[instructions] ~[please?]?
 
 %[stop_cooking](50)
     ~[&sorry?] ~[please?] ~[i want] to ~[stop] ~[cooking]
     ~[&sorry?] ~[please?] ~[can] [I|we|you] ~[stop] ~[cooking]
+    [~[stop]|exit] ~[cooking?]
 
 %[set_timer](100)
     ~[&thanks?] ~[please?] ~[can?] [you?] ~[set] [a?] ~[timer] [for|in|of] @[TIME]?

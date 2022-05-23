@@ -72,7 +72,7 @@
     [repeat|say it again]
 
 ~[give]
-    [give|deliver|send|tell|share with]
+    [give|deliver|send|tell|share with|read]
 
 ~[needed]
     [needed|required]
@@ -120,6 +120,9 @@
 
 ~[people]
     [people|person|persons|friends|relatives]
+
+~[instructions]
+    [instructions|steps|points]
 
 ~[alone]
     [alone|only|by myself]

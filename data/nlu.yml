@@ -513,96 +513,94 @@ nlu:
 - intent: ask_ingredients_list
   examples: |
     - Can you give me the ingredient that are for [nine](CARDINAL)?
-    - Can you please send the list of ingredient for [7](CARDINAL)?
-    - Can you tell me the list of ingredient needed?
+    - Can you please read the ingredient that are for [10](CARDINAL)?
     - Can you tell the ingredient for [1](CARDINAL) friends?
     - Could you please send the list of ingredient that are required for [1](CARDINAL) relatives?
+    - Could you read the ingredient that are required for [one](CARDINAL) persons?
     - Could you send me the ingredients that are required?
-    - Could you send the ingredients for [ten](CARDINAL)?
+    - I want the ingredient required
     - I want the ingredients required for [two](CARDINAL)
     - I want the ingredients that are required for [2](CARDINAL)
-    - I want the list of ingredient for [7](CARDINAL)
     - I want the list of ingredient that are
     - I want the list of ingredients that are required for [1](CARDINAL) friends
     - I'd love the list of ingredient that are required
-    - I'd love the list of ingredients needed for [four](CARDINAL)
-    - I'd really like the list of ingredient that are needed
-    - I'd really love the ingredient
     - May you deliver the list of ingredients for [one](CARDINAL) person?
     - May you please give the ingredients?
+    - May you please send the list of ingredient that are for [one](CARDINAL)?
     - May you please share with the ingredients that are required for [three](CARDINAL) relatives?
     - Ok the ingredient that are required for [1](CARDINAL) person
+    - Okay i want the list of ingredients
     - Okay i want the list of ingredients that are required for [7](CARDINAL)
     - What compononets are needed for [5](CARDINAL)?
     - What ingredients do i require?
-    - What items are needed?
+    - What items do I require?
     - What other compononets are required for [three](CARDINAL)?
     - What other ingredients do i require?
-    - What other items are required for [one](CARDINAL) persons?
     - What other items are required for [one](CARDINAL)?
     - What other items do I require?
+    - What other items do i need?
     - What things are needed?
     - What things do I require for [1](CARDINAL) people?
+    - Which compononets are required?
     - Which compononets do i need for [1](CARDINAL) relatives?
+    - Which ingredients are required for [six](CARDINAL)?
     - Which items are needed?
     - Which other compononets do i need for [1](CARDINAL)?
     - Which other items do i need?
     - Which other things are required?
     - Which other things do i require?
+    - Which things are needed for [one](CARDINAL)?
+    - Would you deliver the list of ingredient that are needed for [three](CARDINAL)?
     - Would you please give me the list of ingredients that are for [1](CARDINAL) friends?
     - Would you please send me the list of ingredients that are for [6](CARDINAL)?
     - Would you tell the ingredient that are for [one](CARDINAL)?
     - Y the ingredient required
-    - Y the ingredients required for [9](CARDINAL) persons
     - Y the ingredients that are required for [8](CARDINAL) people
+    - Yes the ingredient
     - can you please send me the ingredients that are required for [one](CARDINAL)?
-    - can you please send me the list of ingredient needed for [one](CARDINAL) people?
     - can you please send the list of ingredient that are required for [four](CARDINAL)?
     - can you please send the list of ingredients required?
-    - can you please share with the ingredient that are for [one](CARDINAL) friends?
-    - can you tell the ingredient that are needed?
-    - could you give the ingredient for [nine](CARDINAL)?
     - could you please give the ingredient that are needed?
     - could you please give the list of ingredients that are required for [two](CARDINAL)?
+    - could you please send me the ingredients?
     - could you share with the ingredients required?
     - i want the ingredient
-    - i want the list of ingredients for [1](CARDINAL) relatives
-    - may you give the list of ingredients needed?
-    - may you please deliver the list of ingredients needed for [3](CARDINAL)?
+    - i want the list of ingredient that are for [4](CARDINAL)
     - may you please give me the list of ingredient that are for [6](CARDINAL)?
+    - may you please read the list of ingredient that are required for [1](CARDINAL) person?
     - may you please send me the ingredient required?
-    - ok the ingredient required for [one](CARDINAL) friends
+    - ok the list of ingredient that are needed for [2](CARDINAL)
     - ok the list of ingredients needed for [9](CARDINAL) friends
     - okay i would really love the list of ingredient for [six](CARDINAL) persons
     - okay i'd really love the list of ingredient needed
     - okay the ingredient that are
     - okay the list of ingredients that are needed for [1](CARDINAL)
     - the ingredient required for [one](CARDINAL)
+    - the ingredient that are required for [four](CARDINAL) people
     - the ingredients
     - the ingredients that are for [2](CARDINAL) person
     - the ingredients that are for [one](CARDINAL) persons
     - the list of ingredients needed for [1](CARDINAL)
     - the list of ingredients that are for [one](CARDINAL) relatives
-    - the list of ingredients that are required
     - what compononets do i require?
     - what items are required?
     - what other compononets do i need?
     - what other items are required?
     - what things are needed for [5](CARDINAL) person?
-    - which compononets are required?
+    - what things do I need for [eight](CARDINAL)?
     - which compononets do i require for [5](CARDINAL)?
     - which ingredients do i need?
-    - which ingredients do i require for [four](CARDINAL) people?
-    - which items are needed?
     - which other compononets are needed?
     - which other compononets do I require for [one](CARDINAL)?
     - which other compononets do i need for [six](CARDINAL)?
+    - which other ingredients are required for [one](CARDINAL)?
     - which other ingredients are required?
     - which other ingredients do I need?
+    - which other items are needed for [ten](CARDINAL) friends?
+    - which other things are required?
     - which other things do i require for [four](CARDINAL)?
     - which things are needed?
-    - would you please deliver the ingredients that are?
-    - would you please share with me the list of ingredients that are for [7](CARDINAL) persons?
+    - would you please deliver me the list of ingredient required for [three](CARDINAL) person?
     - would you please share with the ingredients required for [5](CARDINAL)?
     - would you please tell the list of ingredient that are required?
     - would you send me the ingredients that are for [seven](CARDINAL)?
@@ -612,6 +610,8 @@ nlu:
     - y the list of ingredients that are
     - yep the list of ingredients required
     - yep the list of ingredients that are required for [1](CARDINAL)
+    - yes i'd really like the ingredient required for [one](CARDINAL) persons
+    - yes i'd really like the ingredients that are needed
 - intent: ask_expected_time
   examples: |
     - how long is going to take to cook?
@@ -1030,160 +1030,161 @@ nlu:
     - I'm by myself
 - intent: start_cooking
   examples: |
-    - I am all set to prepare
-    - I am ready to prepare now
-    - I am set to cook
-    - I'm prepared to cook now
-    - I'm prepared to make now
-    - I'm prepared to prepare now
-    - I'm ready to bake now
-    - I'm set to bake
-    - I'm set to make now
-    - I'm set to prepare now
-    - Thank you I am ready to bake now
-    - Thank you I am set to bake now
-    - Thank you I'm all set to cook now
-    - Thank you bake now
-    - Thank you i am ready to prepare now
-    - Thank you i am set to bake
-    - Thank you i'm all set to bake
-    - Thank you let's bake now
-    - Thank you let's cook
-    - Thank you let's cook now
-    - Thank you let's make now
-    - Thank you let's prepare now
-    - Thank you prepare
+    - I am ready to bake now
+    - I am set to cook now
+    - I am set to make now
+    - Thank you I am all set to prepare now
+    - Thank you I am prepared to bake
+    - Thank you I am prepared to prepare now
+    - Thank you I'm set to prepare
+    - Thank you begin cooking now
+    - Thank you can We start baking now?
+    - Thank you can we start preparing?
+    - Thank you can you share with me the steps please?
+    - Thank you may We get going and begin baking?
+    - Thank you may you send me the recipe instructions please?
+    - Thank you share with me the something points?
     - Thank you would we go ahead and begin making now?
-    - Thanks commence cooking
-    - Thanks cook
-    - Thanks could We commence preparing now?
-    - Thanks could we go ahead and start preparing now?
-    - Thanks i am ready to cook now
-    - Thanks i'm ready to cook now
-    - Thanks initiate baking
-    - Thanks let's commence making
-    - Thanks let's initiate baking now
-    - Thanks may We begin cooking now?
-    - Thanks start cooking
-    - Thanks would We go ahead and begin baking?
+    - Thanks I am all set to prepare
+    - Thanks I am prepared to make now
+    - Thanks I am ready to cook now
+    - Thanks can We begin preparing?
+    - Thanks i am ready to bake
+    - Thanks i'm set to bake now
+    - Thanks let's bake
+    - Thanks let's cook now
+    - Thanks let's prepare
+    - Thanks let's prepare now
+    - Thanks may we get going and commence preparing now?
+    - Thanks may you read me the recipe points?
+    - Thanks would you share with me the food instructions?
     - bake
-    - bake now
-    - can We commence baking?
-    - can We get going and start making?
-    - can we get going and start baking now?
-    - can we go ahead and commence baking?
-    - can we go ahead and start preparing now?
-    - commence cooking
-    - commence making
-    - cook
+    - begin baking now
+    - begin cooking now
+    - can we commence cooking?
+    - can we go ahead and begin cooking now?
+    - can we initiate making now?
+    - can you deliver me the points?
+    - can you send me the something steps please?
+    - can you share with me the making instructions?
+    - can you share with me the recipe instructions please?
+    - can you tell me the something instructions please?
+    - commence baking
     - cook now
-    - could We begin cooking now?
-    - could We start cooking now?
-    - could we get going and commence baking now?
-    - could we get going and initiate baking?
-    - could we get going and initiate preparing?
-    - could we initiate cooking?
-    - could we start preparing now?
-    - i am ready to prepare
-    - i'm ready to make
-    - i'm set to bake
-    - i'm set to bake now
-    - initiate baking
-    - let's bake
-    - let's begin baking
-    - let's initiate making now
-    - let's make
-    - let's make now
+    - could we go ahead and begin making now?
+    - could we initiate baking now?
+    - could you give me the points please?
+    - deliver me the cooking steps please?
+    - i am prepared to cook now
+    - i am prepared to make
+    - i am ready to cook
+    - i am ready to make now
+    - i'm all set to make now
+    - i'm ready to make now
+    - i'm set to prepare now
+    - initiate making now
+    - let's bake now
     - let's prepare
-    - let's start preparing
-    - make now
-    - may we get going and commence making now?
+    - make
+    - may We get going and initiate making?
+    - may We go ahead and start making?
+    - may we get going and begin baking?
+    - may we get going and initiate baking now?
     - may we get going and start making?
     - may we initiate making now?
+    - may we start preparing?
+    - may you send me the something steps please?
     - prepare now
-    - start cooking
-    - start preparing now
-    - thank you I am all set to prepare now
-    - thank you begin making
-    - thank you could We initiate preparing?
-    - thank you i am prepared to bake
-    - thank you i'm ready to cook
-    - thank you let's commence preparing
-    - thank you start preparing
-    - thank you would We go ahead and commence making?
-    - thank you would We go ahead and initiate preparing now?
-    - thank you would We go ahead and start making?
-    - thank you would we initiate cooking now?
-    - thanks bake
-    - thanks begin baking now
-    - thanks can We get going and begin baking?
+    - send me the baking steps?
+    - send me the cooking points?
+    - send me the making points?
+    - share with me the food instructions please?
+    - start baking
+    - tell me the instructions please?
+    - thank you I'm set to prepare now
+    - thank you can we commence preparing?
+    - thank you could you deliver me the points?
+    - thank you give me the instructions?
+    - thank you i'm prepared to cook now
+    - thank you let's bake now
+    - thank you make now
+    - thank you prepare now
+    - thank you start cooking
+    - thank you tell me the recipe points please?
+    - thank you would we begin baking now?
+    - thanks I am prepared to make now
+    - thanks I'm ready to cook
     - thanks can we initiate making?
-    - thanks could We begin preparing?
-    - thanks could We get going and commence cooking?
-    - thanks i am ready to cook
-    - thanks initiate cooking
+    - thanks deliver me the baking points please?
+    - thanks i am set to bake
+    - thanks initiate preparing
+    - thanks let's make now
     - thanks let's prepare
-    - thanks may We commence cooking now?
-    - thanks may we go ahead and start baking?
-    - thanks would We get going and initiate baking?
-    - thanks would we begin baking?
+    - thanks let's prepare now
+    - thanks let's start baking
+    - thanks would we go ahead and commence preparing now?
     - would we begin cooking now?
-    - would we get going and begin cooking?
-    - would we go ahead and initiate cooking?
+    - would we commence baking?
+    - would we commence preparing now?
+    - would we start preparing now?
+    - would you read me the something points?
+    - would you share with me the instructions please?
+    - would you tell me the points please?
 - intent: stop_cooking
   examples: |
-    - Excuse me I want to end baking
-    - Excuse me could you stop preparing
-    - Excuse me i would really like to cancel making
-    - Excuse me may I stop cooking
-    - Excuse me please I would like to end baking
-    - Excuse me please I'd like to stop cooking
-    - Excuse me please can I halt cooking
+    - Excuse me can we stop making
+    - Excuse me i'd like to stop cooking
+    - Excuse me please I want to stop cooking
+    - Excuse me please can you halt making
     - Excuse me would you halt preparing
-    - I want to end preparing
-    - I would really love to cancel making
+    - I am sorry please could you stop preparing
     - I would really love to halt cooking
-    - I would really love to stop preparing
-    - I'd like to halt baking
-    - I'm sorry please i would really love to halt preparing
-    - Sorry please I want to halt baking
-    - Sorry please can I cancel preparing
-    - Sorry please i'd love to stop preparing
-    - can we halt making
-    - can we stop baking
+    - I'd like to halt preparing
+    - I'm sorry can I stop making
+    - I'm sorry please I would really love to halt making
+    - Sorry i would really like to end cooking
+    - Sorry please can I halt baking
+    - Sorry please i would really love to stop preparing
+    - can we halt baking
+    - cancel
+    - cancel baking
+    - end
     - excuse me I want to end baking
     - excuse me I'd really like to halt cooking
-    - excuse me can I stop cooking
-    - excuse me please I would like to halt cooking
+    - excuse me i'd like to end preparing
+    - excuse me please can I halt cooking
     - excuse me please can you halt preparing
-    - excuse me please i want to halt making
-    - i want to halt preparing
-    - i'd like to end preparing
-    - i'm sorry i want to halt making
+    - excuse me please i would really love to cancel cooking
+    - excuse me please i'd like to end cooking
+    - excuse me please may I stop making
+    - excuse me please would I halt preparing
+    - exit
+    - exit baking
+    - exit making
+    - exit preparing
+    - halt
     - may you cancel cooking
     - may you end cooking
-    - may you halt cooking
-    - please I want to end cooking
-    - please I would love to stop making
-    - please can I cancel preparing
-    - please can I halt cooking
-    - please can you cancel baking
-    - please could I stop preparing
-    - please could you halt baking
-    - please i want to cancel baking
+    - please I want to stop preparing
+    - please I'd like to halt baking
+    - please I'd really like to end cooking
+    - please I'd really like to stop cooking
+    - please can I cancel baking
+    - please can we halt making
+    - please could we cancel cooking
+    - please could we halt making
+    - please could you halt cooking
     - please i want to end preparing
-    - please i want to halt baking
-    - please may I cancel preparing
-    - sorry i want to end preparing
-    - sorry may you halt making
-    - sorry please I want to halt preparing
-    - sorry please i want to end cooking
-    - sorry please may we end making
+    - please may I cancel baking
+    - please would we stop preparing
+    - sorry i would really love to halt cooking
     - sorry please would we cancel making
-    - would I halt baking
-    - would we cancel cooking
+    - stop
+    - would I cancel baking
+    - would we end making
 - intent: set_timer
   examples: |
+    - Thank you alert me in [two hours](TIME)
     - Thank you can add timer in [ten hours](TIME)?
     - Thank you can create a alarm of [four hours](TIME)?
     - Thank you please would warn in [9 mins](TIME)
@@ -1194,6 +1195,7 @@ nlu:
     - Thank you please you create chronometer of [one min](TIME)?
     - Thank you would you add a chronometer for [1 minute](TIME)?
     - Thank you you add a timer of [7 mins](TIME)?
+    - Thank you you alert me in [1 minute](TIME)
     - Thank you you create chronometer for [one h](TIME)?
     - Thanks can you remind me in [one minute](TIME)
     - Thanks please may add a countdown in [2 minutes](TIME)?
@@ -1201,20 +1203,18 @@ nlu:
     - Thanks please would you create a chronometer for [one min](TIME)?
     - Thanks please you add timer for [1 hour](TIME)?
     - Thanks please you create a reminder for [3 hours](TIME)?
-    - Thanks remember in [four hours](TIME)
     - Thanks would set a alarm for [7 minutes](TIME)?
     - Thanks you notify me in [1 min](TIME)
     - Thanks you set up countdown in [1 h](TIME)?
     - activate alarm in [one hour](TIME)?
     - add a alarm in [1 hour](TIME)?
-    - alert me in [two hours](TIME)
     - can add a chronometer of [1 min](TIME)?
     - can you add a chronometer in [three hours](TIME)?
     - can you remind in [nine h](TIME)
     - could set up a chronometer of [8 minutes](TIME)?
     - could you notify in [9 h](TIME)
-    - create a reminder in [two hours](TIME)?
     - may you alert me in [8 minutes](TIME)
+    - may you configure countdown in [5 minutes](TIME)?
     - notify in [eight hours](TIME)
     - please activate a chronometer for [1 h](TIME)?
     - please add a timer of [four mins](TIME)?
@@ -1230,6 +1230,7 @@ nlu:
     - please could you add a timer in [8 hours](TIME)?
     - please could you alert me in [three mins](TIME)
     - please could you create countdown for [one minute](TIME)?
+    - please could you remind me in [six hours](TIME)
     - please could you warn me in [5 mins](TIME)
     - please may you configure a countdown for [one hour](TIME)?
     - please may you remember me in [one min](TIME)
@@ -1243,7 +1244,6 @@ nlu:
     - please you create reminder of [1 min](TIME)?
     - please you notify in [one min](TIME)
     - please you notify me in [7 hours](TIME)
-    - please you set a timer of [4 h](TIME)?
     - remind in [1 h](TIME)
     - remind in [eight hours](TIME)
     - remind in [one h](TIME)
