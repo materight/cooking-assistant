@@ -174,7 +174,7 @@ class ActionTellIngredientAmount(Action):
             if people_count is not None: # Update ingredients amount to adapt to the specified people_count
                 recipe.set_servings(w2n.word_to_num(str(people_count)))
             amounts = [ utils.ingredient_to_str(ingr.name, ingr.amount, ingr.unit, sep='of ', default_amount='some') for ingr in recipe.ingredients 
-                        if any(ingr.name in asked_ingr for asked_ingr in asked_ingredients) ]
+                        if any(asked_ingr in ingr.name for asked_ingr in asked_ingredients) ]
             amounts_str = utils.join_list_str(amounts)
             dispatcher.utter_message(response='utter_ingredient_amount/found', amounts_str=amounts_str)
         else:

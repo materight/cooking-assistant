@@ -17,7 +17,7 @@ class Ingredient:
     amount: Optional[float]
     unit: Optional[Text]
     def __str__(self) -> str:
-        utils.ingredient_to_str(self.name, self.amount, self.unit)
+        return utils.ingredient_to_str(self.name, self.amount, self.unit)
 
 @dataclass
 class Step:
