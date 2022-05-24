@@ -99,6 +99,11 @@ class Dataset():
 
     def search_recipes(self, keywords: List[Text], ingredients: List[Text], tags: List[Text], cuisine: Optional[Text]) -> List[int]:
         """Search for recipes matching the given keywords, ingredients, tags and cuisine."""
+        # Pre-processing
+        tags = set(t.lower() for t in tags)
+        keywords = [ k for k in keywords if k not in tags and k != cuisine ]
+        ingredients = [ i for i in ingredients if i not in tags and i != cuisine ]
+        # Search with filters
         recipes_mask = True
         if len(keywords) > 0:
             recipes_mask &= self._df_recipes['title'].str.contains('|'.join(keywords), case=False) # Any of the keywords
@@ -108,9 +113,9 @@ class Dataset():
             results = results[results['count'] == len(ingredients)].recipe_id.to_list() # Returns only the recipes containing all the given ingredients
             recipes_mask &= self._df_recipes.index.isin(results)
         if len(tags) > 0:
-            recipes_mask &= self._df_recipes['tags'].apply(set(t.lower() for t in tags).issubset)
+            recipes_mask &= self._df_recipes['tags'].apply(tags.issubset)
         if cuisine is not None:
-            recipes_mask &= self._df_recipes['cuisine'].str.contains(cuisine.lower())
+            recipes_mask &= self._df_recipes['cuisine'].str.contains(cuisine, case=False)
         recipe_ids = self._df_recipes[recipes_mask].index.tolist()
         return recipe_ids
 
