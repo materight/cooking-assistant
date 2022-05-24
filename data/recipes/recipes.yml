@@ -2,6 +2,8 @@
 
 - title: Pasta Aglio e Olio
   image: https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F5853F13-70A5-4A54-B38A-8F229C3050F5/Derivates/7C5F0049-A335-40D1-8EF5-D2702653584E.jpg
+  tags: [vegan, vegetarian, dairy-free, spicy]
+  cuisine: italian
   prep_time: 15
   cook_time: 15
   servings: 4
@@ -30,6 +32,8 @@
 
 - title: Spaghetti Carbonara
   image: https://i.imgur.com/CaNeTey.jpg
+  tags: []
+  cuisine: italian
   prep_time: 5
   cook_time: 15
   servings: 2
@@ -61,8 +65,10 @@
   - Check for seasoning and add salt and pepper if necessary.
   - Stir in the crispy bacon and garnish with parsley and additional cheese.
 
-- title: Instant Pot White Rice
+- title: White Rice
   image: https://i.imgur.com/YorXe4Z.jpg
+  tags: [vegan, vegetarian, dairy-free, gluten-free]
+  cuisine: null
   prep_time: 0
   cook_time: 6
   servings: 4
@@ -74,7 +80,7 @@
   - name: salt
     amount: 5ml
   steps:
-  - Pour unwashed rice into instant pot.
+  - Pour unwashed rice into the instant pot.
   - Add water and salt.
   - Pressure cook for six minutes.
   - Once it's done, unplug the instant pot and allow pressure to naturally release
@@ -83,6 +89,8 @@
 
 - title: Pizza Margherita
   image: https://i.imgur.com/OaqXSMf.jpg
+  tags: [vegetarian]
+  cuisine: italian
   prep_time: 25
   cook_time: 10
   servings: 2
@@ -113,6 +121,8 @@
 
 - title: Pepperoni Pizza
   image: https://i.imgur.com/OaqXSMf.jpg
+  tags: []
+  cuisine: italian
   prep_time: 25
   cook_time: 10
   servings: 2
@@ -143,8 +153,10 @@
   - Add the tomato sauce, the sliced pepperoni and the mozzarella on top.
   - Bake in the oven for 8-10 minutes until crisp.
 
-- title: Instant Pot Chili
+- title: Chili
   image: https://i.imgur.com/tmJaN1w.jpg
+  tags: [spicy, dairy-free, gluten-free]
+  cuisine: mexican
   prep_time: 5
   cook_time: 60
   servings: 8
@@ -188,6 +200,8 @@
 
 - title: Baked Salmon
   image: https://i.imgur.com/57qo6Op.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 0
   cook_time: 30
   servings: 6
@@ -209,8 +223,10 @@
   - Serve with your choice of sides. In the picture we topped it with chimichurri.
     Check out our recipe for that here.
 
-- title: Curried Lentil Soup
-  image: https://i.imgur.com/https://i.imgur.com/9MywNPN.jpg.jpg
+- title: Curry Lentil Soup
+  image: https://i.imgur.com/9MywNPN.jpg
+  tags: [gluten-free]
+  cuisine: null
   prep_time: 5
   cook_time: 20
   servings: 4
@@ -247,6 +263,8 @@
 
 - title: Thai Curry Chicken
   image: https://i.imgur.com/8pEZX3e.jpg
+  tags: [spicy, gluten-free, dairy-free]
+  cuisine: thai
   prep_time: 10
   cook_time: 20
   servings: 6
@@ -275,6 +293,8 @@
 
 - title: Yuca Fries
   image: https://i.imgur.com/mDdLhzc.jpg
+  tags: [gluten-free, dairy-free, vegan, vegetarian]
+  cuisine: latin
   prep_time: 5
   cook_time: 30
   servings: 3
@@ -302,6 +322,8 @@
 
 - title: Almond Cookies
   image: https://i.imgur.com/bY2SKVg.jpg
+  tags: [vegetarian]
+  cuisine: null
   prep_time: 10
   cook_time: 15
   servings: 9
@@ -329,7 +351,9 @@
   - Allow to cool and dust with powdered sugar or serve as is.
 
 - title: Fried Chicken Thighs
-  image: https://i.imgur.com/https://i.imgur.com/NqgCUgy.jpg.jpg
+  image: https://i.imgur.com/NqgCUgy.jpg
+  tags: [gluten-free, dairy-free]
+  cuisine: null
   prep_time: 5
   cook_time: 35
   servings: 4
@@ -355,6 +379,8 @@
 
 - title: Potato Wedges
   image: https://i.imgur.com/8hRWD5u.jpg
+  tags: [gluten-free, dairy-free, vegetarian, vegan]
+  cuisine: null
   prep_time: 5
   cook_time: 30
   servings: 2
@@ -386,6 +412,8 @@
 
 - title: Black Beans
   image: https://i.imgur.com/ZwTBUhd.jpg
+  tags: [gluten-free, dairy-free, vegetarian, vegan]
+  cuisine: null
   prep_time: 5
   cook_time: 540
   servings: 6
@@ -421,13 +449,15 @@
 
 - title: Red Pepper Soup
   image: https://i.imgur.com/QhFvt5J.jpg
+  tags: [dairy-free, vegetarian]
+  cuisine: null
   prep_time: 15
   cook_time: 60
   servings: 4
   ingredients:
   - name: bell peppers
     amount: 5
-  - name: chicken stock
+  - name: vegetables stock
     amount: 1000ml
   - name: garlic
     amount: 1
@@ -447,7 +477,7 @@
     amount: 2ml
   steps:
   - Roughly chop the peppers, garlic, and onion then add to a stock pot.
-  - Add the chicken stock, turn the heat up to medium high,  and bring to a simmer.
+  - Add the vegetables stock, turn the heat up to medium high,  and bring to a simmer.
   - Drop the heat to low and simmer gently for 45 minutes.
   - Empty contents of pot into a blender and blend on high until smooth. Then transfer
     to a separate container. (Depending on the size of your blender you may need to
@@ -463,6 +493,8 @@
 
 - title: Fish Cakes
   image: https://i.imgur.com/psJrc5N.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 15
   cook_time: 10
   servings: 5
@@ -502,7 +534,9 @@
     can find it.
 
 - title: Orange Salad
-  image: https://i.imgur.com/https://i.imgur.com/wVcZGNE.jpg.jpg
+  image: https://i.imgur.com/wVcZGNE.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  cuisine: null
   prep_time: 5
   cook_time: 0
   servings: 2
@@ -525,6 +559,8 @@
 
 - title: Crêpes
   image: https://i.imgur.com/EOfighF.jpg
+  tags: [vegetarian]
+  cuisine: french
   prep_time: 5
   cook_time: 3
   servings: 4
@@ -554,6 +590,8 @@
 
 - title: Apple Tart
   image: https://i.imgur.com/GgT2iue.jpg
+  tags: [dairy-free, vegetarian, vegan]
+  cuisine: french
   prep_time: 15
   cook_time: 35
   servings: 8
@@ -590,7 +628,9 @@
     apples as necessary so it looks nice again.
 
 - title: Red Pepper Hummus
-  image: https://i.imgur.com/https://i.imgur.com/axJOEyc.jpg.jpg
+  image: https://i.imgur.com/axJOEyc.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan, spicy]
+  cuisine: egyptian
   prep_time: 15
   cook_time: 0
   servings: 8
@@ -625,7 +665,9 @@
     next day.
 
 - title: Peppermint Latte
-  image: https://i.imgur.com/https://i.imgur.com/xmNWfaN.jpg.jpg
+  image: https://i.imgur.com/xmNWfaN.jpg
+  tags: [gluten-free, vegetarian]
+  cuisine: null
   prep_time: 5
   cook_time: 0
   servings: 1
@@ -652,6 +694,8 @@
 
 - title: Red Wine Poached Pears
   image: https://i.imgur.com/TvlLpOZ.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  cuisine: french
   prep_time: 15
   cook_time: 60
   servings: 6
@@ -685,6 +729,8 @@
 
 - title: Banana Bread
   image: https://i.imgur.com/4yCwzp5.jpg
+  tags: [vegetarian]
+  cuisine: null
   prep_time: 15
   cook_time: 60
   servings: 12
@@ -721,6 +767,8 @@
 
 - title: Gnocchi with butter and sage
   image: https://i.imgur.com/phlHth1.jpg
+  tags: [vegetarian]
+  cuisine: italian
   prep_time: 5
   cook_time: 10
   servings: 4
@@ -753,6 +801,8 @@
 
 - title: Christmas Cookies
   image: https://i.imgur.com/dsJKk9E.jpg
+  tags: [vegetarian]
+  cuisine: null
   prep_time: 120
   cook_time: 8
   servings: 36
@@ -789,6 +839,8 @@
 
 - title: Gingersnap Cookies
   image: https://i.imgur.com/VbIu49t.jpg
+  tags: [dairy-free, vegetarian, vegan]
+  cuisine: german
   prep_time: 15
   cook_time: 15
   servings: 36
@@ -825,6 +877,8 @@
 
 - title: Beef bourguignon
   image: https://i.imgur.com/MlcAUYx.jpg
+  tags: [gluten-free]
+  cuisine: french
   prep_time: 15
   cook_time: 240
   servings: 4
@@ -890,6 +944,8 @@
 
 - title: Blueberry Muffins
   image: https://i.imgur.com/BVX6IWv.jpg
+  tags: [vegetarian]
+  cuisine: null
   prep_time: 10
   cook_time: 30
   servings: 6
@@ -926,6 +982,8 @@
 
 - title: Jasmine Rice
   image: https://i.imgur.com/p05sec0.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  cuisine: null
   prep_time: 3
   cook_time: 17
   servings: 4
@@ -959,6 +1017,8 @@
 
 - title: Pecan Tilapia
   image: https://i.imgur.com/qNWbcts.jpg
+  tags: []
+  cuisine: null
   prep_time: 5
   cook_time: 15
   servings: 4
@@ -995,6 +1055,8 @@
 
 - title: Breakfast Potatoes
   image: https://i.imgur.com/cLRa5ae.jpg
+  tags: [gluten-free, vegetarian]
+  cuisine: null
   prep_time: 10
   cook_time: 20
   servings: 6
@@ -1030,6 +1092,8 @@
 
 - title: Creamed Leeks
   image: https://i.imgur.com/4WHEeov.jpg
+  tags: [vegetarian]
+  cuisine: null
   prep_time: 15
   cook_time: 15
   servings: 8
@@ -1067,6 +1131,8 @@
 
 - title: Peanut Butter Cookies
   image: https://i.imgur.com/9hEOxKj.jpg
+  tags: [vegetarian]
+  cuisine: null
   prep_time: 20
   cook_time: 10
   servings: 60
@@ -1110,6 +1176,8 @@
 
 - title: Macaroni and Cheese
   image: https://i.imgur.com/RZuwL6Y.jpg
+  tags: [vegetarian]
+  cuisine: italian
   prep_time: 0
   cook_time: 60
   servings: 10
@@ -1162,6 +1230,8 @@
 
 - title: Cranberry Sauce
   image: https://i.imgur.com/nib5ibS.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  cuisine: british
   prep_time: 0
   cook_time: 15
   servings: 6
@@ -1187,6 +1257,8 @@
 
 - title: Chicken Thigh Cutlet
   image: https://i.imgur.com/5tEIl0h.jpg
+  tags: [dairy-free]
+  cuisine: null
   prep_time: 20
   cook_time: 10
   servings: 8
@@ -1228,6 +1300,8 @@
 
 - title: Chocolate Cookies
   image: https://i.imgur.com/frPvz9b.jpg
+  tags: [dairy-free, vegetarian]
+  cuisine: null
   prep_time: 15
   cook_time: 12
   servings: 20
@@ -1262,6 +1336,8 @@
 
 - title: Ribeye steak
   image: https://i.imgur.com/zhijVV1.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 0
   cook_time: 8
   servings: 1
@@ -1289,6 +1365,8 @@
 
 - title: Chicken Taco
   image: https://i.imgur.com/VFbY1vo.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: mexican
   prep_time: 0
   cook_time: 25
   servings: 4
@@ -1314,6 +1392,8 @@
 
 - title: Minestrone Soup
   image: https://i.imgur.com/kvqw5R6.jpg
+  tags: [dairy-free]
+  cuisine: italian
   prep_time: 15
   cook_time: 60
   servings: 12
@@ -1365,6 +1445,8 @@
 
 - title: Green Beans
   image: https://i.imgur.com/Zo1zzq9.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  cuisine: null
   prep_time: 5
   cook_time: 15
   servings: 4
@@ -1393,6 +1475,8 @@
 
 - title: Chicken and Rice Soup
   image: https://i.imgur.com/b8pOHJA.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 10
   cook_time: 40
   servings: 12
@@ -1444,6 +1528,8 @@
 
 - title: Baked Meatballs
   image: https://i.imgur.com/PzYOTMu.jpg
+  tags: []
+  cuisine: null
   prep_time: 15
   cook_time: 30
   servings: 4
@@ -1481,6 +1567,8 @@
 
 - title: Sesame Chicken
   image: https://i.imgur.com/sPh4z3Z.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 5
   cook_time: 60
   servings: 4
@@ -1514,8 +1602,10 @@
   - Keep doing this until the chicken has reached your desired doneness.
   - Serve with rice and garnish with green onions.
 
-- title: Roasted Potatoes
+- title: Spicy Roasted Potatoes
   image: https://i.imgur.com/h2LrPIW.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan, spicy]
+  cuisine: null
   prep_time: 5
   cook_time: 60
   servings: 4
@@ -1543,6 +1633,8 @@
 
 - title: Red Thai Curry Chicken
   image: https://i.imgur.com/CTSsuie.jpg
+  tags: [dairy-free, gluten-free, spicy]
+  cuisine: thai
   prep_time: 5
   cook_time: 10
   servings: 3
@@ -1566,7 +1658,9 @@
   - Serve over rice or if you're feeling adventerous with ou Thai Green Papaya Salad.
 
 - title: Chicken with cream sauce
-  image: https://i.imgur.com/https://i.imgur.com/v9h2ACX.jpg.jpg
+  image: https://i.imgur.com/v9h2ACX.jpg
+  tags: [gluten-free]
+  cuisine: null
   prep_time: 20
   cook_time: 60
   servings: 4
@@ -1614,6 +1708,8 @@
 
 - title: Tres Leches Cake
   image: https://i.imgur.com/GGJsTiP.jpg
+  tags: [gluten-free, vegetarian]
+  cuisine: mexican
   prep_time: 30
   cook_time: 30
   servings: 12
@@ -1670,6 +1766,8 @@
 
 - title: Tomato Chicken with Pasta Alfredo
   image: https://i.imgur.com/r2IPFPQ.jpg
+  tags: []
+  cuisine: italian
   prep_time: 15
   cook_time: 30
   servings: 4
@@ -1716,6 +1814,8 @@
 
 - title: Jalapeno Cornbread
   image: https://i.imgur.com/fQ1Wp7X.jpg
+  tags: [vegetarian, spicy]
+  cuisine: mexican
   prep_time: 10
   cook_time: 20
   servings: 16
@@ -1752,6 +1852,8 @@
 
 - title: Chili Tomato Soup
   image: https://i.imgur.com/dUaSNnb.jpg
+  tags: [dairy-free, vegetarian, vegan, spicy]
+  cuisine: mexican
   prep_time: 10
   cook_time: 60
   servings: 6
@@ -1762,7 +1864,7 @@
     amount: 1
   - name: garlic
     amount: 6
-  - name: chicken stock
+  - name: vegetables stock
     amount: 200ml
   - name: butter
     amount: 45ml
@@ -1779,7 +1881,7 @@
   steps:
   - Cut the tomatoes into large chunks, dice the onion, and mince the garlic.
   - Add the ingredients to a pot and turn the heat up.
-  - Add the chicken stock and bring to a simmer.
+  - Add the vegetables stock and bring to a simmer.
   - Cut the chilis in half and remove some of the seeds (or leave them if you want
     it very spicy) then add them to the pot.
   - Turn the heat down to a gentle simmer and cook for about 40 minutes.
@@ -1793,6 +1895,8 @@
 
 - title: Meat Chili
   image: https://i.imgur.com/tUebqHZ.jpg
+  tags: [dairy-free, gluten-free, spicy]
+  cuisine: mexican
   prep_time: 20
   cook_time: 120
   servings: 12
@@ -1834,6 +1938,8 @@
 
 - title: Bagel Burgers
   image: https://i.imgur.com/foRSp4Z.jpg
+  tags: []
+  cuisine: german
   prep_time: 30
   cook_time: 30
   servings: 12
@@ -1871,6 +1977,8 @@
 
 - title: Papaya Salad
   image: https://i.imgur.com/gfP9ikQ.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: mexican
   prep_time: 15
   cook_time: 0
   servings: 6
@@ -1904,6 +2012,8 @@
 
 - title: Thanksgiving Turkey
   image: https://i.imgur.com/q8v3DTC.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 15
   cook_time: 300
   servings: 8
@@ -1936,41 +2046,10 @@
   - When serving, slice the turkey breast carefully in the crock pot so the gravy
     sits in the turkey while people are serving themselves.
 
-- title: Charcuterie Board
-  image: https://i.imgur.com/aZSiTjX.jpg
-  prep_time: 15
-  cook_time: 0
-  servings: 12
-  ingredients:
-  - name: nuts
-    amount: 100g
-  - name: walnuts
-    amount: 100g
-  - name: hummus
-    amount: 100g
-  - name: tapenade
-    amount: 100g
-  - name: olives
-    amount: 50g
-  - name: cheese
-    amount: 100g
-  - name: butter
-    amount: 20ml
-  - name: grapes
-    amount: 100g
-  - name: strawberries
-    amount: 100g
-  - name: peaches
-    amount: 6
-  - name: olive oil
-    amount: null
-  - name: bread
-    amount: 12
-  steps:
-  - Lay it out and try to make it look nice. This step shouldn't be hard.
-
 - title: Carrot Fries
   image: https://i.imgur.com/BCphvuZ.jpg
+  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  cuisine: null
   prep_time: 5
   cook_time: 30
   servings: 4
@@ -1993,6 +2072,8 @@
 
 - title: Chicken Enchiladas
   image: https://i.imgur.com/ArjWgkU.jpg
+  tags: [dairy-free, gluten-free, spicy]
+  cuisine: mexican
   prep_time: 5
   cook_time: 540
   servings: 12
@@ -2039,6 +2120,8 @@
 
 - title: Pan Eggs
   image: https://i.imgur.com/KQuN8Ry.jpg
+  tags: [dairy-free, gluten-free, vegetarian]
+  cuisine: null
   prep_time: 0
   cook_time: 10
   servings: 1
@@ -2062,6 +2145,8 @@
 
 - title: Mongolian Beef
   image: https://i.imgur.com/GYdAgIx.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: asian
   prep_time: 15
   cook_time: 240
   servings: 6
@@ -2088,6 +2173,8 @@
 
 - title: Cottage Pie
   image: https://i.imgur.com/uv1FWOQ.jpg
+  tags: [gluten-free]
+  cuisine: british
   prep_time: 15
   cook_time: 60
   servings: 6
@@ -2141,6 +2228,8 @@
 
 - title: Shrimp Scampi
   image: https://i.imgur.com/w51HPTI.jpg
+  tags: [gluten-free]
+  cuisine: null
   prep_time: 10
   cook_time: 10
   servings: 2
@@ -2178,6 +2267,8 @@
 
 - title: Cheddar Baked Potatoes
   image: https://i.imgur.com/AaM7HIf.jpg
+  tags: [gluten-free, vegetarian]
+  cuisine: null
   prep_time: 0
   cook_time: 120
   servings: 4
@@ -2206,6 +2297,8 @@
 
 - title: Chicken Wings
   image: https://i.imgur.com/0Z6ObEL.jpg
+  tags: [dairy-free, gluten-free]
+  cuisine: null
   prep_time: 10
   cook_time: 60
   servings: 6
@@ -2226,6 +2319,8 @@
 
 - title: Sriracha Chicken Wings
   image: https://i.imgur.com/yZDAgPI.jpg
+  tags: [gluten-free, spicy]
+  cuisine: thai
   prep_time: 10
   cook_time: 60
   servings: 8
@@ -2252,6 +2347,8 @@
 
 - title: Miso Chicken
   image: https://i.imgur.com/GdkjVrP.jpg
+  tags: [dairy-free, gluten-free, spicy]
+  cuisine: japanese
   prep_time: 10
   cook_time: 60
   servings: 6
