@@ -32,6 +32,8 @@ class Recipe:
     id: int
     title: Text
     image: Optional[Text]
+    tags: List[Text]
+    cuisine: Optional[Text]
     prep_time: int
     cook_time: int
     servings: int
@@ -75,6 +77,16 @@ class Dataset():
     def ingredients(self) -> List[Text]:
         """Returns a list of all the available ingredients."""
         return self._df_ingredients.name.unique().tolist()
+
+    @property
+    def tags(self) -> List[Text]:
+        """Returns a list of all the available tags."""
+        return self._df_recipes.tags.explode().dropna().unique().tolist()
+
+    @property
+    def cuisines(self) -> List[Text]:
+        """Returns a list of all the available cuisines."""
+        return self._df_recipes.cuisine.dropna().unique().tolist()
 
     def get_recipe(self, recipe_id: int) -> Recipe:
         """Converts a recipe id to the corresponding Recipe objects."""
