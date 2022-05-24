@@ -2,22 +2,22 @@ version: "2.0"
 nlu:
 - lookup: tag
   examples: |
+    - dairy-free
+    - gluten-free
+    - spicy
     - vegan
     - vegetarian
-    - dairy-free
-    - spicy
-    - gluten-free
 
 - lookup: cuisine
   examples: |
+    - asian
+    - british
+    - egyptian
+    - french
+    - german
     - italian
+    - japanese
+    - latin
     - mexican
     - thai
-    - latin
-    - french
-    - egyptian
-    - german
-    - british
-    - asian
-    - japanese
 

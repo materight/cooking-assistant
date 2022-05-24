@@ -232,408 +232,408 @@ nlu:
     - yes proceed thanks
 - intent: search_recipes
   examples: |
-    - Can you find something containing [cheddar cheese](ingredient)?
-    - Can you find something using [honey](ingredient)?
+    - Can you find [Red Wine Poached Pears](recipe)?
+    - Can you find me something using [red wine](ingredient)?
+    - Can you find recipe containing [tobasco](ingredient) [flower](ingredient)?
+    - Can you please find food with [cinnamon powder](ingredient)?
     - Can you please find how to bake [italian](cuisine) recipe?
-    - Can you please find [italian](cuisine) recipe?
-    - Can you please find me recipe [gluten-free](tag) and [gluten-free](tag)?
-    - Can you please search food with [vegetable oil](ingredient)?
+    - Can you please search food with [egg yolks](ingredient)?
     - Can you please search for food [gluten-free](tag)?
     - Can you please search for something [gluten-free](tag)?
-    - Can you search [Crêpes?]{"entity": "recipe", "value": "Cr\u00eapes"}
-    - Can you search for food using [lentils](ingredient) [chicken broth](ingredient)?
+    - Can you search for recipe [gluten-free](tag)?
     - Could you find food [gluten-free](tag)?
-    - Could you find food with [thyme](ingredient)?
+    - Could you find food with [parmesan cheese](ingredient)?
+    - Could you find me [italian](cuisine) food?
+    - Could you find me recipe [gluten-free](tag)?
     - Could you find something [gluten-free](tag)?
-    - Could you please find [italian](cuisine) food?
-    - Could you please find me food [gluten-free](tag) and [gluten-free](tag)?
-    - Could you please find me food [gluten-free](tag)?
+    - Could you please find me recipe with [cumin](ingredient) [green beans](ingredient)?
     - Could you please find me something [gluten-free](tag) and [gluten-free](tag)?
     - Could you please find me something [gluten-free](tag)?
-    - Could you please find recipe using [paprika](ingredient)?
-    - Could you please find something with [chili powder](ingredient) and [blueberries](ingredient)?
-    - Could you please find something with [ground beef](ingredient)?
-    - Could you please search food containing [paprika](ingredient) [onion powder](ingredient)?
-    - Could you please search food for [Chicken Enchiladas](recipe)?
+    - Could you please find recipe using [chili powder](ingredient)?
+    - Could you please search food containing [chili powder](ingredient) [condensed milk](ingredient)?
+    - Could you please search food for [Spaghetti Carbonara](recipe)?
+    - Could you please search for something [gluten-free](tag) and [gluten-free](tag)?
     - Could you please search for something [gluten-free](tag)?
     - Could you please search something [gluten-free](tag)?
-    - Could you search for something with [egg yolk](ingredient) [sriracha sauce](ingredient)?
-    - Could you search [italian](cuisine) food?
-    - Could you search recipe containing [frozen puff pastry](ingredient) [enchilada sauce](ingredient)?
-    - Could you search recipe [gluten-free](tag)?
-    - Could you search something using [whipping cream](ingredient) [red peppers](ingredient)?
-    - I exclusively have [cornstarch](ingredient)
-    - I exclusively have [onion](ingredient)
-    - I exclusively have [whipping cream](ingredient), what would I prepare?
-    - I exclusively own [almonds](ingredient), what may I bake?
-    - I exclusively own [raisins](ingredient), what would i prepare?
-    - I have [bourbon](ingredient)
-    - I just have [parsley](ingredient)
-    - I just have [peppermint syrup](ingredient), what can i prepare?
-    - I just have [spaghetti](ingredient), what can I prepare?
-    - I just own [bell peppers](ingredient)
-    - I just own [water](ingredient), what can i prepare?
-    - I only have [pasta](ingredient), what can I make?
-    - I only have [soy sauce](ingredient), what could i cook?
-    - I only have [wine](ingredient), what could i make?
-    - I only own [almonds](ingredient)
-    - I only own [evaporated milk](ingredient), what could I bake?
-    - I own [celery](ingredient), what may I cook?
-    - I own [cheese](ingredient)
-    - I own [vinegar](ingredient), what could i make?
-    - I solely have [apples](ingredient)
-    - I solely have [beef](ingredient)
-    - I solely have [red chili](ingredient)
-    - I solely have [tomato sauce](ingredient), what would i cook?
-    - I solely own [tomato paste](ingredient)
-    - I want to eat a [Potato Wedges](recipe) tomorrow
+    - Could you search [Thanksgiving Turkey](recipe)?
+    - Could you search for how to cook [italian](cuisine) recipe?
+    - Could you search for something with [cumin powder](ingredient) [rotisserie chicken](ingredient)?
+    - Could you search recipe containing [frozen puff pastry](ingredient) [white sugar](ingredient)?
+    - Could you search something using [teriyaki sauce](ingredient) [garlic cloves](ingredient)?
+    - I exclusively have [brown sugar](ingredient)
+    - I exclusively have [curry paste](ingredient)
+    - I exclusively own [chilis](ingredient), what may I bake?
+    - I exclusively own [lemons](ingredient), what would i prepare?
+    - I have [chili flakes](ingredient), what can i bake?
+    - I have [jalapenos](ingredient)
+    - I have [red chili flakes](ingredient)
+    - I just have [ground beef](ingredient), what can i prepare?
+    - I just own [bay leaf](ingredient), what can i prepare?
+    - I just own [cinnamon sticks](ingredient), what could I bake?
+    - I just own [crackers](ingredient)
+    - I only have [carrots](ingredient), what can I bake?
+    - I only have [mozzarella](ingredient), what would i make?
+    - I only have [salt](ingredient), what could i cook?
+    - I only own [chilis](ingredient)
+    - I only own [espresso](ingredient), what could I cook?
+    - I own [baking soda](ingredient)
+    - I own [chicken breasts](ingredient), what would i prepare?
+    - I own [chili flakes](ingredient)
+    - I own [crackers](ingredient), what would I prepare?
+    - I own [pepperoni](ingredient)
+    - I own [rotisserie chicken](ingredient), what may I cook?
+    - I own [vegetable oil](ingredient), what may i bake?
+    - I solely have [beef broth](ingredient), what would i cook?
+    - I solely have [whole milk](ingredient)
+    - I solely own [cumin powder](ingredient), what would i cook?
+    - I want to eat a [Cheddar Baked Potatoes](recipe)
+    - I want to eat a [Chicken Enchiladas](recipe) tomorrow
     - I want to eat a [italian](cuisine) something this morning
-    - I want to eat food [gluten-free](tag)
+    - I want to eat food containing [yuca root](ingredient) this dinner
     - I want to eat food [gluten-free](tag) [gluten-free](tag)
     - I want to eat food [gluten-free](tag) [gluten-free](tag) for morning
-    - I want to eat food using [pepper](ingredient) for morning
-    - I want to eat food with [crackers](ingredient) today
+    - I want to eat food [gluten-free](tag) today
     - I want to eat [italian](cuisine) something
     - I want to eat recipe [gluten-free](tag)
-    - I want to eat recipe [gluten-free](tag) and [gluten-free](tag)
     - I want to eat something [gluten-free](tag)
-    - I want to eat something [gluten-free](tag) [gluten-free](tag)
-    - I want to eat something using [oregano](ingredient) for breakfast
-    - I want to try [Green Beans](recipe)
-    - I want to try [Tomato Chicken with Pasta Alfredo](recipe) for evening
+    - I want to eat something using [coconut milk](ingredient) for breakfast
+    - I want to try [Pan Eggs](recipe)
+    - I want to try [Potato Wedges](recipe) for evening
     - I want to try a [italian](cuisine) food for morning
-    - I want to try a [italian](cuisine) recipe tomorrow
-    - I want to try a [italian](cuisine) something tomorrow
+    - I want to try a [italian](cuisine) food tomorrow
+    - I want to try a [italian](cuisine) recipe for launch
+    - I want to try food [gluten-free](tag)
     - I want to try food [gluten-free](tag) tomorrow
-    - I want to try recipe containing [blueberries](ingredient) today
-    - I want to try recipe containing [cheese](ingredient)
-    - I want to try recipe containing [enchilada sauce](ingredient)
-    - I want to try something [gluten-free](tag)
-    - I want to try something using [pepper](ingredient) and [tahini](ingredient)
-    - I would like to eat [italian](cuisine) food
+    - I want to try recipe containing [parsley flakes](ingredient) today
+    - I want to try recipe containing [pepperoni](ingredient)
+    - I want to try recipe containing [white sugar](ingredient)
+    - I want to try recipe [gluten-free](tag) this dinner
+    - I want to try recipe using [almond extract](ingredient)
+    - I want to try something using [basil](ingredient) and [garlic powder](ingredient)
+    - I want to try something with [paprika](ingredient)
+    - I want to try something with [pepper](ingredient)
     - I would like to eat recipe [gluten-free](tag) [gluten-free](tag) today
-    - I would like to eat something [gluten-free](tag) today
-    - I would love to eat a [Baked Salmon](recipe) this breakfast
-    - I would love to eat a [Ribeye steak](recipe) tomorrow
+    - I would like to try food using [bell peppers](ingredient) [orange bitters](ingredient) for breakfast
+    - I would like to try [italian](cuisine) something tomorrow
+    - I would love to eat a [Beef bourguignon](recipe) this breakfast
+    - I would love to eat a [Miso Chicken](recipe) tomorrow
     - I would love to eat food [gluten-free](tag) and [gluten-free](tag)
-    - I would love to eat [italian](cuisine) something tomorrow
-    - I would love to eat something [gluten-free](tag) and [gluten-free](tag)
-    - I would love to eat something [gluten-free](tag) [gluten-free](tag)
-    - I would love to try something [gluten-free](tag)
+    - I would love to eat recipe [gluten-free](tag) [gluten-free](tag)
+    - I would love to eat something containing [parsley flakes](ingredient)
     - I would love to try something [gluten-free](tag) [gluten-free](tag)
-    - I would really like to eat a [Fried Chicken Thighs](recipe)
     - I would really like to eat food [gluten-free](tag) [gluten-free](tag)
-    - I would really like to eat food with [butter](ingredient) [pepper](ingredient)
-    - I would really like to eat recipe [gluten-free](tag)
-    - I would really like to eat recipe with [white sugar](ingredient) and [tobasco](ingredient) tomorrow
-    - I would really like to try a [Minestrone Soup](recipe) this dinner
-    - I would really like to try a [Minestrone Soup](recipe) today
+    - I would really like to eat food with [chocolate chips](ingredient) [basil](ingredient)
+    - I would really like to eat [italian](cuisine) recipe
+    - I would really like to eat recipe with [tomato sauce](ingredient) and [cheddar cheese](ingredient) tomorrow
+    - I would really like to try a [Orange Salad](recipe) this dinner
+    - I would really like to try a [Orange Salad](recipe) today
     - I would really like to try recipe [gluten-free](tag)
-    - I would really love to eat recipe using [brioche rolls](ingredient) [celery](ingredient)
-    - I'd like to eat food [gluten-free](tag)
-    - I'd like to try a [Cranberry Sauce](recipe)
+    - I would really love to eat something [gluten-free](tag) today
+    - I would really love to try something [gluten-free](tag) and [gluten-free](tag) this morning
+    - I'd like to eat a [Blueberry Muffins](recipe)
+    - I'd like to try a [Macaroni and Cheese](recipe)
     - I'd like to try a [italian](cuisine) food
-    - I'd like to try food with [tomato sauce](ingredient) today
-    - I'd love to eat [Blueberry Muffins](recipe) tomorrow
+    - I'd like to try food with [beef broth](ingredient) today
+    - I'd like to try something using [whole milk](ingredient) and [almond extract](ingredient)
+    - I'd love to eat [Fish Cakes](recipe) tomorrow
+    - I'd love to eat something [gluten-free](tag) [gluten-free](tag)
     - I'd love to try food [gluten-free](tag)
-    - I'd love to try food using [orange bitters](ingredient) and [gnocchi](ingredient) today
     - I'd really like to eat [Meat Chili](recipe)
+    - I'd really like to eat [italian](cuisine) food tomorrow
     - I'd really like to eat recipe [gluten-free](tag) and [gluten-free](tag)
-    - I'd really like to try something containing [chocolate chips](ingredient) for morning
-    - I'd really love to eat something using [bell peppers](ingredient) [cornstarch](ingredient)
-    - I'd really love to eat something using [tilapia filets](ingredient) [tortillas](ingredient)
-    - I'd really love to try a [italian](cuisine) recipe
-    - I'd really love to try food containing [chicken wings](ingredient) [whipped cream](ingredient)
-    - I'd really love to try food containing [instant yeast](ingredient) tomorrow
+    - I'd really like to try something containing [red peppers](ingredient) for morning
+    - I'd really love to eat a [italian](cuisine) something today
+    - I'd really love to eat something using [crackers](ingredient) [curry paste](ingredient)
+    - I'd really love to try food containing [flour](ingredient) [white sugar](ingredient) today
     - I'd really love to try food [gluten-free](tag) and [gluten-free](tag)
-    - I'd really love to try recipe with [bell peppers](ingredient) for evening
-    - I'd really love to try something [gluten-free](tag) [gluten-free](tag)
+    - I'd really love to try recipe with [crackers](ingredient) for evening
+    - I'd really love to try recipe with [olive oil](ingredient)
+    - May you find food containing [whipped cream](ingredient) [chili peppers](ingredient)?
     - May you find me food for [italian](cuisine) food?
     - May you find me food [gluten-free](tag) and [gluten-free](tag)?
-    - May you find me how to prepare [Jasmine Rice](recipe)?
-    - May you find recipe containing [pears](ingredient)?
+    - May you find me how to prepare [Fried Chicken Thighs](recipe)?
+    - May you find recipe containing [instant yeast](ingredient)?
     - May you find something for [italian](cuisine) recipe?
     - May you find something [gluten-free](tag) and [gluten-free](tag)?
-    - May you please find food for [italian](cuisine) recipe?
+    - May you please find me food with [peanuts](ingredient)?
+    - May you please find me recipe [gluten-free](tag)?
     - May you please find me something [gluten-free](tag) [gluten-free](tag)?
     - May you please search for food [gluten-free](tag) and [gluten-free](tag)?
-    - May you please search for [italian](cuisine) recipe?
+    - May you please search for something containing [peanuts](ingredient) [pecorino romano cheese](ingredient)?
     - May you please search for something [gluten-free](tag) and [gluten-free](tag)?
+    - May you please search [italian](cuisine) something?
     - May you please search recipe [gluten-free](tag)?
-    - May you please search recipe with [blueberries](ingredient) and [brown sugar](ingredient)?
     - May you search for how to cook [italian](cuisine) food?
-    - May you search for recipe with [butter](ingredient)?
-    - May you search for something containing [cheese](ingredient) and [tomato pesto](ingredient)?
-    - May you search how to make [Thai Curry Chicken](recipe)?
+    - May you search for recipe with [chocolate chips](ingredient)?
     - May you search [italian](cuisine) recipe?
-    - May you search something containing [leeks](ingredient) and [olive oil](ingredient)?
     - May you search something [gluten-free](tag) and [gluten-free](tag)?
+    - May you search something [gluten-free](tag)?
+    - Would you find [Macaroni and Cheese](recipe)?
     - Would you find me [italian](cuisine) food?
-    - Would you find me [italian](cuisine) something?
-    - Would you find me something for [italian](cuisine) something?
-    - Would you find something using [tomatoes](ingredient) and [garlic](ingredient)?
-    - Would you please find [italian](cuisine) something?
-    - Would you please search for food [gluten-free](tag) and [gluten-free](tag)?
-    - Would you please search for recipe with [chicken stock](ingredient)?
-    - Would you please search something using [tomatoes](ingredient) [cumin](ingredient)?
-    - Would you search food [gluten-free](tag) [gluten-free](tag)?
-    - Would you search for food containing [rice](ingredient)?
+    - Would you please find me something [gluten-free](tag) [gluten-free](tag)?
+    - Would you please search for recipe containing [apples](ingredient)?
+    - Would you please search for recipe [gluten-free](tag) [gluten-free](tag)?
+    - Would you please search something using [breadcrumbs](ingredient) [ginger powder](ingredient)?
+    - Would you search for food containing [shortening](ingredient)?
     - Would you search for food [gluten-free](tag)?
     - Would you search for recipe [gluten-free](tag) and [gluten-free](tag)?
-    - Would you search recipe using [vinegar](ingredient)?
+    - Would you search recipe [gluten-free](tag)?
     - can you find me recipe [gluten-free](tag) [gluten-free](tag)?
     - can you find something [gluten-free](tag)?
-    - can you please find food [gluten-free](tag) [gluten-free](tag)?
-    - can you please find how to prepare [Macaroni and Cheese](recipe)?
+    - can you please find food containing [bacon slices](ingredient)?
+    - can you please find how to prepare [Pasta Aglio e Olio](recipe)?
     - can you please find [italian](cuisine) something?
-    - can you please find me [italian](cuisine) food?
-    - can you please find me something containing [leaves sage](ingredient) [lentils](ingredient)?
-    - can you please find me something with [tahini](ingredient) [chili flakes](ingredient)?
-    - can you please search [Banana Bread](recipe)?
-    - can you please search [Peppermint Latte](recipe)?
+    - can you please find me something containing [miso paste](ingredient) [chicken breasts](ingredient)?
+    - can you please find me something [gluten-free](tag) and [gluten-free](tag)?
+    - can you please find something containing [condensed milk](ingredient)?
+    - can you please search [Chocolate Cookies](recipe)?
+    - can you please search [Cottage Pie](recipe)?
     - can you please search food [gluten-free](tag) [gluten-free](tag)?
-    - can you please search for food containing [soy sauce](ingredient) [beans](ingredient)?
+    - can you please search for food containing [salt](ingredient) [brioche rolls](ingredient)?
     - can you please search for food [gluten-free](tag) [gluten-free](tag)?
-    - can you please search something for [italian](cuisine) food?
+    - can you please search recipe for [Chicken Wings](recipe)?
+    - can you please search something [gluten-free](tag)?
     - can you search for [italian](cuisine) recipe?
-    - can you search for recipe for [Chili Tomato Soup](recipe)?
-    - can you search recipe with [chickpeas](ingredient)?
-    - could you find me food [gluten-free](tag)?
-    - could you find me recipe using [chicken broth](ingredient) [heavy cream](ingredient)?
+    - can you search for recipe for [Red Pepper Soup](recipe)?
+    - can you search recipe with [garlic chili sauce](ingredient)?
+    - could you find me recipe using [chicken broth](ingredient) [chicken stock](ingredient)?
     - could you find me something for [italian](cuisine) food?
+    - could you please find [Papaya Salad](recipe)?
     - could you please find me something [gluten-free](tag)?
-    - could you please find something containing [egg yolk](ingredient) [bananas](ingredient)?
-    - could you please search [Thanksgiving Turkey](recipe)?
-    - could you please search food containing [salt](ingredient) and [tahini](ingredient)?
-    - could you please search food using [red wine](ingredient) and [ginger](ingredient)?
-    - could you please search for recipe using [garlic chili sauce](ingredient) and [parsley flakes](ingredient)?
+    - could you please find recipe using [pasta](ingredient) and [sugar](ingredient)?
+    - could you please find something containing [cumin powder](ingredient) [leeks](ingredient)?
+    - could you please search [Sesame Chicken](recipe)?
+    - could you please search food containing [bay leaves](ingredient) and [garlic powder](ingredient)?
+    - could you please search food using [jalapenos](ingredient) and [olive oil](ingredient)?
+    - could you please search for [Red Pepper Soup](recipe)?
     - could you please search recipe [gluten-free](tag)?
     - could you please search something [gluten-free](tag) and [gluten-free](tag)?
     - could you search food [gluten-free](tag)?
-    - could you search for food containing [ribeye steak](ingredient)?
-    - i exclusively have [eggs](ingredient)
-    - i exclusively own [ginger](ingredient)
-    - i exclusively own [jasmine rice](ingredient)
-    - i exclusively own [spinach](ingredient), what may I bake?
-    - i have [cinnamon](ingredient), what can I make?
-    - i have [mushrooms](ingredient), what could I make?
-    - i have [spinach](ingredient), what may I make?
-    - i just have [bell peppers](ingredient)
-    - i just have [parsley flakes](ingredient)
-    - i just own [chicken wings](ingredient), what would I prepare?
-    - i just own [lemon](ingredient), what may i bake?
-    - i only have [basil leaves](ingredient), what may i bake?
-    - i own [chili peppers](ingredient)
-    - i solely own [cinnamnon sticks](ingredient)
-    - i solely own [ginger powder](ingredient)
-    - i want to eat [Carrot Fries](recipe) today
-    - i want to eat a [Chicken Wings](recipe) this evening
-    - i want to eat a [Chili Tomato Soup](recipe)
-    - i want to eat a [Fried Chicken Thighs](recipe)
-    - i want to eat a [Red Thai Curry Chicken](recipe)
-    - i want to eat a [italian](cuisine) food this dinner
+    - could you search for food containing [red wine](ingredient)?
+    - could you search for something using [miso paste](ingredient)?
+    - i exclusively have [baking soda](ingredient)
+    - i exclusively have [chicken wings](ingredient)
+    - i exclusively own [basil leaves](ingredient)
+    - i exclusively own [olive oil](ingredient)
+    - i exclusively own [sriracha sauce](ingredient), what may I bake?
+    - i have [onion powder](ingredient), what can I make?
+    - i have [oregano](ingredient), what could I make?
+    - i just have [crackers](ingredient)
+    - i just have [parsley](ingredient)
+    - i just own [flower](ingredient), what may i bake?
+    - i own [bananas](ingredient), what can i prepare?
+    - i own [chilis](ingredient)
+    - i own [leeks](ingredient)
+    - i own [pecorino romano cheese](ingredient), what would I make?
+    - i solely have [lentils](ingredient)
+    - i solely own [jasmine rice](ingredient)
+    - i solely own [wine](ingredient)
+    - i want to eat [Shrimp Scampi](recipe) today
+    - i want to eat a [Cheddar Baked Potatoes](recipe)
+    - i want to eat a [Tres Leches Cake](recipe) this evening
+    - i want to eat a [italian](cuisine) recipe
     - i want to eat a [italian](cuisine) something tomorrow
-    - i want to eat food containing [steamed milk](ingredient) [evaporated milk](ingredient)
     - i want to eat food [gluten-free](tag)
-    - i want to eat food with [peppermint syrup](ingredient) and [rice](ingredient)
-    - i want to eat food with [sriracha sauce](ingredient) [jalapenos](ingredient)
-    - i want to eat recipe containing [cornstarch](ingredient)
+    - i want to eat food with [chicken breasts](ingredient) [dark chocolate syrup](ingredient) tomorrow
+    - i want to eat recipe containing [curry paste](ingredient)
     - i want to eat recipe [gluten-free](tag)
-    - i want to eat recipe with [curry powder](ingredient) for morning
-    - i want to eat something containing [white sugar](ingredient) [garlic powder](ingredient) this dinner
     - i want to eat something [gluten-free](tag)
     - i want to eat something [gluten-free](tag) and [gluten-free](tag) for launch
     - i want to eat something [gluten-free](tag) [gluten-free](tag) for dinner
-    - i want to eat something with [basil leaves](ingredient) and [sriracha sauce](ingredient) tomorrow
-    - i want to try [Bagel Burgers](recipe)
-    - i want to try [Baked Salmon](recipe) today
-    - i want to try [Banana Bread](recipe)
-    - i want to try [Cranberry Sauce](recipe)
-    - i want to try [Miso Chicken](recipe) for evening
-    - i want to try a [Green Beans](recipe) tomorrow
-    - i want to try a [Macaroni and Cheese](recipe)
-    - i want to try a [Mongolian Beef](recipe)
+    - i want to try [Beef bourguignon](recipe) today
+    - i want to try [Chicken Enchiladas](recipe)
+    - i want to try [Cottage Pie](recipe)
+    - i want to try [Macaroni and Cheese](recipe)
+    - i want to try [Yuca Fries](recipe) for evening
+    - i want to try a [Jasmine Rice](recipe)
+    - i want to try a [Sriracha Chicken Wings](recipe)
     - i want to try a [italian](cuisine) recipe tomorrow
+    - i want to try a [italian](cuisine) something
     - i want to try a [italian](cuisine) something this morning
-    - i want to try food containing [peanut butter](ingredient) [lentils](ingredient)
+    - i want to try food containing [green beans](ingredient) and [espresso](ingredient) tomorrow
+    - i want to try food containing [pecorino romano cheese](ingredient) [chicken breasts](ingredient)
     - i want to try food [gluten-free](tag)
-    - i want to try food [gluten-free](tag) and [gluten-free](tag) for breakfast
-    - i want to try food [gluten-free](tag) [gluten-free](tag)
-    - i want to try food [gluten-free](tag) [gluten-free](tag) today
-    - i want to try food using [chicken breasts](ingredient) [red wine](ingredient) tomorrow
-    - i want to try food using [ground beef](ingredient) [vinegar](ingredient) today
-    - i want to try recipe using [ginger](ingredient) [bay leaf](ingredient) for dinner
-    - i want to try recipe using [lemon juice](ingredient)
-    - i want to try recipe using [mozzarella](ingredient)
-    - i want to try recipe with [tilapia](ingredient) [instant yeast](ingredient)
-    - i want to try something containing [chicken thighs](ingredient) [baking soda](ingredient) today
-    - i want to try something containing [cornstarch](ingredient) [red chili flakes](ingredient) tomorrow
+    - i want to try food with [curry powder](ingredient) [tomato sauce](ingredient) tomorrow
+    - i want to try recipe [gluten-free](tag) [gluten-free](tag) this evening
+    - i want to try recipe using [beef roast](ingredient)
+    - i want to try recipe using [ginger](ingredient)
+    - i want to try recipe using [olive oil](ingredient) [shrimps](ingredient) for dinner
+    - i want to try something containing [curry paste](ingredient) [yuca root](ingredient) tomorrow
+    - i want to try something containing [oregano](ingredient) and [tahini](ingredient)
     - i want to try something [gluten-free](tag) and [gluten-free](tag)
     - i want to try something [gluten-free](tag) this morning
-    - i want to try something with [flour](ingredient) and [garlic chili sauce](ingredient) today
+    - i want to try something with [beans](ingredient) and [soy sauce](ingredient) today
+    - i want to try something with [red chili flakes](ingredient) [baking powder](ingredient) this launch
     - i would like to eat food [gluten-free](tag) [gluten-free](tag)
     - i would like to eat something [gluten-free](tag) [gluten-free](tag) today
-    - i would like to try [Thanksgiving Turkey](recipe)
-    - i would like to try recipe using [almond extract](ingredient)
+    - i would like to try [Sesame Chicken](recipe)
+    - i would like to try [Shrimp Scampi](recipe)
+    - i would like to try recipe containing [cinnamon sticks](ingredient) [honey](ingredient)
     - i would like to try something [gluten-free](tag) this launch
-    - i would love to eat [Macaroni and Cheese](recipe) for evening
-    - i would love to eat [italian](cuisine) something today
-    - i would love to eat something [gluten-free](tag) and [gluten-free](tag)
-    - i would love to try food [gluten-free](tag) this breakfast
+    - i would love to eat [Jasmine Rice](recipe) for evening
+    - i would love to eat a [Chili](recipe)
+    - i would love to try food [gluten-free](tag) and [gluten-free](tag)
+    - i would really like to eat food using [heavy cream](ingredient)
     - i would really like to eat something [gluten-free](tag) [gluten-free](tag)
     - i would really love to eat a [italian](cuisine) recipe
     - i would really love to try food [gluten-free](tag) [gluten-free](tag)
-    - i would really love to try food using [scallions](ingredient)
+    - i would really love to try food using [potatoes](ingredient) today
     - i would really love to try recipe [gluten-free](tag)
     - i'd like to eat food [gluten-free](tag)
-    - i'd like to eat recipe [gluten-free](tag) and [gluten-free](tag) tomorrow
-    - i'd like to eat recipe [gluten-free](tag) for breakfast
-    - i'd like to eat something containing [egg yolk](ingredient) and [mushrooms](ingredient)
-    - i'd like to eat something with [cinnamon](ingredient) [pecorino romano cheese](ingredient)
-    - i'd love to try a [Pan Eggs](recipe) today
-    - i'd really like to eat a [Cottage Pie](recipe) for launch
-    - i'd really like to eat food with [carrots](ingredient) [celery](ingredient) this morning
-    - i'd really like to try food [gluten-free](tag) and [gluten-free](tag) for evening
-    - i'd really like to try recipe using [dark chocolate syrup](ingredient) and [chili peppers](ingredient) for launch
-    - i'd really like to try something containing [coconut milk](ingredient) and [whipping cream](ingredient) today
+    - i'd like to eat food [gluten-free](tag) tomorrow
+    - i'd like to eat something containing [cumin powder](ingredient) and [oregano](ingredient)
+    - i'd like to eat something with [onion powder](ingredient) [bananas](ingredient)
+    - i'd like to try something with [rice](ingredient) [cumin](ingredient) today
+    - i'd love to try a [Spicy Roasted Potatoes](recipe) today
+    - i'd really like to eat a [Thai Curry Chicken](recipe) for launch
+    - i'd really like to eat food with [orange juice](ingredient) [rotisserie chicken](ingredient) this morning
+    - i'd really like to try food [gluten-free](tag)
+    - i'd really like to try recipe using [heavy cream](ingredient) and [vanilla extract](ingredient) for launch
     - i'd really love to eat a [italian](cuisine) food
     - i'd really love to eat food [gluten-free](tag)
-    - i'd really love to eat recipe with [tilapia](ingredient) [steamed milk](ingredient) for launch
-    - i'd really love to try food [gluten-free](tag) and [gluten-free](tag) today
-    - may you find something with [mushrooms](ingredient) and [orange bitters](ingredient)?
-    - may you please find how to bake [Thai Curry Chicken](recipe)?
+    - i'd really love to eat recipe containing [cranberries](ingredient)
+    - i'd really love to try recipe with [ground beef](ingredient) and [pecans](ingredient) today
+    - may you find me food with [raisins](ingredient) [pecans](ingredient)?
+    - may you find me recipe [gluten-free](tag) [gluten-free](tag)?
+    - may you find something with [oregano](ingredient) and [enchilada sauce](ingredient)?
+    - may you please find how to bake [Blueberry Muffins](recipe)?
     - may you please find me food [gluten-free](tag)?
-    - may you please find me how to prepare [Baked Salmon](recipe)?
+    - may you please find me how to prepare [Beef bourguignon](recipe)?
+    - may you please find me something [gluten-free](tag) [gluten-free](tag)?
     - may you please find me something [gluten-free](tag)?
-    - may you please find me something with [milk](ingredient)?
     - may you please find something [gluten-free](tag) [gluten-free](tag)?
-    - may you please search food [gluten-free](tag) and [gluten-free](tag)?
     - may you please search for food [gluten-free](tag) and [gluten-free](tag)?
-    - may you please search for food using [chili peppers](ingredient) [cilantro](ingredient)?
+    - may you please search for food using [vanilla extract](ingredient) [rice](ingredient)?
+    - may you please search for [italian](cuisine) something?
+    - may you please search how to cook [italian](cuisine) something?
     - may you please search [italian](cuisine) recipe?
-    - may you search [italian](cuisine) something?
-    - may you search recipe with [thyme](ingredient) and [wine](ingredient)?
-    - would you find food containing [cornmeal](ingredient)?
-    - would you find [italian](cuisine) something?
-    - would you find me [Spicy Roasted Potatoes](recipe)?
+    - may you search for something for [italian](cuisine) food?
+    - may you search recipe [gluten-free](tag) [gluten-free](tag)?
+    - may you search recipe with [parmesan cheese](ingredient) and [shrimps](ingredient)?
+    - would you find food containing [tomato paste](ingredient)?
+    - would you find me [Pecan Tilapia](recipe)?
     - would you find me food [gluten-free](tag)?
-    - would you find recipe using [curry powder](ingredient)?
-    - would you find recipe with [yuca root](ingredient) [bay leaf](ingredient)?
-    - would you please find [Carrot Fries](recipe)?
-    - would you please find me [Chicken Enchiladas](recipe)?
-    - would you please find me recipe containing [filet of salmon](ingredient) and [jasmine rice](ingredient)?
-    - would you please find recipe with [water](ingredient) [beef broth](ingredient)?
-    - would you please find something using [jalapenos](ingredient)?
-    - would you please search food containing [butter](ingredient)?
-    - would you please search food with [red wine](ingredient)?
-    - would you please search for [Chocolate Cookies](recipe)?
+    - would you find recipe using [chicken thighs](ingredient)?
+    - would you find recipe with [chili peppers](ingredient) [shrimps](ingredient)?
+    - would you please find [Shrimp Scampi](recipe)?
+    - would you please find food containing [baking powder](ingredient)?
+    - would you please find food containing [brioche rolls](ingredient) [chicken broth](ingredient)?
+    - would you please find me [Spaghetti Carbonara](recipe)?
+    - would you please find me recipe containing [cheese](ingredient) and [basil leaves](ingredient)?
+    - would you please find me recipe containing [chicken broth](ingredient) and [beef](ingredient)?
+    - would you please find recipe with [bay leaf](ingredient) [orange bitters](ingredient)?
+    - would you please search food containing [chocolate chips](ingredient)?
+    - would you please search food [gluten-free](tag)?
+    - would you please search food with [jalapenos](ingredient)?
     - would you please search for [italian](cuisine) something?
-    - would you please search for something [gluten-free](tag) [gluten-free](tag)?
-    - would you please search recipe [gluten-free](tag)?
+    - would you please search recipe [gluten-free](tag) and [gluten-free](tag)?
+    - would you please search something using [baking soda](ingredient)?
     - would you search for food [gluten-free](tag)?
     - would you search for [italian](cuisine) food?
+    - would you search for recipe [gluten-free](tag) [gluten-free](tag)?
+    - would you search for something with [frozen puff pastry](ingredient) [parsley](ingredient)?
 - intent: ask_alternative_recipe
   examples: |
-    - no is there an substitute food?
-    - no are there any replacement recipe?
-    - No is there some surrogate food?
-    - is there an surrogate?
-    - No is there any alternative something?
-    - No is there an substitute food?
-    - no what other food did you find?
-    - no are there any substitute food?
-    - is there any surrogate recipe?
-    - No is there an surrogate recipe?
-    - no are there an alternative something?
-    - No is there any surrogate?
-    - what else do you own?
-    - is there some substitute?
-    - no is there an substitute something?
-    - No are there some surrogate something?
-    - is there an alternative food?
-    - No is there some replacement recipe?
-    - No is there an replacement recipe?
-    - no are there an replacement food?
-    - no what other food do you own?
-    - no are there any surrogate?
-    - no what else do you own?
-    - No are there some alternative recipe?
-    - no are there an alternative recipe?
-    - no are there an substitute recipe?
-    - is there any substitute food?
-    - No is there some replacement something?
+    - are there any alternative?
     - is there any replacement recipe?
-    - no what other something do you own?
-    - No are there some substitute food?
-    - are there some alternative?
-    - no are there any replacement?
-    - No are there an surrogate?
-    - No is there any surrogate something?
-    - is there some replacement recipe?
-    - no is there an surrogate recipe?
-    - no are there any substitute something?
-    - no is there an replacement food?
-    - no are there an alternative food?
-    - what other something do you have?
-    - No what other something do you have?
-    - are there any replacement food?
-    - is there any surrogate food?
-    - are there any substitute?
-    - no is there some alternative food?
-    - No are there some alternative?
-    - no are there any replacement food?
-    - are there some replacement recipe?
-    - No is there some replacement food?
-    - No are there any replacement recipe?
-    - No are there any surrogate recipe?
-    - what other recipe do you own?
-    - No is there any replacement something?
-    - no is there any surrogate recipe?
-    - are there an replacement something?
-    - no is there an replacement something?
-    - No are there any alternative recipe?
-    - No is there an substitute recipe?
-    - are there an alternative recipe?
-    - no are there some substitute recipe?
-    - no are there an substitute food?
-    - is there any replacement food?
-    - No is there an replacement food?
-    - no is there some substitute recipe?
-    - are there an substitute food?
-    - no are there some surrogate something?
-    - are there some surrogate something?
-    - are there an replacement recipe?
-    - is there an surrogate food?
-    - No is there any substitute recipe?
-    - no is there some alternative recipe?
-    - no are there some alternative recipe?
-    - is there some alternative recipe?
-    - is there an alternative?
-    - No are there an replacement recipe?
-    - is there some alternative food?
-    - no is there an surrogate?
-    - no is there any substitute?
-    - are there any alternative food?
-    - no are there any alternative recipe?
-    - no is there an alternative something?
-    - is there an replacement recipe?
-    - no is there an surrogate food?
-    - is there an substitute something?
+    - no are there some alternative something?
+    - are there some alternative something?
+    - is there an alternative recipe?
+    - no are there any surrogate something?
+    - No are there some replacement something?
+    - no are there any replacement something?
+    - are there some substitute something?
     - what other food do you have?
-    - no is there any replacement recipe?
-    - no are there some substitute something?
-    - no is there any alternative food?
-    - no are there some alternative food?
-    - No are there an alternative food?
-    - is there an replacement something?
-    - No is there any surrogate recipe?
-    - is there an substitute?
-    - No is there some substitute food?
-    - is there any alternative?
     - No is there any substitute something?
+    - are there some alternative?
+    - are there some alternative recipe?
+    - No what else do you have?
+    - no what other food did you find?
+    - is there an surrogate recipe?
+    - are there some surrogate food?
+    - No is there an substitute food?
+    - No is there an surrogate recipe?
+    - are there an substitute recipe?
+    - no is there some substitute?
+    - what other something do you have?
+    - no what other something do you own?
+    - no is there any alternative recipe?
+    - is there any alternative recipe?
+    - are there some replacement?
+    - No are there some surrogate recipe?
+    - No is there some surrogate food?
+    - no is there some surrogate something?
+    - no is there an surrogate food?
+    - No are there any substitute food?
+    - no are there some surrogate food?
+    - no is there an replacement?
+    - are there some surrogate something?
+    - No are there any replacement food?
+    - no is there an replacement food?
+    - no are there some substitute recipe?
+    - No is there any surrogate?
+    - No is there some substitute?
+    - No are there some alternative food?
+    - are there some surrogate recipe?
+    - No is there some alternative recipe?
+    - is there an alternative something?
+    - what other recipe do you own?
+    - are there some substitute recipe?
+    - is there any substitute recipe?
+    - are there some alternative food?
+    - no are there an alternative something?
+    - No is there an alternative something?
+    - are there an substitute food?
+    - No are there some alternative recipe?
     - is there some surrogate recipe?
-    - no are there an replacement?
-    - No are there an surrogate food?
+    - No are there any surrogate?
+    - no are there some replacement?
+    - No is there any replacement recipe?
+    - is there any alternative food?
+    - No is there any replacement something?
+    - No are there some substitute food?
+    - no is there an alternative something?
+    - is there an surrogate?
+    - no is there an substitute something?
+    - are there any surrogate recipe?
+    - are there any replacement food?
+    - No is there any replacement food?
+    - no are there an alternative food?
+    - is there an alternative food?
+    - No is there some alternative food?
+    - are there an replacement?
+    - are there some substitute?
+    - is there some alternative recipe?
+    - No is there an substitute?
+    - No are there some surrogate?
+    - No is there some replacement something?
+    - is there some replacement something?
+    - No are there any alternative something?
+    - no is there an alternative food?
+    - No is there an alternative?
+    - no are there an replacement food?
+    - No what other food do you have?
+    - No is there some surrogate?
+    - is there an replacement?
+    - No is there an alternative recipe?
+    - No what other something do you own?
+    - No is there an replacement recipe?
+    - no is there an replacement recipe?
+    - are there an surrogate recipe?
+    - no is there some alternative?
+    - No what other something do you have?
+    - is there an substitute?
+    - No are there any substitute?
+    - are there any surrogate?
+    - no are there some substitute something?
+    - no are there some substitute food?
+    - No are there some surrogate food?
+    - No is there any substitute food?
+    - No are there an alternative?
+    - No are there an alternative food?
+    - no are there any alternative?
+    - no are there any alternative recipe?
+    - is there some replacement recipe?
 - intent: ask_ingredients_list
   examples: |
     - Can you give the ingredients needed?
@@ -642,6 +642,7 @@ nlu:
     - Can you please read the list of ingredients that are for [ten](CARDINAL)?
     - Can you please send the list of ingredients that are for [one](CARDINAL) person?
     - Can you please tell the list of ingredients for [5](CARDINAL)?
+    - Can you read me the list of ingredients that are needed?
     - Can you tell the list of ingredients that are needed for [1](CARDINAL)?
     - Could you deliver me the list of ingredients needed?
     - Could you please share with me the ingredients?
@@ -653,6 +654,7 @@ nlu:
     - I'd love the ingredient that are needed for [one](CARDINAL)
     - May you please read me the ingredient needed?
     - Ok I'd love the ingredients that are for [4](CARDINAL) persons
+    - Okay I'd really like the list of ingredients that are needed
     - Okay the ingredients that are
     - Sure i would really like the list of ingredient that are needed
     - What compononets do I require for [1](CARDINAL)?
@@ -662,27 +664,27 @@ nlu:
     - What other compononets are needed for [one](CARDINAL) people?
     - What other compononets are needed?
     - What other compononets do i need for [9](CARDINAL)?
-    - What other ingredients are needed?
     - What other items are needed for [3](CARDINAL) relatives?
     - What other items do i require?
     - What things are required for [1](CARDINAL)?
     - What things do I need?
+    - Which compononets are required for [one](CARDINAL)?
     - Which ingredients are needed?
     - Which ingredients do i require for [1](CARDINAL)?
     - Which items are required?
     - Which items do I need for [one](CARDINAL)?
     - Which items do I require for [one](CARDINAL)?
     - Which items do i need?
+    - Which other ingredients are needed for [one](CARDINAL) person?
     - Which other items are needed?
     - Which things are required for [1](CARDINAL) relatives?
     - Which things do i need?
-    - Would you give me the ingredients for [1](CARDINAL) friends?
     - Would you please give me the list of ingredient needed?
     - Would you please give the ingredient that are?
     - Y i would really like the list of ingredients that are required for [3](CARDINAL)
     - Yeah the list of ingredient that are for [eight](CARDINAL)
-    - Yes the list of ingredients for [1](CARDINAL) person
     - can you give the ingredients that are for [1](CARDINAL)?
+    - can you please give me the list of ingredients?
     - can you please give the list of ingredients needed for [ten](CARDINAL) friends?
     - can you please read me the ingredients that are for [1](CARDINAL) person?
     - can you please tell the list of ingredients required?
@@ -690,10 +692,8 @@ nlu:
     - could you share with the list of ingredients needed for [one](CARDINAL)?
     - i want the ingredient required
     - i want the list of ingredient
-    - i want the list of ingredient needed
     - i'd really like the list of ingredient that are
     - may you give me the ingredient for [four](CARDINAL)?
-    - may you please share with the ingredients that are needed?
     - may you please tell me the ingredients that are needed for [1](CARDINAL)?
     - may you send the ingredients needed for [6](CARDINAL)?
     - okay I'd really like the ingredients that are needed for [one](CARDINAL) people
@@ -714,295 +714,294 @@ nlu:
     - what other ingredients do i require for [one](CARDINAL)?
     - which compononets do I need for [6](CARDINAL) persons?
     - which ingredients are required?
+    - which items are needed for [1](CARDINAL) relatives?
     - which items are required for [7](CARDINAL) people?
     - which other compononets are needed for [9](CARDINAL)?
     - which other compononets do I require for [4](CARDINAL)?
     - which other ingredients do i require for [1](CARDINAL)?
+    - which other things are needed for [4](CARDINAL)?
     - which things are needed?
     - which things do i need for [one](CARDINAL) person?
     - which things do i need?
     - which things do i require for [5](CARDINAL) relatives?
-    - would you give me the ingredients required for [three](CARDINAL) persons?
-    - would you please read me the ingredients?
     - would you please read the list of ingredients required for [nine](CARDINAL) friends?
     - would you please tell the ingredients that are?
     - would you read me the ingredient that are?
+    - would you send the ingredient needed?
     - would you share with me the list of ingredient needed for [one](CARDINAL) friends?
+    - y the list of ingredient
     - y the list of ingredient that are for [1](CARDINAL)
     - yeah i want the ingredient
-    - yeah i want the list of ingredient for [eight](CARDINAL) persons
-    - yeah i would love the list of ingredients that are
     - yeah the ingredients for [three](CARDINAL) persons
     - yep i want the ingredients for [1](CARDINAL)
     - yep i want the list of ingredients
     - yes the ingredients for [1](CARDINAL) relatives
 - intent: ask_expected_time
   examples: |
-    - how long is going to take to make?
-    - How long will it take to make?
-    - how much time will it take to make?
-    - What is the preparation time?
-    - How much time to prepare?
-    - How long to bake?
-    - how long to cook?
-    - What is the cooking time?
-    - how long to make?
-    - How long is going to take to make?
-    - what is the preparation time?
-    - How long to make?
-    - How much time will it take to bake?
-    - How long is going to take to bake?
-    - how long to prepare?
-    - how long will it take to prepare?
-    - How much time is going to take to cook?
-    - how long is going to take to cook?
-    - how much time is going to take to cook?
-    - how long to bake?
-    - How long will it take to cook?
-    - what's the cooking time?
-    - How long will it take to prepare?
-    - how much time to cook?
-    - What's the cooking time?
-    - How long to prepare?
-    - How much time to cook?
-    - How much time will it take to prepare?
-    - how much time to make?
-    - How much time will it take to make?
-    - how long is going to take to bake?
-    - how long will it take to bake?
-    - what is the cooking time?
-    - How long will it take to bake?
-    - How much time is going to take to bake?
     - how long is going to take to prepare?
     - How long is going to take to prepare?
     - how much time will it take to prepare?
-    - How much time is going to take to make?
-    - How much time to bake?
-    - how much time to bake?
-    - how much time is going to take to make?
-    - how much time will it take to cook?
-    - how much time will it take to bake?
+    - how long to cook?
     - how much time is going to take to prepare?
-    - How long to cook?
+    - What's the cooking time?
+    - What's the preparation time?
+    - How long will it take to prepare?
+    - how much time to make?
+    - How much time will it take to make?
+    - How long to make?
+    - What is the cooking time?
+    - What is the preparation time?
+    - how long will it take to make?
+    - how much time will it take to make?
+    - How long will it take to cook?
+    - how long is going to take to make?
     - how long will it take to cook?
-    - How long is going to take to cook?
+    - how much time is going to take to make?
+    - How long will it take to make?
+    - How long to prepare?
+    - How long to bake?
+    - How much time is going to take to make?
+    - how long will it take to prepare?
+    - what's the cooking time?
     - how much time is going to take to bake?
     - How much time is going to take to prepare?
+    - How long is going to take to make?
+    - how much time to cook?
     - what's the preparation time?
-    - What's the preparation time?
+    - How long is going to take to bake?
+    - how long to prepare?
+    - how much time will it take to bake?
+    - How much time is going to take to bake?
+    - How long is going to take to cook?
+    - how much time is going to take to cook?
     - How much time will it take to cook?
-    - how long will it take to make?
-    - how much time to prepare?
+    - what is the preparation time?
+    - How much time to prepare?
+    - how long will it take to bake?
+    - How long to cook?
+    - How long will it take to bake?
+    - How much time will it take to bake?
+    - how long is going to take to cook?
+    - How much time will it take to prepare?
+    - how much time will it take to cook?
+    - How much time to bake?
+    - how long to bake?
     - How much time to make?
+    - how long to make?
+    - what is the cooking time?
+    - How much time is going to take to cook?
+    - How much time to cook?
+    - how much time to prepare?
+    - how much time to bake?
+    - how long is going to take to bake?
 - intent: ask_ingredient_substitute
   examples: |
-    - Any replacement for [beef broth](ingredient)?
-    - Any replacement to [beans](ingredient)?
-    - Any replacement to [blueberries](ingredient)?
-    - Any surrogates for [almonds](ingredient)?
-    - I do not have any [crackers](ingredient), what may I utilize instead?
-    - I do not have any [whole milk](ingredient), what surrogate would I employ instead?
-    - I do not have [beef broth](ingredient), what would i utilize?
-    - I do not have [cumin](ingredient), what could i employ instead?
-    - I do not have [heavy cream](ingredient), what compononet may i utilize instead?
-    - I don't own any [parsley flakes](ingredient), what else would I employ instead?
-    - I don't own [parsley flakes](ingredient), what item could i employ instead?
-    - I not have any [fish sauce](ingredient), what could I utilize?
-    - Some replacements for [shortening](ingredient)?
-    - Some replacements for [tilapia filets](ingredient)?
-    - Some substitute for [cinnamon sticks](ingredient)?
-    - Some substitutes to [honey](ingredient)?
-    - Some surrogates for [tortillas](ingredient)?
-    - Some surrogates to [beans](ingredient)?
-    - Some surrogates to [rotisserie chicken](ingredient)?
-    - What can I employ instead of [vegetable oil](ingredient)?
-    - What can I use instead of [chocolate chips](ingredient)?
-    - What can i use instead of [chilis](ingredient)?
-    - What else can I utilize instead of [bananas](ingredient)?
-    - What is an alternatives to [garlic chili sauce](ingredient)?
-    - What is an substitute to [tahini](ingredient)?
-    - What is an substitutes to [cheese](ingredient)?
-    - What other ingredients may i use instead of [tomato sauce](ingredient)?
-    - What other item could I utilize instead of [parsley](ingredient)?
-    - What replacement could i employ instead of [chili powder](ingredient)?
-    - What's an replacement for [cinnamnon sticks](ingredient)?
-    - What's an replacement for [red chili flakes](ingredient)?
-    - What's an replacement to [bay leaf](ingredient)?
-    - Which can i employ instead of [beans](ingredient)?
-    - Which could I use instead of [spinach](ingredient)?
-    - Which could i utilize instead of [brown sugar](ingredient)?
-    - Which else can I utilize instead of [whole milk](ingredient)?
-    - Which is an replacement for [chili powder](ingredient)?
-    - Which is an surrogates for [leeks](ingredient)?
-    - Which is an surrogates for [paprika](ingredient)?
-    - Which is an surrogates to [pecorino romano cheese](ingredient)?
-    - Which may i utilize instead of [sriracha sauce](ingredient)?
-    - Which other thing may I use instead of [tilapia filets](ingredient)?
-    - Which would i employ instead of [celery](ingredient)?
-    - Which's an alternatives to [whole milk](ingredient)?
-    - Which's an replacement for [miso paste](ingredient)?
-    - Which's an replacement for [mushrooms](ingredient)?
-    - Which's an replacements for [red chili flakes](ingredient)?
-    - Which's an substitute for [ginger powder](ingredient)?
-    - Which's an substitute to [peppermint syrup](ingredient)?
-    - Which's an surrogate to [almond extract](ingredient)?
-    - Which's an surrogates for [beans](ingredient)?
-    - any replacement for [beef broth](ingredient)?
+    - Any alternative for [salt](ingredient)?
+    - Any replacement for [orange bitters](ingredient)?
+    - Any replacement to [brioche rolls](ingredient)?
+    - Any replacement to [parsley flakes](ingredient)?
+    - Any surrogates for [chilis](ingredient)?
+    - I do not have any [raisins](ingredient), what may I utilize instead?
+    - I do not have any [tobasco](ingredient), what surrogate would I employ instead?
+    - I do not have [chicken stock](ingredient), what compononet may i utilize instead?
+    - I do not have [orange bitters](ingredient), what would i utilize?
+    - I don't own any [parsley](ingredient), what else would I employ instead?
+    - I don't own [mushrooms](ingredient), what else would I employ?
+    - I don't own [parsley](ingredient), what item could i employ instead?
+    - I not have any [chili flakes](ingredient), what could I utilize?
+    - I not have any [frozen puff pastry](ingredient), what else would i employ instead?
+    - Some replacements for [mozzarella](ingredient)?
+    - Some replacements for [peanut butter](ingredient)?
+    - Some substitute for [flour](ingredient)?
+    - Some substitutes to [scallions](ingredient)?
+    - Some surrogates for [whipped cream](ingredient)?
+    - Some surrogates to [brioche rolls](ingredient)?
+    - Some surrogates to [spinach](ingredient)?
+    - What can I employ instead of [egg yolks](ingredient)?
+    - What can I use instead of [red peppers](ingredient)?
+    - What is an alternatives to [soy sauce](ingredient)?
+    - What is an substitute to [garlic powder](ingredient)?
+    - What is an substitutes to [pepperoni](ingredient)?
+    - What other item could I utilize instead of [apples](ingredient)?
+    - What replacement could i employ instead of [butter](ingredient)?
+    - What would i employ instead of [cinnamon powder](ingredient)?
+    - What would i use instead of [tomato sauce](ingredient)?
+    - What's an replacement for [yuca root](ingredient)?
+    - Which can i employ instead of [brioche rolls](ingredient)?
+    - Which could I employ instead of [mushrooms](ingredient)?
+    - Which could i utilize instead of [pepper](ingredient)?
+    - Which else can I utilize instead of [tobasco](ingredient)?
+    - Which is an replacement for [butter](ingredient)?
+    - Which is an surrogates for [chili powder](ingredient)?
+    - Which is an surrogates for [pecans](ingredient)?
+    - Which may i utilize instead of [frozen puff pastry](ingredient)?
+    - Which other thing may I use instead of [peanut butter](ingredient)?
+    - Which's an alternatives to [tobasco](ingredient)?
+    - Which's an replacement for [milk](ingredient)?
+    - Which's an replacement for [oregano](ingredient)?
+    - Which's an substitute for [wine](ingredient)?
+    - Which's an substitute to [ground beef](ingredient)?
+    - Which's an surrogate to [cinnamon powder](ingredient)?
+    - Which's an surrogates for [brioche rolls](ingredient)?
+    - any replacement for [brioche rolls](ingredient)?
     - any replacement for [frozen puff pastry](ingredient)?
-    - any replacements to [coconut milk](ingredient)?
-    - any replacements to [olive oil](ingredient)?
-    - any replacements to [pecorino romano cheese](ingredient)?
-    - any substitute for [tilapia](ingredient)?
-    - any substitute to [flower](ingredient)?
-    - any surrogates to [chili flakes](ingredient)?
-    - i do not have any [fish sauce](ingredient), what may I employ?
-    - i do not own any [leaves sage](ingredient), what could i use?
-    - i don't have any [olive oil](ingredient), what can i employ instead?
-    - i don't have [jalapenos](ingredient), what may i utilize instead?
-    - i don't have [shortening](ingredient), what would I use?
-    - i don't own any [molasses](ingredient), what replacement could i use?
-    - i not have any [bell peppers](ingredient), what may i employ?
+    - any replacement for [orange bitters](ingredient)?
+    - any replacements to [almonds](ingredient)?
+    - any replacements to [spaghetti](ingredient)?
+    - any substitute for [cumin](ingredient)?
+    - any surrogates to [bacon slices](ingredient)?
+    - i do not have any [chili flakes](ingredient), what may I employ?
+    - i don't have any [almonds](ingredient), what can i employ instead?
+    - i don't have [mozzarella](ingredient), what would I use?
+    - i don't have [tomatoes](ingredient), what may i utilize instead?
+    - i don't own any [mushrooms](ingredient), what replacement could i use?
+    - i not have any [crackers](ingredient), what may i employ?
     - i not have [chicken broth](ingredient), what item could i use instead?
-    - i not have [orange bitters](ingredient), what item could i employ instead?
-    - i not own [walnuts](ingredient), what can i utilize?
-    - some replacement for [bourbon](ingredient)?
-    - some surrogate for [whipped cream](ingredient)?
-    - some surrogate to [garlic chili sauce](ingredient)?
-    - some surrogates for [teriyaki sauce](ingredient)?
-    - what  items could I use instead of [lentils](ingredient)?
-    - what can i employ instead of [milk](ingredient)?
-    - what can i employ instead of [red peppers](ingredient)?
-    - what could I use instead of [garlic powder](ingredient)?
-    - what else would i utilize instead of [evaporated milk](ingredient)?
-    - what is an alternative for [bacon](ingredient)?
-    - what is an substitute for [curry powder](ingredient)?
-    - what is an substitute for [oregano](ingredient)?
-    - what is an substitute for [tortillas](ingredient)?
-    - what other thing may I employ instead of [molasses](ingredient)?
-    - what substitutes could i utilize instead of [peanuts](ingredient)?
+    - i not have [enchilada sauce](ingredient), what item could i employ instead?
+    - i not own [lemon juice](ingredient), what can i utilize?
+    - some replacement for [red chili flakes](ingredient)?
+    - some surrogate for [honey](ingredient)?
+    - some surrogate to [soy sauce](ingredient)?
+    - some surrogates for [whole milk](ingredient)?
+    - what  items could I use instead of [chicken breasts](ingredient)?
+    - what can i employ instead of [espresso](ingredient)?
+    - what could I use instead of [carrots](ingredient)?
+    - what else would i utilize instead of [sugar](ingredient)?
+    - what is an alternative for [baking powder](ingredient)?
+    - what is an substitute for [chicken thighs](ingredient)?
+    - what is an substitute for [coconut milk](ingredient)?
+    - what is an substitute for [whipped cream](ingredient)?
+    - what is an surrogates to [bananas](ingredient)?
+    - what substitutes could i utilize instead of [walnuts](ingredient)?
+    - what surrogates would i employ instead of [chilis](ingredient)?
     - what would I employ instead of [chicken broth](ingredient)?
-    - what's an alternatives to [cornmeal](ingredient)?
-    - what's an surrogates for [cinnamnon sticks](ingredient)?
-    - what's an surrogates for [garlic](ingredient)?
-    - which  thing may i employ instead of [ribeye steak](ingredient)?
-    - which else can I use instead of [onions](ingredient)?
-    - which else would I utilize instead of [honey](ingredient)?
-    - which is an substitutes for [blueberries](ingredient)?
-    - which is an surrogates for [milk](ingredient)?
-    - which is an surrogates to [bourbon](ingredient)?
-    - which may i utilize instead of [curry powder](ingredient)?
-    - which would I use instead of [lemon](ingredient)?
+    - what's an alternatives to [tomato paste](ingredient)?
+    - what's an surrogates for [arugula greens](ingredient)?
+    - what's an surrogates for [jasmine rice](ingredient)?
+    - which  thing may i employ instead of [red wine](ingredient)?
+    - which else can I use instead of [papayas](ingredient)?
+    - which else could I utilize instead of [tomato paste](ingredient)?
+    - which else would I utilize instead of [scallions](ingredient)?
+    - which is an replacements to [jalapenos](ingredient)?
+    - which is an substitute for [bell peppers](ingredient)?
+    - which is an substitutes for [parsley flakes](ingredient)?
+    - which is an surrogate for [bacon slices](ingredient)?
+    - which is an surrogates for [espresso](ingredient)?
+    - which is an surrogates to [red chili flakes](ingredient)?
+    - which would I use instead of [flower](ingredient)?
     - which's an alternative for [breadcrumbs](ingredient)?
-    - which's an alternative for [tomatoes](ingredient)?
-    - which's an substitute for [onions](ingredient)?
-    - which's an surrogate for [onion](ingredient)?
+    - which's an alternative for [peanuts](ingredient)?
+    - which's an replacement to [lentils](ingredient)?
+    - which's an replacement to [soy sauce](ingredient)?
+    - which's an substitute for [papayas](ingredient)?
+    - which's an substitutes to [tortillas](ingredient)?
+    - which's an surrogate for [brown sugar](ingredient)?
 - intent: ask_ingredient_amount
   examples: |
-    - How many [almonds](ingredient) and [chili flakes](ingredient) does the recipe require for [three](CARDINAL) persons?
-    - How many [basil leaves](ingredient) , [papayas](ingredient) are required for [nine](CARDINAL)?
-    - How many [chicken thighs](ingredient) [whipped cream](ingredient) does the recipe require?
-    - How many [chili powder](ingredient) are needed for [one](CARDINAL)?
-    - How many [ginger](ingredient) do i require for [7](CARDINAL) friends?
-    - How many [ginger powder](ingredient) does the recipe require for [one](CARDINAL) friends?
-    - How many [ground beef](ingredient) [basil](ingredient) do i require for [4](CARDINAL)?
-    - How many of [beef broth](ingredient) do i require?
-    - How many of [beef roast](ingredient) [tomato pesto](ingredient) are required for this recipe for [nine](CARDINAL) relatives?
-    - How many of [brioche rolls](ingredient) are needed for [10](CARDINAL) people?
-    - How many of [eggs](ingredient) does the recipe require for [six](CARDINAL) persons?
-    - How many of [molasses](ingredient) [basil](ingredient) is required for [1](CARDINAL)?
-    - How many of [pecorino romano cheese](ingredient) do I need?
-    - How many of [pepper](ingredient) , [brown sugar](ingredient) is needed for [9](CARDINAL) person?
-    - How many of [tahini](ingredient) and [thyme](ingredient) is required for [five](CARDINAL)?
-    - How many of [whipping cream](ingredient) [chocolate chips](ingredient) does the recipe need for [one](CARDINAL) people?
-    - How many of [yuca root](ingredient) do i require?
-    - How many [orange bitters](ingredient) , [butter](ingredient) are needed?
-    - How many [raisins](ingredient) do i need for [9](CARDINAL) people?
-    - How many [sriracha sauce](ingredient) are needed for [3](CARDINAL) friends?
-    - How many [tomato sauce](ingredient) and [eggs](ingredient) do i require for [three](CARDINAL) person?
-    - How many [vegetable oil](ingredient) and [ginger](ingredient) does the recipe need for [one](CARDINAL)?
-    - How many [vegetables stock](ingredient) is needed for [one](CARDINAL) friends?
-    - How much [bay leaves](ingredient) [oregano](ingredient) does the recipe require for [1](CARDINAL) friends?
-    - How much [beef broth](ingredient) [bourbon](ingredient) are needed for [six](CARDINAL) person?
-    - How much [butter](ingredient) does the recipe need for [one](CARDINAL)?
-    - How much [celery](ingredient) and [chicken breasts](ingredient) do I require?
-    - How much [chicken thighs](ingredient) , [basil](ingredient) are required for this recipe?
-    - How much [chocolate chips](ingredient) are needed for this recipe?
-    - How much [curry paste](ingredient) does the recipe need for [three](CARDINAL)?
-    - How much [gnocchi](ingredient) are needed for [one](CARDINAL) relatives?
-    - How much [ground beef](ingredient) [tortillas](ingredient) do i need for [1](CARDINAL) person?
-    - How much [lemon](ingredient) , [almond extract](ingredient) does the recipe require?
-    - How much of [basil](ingredient) and [chicken wings](ingredient) are needed for this for [one](CARDINAL) relatives?
-    - How much of [chicken breasts](ingredient) does the recipe need?
-    - How much of [egg yolk](ingredient) are required for [six](CARDINAL) relatives?
-    - How much of [flour](ingredient) and [white sugar](ingredient) does the recipe require for [1](CARDINAL)?
-    - How much of [garlic powder](ingredient) does the recipe need?
-    - How much of [jalapenos](ingredient) is needed for this?
-    - How much of [oregano](ingredient) and [chicken breasts](ingredient) are needed for [1](CARDINAL) friends?
-    - How much of [rotisserie chicken](ingredient) are required for [four](CARDINAL)?
-    - How much of [steamed milk](ingredient) are needed for [1](CARDINAL) relatives?
-    - How much of [tomato paste](ingredient) do i require for [one](CARDINAL)?
-    - How much [onion](ingredient) does the recipe need for [three](CARDINAL)?
-    - How much [papayas](ingredient) [gnocchi](ingredient) do i need for [1](CARDINAL) friends?
-    - How much [pepperoni](ingredient) do i require?
-    - How much [salsa](ingredient) , [tilapia filets](ingredient) is needed for [1](CARDINAL)?
-    - How much [whipping cream](ingredient) [parmesan cheese](ingredient) are required for this?
-    - how many [apples](ingredient) , [walnuts](ingredient) is needed for [10](CARDINAL) persons?
-    - how many [bananas](ingredient) and [sugar](ingredient) are needed?
-    - how many [basil leaves](ingredient) , [bourbon](ingredient) do I need for [1](CARDINAL) persons?
-    - how many [beans](ingredient) [leeks](ingredient) is required for [one](CARDINAL)?
-    - how many [blueberries](ingredient) does the recipe need for [one](CARDINAL) friends?
-    - how many [butter](ingredient) do I need for [one](CARDINAL)?
-    - how many [cheese](ingredient) is needed for this for [six](CARDINAL) persons?
-    - how many [chilis](ingredient) [oregano](ingredient) do i require for [four](CARDINAL) person?
-    - how many [cinnamnon sticks](ingredient) is needed for this recipe?
-    - how many [cinnamon sticks](ingredient) and [tortillas](ingredient) does the recipe require for [one](CARDINAL) relatives?
-    - how many [egg](ingredient) [spaghetti](ingredient) are required for this recipe for [4](CARDINAL) people?
-    - how many [garlic chili sauce](ingredient) does the recipe need for [2](CARDINAL)?
-    - how many of [beans](ingredient) and [water](ingredient) do i need for [3](CARDINAL) person?
-    - how many of [coconut milk](ingredient) does the recipe need?
-    - how many of [condensed milk](ingredient) and [chicken broth](ingredient) is needed for [5](CARDINAL) person?
-    - how many of [lentils](ingredient) do i need for [8](CARDINAL) person?
-    - how many of [limes](ingredient) are needed for this?
-    - how many of [molasses](ingredient) is needed for this recipe for [two](CARDINAL) person?
-    - how many of [paprika](ingredient) does the recipe need for [1](CARDINAL)?
-    - how many of [salt](ingredient) [rice](ingredient) are required for [one](CARDINAL) persons?
-    - how many of [tobasco](ingredient) and [onions](ingredient) do I need for [six](CARDINAL)?
-    - how many of [vegetable oil](ingredient) is needed for this for [10](CARDINAL) person?
-    - how many of [water](ingredient) is required for [one](CARDINAL) friends?
-    - how many [paprika](ingredient) [chickpeas](ingredient) do i require for [one](CARDINAL) person?
-    - how many [red chili](ingredient) [jasmine rice](ingredient) does the recipe require for [6](CARDINAL) persons?
-    - how many [tahini](ingredient) are required for [1](CARDINAL)?
-    - how many [tilapia filets](ingredient) [bay leaf](ingredient) do i need for [7](CARDINAL)?
-    - how many [turkey breasts](ingredient) is needed for this recipe for [2](CARDINAL) person?
-    - how much [arugula greens](ingredient) [rice](ingredient) is required for [9](CARDINAL) people?
-    - how much [basil leaves](ingredient) and [limes](ingredient) do I require for [eight](CARDINAL)?
-    - how much [beans](ingredient) are needed for this?
-    - how much [chili powder](ingredient) is required for [one](CARDINAL) people?
-    - how much [chocolate chips](ingredient) does the recipe require for [one](CARDINAL) person?
-    - how much [coconut milk](ingredient) are required for this recipe for [one](CARDINAL)?
-    - how much [dark chocolate syrup](ingredient) is required for [5](CARDINAL) people?
-    - how much [filet of salmon](ingredient) do I require for [three](CARDINAL)?
-    - how much [heavy cream](ingredient) [spinach](ingredient) does the recipe require?
-    - how much [jalapenos](ingredient) is needed for [1](CARDINAL) person?
-    - how much [mushrooms](ingredient) are needed for [four](CARDINAL)?
-    - how much of [bay leaves](ingredient) does the recipe need?
-    - how much of [beef broth](ingredient) , [frozen puff pastry](ingredient) is needed for this recipe for [6](CARDINAL) people?
-    - how much of [chickpeas](ingredient) are required for [seven](CARDINAL)?
-    - how much of [cinnamnon sticks](ingredient) , [tobasco](ingredient) are required for [one](CARDINAL) relatives?
-    - how much of [fish sauce](ingredient) are needed for this recipe for [two](CARDINAL) friends?
-    - how much of [heavy cream](ingredient) is required for this recipe for [five](CARDINAL) relatives?
-    - how much of [instant yeast](ingredient) do I need for [8](CARDINAL) people?
-    - how much of [vanilla extract](ingredient) [whole milk](ingredient) is required?
-    - how much of [vegetables stock](ingredient) [chicken thighs](ingredient) is needed for this for [10](CARDINAL)?
-    - how much [pears](ingredient) [frozen puff pastry](ingredient) are needed for this recipe for [nine](CARDINAL) friends?
-    - how much [vegetable oil](ingredient) , [lemon juice](ingredient) is needed for this for [10](CARDINAL)?
-    - how much [walnuts](ingredient) are required for this recipe for [1](CARDINAL)?
-    - how much [whipping cream](ingredient) do I need for [1](CARDINAL)?
+    - How many [bourbon](ingredient) [bell peppers](ingredient) do i require for [4](CARDINAL)?
+    - How many [butter](ingredient) are needed for [one](CARDINAL)?
+    - How many [chilis](ingredient) and [bacon slices](ingredient) does the recipe require for [three](CARDINAL) persons?
+    - How many [dark chocolate syrup](ingredient) , [vegetable stock](ingredient) are required for [nine](CARDINAL)?
+    - How many [enchilada sauce](ingredient) , [chocolate chips](ingredient) are needed?
+    - How many [ginger](ingredient) are needed for [three](CARDINAL) friends?
+    - How many [lemons](ingredient) do i need for [9](CARDINAL) people?
+    - How many [lentils](ingredient) [red peppers](ingredient) do I require?
+    - How many of [baking soda](ingredient) does the recipe require for [six](CARDINAL) persons?
+    - How many of [bananas](ingredient) do I need?
+    - How many of [basil](ingredient) , [pepper](ingredient) is needed for [9](CARDINAL) person?
+    - How many of [chili peppers](ingredient) do i require?
+    - How many of [garlic powder](ingredient) and [parmesan cheese](ingredient) is required for [five](CARDINAL)?
+    - How many of [orange bitters](ingredient) do i require?
+    - How many of [steamed milk](ingredient) is required?
+    - How many of [turkey breasts](ingredient) are needed for [10](CARDINAL) people?
+    - How many [olive oil](ingredient) do i require for [7](CARDINAL) friends?
+    - How many [peanut butter](ingredient) and [garlic chili sauce](ingredient) does the recipe require for [1](CARDINAL)?
+    - How many [pecorino romano cheese](ingredient) [leaves sage](ingredient) is needed for this recipe?
+    - How many [red wine](ingredient) is needed?
+    - How many [salt](ingredient) [egg yolks](ingredient) do I require?
+    - How many [vinegar](ingredient) , [frozen puff pastry](ingredient) are required for [nine](CARDINAL)?
+    - How many [wine](ingredient) does the recipe require for [one](CARDINAL) friends?
+    - How much [almond extract](ingredient) is required for [five](CARDINAL) persons?
+    - How much [bacon slices](ingredient) [blueberries](ingredient) do i need?
+    - How much [blueberries](ingredient) do i require?
+    - How much [bourbon](ingredient) [whipped cream](ingredient) do i need for [1](CARDINAL) person?
+    - How much [brown sugar](ingredient) does the recipe require for [one](CARDINAL) friends?
+    - How much [chickpeas](ingredient) do I need for [one](CARDINAL) relatives?
+    - How much [chocolate chips](ingredient) does the recipe need for [one](CARDINAL)?
+    - How much [cinnamon sticks](ingredient) , [bell peppers](ingredient) are required for this recipe?
+    - How much [cornstarch](ingredient) [coconut milk](ingredient) does the recipe require for [1](CARDINAL) friends?
+    - How much [milk](ingredient) are needed for [one](CARDINAL) relatives?
+    - How much of [bacon slices](ingredient) [fish sauce](ingredient) does the recipe need for [four](CARDINAL)?
+    - How much of [beans](ingredient) and [tomato sauce](ingredient) does the recipe require for [1](CARDINAL)?
+    - How much of [carrots](ingredient) does the recipe need?
+    - How much of [coconut milk](ingredient) and [thyme](ingredient) are needed for [1](CARDINAL) friends?
+    - How much of [cumin powder](ingredient) are required for [six](CARDINAL) relatives?
+    - How much of [green beans](ingredient) are needed for [1](CARDINAL) relatives?
+    - How much of [mozzarella](ingredient) do I require for [5](CARDINAL) persons?
+    - How much of [paprika](ingredient) do i require for [one](CARDINAL)?
+    - How much of [spinach](ingredient) are required for [four](CARDINAL)?
+    - How much of [thyme](ingredient) does the recipe need?
+    - How much of [tomatoes](ingredient) is needed for this?
+    - How much of [water](ingredient) and [rice](ingredient) is required for this recipe for [eight](CARDINAL)?
+    - How much [red peppers](ingredient) are needed for this recipe?
+    - How much [ribeye steak](ingredient) , [peanut butter](ingredient) is needed for [1](CARDINAL)?
+    - How much [vegetable stock](ingredient) [milk](ingredient) do i need for [1](CARDINAL) friends?
+    - how many [chili powder](ingredient) [garlic chili sauce](ingredient) do i require for [one](CARDINAL) person?
+    - how many [dark chocolate syrup](ingredient) , [red chili flakes](ingredient) do I need for [1](CARDINAL) persons?
+    - how many [evaporated milk](ingredient) [almond extract](ingredient) are required for this recipe for [4](CARDINAL) people?
+    - how many [flour](ingredient) and [whipped cream](ingredient) does the recipe require for [one](CARDINAL) relatives?
+    - how many [garlic powder](ingredient) are required for [1](CARDINAL)?
+    - how many [jasmine rice](ingredient) is needed for this recipe?
+    - how many [milk](ingredient) [onions](ingredient) do i need for [5](CARDINAL) relatives?
+    - how many of [bay leaf](ingredient) is required for [one](CARDINAL) friends?
+    - how many of [bay leaves](ingredient) [shortening](ingredient) are required for [one](CARDINAL) persons?
+    - how many of [beef roast](ingredient) do I require for [1](CARDINAL)?
+    - how many of [brioche rolls](ingredient) and [bay leaf](ingredient) do i need for [3](CARDINAL) person?
+    - how many of [butter](ingredient) does the recipe need for [eight](CARDINAL) person?
+    - how many of [cheddar cheese](ingredient) and [papayas](ingredient) do I need for [six](CARDINAL)?
+    - how many of [chicken breasts](ingredient) do i need for [8](CARDINAL) person?
+    - how many of [coconut milk](ingredient) , [red peppers](ingredient) does the recipe need for [one](CARDINAL) people?
+    - how many of [cornstarch](ingredient) , [water](ingredient) do i require for [1](CARDINAL) person?
+    - how many of [mushrooms](ingredient) is needed for this recipe for [two](CARDINAL) person?
+    - how many of [olive oil](ingredient) does the recipe need for [1](CARDINAL)?
+    - how many of [parsley](ingredient) , [onion powder](ingredient) are needed for [one](CARDINAL)?
+    - how many of [spaghetti](ingredient) does the recipe need?
+    - how many of [tahini](ingredient) and [chicken broth](ingredient) is needed for [5](CARDINAL) person?
+    - how many of [vinegar](ingredient) are needed for this?
+    - how many [parsley flakes](ingredient) does the recipe need for [one](CARDINAL) friends?
+    - how many [peanut butter](ingredient) [shrimps](ingredient) do i need for [7](CARDINAL)?
+    - how many [pepperoni](ingredient) is needed for this for [six](CARDINAL) persons?
+    - how many [tortillas](ingredient) [coconut milk](ingredient) do i require for [four](CARDINAL) person?
+    - how many [water](ingredient) is needed for this recipe for [2](CARDINAL) person?
+    - how much [arugula greens](ingredient) [vegetable oil](ingredient) does the recipe require for [one](CARDINAL)?
+    - how much [basil leaves](ingredient) and [beef broth](ingredient) are required for this recipe for [two](CARDINAL)?
+    - how much [brioche rolls](ingredient) are needed for this?
+    - how much [cheese](ingredient) do I require for [three](CARDINAL)?
+    - how much [chicken stock](ingredient) [sriracha sauce](ingredient) does the recipe require?
+    - how much [chicken thighs](ingredient) is required?
+    - how much [dark chocolate syrup](ingredient) and [vinegar](ingredient) do I require for [eight](CARDINAL)?
+    - how much [egg yolks](ingredient) , [ginger](ingredient) is needed for this for [10](CARDINAL)?
+    - how much [eggs](ingredient) [shortening](ingredient) is required for [9](CARDINAL) people?
+    - how much [heavy cream](ingredient) is required for [5](CARDINAL) people?
+    - how much [instant yeast](ingredient) [frozen puff pastry](ingredient) are needed for this recipe for [nine](CARDINAL) friends?
+    - how much of [baking powder](ingredient) are needed for [1](CARDINAL) person?
+    - how much of [bay leaves](ingredient) do i need for [5](CARDINAL) person?
+    - how much of [beef](ingredient) do I need for [8](CARDINAL) people?
+    - how much of [chicken stock](ingredient) is required for this recipe for [five](CARDINAL) relatives?
+    - how much of [cornstarch](ingredient) does the recipe need?
+    - how much of [cranberries](ingredient) [cinnamon sticks](ingredient) is needed for this for [10](CARDINAL)?
+    - how much of [jasmine rice](ingredient) , [cheddar cheese](ingredient) are required for [one](CARDINAL) relatives?
+    - how much of [limes](ingredient) [tobasco](ingredient) is required?
+    - how much of [onion powder](ingredient) do I require for [1](CARDINAL)?
+    - how much of [orange bitters](ingredient) , [frozen puff pastry](ingredient) is needed for this recipe for [6](CARDINAL) people?
+    - how much of [sriracha sauce](ingredient) do i need?
+    - how much [red peppers](ingredient) does the recipe require for [one](CARDINAL) person?
+    - how much [spaghetti](ingredient) are required for this recipe for [one](CARDINAL)?
+    - how much [tomato paste](ingredient) is needed for this for [1](CARDINAL) persons?
 - intent: tell_people_count
   examples: |
     - Thank you We 'll be [one](CARDINAL) relatives
     - Thank you We are [3](CARDINAL)
-    - Thank you We are in [one](CARDINAL) person
     - Thank you We are [one](CARDINAL) people
     - Thank you We [eight](CARDINAL)
     - Thank you We [four](CARDINAL)
@@ -1013,12 +1012,10 @@ nlu:
     - Thank you for [9](CARDINAL)?
     - Thank you we are in [one](CARDINAL)
     - Thank you we [one](CARDINAL)
-    - Thank you what about for [1](CARDINAL) relatives?
     - Thank you what about for [9](CARDINAL)?
     - Thanks We 'll be [one](CARDINAL)
     - Thanks We are [1](CARDINAL) persons
     - Thanks We are [nine](CARDINAL) person
-    - Thanks We are [one](CARDINAL) friends
     - Thanks We are [one](CARDINAL) people
     - Thanks We are [three](CARDINAL) person
     - Thanks We [two](CARDINAL) people
@@ -1027,17 +1024,15 @@ nlu:
     - Thanks we are [1](CARDINAL)
     - Thanks we gonna be [five](CARDINAL)
     - Thanks we [three](CARDINAL) people
-    - We 'll be [5](CARDINAL)
     - We 'll be [one](CARDINAL)
+    - We 'll be [one](CARDINAL) person
     - We [1](CARDINAL) person
     - We [2](CARDINAL)
-    - We [4](CARDINAL)
-    - We are [1](CARDINAL) people
     - We are [9](CARDINAL) persons
     - We are [eight](CARDINAL) person
     - We are in [1](CARDINAL)
-    - We are in [1](CARDINAL) relatives
-    - We are in [8](CARDINAL) persons
+    - We are in [1](CARDINAL) people
+    - We are in [four](CARDINAL) relatives
     - We are in [one](CARDINAL)
     - We are in [seven](CARDINAL) persons
     - We are in [ten](CARDINAL) friends
@@ -1056,10 +1051,13 @@ nlu:
     - and for [seven](CARDINAL) person?
     - and for [two](CARDINAL)?
     - for [1](CARDINAL) person?
+    - for [1](CARDINAL)?
+    - for [8](CARDINAL)?
     - for [one](CARDINAL) person?
     - for [six](CARDINAL)?
+    - for [ten](CARDINAL) persons?
+    - for [two](CARDINAL)?
     - thank you We are [eight](CARDINAL)
-    - thank you We are in [one](CARDINAL) friends
     - thank you We gonna be [1](CARDINAL)
     - thank you We [one](CARDINAL) persons
     - thank you We will be [eight](CARDINAL) persons
@@ -1067,108 +1065,116 @@ nlu:
     - thank you and for [one](CARDINAL)?
     - thank you for [1](CARDINAL)?
     - thank you for [one](CARDINAL)?
-    - thank you we are [1](CARDINAL) persons
     - thank you we are in [1](CARDINAL) people
+    - thank you we are in [one](CARDINAL) person
     - thank you we are [two](CARDINAL)
     - thank you we [four](CARDINAL) people
-    - thank you we [one](CARDINAL) persons
-    - thank you what about for [1](CARDINAL)?
     - thank you what about for [8](CARDINAL)?
-    - thank you what about for [one](CARDINAL) friends?
     - thanks We [1](CARDINAL) friends
+    - thanks We are in [six](CARDINAL)
     - thanks We [one](CARDINAL) people
     - thanks We [three](CARDINAL) people
     - thanks a lot and for [1](CARDINAL)?
-    - thanks a lot for [1](CARDINAL) person?
     - thanks a lot we 'll be [1](CARDINAL)
     - thanks a lot we 'll be [one](CARDINAL)
+    - thanks for [one](CARDINAL) people?
     - thanks we are [4](CARDINAL)
-    - thanks we [nine](CARDINAL) person
     - we [1](CARDINAL)
     - we [3](CARDINAL)
+    - we [5](CARDINAL)
     - we [7](CARDINAL)
     - we are [1](CARDINAL)
     - we are [1](CARDINAL) person
     - we are [1](CARDINAL) relatives
     - we are [4](CARDINAL) people
+    - we are [6](CARDINAL)
+    - we are in [8](CARDINAL)
+    - we are in [nine](CARDINAL) people
     - we are in [one](CARDINAL) friends
-    - we are in [one](CARDINAL) person
     - we are in [ten](CARDINAL) relatives
-    - we are in [three](CARDINAL) people
-    - we gonna be [five](CARDINAL)
+    - we gonna be [1](CARDINAL)
+    - we [one](CARDINAL)
+    - we [three](CARDINAL)
+    - we [three](CARDINAL) people
     - what about for [1](CARDINAL) person?
     - what about for [5](CARDINAL)?
     - what about for [five](CARDINAL) relatives?
     - what about for [one](CARDINAL) persons?
 - intent: tell_people_count_one
   examples: |
-    - thank you I am only
-    - thank you It is only me
-    - Thanks a lot i am alone
-    - Thanks a lot it is only me
-    - Thanks a lot it's only me
-    - Thanks I am by myself
-    - thanks a lot it's only me
-    - Thanks i'm by myself
-    - Thanks I'm only
-    - thanks a lot It is only me
-    - i am only
-    - thanks a lot I'm only
-    - thank you It's only me
-    - thanks a lot I'm by myself
-    - Thanks i'm only
-    - Thanks It is only me
-    - i'm by myself
-    - Thank you it's just me
-    - Thanks i am only
-    - Thank you I am by myself
-    - Thanks I'm by myself
-    - Thanks i am by myself
-    - thanks i am alone
-    - Thanks a lot I'm only
-    - Thank you it is only me
-    - I'm only
-    - Thanks a lot i'm by myself
-    - i'm only
-    - I am only
-    - Thank you i'm by myself
-    - thank you I'm by myself
-    - thanks a lot I'm alone
-    - thanks i'm by myself
-    - it's only me
-    - thanks i'm alone
-    - Thanks a lot i am only
-    - It's just me
-    - thanks it is just me
-    - Thank you I am only
-    - i am by myself
-    - Thanks it is only me
     - thanks It's only me
-    - Thank you It is just me
-    - thanks I'm alone
-    - thanks I am alone
     - Thank you i'm alone
-    - thanks a lot i'm only
-    - Thanks a lot I'm alone
-    - Thank you I am alone
-    - I'm by myself
+    - I'm alone
+    - Thanks I'm by myself
+    - Thank you i am by myself
+    - thank you It is only me
+    - thank you It's just me
+    - thanks a lot i am only
+    - thanks a lot I am by myself
+    - thanks it's just me
+    - thanks I am alone
+    - Thanks it is just me
+    - thank you i'm alone
+    - Thank you I'm by myself
+    - thanks it is only me
+    - Thanks a lot I am alone
+    - thank you I'm alone
+    - Thanks i am only
+    - thank you i am alone
+    - Thank you It's just me
+    - thanks it's only me
+    - thanks a lot I am only
+    - thanks a lot It is only me
+    - Thanks a lot It is only me
+    - thanks a lot It's only me
+    - Thank you i am alone
+    - Thanks a lot i'm alone
+    - Thanks a lot i'm only
+    - i'm by myself
+    - Thanks It is only me
+    - Thank you it's only me
+    - Thanks It's just me
+    - thanks a lot It's just me
+    - Thank you It is only me
+    - Thanks a lot i am by myself
+    - thanks it is just me
+    - Thank you I'm alone
+    - Thanks a lot it is only me
+    - i'm only
+    - Thank you I am only
+    - Thanks a lot It's only me
+    - Thanks I am alone
+    - Thanks it's just me
+    - Thank you It's only me
+    - Thanks a lot it's just me
+    - Thanks a lot i'm by myself
+    - I am only
+    - I'm only
+    - it's only me
+    - it is just me
 - intent: start_cooking
   examples: |
+    - I am set to prepare
+    - I'm all set to bake now
     - I'm all set to cook now
+    - I'm set to make now
     - Thank you I am set to bake
     - Thank you I am set to bake now
     - Thank you I'm ready to make
-    - Thank you can we commence cooking now?
+    - Thank you could We go ahead and start cooking now?
+    - Thank you could We initiate baking?
     - Thank you could we get going and start preparing?
+    - Thank you i am set to make
     - Thank you i'm ready to bake now
     - Thank you i'm ready to prepare
     - Thank you let's start cooking
+    - Thank you start preparing now
     - Thank you tell me the recipe points please?
     - Thank you would we initiate preparing now?
     - Thank you would you give me the food steps?
     - Thanks a lot I am ready to bake now
+    - Thanks a lot can we go ahead and commence making now?
     - Thanks a lot deliver me the instructions please?
-    - Thanks a lot initiate making now
     - Thanks a lot let's bake
     - Thanks a lot let's cook
     - Thanks a lot let's initiate preparing now
@@ -1176,10 +1182,10 @@ nlu:
     - Thanks can you deliver me the recipe steps please?
     - Thanks i'm ready to prepare now
     - Thanks make
-    - Thanks tell me the making steps please?
     - Thanks would We get going and start preparing?
     - Thanks would we begin baking now?
     - Thanks would you give me the making instructions?
+    - bake
     - can we commence preparing now?
     - can we get going and begin making now?
     - can we go ahead and commence baking now?
@@ -1188,14 +1194,10 @@ nlu:
     - could We begin cooking?
     - could We commence cooking?
     - could you deliver me the steps?
-    - deliver me the preparing instructions please?
-    - deliver me the steps?
+    - give me the instructions?
     - i am all set to prepare
-    - i am ready to bake now
     - i am ready to make
-    - i'm all set to bake
     - i'm all set to bake now
-    - i'm all set to cook now
     - i'm all set to make
     - i'm set to cook
     - i'm set to prepare now
@@ -1207,24 +1209,26 @@ nlu:
     - let's cook now
     - let's make
     - let's make now
+    - let's prepare
     - make now
+    - may We initiate making now?
     - may we get going and start cooking now?
     - may we go ahead and start preparing?
-    - may we start baking now?
     - may you deliver me the instructions please?
+    - may you send me the steps?
     - prepare
     - prepare now
     - read me the instructions please?
     - read me the recipe points?
     - read me the something instructions?
-    - send me the baking steps please?
     - send me the preparing points?
     - share with me the instructions?
     - start cooking
-    - thank you I am all set to cook
-    - thank you I am ready to cook now
+    - tell me the cooking steps please?
+    - thank you I am all set to bake
+    - thank you I am set to prepare now
+    - thank you can we go ahead and initiate cooking?
     - thank you can you deliver me the steps?
-    - thank you cook
     - thank you could We get going and start cooking now?
     - thank you could We start preparing?
     - thank you give me the recipe points please?
@@ -1234,21 +1238,17 @@ nlu:
     - thank you i'm all set to make
     - thank you let's prepare
     - thank you may you give me the points please?
-    - thank you may you share with me the making steps?
     - thank you may you tell me the making instructions please?
-    - thank you would you deliver me the instructions please?
-    - thanks I'm set to make
+    - thanks I am ready to cook now
     - thanks a lot commence baking now
     - thanks a lot commence preparing now
-    - thanks a lot may we get going and initiate preparing?
+    - thanks a lot let's prepare
     - thanks a lot read me the steps please?
     - thanks a lot start preparing
-    - thanks a lot would you deliver me the preparing instructions?
     - thanks a lot would you read me the points please?
     - thanks give me the recipe steps please?
-    - thanks would we go ahead and initiate making now?
+    - thanks i'm ready to cook now
     - would We commence making now?
-    - would We get going and begin preparing now?
     - would We get going and initiate cooking?
     - would We go ahead and commence cooking?
     - would We initiate baking now?
@@ -1256,111 +1256,112 @@ nlu:
     - would you deliver me the points?
 - intent: stop_cooking
   examples: |
-    - Excuse me I want to halt making
     - Excuse me can we end cooking
     - Excuse me could I end baking
     - Excuse me i want to halt baking
     - Excuse me i want to halt cooking
+    - Excuse me please I want to stop preparing
     - Excuse me please I'd love to end baking
-    - Excuse me please could we stop baking
-    - Excuse me please could you cancel cooking
     - Excuse me please may I cancel baking
     - Excuse me please may we halt cooking
-    - Excuse me please would I end making
-    - I am sorry please I want to cancel baking
-    - I am sorry please would I halt baking
-    - I would really like to cancel making
-    - I'm sorry I want to halt cooking
+    - I am sorry i would really love to stop cooking
+    - I am sorry please may we stop preparing
+    - I want to cancel making
     - I'm sorry can you stop cooking
     - Sorry I'd like to stop baking
-    - can I stop cooking
     - cancel
-    - cancel cooking
+    - cancel making
+    - could I halt preparing
     - could we cancel making
-    - excuse me can we end making
+    - end
+    - end making
     - excuse me can you cancel baking
     - excuse me please I'd love to stop preparing
+    - excuse me please can we stop baking
     - excuse me please may I halt baking
     - exit
+    - exit baking
     - exit cooking
-    - exit making
     - exit preparing
     - halt
     - halt baking
-    - i am sorry please I'd like to end cooking
+    - halt making
+    - i am sorry please can you cancel making
     - i want to cancel baking
-    - i want to halt preparing
-    - may we halt baking
-    - please I want to end preparing
+    - i want to end cooking
+    - may we cancel making
+    - please I want to cancel cooking
+    - please I want to end cooking
     - please I want to halt cooking
-    - please I'd like to cancel cooking
     - please can you cancel baking
     - please could I end making
+    - please could I halt baking
     - please i want to halt cooking
-    - please i would like to cancel baking
+    - please i would love to end making
     - please i would really like to cancel making
+    - please may I cancel baking
     - please would I cancel baking
-    - sorry I would really like to cancel preparing
+    - sorry please I'd love to halt preparing
+    - sorry please could I cancel baking
     - sorry would we halt preparing
     - stop
     - stop baking
-    - stop preparing
-    - would I end cooking
 - intent: set_timer
   examples: |
+    - Thank you can you set up a alarm for [3 mins](TIME)?
+    - Thank you could you create alarm of [3 h](TIME)?
     - Thank you could you remember in [1 h](TIME)
+    - Thank you could you warn in [one min](TIME)
     - Thank you could you warn me in [2 mins](TIME)
     - Thank you please could you set a countdown for [1 min](TIME)?
     - Thank you please remind me in [two h](TIME)
     - Thank you please warn me in [9 mins](TIME)
-    - Thank you please warn me in [nine h](TIME)
     - Thank you please warn me in [one hour](TIME)
     - Thank you please would you configure countdown for [eight hours](TIME)?
+    - Thank you please would you create timer in [nine hours](TIME)?
     - Thank you warn me in [1 min](TIME)
     - Thanks a lot notify me in [9 mins](TIME)
     - Thanks a lot please could you configure reminder of [one h](TIME)?
-    - Thanks could you add alarm of [one h](TIME)?
+    - Thanks please could you set up a reminder for [one minute](TIME)?
     - Thanks please may you remind in [one h](TIME)
     - Thanks please remember in [six mins](TIME)
     - Thanks remind in [ten minutes](TIME)
     - activate alarm for [10 minutes](TIME)?
     - activate alarm of [7 minutes](TIME)?
     - add a chronometer in [one hour](TIME)?
+    - add a chronometer in [six hours](TIME)?
     - add a reminder of [five minutes](TIME)?
-    - alert me in [1 hour](TIME)
     - can you remember me in [1 minute](TIME)
+    - can you remember me in [2 mins](TIME)
+    - can you set a reminder for [9 h](TIME)?
     - configure countdown of [one h](TIME)?
     - configure timer for [1 min](TIME)?
     - could you add reminder for [six h](TIME)?
-    - could you notify me in [five minutes](TIME)
-    - could you remember me in [4 hours](TIME)
     - create alarm for [six hours](TIME)?
-    - create countdown for [nine h](TIME)?
     - create timer for [1 minute](TIME)?
     - may you activate countdown of [4 minutes](TIME)?
     - may you create a timer of [7 hours](TIME)?
     - may you remind me in [one h](TIME)
-    - notify me in [one h](TIME)
+    - notify in [seven minutes](TIME)
     - please activate reminder of [10 hours](TIME)?
     - please alert me in [1 minute](TIME)
     - please alert me in [two h](TIME)
-    - please alert me in [two minutes](TIME)
     - please can you notify in [6 mins](TIME)
     - please can you remind me in [1 hour](TIME)
     - please configure countdown in [ten mins](TIME)?
     - please could you set up a countdown in [10 mins](TIME)?
     - please could you set up chronometer in [1 min](TIME)?
     - please could you set up timer for [1 min](TIME)?
+    - please may you activate a timer for [1 minute](TIME)?
     - please may you add a chronometer in [1 minute](TIME)?
-    - please may you create a reminder for [1 hour](TIME)?
     - please may you set up a alarm for [2 h](TIME)?
     - please may you warn in [two h](TIME)
     - please notify me in [one min](TIME)
     - please notify me in [one minute](TIME)
-    - please remember in [one hour](TIME)
     - please remind in [nine h](TIME)
     - please remind me in [four mins](TIME)
-    - please set a timer in [3 minutes](TIME)?
+    - please set a alarm for [7 minutes](TIME)?
+    - please set alarm of [4 h](TIME)?
     - please set up a alarm of [1 min](TIME)?
     - please set up a countdown in [three h](TIME)?
     - please warn in [6 hours](TIME)
@@ -1374,12 +1375,9 @@ nlu:
     - remember me in [1 hour](TIME)
     - remember me in [3 h](TIME)
     - remember me in [one h](TIME)
-    - remind in [7 minutes](TIME)
     - set up a chronometer in [1 hour](TIME)?
     - set up a countdown of [seven h](TIME)?
-    - set up chronometer in [two mins](TIME)?
     - thank you can you configure reminder in [one minute](TIME)?
-    - thank you could you set up countdown of [8 mins](TIME)?
     - thank you may you alert in [one min](TIME)
     - thank you may you configure alarm for [ten h](TIME)?
     - thank you notify in [one min](TIME)
@@ -1387,76 +1385,78 @@ nlu:
     - thank you please can you set up chronometer of [seven h](TIME)?
     - thank you please can you set up reminder for [7 mins](TIME)?
     - thank you please can you warn me in [1 min](TIME)
-    - thank you please may you add a chronometer for [1 h](TIME)?
+    - thank you please may you alert in [1 min](TIME)
     - thank you remember in [8 mins](TIME)
     - thank you set countdown for [one minute](TIME)?
     - thank you set up chronometer for [nine minutes](TIME)?
     - thank you warn me in [one h](TIME)
     - thanks a lot activate countdown in [seven h](TIME)?
     - thanks a lot alert in [one hour](TIME)
+    - thanks a lot can you remember in [2 hours](TIME)
+    - thanks a lot could you remember me in [five h](TIME)
     - thanks a lot please can you remember in [9 mins](TIME)
     - thanks a lot please can you set up alarm for [one hour](TIME)?
     - thanks a lot please remember in [7 minutes](TIME)
-    - thanks a lot please remember me in [four minutes](TIME)
     - thanks a lot please would you set up chronometer for [one h](TIME)?
     - thanks alert in [one hour](TIME)
     - thanks can you remind in [8 minutes](TIME)
-    - thanks please remember me in [one h](TIME)
+    - thanks please could you set a timer for [one hour](TIME)?
     - thanks please warn me in [one hour](TIME)
     - thanks remember me in [9 minutes](TIME)
+    - thanks would you remember in [one minute](TIME)
     - warn in [seven hours](TIME)
-    - would you activate timer for [1 h](TIME)?
+    - warn me in [five minutes](TIME)
     - would you create chronometer of [one h](TIME)?
     - would you remind me in [one min](TIME)
 - intent: ask_to_repeat
   examples: |
-    - May you please repeat that?
-    - can you please say it again that?
-    - Please what did you say?
-    - would you repeat?
-    - May you say it again that?
-    - could you please say it again?
-    - would you repeat that?
-    - Can you please say it again that?
-    - Would you please say it again that?
-    - what did you say?
-    - would you say it again that?
-    - Would you say it again that?
-    - Would you please repeat that?
-    - could you repeat?
-    - Could you please say it again that?
-    - can you repeat?
-    - could you say it again?
-    - would you please say it again that?
-    - May you please say it again that?
-    - May you say it again?
-    - Could you repeat that?
-    - can you please repeat?
-    - may you please repeat that?
-    - Can you please repeat that?
-    - may you repeat that?
-    - could you please say it again that?
-    - come again?
-    - may you please say it again that?
-    - Can you say it again that?
-    - May you please say it again?
-    - you say it again?
-    - Could you say it again?
-    - would you please repeat?
-    - Could you please say it again?
-    - you please repeat that?
     - Could you please repeat?
-    - May you repeat that?
-    - could you repeat that?
-    - could you please repeat that?
-    - Can you repeat?
-    - can you please repeat that?
-    - Would you please repeat?
-    - Please come again?
-    - you please say it again?
+    - please what did you say?
+    - Please what did you say?
+    - you please repeat?
+    - Would you please say it again?
+    - can you say it again that?
+    - come again?
+    - may you please repeat?
+    - what did you say?
+    - May you please say it again that?
+    - Can you please say it again?
     - you say it again that?
-    - may you say it again that?
-    - Would you repeat?
-    - can you please say it again?
-    - could you please repeat?
+    - would you repeat?
     - please come again?
+    - Would you please repeat that?
+    - you please repeat that?
+    - would you repeat that?
+    - could you repeat that?
+    - can you please say it again?
+    - may you say it again that?
+    - can you please say it again that?
+    - could you say it again?
+    - Would you please say it again that?
+    - May you say it again?
+    - Can you please repeat?
+    - can you please repeat that?
+    - Could you repeat that?
+    - would you please repeat?
+    - may you repeat that?
+    - could you please say it again?
+    - Can you repeat?
+    - Can you please repeat that?
+    - may you please say it again that?
+    - may you please repeat that?
+    - could you repeat?
+    - Please come again?
+    - you say it again?
+    - May you please repeat that?
+    - Could you please say it again that?
+    - could you please say it again that?
+    - Would you say it again that?
+    - Can you say it again?
+    - can you please repeat?
+    - can you repeat?
+    - could you please repeat that?
+    - would you say it again?
+    - Can you please say it again that?
+    - May you repeat that?
+    - Could you say it again?
+    - Would you please repeat?

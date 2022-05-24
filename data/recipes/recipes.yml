@@ -14,7 +14,7 @@
     amount: 60ml
   - name: parsley
     amount: 240ml
-  - name: garlic
+  - name: garlic cloves
     amount: 1
   - name: chili flakes
     amount: 5ml
@@ -40,7 +40,7 @@
   ingredients:
   - name: spaghetti
     amount: 225g
-  - name: bacon
+  - name: bacon slices
     amount: 6
   - name: eggs
     amount: 2
@@ -169,7 +169,7 @@
     amount: 450g
   - name: tomato sauce
     amount: 800ml
-  - name: onion
+  - name: onions
     amount: 1
   - name: chili powder
     amount: 15ml
@@ -206,7 +206,7 @@
   cook_time: 30
   servings: 6
   ingredients:
-  - name: filet of salmon
+  - name: salmon filets
     amount: 1
   - name: olive oil
     amount: null
@@ -241,7 +241,7 @@
     amount: 30ml
   - name: heavy cream
     amount: 60ml
-  - name: garlic
+  - name: garlic cloves
     amount: 5
   - name: curry powder
     amount: 15ml
@@ -269,7 +269,7 @@
   cook_time: 20
   servings: 6
   ingredients:
-  - name: chicken breast
+  - name: chicken breasts
     amount: 1300g
   - name: olive oil
     amount: 60ml
@@ -420,9 +420,9 @@
   ingredients:
   - name: beans
     amount: 500g
-  - name: onion
+  - name: onions
     amount: 1
-  - name: garlic
+  - name: garlic cloves
     amount: 1
   - name: olive oil
     amount: 15ml
@@ -457,11 +457,11 @@
   ingredients:
   - name: bell peppers
     amount: 5
-  - name: vegetables stock
+  - name: vegetable stock
     amount: 1000ml
-  - name: garlic
+  - name: garlic cloves
     amount: 1
-  - name: onion
+  - name: onions
     amount: 1
   - name: butter
     amount: 60ml
@@ -477,7 +477,7 @@
     amount: 2ml
   steps:
   - Roughly chop the peppers, garlic, and onion then add to a stock pot.
-  - Add the vegetables stock, turn the heat up to medium high,  and bring to a simmer.
+  - Add the vegetable stock, turn the heat up to medium high,  and bring to a simmer.
   - Drop the heat to low and simmer gently for 45 minutes.
   - Empty contents of pot into a blender and blend on high until smooth. Then transfer
     to a separate container. (Depending on the size of your blender you may need to
@@ -497,15 +497,15 @@
   cuisine: null
   prep_time: 15
   cook_time: 10
-  servings: 5
+  servings: 4
   ingredients:
-  - name: tilapia
-    amount: 550g
+  - name: tilapia filets
+    amount: 4
   - name: curry paste
     amount: 45ml
   - name: fish sauce
     amount: 15ml
-  - name: egg yolk
+  - name: egg yolks
     amount: 1
   - name: cornstarch
     amount: 5ml
@@ -519,7 +519,7 @@
   - Cut the green beans into thin rings and set aside.
   - Mince the basil and set aside.
   - Cut the tilapia into large chunks and place in food processor.
-  - Add the curry paste, fish sauce, egg yolk, and cornstarch to the food processor.
+  - Add the curry paste, fish sauce, egg yolks, and cornstarch to the food processor.
   - Put the lid on the food processor and pulse approximately 25 times until the fish
     is finely minced.
   - Remove the blade from the food processor, add the basil and green beans then stir
@@ -573,7 +573,7 @@
     amount: 30ml
   - name: sugar
     amount: 15ml
-  - name: egg
+  - name: eggs
     amount: 1
   - name: salt
     amount: null
@@ -602,7 +602,7 @@
     amount: 2
   - name: sugar
     amount: 160ml
-  - name: lemon
+  - name: lemons
     amount: 1
   - name: frozen puff pastry
     amount: 300g
@@ -653,7 +653,7 @@
     amount: 5ml
   - name: pepper
     amount: 2ml
-  - name: garlic
+  - name: garlic cloves
     amount: 2
   steps:
   - Drain the chickpeas and rinse under cold water until clean. No need to remove
@@ -706,7 +706,7 @@
     amount: 750ml
   - name: sugar
     amount: 120ml
-  - name: cinnamnon sticks
+  - name: cinnamon sticks
     amount: 2
   - name: orange juice
     amount: 50ml
@@ -817,7 +817,7 @@
     amount: 5ml
   - name: baking soda
     amount: 5ml
-  - name: egg
+  - name: eggs
     amount: 1
   steps:
   - Combine all ingredients in a large mixing bowl then mix with a hand mixer until
@@ -849,7 +849,7 @@
     amount: 175ml
   - name: sugar
     amount: 240ml
-  - name: egg
+  - name: eggs
     amount: 1
   - name: molasses
     amount: 60ml
@@ -859,7 +859,7 @@
     amount: 3ml
   - name: baking soda
     amount: 10ml
-  - name: cinnamon
+  - name: cinnamon powder
     amount: 5ml
   - name: salt
     amount: 2ml
@@ -889,7 +889,7 @@
     amount: 300ml
   - name: beef broth
     amount: 475ml
-  - name: bacon
+  - name: bacon slices
     amount: 6
   - name: carrots
     amount: 6
@@ -897,7 +897,7 @@
     amount: 12
   - name: onions
     amount: 2
-  - name: garlic
+  - name: garlic cloves
     amount: 6
   - name: tomato paste
     amount: 30ml
@@ -1244,7 +1244,7 @@
     amount: 250ml
   - name: bourbon
     amount: 15ml
-  - name: cinnamon
+  - name: cinnamon powder
     amount: 5ml
   steps:
   - Combine orange juice, sugar, cinnamon, and cloves in a small saucepot and bring
@@ -1400,11 +1400,11 @@
   ingredients:
   - name: carrots
     amount: 3
-  - name: onion
+  - name: onions
     amount: 1
   - name: celery
     amount: 1
-  - name: garlic
+  - name: garlic cloves
     amount: 1
   - name: chicken stock
     amount: 50ml
@@ -1481,7 +1481,7 @@
   cook_time: 40
   servings: 12
   ingredients:
-  - name: onion
+  - name: onions
     amount: 1
   - name: carrots
     amount: 3
@@ -1546,7 +1546,7 @@
     amount: 60ml
   - name: pepper
     amount: 2ml
-  - name: egg
+  - name: eggs
     amount: 1
   steps:
   - Preheat oven to 400°F (205°C).
@@ -1671,9 +1671,9 @@
     amount: 30ml
   - name: tomatoes
     amount: 3
-  - name: onion
+  - name: onions
     amount: 1
-  - name: garlic
+  - name: garlic cloves
     amount: 3
   - name: heavy cream
     amount: 500ml
@@ -1730,7 +1730,7 @@
     amount: 200ml
   - name: condensed milk
     amount: 200ml
-  - name: whipping cream
+  - name: whipped cream
     amount: 100g
   - name: sugar
     amount: null
@@ -1748,7 +1748,7 @@
   - Bake for 32 minutes and remove once the cake passes the toothpick test.
   - Let the cake cool for 15 minutes then separate the edges with a knife, remove
     baking pan, and set aside. Do not remove the baking paper or flip it.
-  - Mix the evaporated milk, condensed milk, whipping cream, and 1 tablespoon of vanilla
+  - Mix the evaporated milk, condensed milk, whipped cream, and 1 tablespoon of vanilla
     in a bowl.
   - Using a bread knife, cut of a small portion of the top of the cake so it is flat
     and can absorb the milk.
@@ -1774,9 +1774,9 @@
   ingredients:
   - name: chicken breasts
     amount: 4
-  - name: garlic
+  - name: garlic cloves
     amount: 8
-  - name: tomato pesto
+  - name: tomato paste
     amount: 100g
   - name: heavy cream
     amount: 200ml
@@ -1818,7 +1818,7 @@
   cuisine: mexican
   prep_time: 10
   cook_time: 20
-  servings: 16
+  servings: 6
   ingredients:
   - name: flour
     amount: 250ml
@@ -1838,7 +1838,7 @@
     amount: 120ml
   - name: jalapenos
     amount: 120ml
-  - name: egg
+  - name: eggs
     amount: 1
   steps:
   - Dice the jalapenos into small pieces.
@@ -1860,11 +1860,11 @@
   ingredients:
   - name: tomatoes
     amount: 8
-  - name: onion
+  - name: onions
     amount: 1
-  - name: garlic
+  - name: garlic cloves
     amount: 6
-  - name: vegetables stock
+  - name: vegetable stock
     amount: 200ml
   - name: butter
     amount: 45ml
@@ -1881,7 +1881,7 @@
   steps:
   - Cut the tomatoes into large chunks, dice the onion, and mince the garlic.
   - Add the ingredients to a pot and turn the heat up.
-  - Add the vegetables stock and bring to a simmer.
+  - Add the vegetable stock and bring to a simmer.
   - Cut the chilis in half and remove some of the seeds (or leave them if you want
     it very spicy) then add them to the pot.
   - Turn the heat down to a gentle simmer and cook for about 40 minutes.
@@ -1905,7 +1905,7 @@
     amount: 2000g
   - name: onions
     amount: 2
-  - name: garlic
+  - name: garlic cloves
     amount: 6
   - name: beans
     amount: 400g
@@ -1987,11 +1987,11 @@
     amount: 15
   - name: chili peppers
     amount: 6
-  - name: shrimp
+  - name: shrimps
     amount: 45ml
   - name: fish sauce
     amount: 60ml
-  - name: garlic
+  - name: garlic cloves
     amount: 3
   - name: green beans
     amount: 18
@@ -2189,9 +2189,9 @@
     amount: 1000g
   - name: carrots
     amount: 2
-  - name: onion
+  - name: onions
     amount: 1
-  - name: garlic
+  - name: garlic cloves
     amount: 4
   - name: salt
     amount: null
@@ -2234,13 +2234,13 @@
   cook_time: 10
   servings: 2
   ingredients:
-  - name: shrimp
+  - name: shrimps
     amount: 500g
   - name: butter
     amount: 45ml
   - name: olive oil
     amount: 45ml
-  - name: garlic
+  - name: garlic cloves
     amount: 4
   - name: wine
     amount: 50ml

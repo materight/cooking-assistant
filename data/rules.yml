@@ -52,7 +52,7 @@ rules:
     - action: action_search_alternative_recipe
 
 
-  - rule: Ask for expected preparation time
+  - rule: Ask for expected preparation and cooking time
     condition:
     - slot_was_set: [ current_recipe_id ]
     steps:
