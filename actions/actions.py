@@ -25,7 +25,7 @@ class ActionSearchByKeyword(Action):
         return 'action_search_by_keyword'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        keyword = next(tracker.get_latest_entity_values('recipe_keyword'), None)
+        keyword = next(tracker.get_latest_entity_values('recipe'), None)
         logger.info('Search recipe by keyword "%s"', keyword)
         if keyword is None:
             dispatcher.utter_message(response='utter_search_recipe/not_found')

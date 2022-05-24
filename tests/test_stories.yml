@@ -5,7 +5,7 @@ stories:
   - user: hi!
     intent: greet
   - action: utter_greet
-  - user: I'd like to prepare a [pizza](recipe_keyword)
+  - user: I'd like to prepare a [pizza](recipe)
     intent: search_by_keyword
   - action: action_search_by_keyword
   - slot_was_set:

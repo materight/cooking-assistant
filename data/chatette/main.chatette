@@ -28,10 +28,10 @@
     ~[&affirm?] ~[i am?] [done|~[ready]]
 
 %[search_by_keyword](100)
-    ~[&i want] to ~[eat] [a|the?] @[recipe_keyword] ~[day time?].
-    ~[&can] you ~[please?] ~[search] @[recipe_keyword]?
-    ~[&can] you ~[please?] ~[search] ~[recipe] for @[recipe_keyword]?
-    ~[&can] you ~[please?] ~[search] how to ~[cook] [a?] @[recipe_keyword]?
+    ~[&i want] to ~[eat] [a|the?] @[recipe] ~[day time?].
+    ~[&can] you ~[please?] ~[search] @[recipe]?
+    ~[&can] you ~[please?] ~[search] ~[recipe] for @[recipe]?
+    ~[&can] you ~[please?] ~[search] how to ~[cook] [a?] @[recipe]?
 
 %[search_by_ingredients](100)
     ~[&i want] to ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].

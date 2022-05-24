@@ -26,7 +26,7 @@ intents:
 - search_by_ingredients:
     use_entities: [ ingredient ]
 - search_by_keyword:
-    use_entities: [ recipe_keyword ]
+    use_entities: [ recipe ]
 - set_timer:
     use_entities: [ TIME ]
 - start_cooking
@@ -39,7 +39,7 @@ intents:
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
 entities:
-  - recipe_keyword
+  - recipe
   - ingredient
   - CARDINAL
   - TIME
