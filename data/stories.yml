@@ -12,7 +12,7 @@ stories:
   - intent: search_by_keyword
     entities: [ recipe_keyword ]
   - action: action_search_by_keyword
-  - slot_was_set: [ found_recipes_ids, current_recipe ]
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - checkpoint: recipe_selected
 
 
@@ -23,7 +23,7 @@ stories:
   - intent: search_by_ingredients
     entities: [ ingredient ]
   - action: action_search_by_ingredients
-  - slot_was_set: [ found_recipes_ids, current_recipe ]
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - checkpoint: recipe_selected
   
 
@@ -34,12 +34,12 @@ stories:
   - intent: search_by_ingredients
     entities: [ ingredient ]
   - action: action_search_by_ingredients
-  - slot_was_set: [ found_recipes_ids, current_recipe ]
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - or:
     - intent: ask_alternative_recipe
     - intent: deny
   - action: action_search_alternative_recipe
-  - slot_was_set: [ current_recipe ]
+  - slot_was_set: [ current_recipe_id ]
   - checkpoint: recipe_selected
 
 
@@ -123,7 +123,8 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_restart
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
 
 
 # - story: Start reading recipe steps
@@ -154,7 +155,7 @@ stories:
 #     - current_step_idx: -1
 #     - list_steps_done: True
 #     - requested_slot: null
-#   - action: utter_greet_again
-#   - action: restart
+#   - action: action_reset_list_steps_loop
+#   - action: utter_anything_else
 
 

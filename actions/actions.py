@@ -38,7 +38,7 @@ class ActionSearchByKeyword(Action):
         else:
             recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
             dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title, image=recipe.image)
-            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe.id) ]
+            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
 
 
 class ActionSearchByIngredients(Action):
@@ -61,7 +61,7 @@ class ActionSearchByIngredients(Action):
         else:
             recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
             dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title)
-            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe', recipe.id) ]
+            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
 
 
 class ActionSearchAlternativeRecipe(Action):
@@ -71,7 +71,7 @@ class ActionSearchAlternativeRecipe(Action):
         return 'action_search_alternative_recipe'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        current_recipe_id = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        current_recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
         found_recipes_ids = tracker.get_slot('found_recipes_ids') # TODO: handle None recipe_ids
         if len(found_recipes_ids) <= 1:
             dispatcher.utter_message(response='utter_search_recipe/not_found_alternative')
@@ -80,7 +80,7 @@ class ActionSearchAlternativeRecipe(Action):
         new_recipe_id = found_recipes_ids[(current_recipe_idx + 1) % len(found_recipes_ids)]
         recipe = dataset.get_recipe(new_recipe_id)
         dispatcher.utter_message(response='utter_search_recipe/found_alternative', recipe_title=recipe.title)
-        return [ SlotSet('current_recipe', new_recipe_id) ]
+        return [ SlotSet('current_recipe_id', new_recipe_id) ]
         
 
 class ActionTellExpectedTime(Action):
@@ -90,7 +90,7 @@ class ActionTellExpectedTime(Action):
         return 'action_tell_expected_time'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        recipe_id = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
         dispatcher.utter_message(response='utter_expected_time', prep_time=str(recipe.prep_time), cook_time=str(recipe.cook_time))
         return []
@@ -120,7 +120,7 @@ class ActionListIngredients(Action):
         return 'action_list_ingredients'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
+        recipe_id = tracker.get_slot('current_recipe_id')  # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
         people_count = next(tracker.get_latest_entity_values('CARDINAL'), tracker.get_slot('people_count')) # Use value o entity or current slot as fallback
         logger.info('Listing ingredients for recipe %s and "%s" people, found %d ingredients', recipe.id, people_count, len(recipe.ingredients))
@@ -166,7 +166,7 @@ class ActionTellIngredientAmount(Action):
         return 'action_tell_ingredient_amount'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        recipe_id = tracker.get_slot('current_recipe')  # TODO: handle None recipe
+        recipe_id = tracker.get_slot('current_recipe_id')  # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
         people_count = next(tracker.get_latest_entity_values('CARDINAL'), tracker.get_slot('people_count'))  # Use value of entity or current slot as fallback
         asked_ingredients = list(tracker.get_latest_entity_values('ingredient'))
@@ -175,10 +175,14 @@ class ActionTellIngredientAmount(Action):
                 recipe.set_servings(w2n.word_to_num(str(people_count)))
             amounts = [ utils.ingredient_to_str(ingr.name, ingr.amount, ingr.unit, sep='of ', default_amount='some') for ingr in recipe.ingredients 
                         if any(asked_ingr in ingr.name for asked_ingr in asked_ingredients) ]
-            amounts_str = utils.join_list_str(amounts)
-            dispatcher.utter_message(response='utter_ingredient_amount/found', amounts_str=amounts_str)
+            if len(amounts) > 0:
+                amounts_str = utils.join_list_str(amounts)
+                dispatcher.utter_message(response='utter_ingredient_amount/found', amounts_str=amounts_str)
+            else:
+                ingredients_str = utils.join_list_str(asked_ingredients, last_sep='or')
+                dispatcher.utter_message(response='utter_ingredient_amount/not_found', ingredients_str=ingredients_str)
         else:
-            dispatcher.utter_message(response='utter_ingredient_amount/not_found')
+            dispatcher.utter_message(response='utter_ingredient_amount/no_ingredient')
         return []
 
 
@@ -189,7 +193,7 @@ class ActionListStepsLoop(FormValidationAction):
         return 'validate_list_steps_loop'
 
     def validate_list_steps_done(self, value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> Dict[Text, Any]:
-        recipe_id = tracker.get_slot('current_recipe') # TODO: handle None recipe
+        recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
         recipe = dataset.get_recipe(recipe_id)
         current_step_idx = tracker.get_slot('current_step_idx')
         current_step_idx += 1 # Go to the next step
@@ -242,3 +246,15 @@ class ActionRepeatLastUtterance(Action):
                 dispatcher.utter_message(text=event.get('text'))
                 break
         return []
+
+
+class ActionResetListStepsLoop(Action):
+    """Reset the slots for reading the steps of a recipe."""
+
+    def name(self) -> Text:
+        return 'action_reset_list_steps_loop'
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info('Resetting the list_steps_loop slots')
+        return [ SlotSet('current_step_idx', -1), SlotSet('list_steps_done', None) ]
+

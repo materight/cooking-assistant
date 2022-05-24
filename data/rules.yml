@@ -15,6 +15,12 @@ rules:
     - action: utter_goodbye
 
 
+  - rule: Say you're welcome anytime the user says thank you
+    steps:
+    - intent: thanks
+    - action: utter_you_are_welcome
+
+
   - rule: Two-stage fallback
     steps:
     - intent: nlu_fallback
@@ -54,7 +60,7 @@ rules:
 
   - rule: Ask for expected preparation time
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     steps:
     - intent: ask_expected_time
     - action: action_tell_expected_time
@@ -68,7 +74,7 @@ rules:
 
   - rule: Ask for ingredients amount
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     steps:
     - intent: ask_ingredient_amount
     - action: action_tell_ingredient_amount
@@ -87,7 +93,7 @@ rules:
 
   - rule: Ask for ingredients list
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     steps:
     - intent: ask_ingredients_list
     - action: action_list_ingredients
@@ -108,7 +114,7 @@ rules:
 
   - rule: Start cooking (user inititiative)
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     steps:
     - intent: start_cooking
     - action: list_steps_loop
@@ -117,7 +123,7 @@ rules:
 
   - rule: Start cooking (system inititiative)
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     steps:
     - action: utter_ask_start_cooking
     - intent: affirm
@@ -127,27 +133,29 @@ rules:
 
   - rule: Finish cooking
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     - active_loop: list_steps_loop
     steps:
     - action: list_steps_loop
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: utter_greet_again
-    - action: action_restart
+    - action: action_reset_list_steps_loop
+    - action: utter_anything_else
 
 
   - rule: Stop cooking
     condition:
-    - slot_was_set: [ current_recipe ]
+    - slot_was_set: [ current_recipe_id ]
     - active_loop: list_steps_loop
     steps:
     - intent: stop_cooking
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: action_restart
+    - action: action_reset_list_steps_loop
+    - action: utter_list_steps/stop
+    - action: utter_anything_else
 
 
   # Reading cooking steps interruptions 

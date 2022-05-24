@@ -40,14 +40,14 @@ def parse_time_str(time_str: Text):
     return amount, unit
 
 
-def join_list_str(list_str: List[Text]):
+def join_list_str(list_str: List[Text], last_sep: Text = 'and'):
     """Join a list of strings with commas and final "and"."""
     if len(list_str) == 0:
         return ''
     elif len(list_str) == 1:
         return list_str[0]
     else:
-        return ', '.join(list_str[:-1]) + ' and ' + list_str[-1]
+        return ', '.join(list_str[:-1]) + f' {last_sep} ' + list_str[-1]
 
 
 def ingredient_to_str(name: Text, amount: Optional[Text], unit: Optional[Text], sep: Text = '', default_amount: Text = ''):

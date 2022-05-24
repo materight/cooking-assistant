@@ -34,6 +34,7 @@ intents:
 - tell_people_count:
     use_entities: [ CARDINAL ]
 - tell_people_count_one
+- thanks
 
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
@@ -50,7 +51,7 @@ slots:
     type: list
     influence_conversation: false
 
-  current_recipe:
+  current_recipe_id:
     type: any
     influence_conversation: false
 
@@ -67,10 +68,6 @@ slots:
     type: bool
     influence_conversation: false
 
-  requested_slot:
-    type: text
-    influence_conversation: false
-
 
 # Responses, check https://rasa.com/docs/rasa/responses for more info
 responses:
@@ -78,12 +75,17 @@ responses:
   - text: Hi! What would you like to cook today?
   - text: Hello! What recipe would you like to try today?
 
-  utter_greet_again:
+  utter_anything_else:
   - text: "What else can I do for you?"
   - text: "Would you like to cook something else?"
 
+  utter_you_are_welcome:
+  - text: "You're welcome!"
+  - text: "No problem, I'm here to help you!"
+  - text: "Happy to help!"
+
   utter_info:
-  - text: "I can help you find cooking recipes."
+  - text: "I can help you find and prepare cooking recipes!"
 
   utter_please_rephrase:
   - text: "I'm sorry, I didn't understand that. Could you please rephrase?"
@@ -126,10 +128,13 @@ responses:
 
   utter_ingredient_amount/found:
   - text: "You need {amounts_str}."
-  - text: "For this recipe you need {amounts_str}."
+  - text: "Please use {amounts_str}."
 
   utter_ingredient_amount/not_found:
-  - text: "You don't need {} for this recipe."
+  - text: "You don't need any {ingredients_str} for this recipe."
+
+  utter_ingredient_amount/no_ingredient:
+  - text: "I'm sorry I couldn't understand which ingredient you are referring to."
 
   utter_list_ingredients:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
@@ -167,6 +172,9 @@ responses:
   - text: "Great! That was the last step, enjoy your meal!"
   - text: "And we are done! Have a nice meal!"
   
+  utter_list_steps/stop:
+  - text: "Ok, I'll stop reading the recipe."
+
 
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
@@ -179,6 +187,7 @@ actions:
   - action_search_ingredient_substitute
   - action_list_ingredients
   - validate_list_steps_loop
+  - action_reset_list_steps_loop
   - action_set_timer
   - action_repeat_last_utterance
 

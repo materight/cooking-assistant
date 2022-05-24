@@ -31,7 +31,6 @@
 
 ~[next]
     [next [step?]|finished|proceed|go on|after [that?]]
-    ~[i am?] done
 
 ~[please]
     [please]
@@ -41,7 +40,7 @@
     ~[i am?] sorry
     
 ~[thanks]
-    [thanks|thank you]
+    [thanks [a lot?]|thank you]
 
 ~[search]
     search [for?]
@@ -81,7 +80,7 @@
     [need|require]
 
 ~[ready]
-    [ready|set|all set|prepared]
+    [ready|set|all set]
 
 ~[start]
     [start|begin|initiate|commence]

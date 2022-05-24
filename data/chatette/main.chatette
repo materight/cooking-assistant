@@ -11,6 +11,9 @@
 %[goodbye](50)
     ~[&goodbye]
 
+%[thanks](50)
+    ~[&thanks]
+
 %[affirm](50)
     ~[&affirm] ~[thanks?]
 
@@ -22,6 +25,7 @@
 
 %[next](50)
     ~[&affirm?] ~[next] ~[thanks?]
+    ~[&affirm?] ~[i am?] [done|~[ready]]
 
 %[search_by_keyword](100)
     ~[&i want] to ~[eat] [a|the?] @[recipe_keyword] ~[day time?].

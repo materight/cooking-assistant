@@ -10,12 +10,12 @@ stories:
   - action: action_search_by_keyword
   - slot_was_set:
     - found_recipes_ids: [3, 4]
-    - current_recipe: 3
+    - current_recipe_id: 3
   - user: I don't know, is there any other recipe?
     intent: ask_alternative_recipe
   - action: action_search_alternative_recipe
   - slot_was_set:
-    - current_recipe: 4
+    - current_recipe_id: 4
   - user: Perfect, yes
     intent: affirm
   - action: action_list_ingredients

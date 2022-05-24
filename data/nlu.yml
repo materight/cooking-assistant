@@ -24,188 +24,215 @@ nlu:
     - see you
     - bye
     - that's it
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - thanks
+    - thanks a lot
+    - Thanks a lot
+    - thank you
 - intent: affirm
   examples: |
-    - Yeah
+    - Yep
+    - yeah
+    - yes
+    - Ok thank you
+    - yep thanks
+    - Sure thanks
+    - yep thanks a lot
     - Sure
-    - yes thank you
+    - y thanks
+    - Ok thanks a lot
+    - Y thank you
+    - Okay thank you
+    - Ok
+    - okay
+    - Y thanks a lot
+    - Yes thanks a lot
+    - Okay thanks
+    - yeah thank you
+    - ok thanks
+    - sure thank you
+    - Yep thanks
+    - Yeah thank you
+    - y thanks a lot
     - y
     - ok
-    - Yep thank you
-    - Yes thanks
-    - Ok thank you
-    - Y thank you
-    - yeah
-    - Sure thanks
-    - yep thank you
-    - yeah thank you
-    - yes
-    - sure
-    - Ok thanks
-    - Ok
     - yep
-    - Sure thank you
-    - ok thank you
-    - Yeah thank you
-    - Okay
-    - sure thank you
-    - Yep
-    - Yes
     - Y thanks
+    - Sure thank you
+    - Ok thanks
+    - Yeah
+    - Yep thank you
+    - okay thanks a lot
+    - yep thank you
+    - Yep thanks a lot
     - y thank you
-    - okay thank you
-    - yep thanks
-    - okay
+    - ok thanks a lot
+    - yeah thanks a lot
+    - Okay
     - Yes thank you
-    - ok thanks
-    - Okay thank you
-    - y thanks
-    - Y
+    - sure
+    - Okay thanks a lot
+    - sure thanks a lot
+    - Sure thanks a lot
+    - Yes thanks
     - Yeah thanks
-    - Yep thanks
+    - ok thank you
+    - okay thank you
+    - Yes
     - okay thanks
-    - Okay thanks
-    - sure thanks
-    - yeah thanks
-    - yes thanks
+    - Yeah thanks a lot
 - intent: deny
   examples: |
-    - not thank you
-    - Nah thank you
-    - nah thanks
-    - nope thanks
-    - n
-    - nah thank you
-    - No thanks
-    - No thank you
-    - Not
-    - n thanks
+    - nah thanks a lot
     - Nope
+    - Nah thank you
     - no
-    - N thank you
+    - nope thanks
     - nah
-    - Not thanks
-    - Nah thanks
-    - No
-    - Nah
-    - not
-    - no thank you
-    - no thanks
-    - Not thank you
     - N
-    - nope thank you
-    - N thanks
-    - Nope thanks
-    - n thank you
-    - Nope thank you
-    - nope
+    - Not thank you
     - not thanks
+    - Nope thanks a lot
+    - nah thank you
+    - N thanks a lot
+    - not
+    - nope thank you
+    - Nope thanks
+    - No
+    - not thanks a lot
+    - n
+    - Not
+    - Not thanks
+    - No thanks a lot
+    - n thank you
+    - Nah
+    - N thank you
+    - nope
+    - not thank you
+    - no thank you
+    - n thanks
+    - No thanks
+    - Nah thanks
+    - Nah thanks a lot
+    - no thanks a lot
+    - N thanks
+    - Nope thank you
+    - Not thanks a lot
+    - no thanks
+    - nope thanks a lot
+    - No thank you
+    - n thanks a lot
+    - nah thanks
 - intent: idk
   examples: |
-    - okay I do no know
-    - Yeah I don't know
-    - Ok idk
-    - yeah i don't know
-    - sure do no know
-    - y don't know
-    - Yes I'm not sure
-    - yeah i'm not sure
-    - sure I'm not sure
-    - Okay i do no know
-    - i'm not sure
-    - Okay idk
-    - Yes boh
-    - Yes I don't know
-    - Okay I am not sure
-    - yep I am not sure
-    - ok do no know
-    - yep boh
-    - ok idk
-    - Ok boh
-    - Sure i am not sure
-    - y not sure
-    - Sure I am not sure
-    - sure I don't know
-    - Yep I do no know
-    - okay i don't know
     - y do no know
     - Y I do no know
+    - yep I am not sure
     - sure i'm not sure
     - yeah i do no know
     - sure I do no know
     - okay I am not sure
+    - yep i'm not sure
     - Yeah i'm not sure
     - Yeah i do no know
+    - yep not sure
     - Yep I'm not sure
+    - yes I don't know
     - Yeah don't know
     - Ok I don't know
     - Yeah not sure
     - Okay not sure
     - Y don't know
+    - y not sure
+    - yep do no know
     - Ok I'm not sure
     - ok I am not sure
     - y I'm not sure
     - Okay boh
-    - y i'm not sure
+    - yep boh
     - Yep i don't know
     - ok i don't know
-    - yep I'm not sure
-    - yeah I do no know
+    - Sure I am not sure
+    - yes do no know
+    - y i do no know
     - okay I'm not sure
+    - Okay i do no know
+    - Yep I am not sure
+    - Sure I don't know
+    - yep I'm not sure
+    - okay don't know
+    - Sure don't know
+    - yeah i don't know
+    - Yep I don't know
+    - Yeah i am not sure
+    - yes i don't know
+    - yes boh
+    - Yeah idk
+    - yep I do no know
+    - Sure idk
+    - Sure I do no know
+    - Okay I'm not sure
+    - ok i'm not sure
+    - ok I'm not sure
+    - Yep I do no know
 - intent: next
   examples: |
-    - I am done
-    - I am done thanks
-    - I'm done
-    - I'm done thanks
-    - Ok finished thanks
-    - Okay i am done
-    - Sure I am done
-    - Sure after that
-    - Sure go on thank you
-    - Sure i'm done
-    - Y I'm done
-    - Y finished thanks
-    - Yeah done
-    - Yeah go on
-    - Yep done
-    - Yep go on
-    - Yes done
-    - Yes done thank you
-    - Yes i'm done thank you
-    - after that thank you
-    - after that thanks
+    - I am set
+    - Ok after that thank you
+    - Ok done
+    - Ok go on thanks a lot
+    - Okay done
+    - Okay next step thank you
+    - Okay proceed thank you
+    - Sure I'm done
+    - Sure done
+    - Sure i am done
+    - Sure next step
+    - Y done
+    - Y i'm all set
+    - Yep next step
+    - Yes next step
+    - after
+    - after that
     - done
-    - done thank you
+    - finished
     - finished thank you
     - finished thanks
     - go on
+    - go on thank you
+    - i am all set
     - i am done
-    - i am done thank you
-    - i'm done thank you
-    - next step
-    - next step thanks
-    - next thanks
-    - ok finished
+    - i am ready
+    - i am set
+    - next thank you
+    - ok I am done
+    - ok after
+    - ok after thank you
+    - ok after thanks
+    - ok set
+    - okay done
     - okay finished
-    - okay i'm done thank you
-    - okay next step thank you
+    - okay proceed
     - proceed
-    - sure I am done thanks
-    - sure done
+    - ready
+    - set
+    - sure i am done
+    - y after that thank you
     - y finished
+    - y finished thanks a lot
     - y go on
     - y go on thank you
-    - y i'm done thank you
     - y proceed
-    - yep I'm done
-    - yes I'm done thanks
-    - yes after
-    - yes after thank you
-    - yes done
-    - yes go on
+    - yeah done
+    - yes after that
+    - yes i'm ready
+    - yes proceed thanks
 - intent: search_by_keyword
   examples: |
+    - Can you find [Black Beans](recipe_keyword)?
     - Can you find food for [Roasted Potatoes](recipe_keyword)?
     - Can you find something for [Tres Leches Cake](recipe_keyword)?
     - Can you please find [Charcuterie Board](recipe_keyword)?
@@ -213,11 +240,9 @@ nlu:
     - Can you please search for how to make [Thanksgiving Turkey](recipe_keyword)?
     - Can you please search how to bake a [Red Thai Curry Chicken](recipe_keyword)?
     - Can you search [Peppermint Latte](recipe_keyword)?
-    - Can you search [Red Pepper Soup](recipe_keyword)?
     - Can you search food for [Creamed Leeks](recipe_keyword)?
     - Could you find [Pasta Aglio e Olio](recipe_keyword)?
     - Could you find how to make a [Cranberry Sauce](recipe_keyword)?
-    - Could you please find food for [Sesame Chicken](recipe_keyword)?
     - Could you please search for [Red Pepper Hummus](recipe_keyword)?
     - Could you please search for recipe for [Chicken Enchiladas](recipe_keyword)?
     - Could you search [Blueberry Muffins](recipe_keyword)?
@@ -227,19 +252,21 @@ nlu:
     - I want to eat a [Cranberry Sauce](recipe_keyword) tomorrow.
     - I want to try a [Baked Meatballs](recipe_keyword) for morning.
     - I want to try a [Chili Tomato Soup](recipe_keyword) tomorrow.
-    - I want to try a [Chocolate Cookies](recipe_keyword) for launch.
+    - I would like to try [Roasted Potatoes](recipe_keyword) tomorrow.
     - I'd love to eat the [Chicken Taco](recipe_keyword) tomorrow.
     - I'd really like to try [Almond Cookies](recipe_keyword).
     - I'd really like to try [Baked Meatballs](recipe_keyword).
     - I'd really like to try [Chili Tomato Soup](recipe_keyword) today.
     - I'd really like to try [Thanksgiving Turkey](recipe_keyword) tomorrow.
     - I'd really love to eat [Curried Lentil Soup](recipe_keyword).
+    - I'd really love to eat [Roasted Potatoes](recipe_keyword).
     - I'd really love to try the [Sesame Chicken](recipe_keyword).
     - May you find how to prepare [Yuca Fries](recipe_keyword)?
     - May you find me how to make a [Pan Eggs](recipe_keyword)?
     - May you please find food for [Chicken and Rice Soup](recipe_keyword)?
-    - May you please find how to prepare [Crêpes](recipe_keyword)?
     - May you please search for something for [Curried Lentil Soup](recipe_keyword)?
+    - May you please search how to prepare a [Red Thai Curry Chicken](recipe_keyword)?
+    - May you search [Baked Meatballs](recipe_keyword)?
     - May you search [Papaya Salad](recipe_keyword)?
     - May you search for [Chocolate Cookies](recipe_keyword)?
     - May you search for how to make [Blueberry Muffins](recipe_keyword)?
@@ -250,12 +277,9 @@ nlu:
     - Would you please find food for [Pepperoni Pizza](recipe_keyword)?
     - Would you please find me something for [Cranberry Sauce](recipe_keyword)?
     - Would you please search for [Pasta Aglio e Olio](recipe_keyword)?
-    - Would you please search for something for [Banana Bread](recipe_keyword)?
-    - Would you search [Chicken Thigh Cutlet](recipe_keyword)?
     - Would you search for how to make a [Chocolate Cookies](recipe_keyword)?
-    - can you find me [Apple Tart](recipe_keyword)?
     - can you please find how to bake a [Macaroni and Cheese](recipe_keyword)?
-    - can you please find me recipe for [Crêpes](recipe_keyword)?
+    - can you please find me recipe for [Crêpes?]{"entity": "recipe_keyword", "value": "Cr\u00eapes"}
     - can you please find something for [Chicken Enchiladas](recipe_keyword)?
     - can you please search recipe for [Banana Bread](recipe_keyword)?
     - can you search for how to prepare a [Yuca Fries](recipe_keyword)?
@@ -264,11 +288,12 @@ nlu:
     - could you please find me how to cook [Chili Tomato Soup](recipe_keyword)?
     - could you please search for [Bagel Burgers](recipe_keyword)?
     - could you please search something for [Pecan Tilapia](recipe_keyword)?
-    - could you search food for [Potato Wedges](recipe_keyword)?
     - could you search for how to cook a [Chicken Wings](recipe_keyword)?
     - could you search for how to make [Chicken with cream sauce](recipe_keyword)?
     - could you search for recipe for [Pan Eggs](recipe_keyword)?
     - could you search for recipe for [Peanut Butter Cookies](recipe_keyword)?
+    - could you search how to prepare a [Sriracha Chicken Wings](recipe_keyword)?
+    - i want to eat [Crêpes ]{"entity": "recipe_keyword", "value": "Cr\u00eapes"}this dinner.
     - i want to eat a [Beef bourguignon](recipe_keyword).
     - i want to eat a [Christmas Cookies](recipe_keyword) tomorrow.
     - i want to eat a [Red Pepper Soup](recipe_keyword).
@@ -277,6 +302,7 @@ nlu:
     - i want to try [Bagel Burgers](recipe_keyword) tomorrow.
     - i want to try [Meat Chili](recipe_keyword) for evening.
     - i want to try a [Tres Leches Cake](recipe_keyword).
+    - i want to try the [Creamed Leeks](recipe_keyword) tomorrow.
     - i want to try the [Jasmine Rice](recipe_keyword).
     - i want to try the [Meat Chili](recipe_keyword).
     - i want to try the [Pecan Tilapia](recipe_keyword).
@@ -286,7 +312,6 @@ nlu:
     - i'd love to try the [Chocolate Cookies](recipe_keyword) today.
     - i'd really love to try the [Ribeye steak](recipe_keyword) today.
     - may you find [Shrimp Scampi](recipe_keyword)?
-    - may you find how to bake [Red Pepper Soup](recipe_keyword)?
     - may you find how to bake a [Chicken with cream sauce](recipe_keyword)?
     - may you find how to make [Chicken Wings](recipe_keyword)?
     - may you please find me [Carrot Fries](recipe_keyword)?
@@ -294,6 +319,7 @@ nlu:
     - may you please find me [Orange Salad](recipe_keyword)?
     - may you please find me how to prepare [Thai Curry Chicken](recipe_keyword)?
     - may you please find me how to prepare a [Tres Leches Cake](recipe_keyword)?
+    - may you please search food for [Potato Wedges](recipe_keyword)?
     - may you please search recipe for [Jasmine Rice](recipe_keyword)?
     - would you find how to make [Chicken and Rice Soup](recipe_keyword)?
     - would you find me [Chicken with cream sauce](recipe_keyword)?
@@ -302,7 +328,7 @@ nlu:
     - would you please find me how to prepare [Pasta Aglio e Olio](recipe_keyword)?
     - would you please search how to make a [Chicken Wings](recipe_keyword)?
     - would you search [Bagel Burgers](recipe_keyword)?
-    - would you search for [Gingersnap Cookies](recipe_keyword)?
+    - would you search for [Thanksgiving Turkey](recipe_keyword)?
     - would you search for food for [Instant Pot White Rice](recipe_keyword)?
     - would you search for something for [Ribeye steak](recipe_keyword)?
     - would you search how to make a [Bagel Burgers](recipe_keyword)?
@@ -312,26 +338,27 @@ nlu:
     - Can you find me something with [mozzarella](ingredient) and [chili powder](ingredient)?
     - Can you find something using [onions](ingredient) [beans](ingredient)?
     - Can you please search for food using [tilapia filets](ingredient) [hummus](ingredient)?
-    - Can you please search something with [salsa](ingredient) [parsley flakes](ingredient)?
-    - Could you please search something using [sriracha sauce](ingredient) and [cornmeal](ingredient)?
+    - Can you search for food with [cumin](ingredient) and [pasta](ingredient)?
     - I exclusively have [chilis](ingredient)
     - I exclusively have [jalapenos](ingredient)
+    - I exclusively have [potatoes](ingredient), what may i make?
     - I exclusively have [tilapia filets](ingredient)
     - I exclusively own [cumin](ingredient)
     - I exclusively own [red wine](ingredient), what can I prepare?
     - I have [peanut butter](ingredient), what may I cook?
     - I have [vanilla extract](ingredient), what could I bake?
     - I just have [pepperoni](ingredient), what can i bake?
-    - I only have [chili flakes](ingredient)
     - I own [bacon](ingredient), what can I make?
     - I own [brown sugar](ingredient)
     - I own [butter](ingredient), what could i prepare?
     - I own [lentils](ingredient), what may i cook?
     - I own [onion](ingredient)
     - I own [peaches](ingredient), what can i prepare?
+    - I own [peanut butter](ingredient)
     - I own [peppermint syrup](ingredient), what would i bake?
     - I own [strawberries](ingredient), what can I bake?
     - I own [vegetable oil](ingredient)
+    - I solely have [basil](ingredient), what may I prepare?
     - I solely have [chickpeas](ingredient), what would I make?
     - I solely own [cumin powder](ingredient), what can i cook?
     - I want to eat food containing [cornstarch](ingredient) [condensed milk](ingredient).
@@ -340,23 +367,25 @@ nlu:
     - I want to eat something with [carrots](ingredient) [bananas](ingredient) this breakfast.
     - I want to eat something with [dark chocolate syrup](ingredient) [rotisserie chicken](ingredient) tomorrow.
     - I want to try food containing [flower](ingredient) this launch.
+    - I want to try food using [celery](ingredient) and [almonds](ingredient) this launch.
     - I want to try food using [olive oil](ingredient) and [garlic powder](ingredient) for breakfast.
-    - I want to try something containing [red chili](ingredient) tomorrow.
     - I want to try something containing [teriyaki sauce](ingredient) [spaghetti](ingredient).
-    - I want to try something with [potatoes](ingredient) [spaghetti](ingredient) today.
     - I would love to eat food using [tobasco](ingredient) and [breadcrumbs](ingredient).
     - I would really like to try recipe with [instant yeast](ingredient) and [orange juice](ingredient).
     - I would really like to try something using [shrimp](ingredient) and [mozzarella](ingredient).
     - I would really like to try something with [flour](ingredient).
-    - I'd love to eat recipe using [almonds](ingredient) and [pecorino romano cheese](ingredient) this morning.
+    - I'd love to try something using [celery](ingredient) and [tortillas](ingredient).
     - I'd really like to try food using [brioche rolls](ingredient) today.
     - I'd really like to try food using [cinnamnon sticks](ingredient) [whipping cream](ingredient).
     - I'd really love to eat food using [strawberries](ingredient) for dinner.
     - May you please search for food using [oregano](ingredient) and [cheddar cheese](ingredient)?
     - May you search food containing [water](ingredient)?
+    - Would you please search something using [spinach](ingredient)?
     - Would you search for recipe with [whipping cream](ingredient)?
     - can you find recipe with [miso paste](ingredient)?
     - can you find something with [chicken stock](ingredient) and [chicken wings](ingredient)?
+    - can you please find me food containing [coconut milk](ingredient)?
+    - can you please find me something containing [beef roast](ingredient) [red peppers](ingredient)?
     - can you please find me something with [cornstarch](ingredient) [sugar](ingredient)?
     - can you search recipe containing [vegetable oil](ingredient) and [curry paste](ingredient)?
     - can you search something with [thyme](ingredient) [apples](ingredient)?
@@ -369,44 +398,41 @@ nlu:
     - i have [cheese](ingredient), what could I make?
     - i have [heavy cream](ingredient), what could I make?
     - i have [salt](ingredient)
-    - i just have [enchilada sauce](ingredient)
     - i just own [sugar](ingredient)
     - i only have [raisins](ingredient)
     - i only have [red wine](ingredient)
     - i only own [blueberries](ingredient), what would i cook?
     - i own [brown sugar](ingredient)
-    - i own [chili powder](ingredient), what could I bake?
     - i own [ginger](ingredient), what would I make?
-    - i solely own [peanut butter](ingredient)
     - i solely own [shrimp](ingredient), what would i make?
     - i want to eat food using [vinegar](ingredient) [tobasco](ingredient).
     - i want to eat food with [olives](ingredient) this launch.
     - i want to eat recipe using [breadcrumbs](ingredient) [milk](ingredient) for launch.
-    - i want to eat recipe with [steamed milk](ingredient) and [onion powder](ingredient) tomorrow.
     - i want to eat something with [frozen puff pastry](ingredient) tomorrow.
     - i want to try food containing [hummus](ingredient) [dark chocolate syrup](ingredient) for morning.
     - i want to try food using [ribeye steak](ingredient).
     - i want to try recipe containing [cheddar cheese](ingredient) this launch.
-    - i want to try recipe using [whipping cream](ingredient) [cumin powder](ingredient) this breakfast.
     - i want to try something containing [paprika](ingredient).
     - i want to try something using [grapes](ingredient).
     - i would like to try food using [wine](ingredient) for breakfast.
+    - i would like to try something containing [chicken breast](ingredient).
     - i would like to try something with [chilis](ingredient) and [hummus](ingredient).
     - i would love to try something with [bacon](ingredient).
     - i would really like to try recipe using [pecorino romano cheese](ingredient) [heavy cream](ingredient).
     - i would really love to eat recipe containing [bourbon](ingredient) [sriracha sauce](ingredient).
-    - i would really love to try something using [coconut milk](ingredient).
-    - i'd love to try recipe using [salsa](ingredient) tomorrow.
     - may you find something containing [flower](ingredient) and [pasta](ingredient)?
     - may you please find me food using [mozzarella](ingredient) and [ribeye steak](ingredient)?
     - may you please find recipe containing [vanilla extract](ingredient) [tomato sauce](ingredient)?
     - may you please search food with [molasses](ingredient)?
+    - may you search for recipe with [cornstarch](ingredient)?
+    - may you search for something containing [miso paste](ingredient)?
     - would you find me recipe containing [onion powder](ingredient)?
-    - would you find something containing [curry paste](ingredient) [garlic chili sauce](ingredient)?
     - would you please find me recipe containing [pears](ingredient)?
     - would you please find recipe containing [garlic powder](ingredient)?
+    - would you please search food with [potatoes](ingredient) [egg yolk](ingredient)?
     - would you please search for food containing [espresso](ingredient) [sugar](ingredient)?
     - would you please search for something with [pepper](ingredient) and [baking powder](ingredient)?
+    - would you search something containing [dark chocolate syrup](ingredient)?
     - would you search something with [ginger](ingredient)?
 - intent: ask_alternative_recipe
   examples: |
@@ -878,43 +904,48 @@ nlu:
   examples: |
     - Thank you We are [9](CARDINAL)
     - Thank you We are in [one](CARDINAL) friends
+    - Thank you We are in [two](CARDINAL) relatives
     - Thank you We are [one](CARDINAL)
-    - Thank you We [three](CARDINAL)
     - Thank you We will be [four](CARDINAL)
-    - Thank you for [1](CARDINAL)
     - Thank you for [one](CARDINAL)
     - Thank you for [one](CARDINAL) relatives
-    - Thank you we 'll be [1](CARDINAL) persons
-    - Thank you we are [8](CARDINAL)
+    - Thank you we are [2](CARDINAL)
     - Thank you what about for [1](CARDINAL)
-    - Thanks We 'll be [one](CARDINAL)
-    - Thanks We [3](CARDINAL) person
+    - Thank you what about for [one](CARDINAL)
+    - Thanks We [4](CARDINAL) relatives
+    - Thanks We are [8](CARDINAL)
     - Thanks We are [eight](CARDINAL)
-    - Thanks We going to be [1](CARDINAL)
-    - Thanks for [1](CARDINAL)
-    - Thanks we are [9](CARDINAL)
-    - Thanks we gonna be [six](CARDINAL) persons
-    - Thanks what about for [2](CARDINAL) persons
-    - Thanks what about for [one](CARDINAL) people
+    - Thanks We [one](CARDINAL) persons
+    - Thanks We [seven](CARDINAL) friends
+    - Thanks a lot We [1](CARDINAL) relatives
+    - Thanks a lot We [3](CARDINAL) person
+    - Thanks a lot for [9](CARDINAL) friends
+    - Thanks a lot we [1](CARDINAL) friends
+    - Thanks for [7](CARDINAL) friends
+    - Thanks we are in [1](CARDINAL)
+    - Thanks we are [one](CARDINAL)
+    - Thanks what about for [1](CARDINAL) person
+    - We 'll be [3](CARDINAL)
+    - We [1](CARDINAL)
     - We are [1](CARDINAL) people
     - We are [2](CARDINAL)
-    - We are in [1](CARDINAL)
+    - We are [7](CARDINAL)
     - We are in [eight](CARDINAL) persons
     - We are in [one](CARDINAL)
     - We are in [one](CARDINAL) person
     - We are in [seven](CARDINAL)
     - We are [one](CARDINAL) person
-    - We are [two](CARDINAL) friends
+    - We [five](CARDINAL) friends
+    - We going to be [1](CARDINAL) people
     - We going to be [1](CARDINAL) relatives
+    - We going to be [one](CARDINAL)
     - We [one](CARDINAL)
-    - We [one](CARDINAL) people
     - We will be [1](CARDINAL) friends
+    - We will be [1](CARDINAL) relatives
     - and for [1](CARDINAL)
+    - and for [3](CARDINAL)
     - and for [five](CARDINAL) relatives
     - and for [four](CARDINAL)
-    - and for [one](CARDINAL)
-    - and for [one](CARDINAL) relatives
-    - and for [ten](CARDINAL) people
     - and for [two](CARDINAL)
     - for [1](CARDINAL)
     - for [1](CARDINAL) person
@@ -922,43 +953,37 @@ nlu:
     - for [2](CARDINAL)
     - for [4](CARDINAL) persons
     - for [four](CARDINAL) people
+    - for [one](CARDINAL)
     - for [one](CARDINAL) friends
-    - for [one](CARDINAL) persons
     - for [seven](CARDINAL) persons
     - for [six](CARDINAL)
-    - for [six](CARDINAL) people
-    - for [ten](CARDINAL) relatives
+    - for [ten](CARDINAL) persons
     - thank you We [1](CARDINAL) friends
-    - thank you We are [seven](CARDINAL) friends
     - thank you We going to be [1](CARDINAL) people
-    - thank you We going to be [10](CARDINAL) relatives
     - thank you We gonna be [10](CARDINAL)
     - thank you We gonna be [one](CARDINAL) relatives
-    - thank you for [4](CARDINAL)
     - thank you we 'll be [one](CARDINAL) person
     - thank you we are in [6](CARDINAL) friends
-    - thank you we [four](CARDINAL) friends
+    - thank you we are [six](CARDINAL) persons
     - thank you what about for [four](CARDINAL)
+    - thanks We 'll be [9](CARDINAL)
+    - thanks We 'll be [one](CARDINAL)
     - thanks We are [1](CARDINAL) friends
-    - thanks We are [5](CARDINAL)
-    - thanks We are in [one](CARDINAL)
-    - thanks We gonna be [one](CARDINAL)
+    - thanks We are in [1](CARDINAL)
+    - thanks We are in [3](CARDINAL) relatives
     - thanks We gonna be [one](CARDINAL) friends
-    - thanks and for [1](CARDINAL) person
-    - thanks and for [one](CARDINAL) friends
-    - thanks for [7](CARDINAL) friends
+    - thanks a lot we are [one](CARDINAL) people
+    - thanks and for [3](CARDINAL)
+    - thanks for [1](CARDINAL) people
+    - thanks for [one](CARDINAL)
     - thanks for [ten](CARDINAL)
-    - thanks for [two](CARDINAL)
-    - thanks we are in [8](CARDINAL)
-    - thanks we are [one](CARDINAL)
-    - thanks we [one](CARDINAL)
-    - thanks what about for [one](CARDINAL)
+    - thanks what about for [1](CARDINAL) person
     - we 'll be [1](CARDINAL)
-    - we 'll be [six](CARDINAL) person
+    - we 'll be [one](CARDINAL) people
+    - we 'll be [one](CARDINAL) persons
     - we [1](CARDINAL)
     - we [1](CARDINAL) person
-    - we [10](CARDINAL) friends
-    - we are [1](CARDINAL)
+    - we are [10](CARDINAL) friends
     - we are [eight](CARDINAL)
     - we are in [1](CARDINAL)
     - we are in [4](CARDINAL) relatives
@@ -967,372 +992,373 @@ nlu:
     - we are [one](CARDINAL)
     - we are [one](CARDINAL) people
     - we going to be [1](CARDINAL)
+    - we going to be [one](CARDINAL)
     - we going to be [one](CARDINAL) persons
     - we gonna be [6](CARDINAL) people
     - we gonna be [7](CARDINAL) persons
     - we [one](CARDINAL)
     - we [one](CARDINAL) friends
     - we [one](CARDINAL) relatives
+    - we will be [4](CARDINAL) people
     - what about for [5](CARDINAL) persons
-    - what about for [one](CARDINAL)
     - what about for [ten](CARDINAL) person
 - intent: tell_people_count_one
   examples: |
-    - Thanks It is just me
-    - Thank you it's only me
-    - Thank you i'm by myself
-    - Thanks I am only
-    - Thank you it is only me
-    - i'm by myself
-    - thanks i'm only
-    - Thank you it's just me
-    - thank you it is only me
-    - Thanks I am alone
-    - thanks i am alone
-    - Thank you I am alone
-    - thanks i'm by myself
-    - thanks i am by myself
-    - thank you I'm by myself
-    - thank you i am alone
     - thanks I'm by myself
-    - Thanks I'm alone
+    - thank you I'm by myself
+    - thanks a lot i am alone
     - thank you I'm alone
-    - Thank you I am by myself
-    - Thanks I am by myself
-    - Thanks it's only me
-    - thanks it is only me
-    - Thank you i am only
-    - thank you it's only me
-    - Thank you I am only
-    - thank you It's only me
-    - it is just me
-    - it's just me
-    - thank you I'm only
-    - thank you It's just me
-    - i am alone
-    - Thank you It's just me
-    - Thanks i am by myself
-    - i am by myself
-    - thanks It's only me
     - Thanks I'm by myself
-    - thank you i'm alone
-    - It's just me
-    - Thanks i'm only
-    - i'm only
-    - Thank you I'm alone
-    - thank you I am only
-    - Thanks i am alone
-    - Thanks i'm alone
-    - thanks i'm alone
-    - thanks I'm only
+    - thanks it's just me
+    - i am only
+    - Thanks a lot i am only
+    - i'm by myself
+    - Thanks a lot I am alone
+    - Thank you I am alone
+    - i am alone
+    - thanks i am only
+    - it is just me
+    - Thanks a lot it is only me
+    - thanks a lot i'm alone
+    - Thank you it's only me
+    - Thanks it is just me
+    - thank you it's only me
+    - thanks a lot i am by myself
+    - thanks a lot i am only
+    - Thank you i am by myself
+    - I am only
     - I am by myself
-    - Thanks It's only me
+    - Thank you I'm only
+    - thanks a lot it's only me
+    - thank you It's just me
     - I'm by myself
+    - It is only me
+    - thanks a lot it is just me
+    - Thanks I am alone
+    - Thanks a lot It's only me
+    - thank you i am only
+    - Thanks a lot I am by myself
+    - it's only me
+    - Thanks I am by myself
+    - thanks I am only
+    - thank you i'm alone
+    - i am by myself
+    - thanks a lot I am only
+    - thanks I am by myself
+    - thank you i'm only
+    - thanks I'm only
+    - thank you It is just me
+    - I'm alone
+    - thanks i'm alone
+    - Thanks a lot I'm only
+    - thanks it is only me
+    - thanks It is just me
+    - Thanks a lot i am alone
 - intent: start_cooking
   examples: |
-    - I am ready to bake now
-    - I am set to cook now
-    - I am set to make now
-    - Thank you I am all set to prepare now
-    - Thank you I am prepared to bake
-    - Thank you I am prepared to prepare now
-    - Thank you I'm set to prepare
-    - Thank you begin cooking now
-    - Thank you can We start baking now?
-    - Thank you can we start preparing?
-    - Thank you can you share with me the steps please?
-    - Thank you may We get going and begin baking?
-    - Thank you may you send me the recipe instructions please?
+    - I am all set to bake
+    - I am all set to prepare
+    - Thank you I am set to bake
+    - Thank you cook
+    - Thank you could you send me the steps?
+    - Thank you let's bake
+    - Thank you let's cook
     - Thank you share with me the something points?
+    - Thank you tell me the food points please?
+    - Thank you tell me the recipe points?
     - Thank you would we go ahead and begin making now?
-    - Thanks I am all set to prepare
-    - Thanks I am prepared to make now
-    - Thanks I am ready to cook now
-    - Thanks can We begin preparing?
-    - Thanks i am ready to bake
-    - Thanks i'm set to bake now
-    - Thanks let's bake
-    - Thanks let's cook now
-    - Thanks let's prepare
-    - Thanks let's prepare now
-    - Thanks may we get going and commence preparing now?
-    - Thanks may you read me the recipe points?
-    - Thanks would you share with me the food instructions?
-    - bake
+    - Thank you would you deliver me the preparing instructions please?
+    - Thanks a lot commence making now
+    - Thanks a lot let's begin preparing now
+    - Thanks a lot let's prepare now
+    - Thanks a lot make now
+    - Thanks can We begin preparing now?
+    - Thanks deliver me the points please?
+    - Thanks i am all set to bake now
+    - Thanks i am all set to cook
+    - Thanks i'm set to cook
+    - Thanks make now
+    - Thanks may you send me the instructions?
+    - Thanks would We get going and initiate baking now?
+    - bake now
     - begin baking now
-    - begin cooking now
+    - can We start preparing?
     - can we commence cooking?
     - can we go ahead and begin cooking now?
     - can we initiate making now?
-    - can you deliver me the points?
-    - can you send me the something steps please?
-    - can you share with me the making instructions?
     - can you share with me the recipe instructions please?
-    - can you tell me the something instructions please?
     - commence baking
+    - cook
     - cook now
+    - could We get going and start preparing?
+    - could We go ahead and initiate baking?
     - could we go ahead and begin making now?
-    - could we initiate baking now?
-    - could you give me the points please?
-    - deliver me the cooking steps please?
-    - i am prepared to cook now
-    - i am prepared to make
-    - i am ready to cook
+    - could you deliver me the steps please?
+    - could you send me the points?
+    - i am all set to prepare now
+    - i am ready to make
     - i am ready to make now
-    - i'm all set to make now
-    - i'm ready to make now
-    - i'm set to prepare now
-    - initiate making now
-    - let's bake now
-    - let's prepare
-    - make
-    - may We get going and initiate making?
+    - i am ready to prepare now
+    - i am set to cook now
+    - let's initiate baking
+    - let's initiate baking now
+    - make now
+    - may We go ahead and commence cooking now?
+    - may We go ahead and commence preparing?
+    - may We go ahead and initiate preparing?
     - may We go ahead and start making?
-    - may we get going and begin baking?
-    - may we get going and initiate baking now?
-    - may we get going and start making?
-    - may we initiate making now?
-    - may we start preparing?
-    - may you send me the something steps please?
+    - may we get going and begin cooking?
+    - may we initiate cooking?
+    - prepare
     - prepare now
+    - read me the something points?
     - send me the baking steps?
     - send me the cooking points?
-    - send me the making points?
-    - share with me the food instructions please?
-    - start baking
-    - tell me the instructions please?
-    - thank you I'm set to prepare now
-    - thank you can we commence preparing?
-    - thank you could you deliver me the points?
-    - thank you give me the instructions?
-    - thank you i'm prepared to cook now
+    - start cooking
+    - start cooking now
+    - tell me the recipe steps please?
+    - thank you I am ready to cook now
+    - thank you can We begin preparing now?
+    - thank you can we initiate preparing?
+    - thank you could we go ahead and begin making?
+    - thank you could we initiate making now?
+    - thank you could we start preparing?
+    - thank you could you send me the steps please?
+    - thank you i am set to prepare
+    - thank you i'm set to cook now
+    - thank you i'm set to make now
     - thank you let's bake now
     - thank you make now
-    - thank you prepare now
-    - thank you start cooking
-    - thank you tell me the recipe points please?
-    - thank you would we begin baking now?
-    - thanks I am prepared to make now
-    - thanks I'm ready to cook
-    - thanks can we initiate making?
-    - thanks deliver me the baking points please?
-    - thanks i am set to bake
-    - thanks initiate preparing
-    - thanks let's make now
-    - thanks let's prepare
-    - thanks let's prepare now
-    - thanks let's start baking
-    - thanks would we go ahead and commence preparing now?
-    - would we begin cooking now?
-    - would we commence baking?
+    - thank you prepare
+    - thank you share with me the instructions please?
+    - thank you would We go ahead and commence making?
+    - thanks I am all set to make now
+    - thanks I'm set to cook
+    - thanks a lot I am all set to bake
+    - thanks a lot I'm set to prepare
+    - thanks a lot can We begin making?
+    - thanks a lot cook
+    - thanks a lot could we begin cooking?
+    - thanks a lot deliver me the something instructions please?
+    - thanks a lot i am ready to bake
+    - thanks a lot let's bake now
+    - thanks a lot prepare now
+    - thanks cook
+    - thanks i'm ready to bake
+    - thanks i'm set to bake
+    - thanks let's cook now
+    - thanks prepare now
+    - would We get going and begin preparing?
+    - would We go ahead and initiate preparing?
     - would we commence preparing now?
+    - would we get going and commence baking?
+    - would we get going and start cooking?
+    - would we go ahead and begin baking?
     - would we start preparing now?
-    - would you read me the something points?
     - would you share with me the instructions please?
-    - would you tell me the points please?
 - intent: stop_cooking
   examples: |
-    - Excuse me can we stop making
+    - Excuse me could we end making
     - Excuse me i'd like to stop cooking
-    - Excuse me please I want to stop cooking
-    - Excuse me please can you halt making
+    - Excuse me i'd really love to cancel cooking
+    - Excuse me please would I halt baking
     - Excuse me would you halt preparing
-    - I am sorry please could you stop preparing
-    - I would really love to halt cooking
+    - I am sorry please would I cancel baking
     - I'd like to halt preparing
-    - I'm sorry can I stop making
+    - I'd really like to halt cooking
     - I'm sorry please I would really love to halt making
-    - Sorry i would really like to end cooking
+    - I'm sorry please can you stop making
     - Sorry please can I halt baking
-    - Sorry please i would really love to stop preparing
-    - can we halt baking
-    - cancel
+    - Sorry please would you stop making
     - cancel baking
-    - end
+    - could I end making
+    - could you halt baking
+    - could you stop preparing
     - excuse me I want to end baking
-    - excuse me I'd really like to halt cooking
+    - excuse me I'd like to halt preparing
     - excuse me i'd like to end preparing
     - excuse me please can I halt cooking
     - excuse me please can you halt preparing
     - excuse me please i would really love to cancel cooking
-    - excuse me please i'd like to end cooking
     - excuse me please may I stop making
     - excuse me please would I halt preparing
+    - excuse me would I cancel making
     - exit
-    - exit baking
+    - exit cooking
     - exit making
     - exit preparing
     - halt
-    - may you cancel cooking
-    - may you end cooking
+    - halt baking
+    - i want to end preparing
+    - may you cancel baking
+    - please I want to cancel cooking
     - please I want to stop preparing
-    - please I'd like to halt baking
     - please I'd really like to end cooking
     - please I'd really like to stop cooking
     - please can I cancel baking
+    - please can I end cooking
+    - please can I halt cooking
     - please can we halt making
     - please could we cancel cooking
-    - please could we halt making
     - please could you halt cooking
     - please i want to end preparing
-    - please may I cancel baking
     - please would we stop preparing
-    - sorry i would really love to halt cooking
+    - sorry can you stop preparing
     - sorry please would we cancel making
     - stop
+    - stop making
     - would I cancel baking
-    - would we end making
 - intent: set_timer
   examples: |
-    - Thank you alert me in [two hours](TIME)
-    - Thank you can add timer in [ten hours](TIME)?
     - Thank you can create a alarm of [four hours](TIME)?
-    - Thank you please would warn in [9 mins](TIME)
-    - Thank you please would you configure a countdown in [seven h](TIME)?
+    - Thank you could notify in [seven h](TIME)
+    - Thank you please can you set up a countdown for [one hour](TIME)?
+    - Thank you please can you warn in [one minute](TIME)
+    - Thank you please would configure a alarm in [2 mins](TIME)?
     - Thank you please would you remember in [4 h](TIME)
     - Thank you please you activate a alarm in [3 h](TIME)?
-    - Thank you please you create alarm in [one min](TIME)?
-    - Thank you please you create chronometer of [one min](TIME)?
-    - Thank you would you add a chronometer for [1 minute](TIME)?
+    - Thank you would create a alarm of [3 h](TIME)?
     - Thank you you add a timer of [7 mins](TIME)?
-    - Thank you you alert me in [1 minute](TIME)
-    - Thank you you create chronometer for [one h](TIME)?
-    - Thanks can you remind me in [one minute](TIME)
-    - Thanks please may add a countdown in [2 minutes](TIME)?
-    - Thanks please would remind me in [7 h](TIME)
-    - Thanks please would you create a chronometer for [one min](TIME)?
-    - Thanks please you add timer for [1 hour](TIME)?
-    - Thanks please you create a reminder for [3 hours](TIME)?
-    - Thanks would set a alarm for [7 minutes](TIME)?
-    - Thanks you notify me in [1 min](TIME)
-    - Thanks you set up countdown in [1 h](TIME)?
-    - activate alarm in [one hour](TIME)?
-    - add a alarm in [1 hour](TIME)?
-    - can add a chronometer of [1 min](TIME)?
-    - can you add a chronometer in [three hours](TIME)?
-    - can you remind in [nine h](TIME)
-    - could set up a chronometer of [8 minutes](TIME)?
-    - could you notify in [9 h](TIME)
-    - may you alert me in [8 minutes](TIME)
-    - may you configure countdown in [5 minutes](TIME)?
-    - notify in [eight hours](TIME)
+    - Thank you you create countdown of [two mins](TIME)?
+    - Thank you you remind in [nine hours](TIME)
+    - Thank you you warn me in [7 mins](TIME)
+    - Thanks a lot may you alert me in [1 minute](TIME)
+    - Thanks a lot please can remind me in [1 h](TIME)
+    - Thanks a lot please could you add a reminder in [9 mins](TIME)?
+    - Thanks a lot please could you add alarm in [four minutes](TIME)?
+    - Thanks a lot please may activate reminder of [1 min](TIME)?
+    - Thanks a lot please you create a timer of [10 mins](TIME)?
+    - Thanks please can warn in [1 hour](TIME)
+    - Thanks please can you notify in [1 minute](TIME)
+    - Thanks please create a alarm for [seven minutes](TIME)?
+    - Thanks please would configure chronometer for [one min](TIME)?
+    - Thanks would add a reminder for [five minutes](TIME)?
+    - Thanks you configure a reminder in [seven h](TIME)?
+    - Thanks you remember me in [3 mins](TIME)
+    - Thanks you set chronometer of [2 h](TIME)?
+    - configure a reminder for [1 minute](TIME)?
+    - configure alarm in [1 minute](TIME)?
+    - could activate a reminder in [six mins](TIME)?
+    - could you configure reminder for [1 min](TIME)?
     - please activate a chronometer for [1 h](TIME)?
-    - please add a timer of [four mins](TIME)?
-    - please alert me in [1 hour](TIME)
-    - please can configure a alarm for [1 hour](TIME)?
-    - please can notify me in [one minute](TIME)
+    - please activate a chronometer of [1 minute](TIME)?
+    - please alert in [1 h](TIME)
+    - please can configure chronometer in [five minutes](TIME)?
+    - please can notify in [one min](TIME)
     - please can set chronometer of [1 minute](TIME)?
+    - please can you configure reminder of [nine h](TIME)?
     - please can you remember in [2 minutes](TIME)
     - please can you set alarm of [seven h](TIME)?
-    - please configure alarm in [1 minute](TIME)?
+    - please can you warn in [6 minutes](TIME)
+    - please could add a chronometer in [four hours](TIME)?
     - please could configure timer for [one hour](TIME)?
-    - please could you add a reminder for [4 h](TIME)?
-    - please could you add a timer in [8 hours](TIME)?
-    - please could you alert me in [three mins](TIME)
+    - please could remind me in [six hours](TIME)
     - please could you create countdown for [one minute](TIME)?
-    - please could you remind me in [six hours](TIME)
-    - please could you warn me in [5 mins](TIME)
+    - please may configure a timer for [1 h](TIME)?
     - please may you configure a countdown for [one hour](TIME)?
-    - please may you remember me in [one min](TIME)
-    - please may you set a countdown for [5 mins](TIME)?
-    - please warn me in [1 minute](TIME)
+    - please remember me in [one h](TIME)
+    - please set a alarm for [7 minutes](TIME)?
+    - please set a timer for [one h](TIME)?
+    - please would configure a countdown of [ten hours](TIME)?
     - please would you alert in [one minute](TIME)
-    - please would you configure alarm of [1 minute](TIME)?
+    - please would you configure timer of [one min](TIME)?
     - please would you set up countdown for [two h](TIME)?
-    - please you add a chronometer of [1 min](TIME)?
+    - please you activate a alarm in [1 min](TIME)?
     - please you add reminder for [1 min](TIME)?
-    - please you create reminder of [1 min](TIME)?
+    - please you alert me in [1 h](TIME)
+    - please you alert me in [10 hours](TIME)
     - please you notify in [one min](TIME)
     - please you notify me in [7 hours](TIME)
-    - remind in [1 h](TIME)
-    - remind in [eight hours](TIME)
+    - please you remember in [1 h](TIME)
+    - please you remember me in [1 min](TIME)
+    - remind in [1 minute](TIME)
     - remind in [one h](TIME)
+    - thank you can you notify in [three mins](TIME)
     - thank you could you remind me in [3 h](TIME)
-    - thank you notify in [1 h](TIME)
-    - thank you notify me in [six h](TIME)
+    - thank you may you remember me in [one minute](TIME)
     - thank you please activate chronometer for [two minutes](TIME)?
     - thank you please can remember in [one h](TIME)
     - thank you please can you alert in [1 min](TIME)
-    - thank you please could set a countdown for [9 h](TIME)?
     - thank you please create chronometer of [one min](TIME)?
-    - thank you please would you notify me in [one min](TIME)
-    - thank you please would you set a alarm in [1 minute](TIME)?
-    - thank you please you alert me in [7 hours](TIME)
-    - thank you please you remember me in [one min](TIME)
-    - thank you remind in [6 hours](TIME)
-    - thank you you activate a reminder in [1 h](TIME)?
-    - thanks may you add chronometer in [two mins](TIME)?
-    - thanks please can alert in [5 mins](TIME)
-    - thanks please can warn in [1 minute](TIME)
-    - thanks please can you notify in [1 minute](TIME)
-    - thanks please may activate a chronometer of [two minutes](TIME)?
-    - thanks please may remind me in [ten h](TIME)
-    - thanks please notify in [two mins](TIME)
-    - thanks please would set up a chronometer in [one minute](TIME)?
-    - thanks please you warn me in [ten hours](TIME)
-    - thanks warn in [5 h](TIME)
-    - thanks would you remind me in [1 h](TIME)
+    - thank you remind in [1 h](TIME)
+    - thank you would you remind me in [five minutes](TIME)
+    - thanks a lot please add chronometer of [one min](TIME)?
+    - thanks a lot please remember in [1 minute](TIME)
+    - thanks a lot please remind me in [7 h](TIME)
+    - thanks a lot please warn me in [ten hours](TIME)
+    - thanks a lot please you alert in [1 minute](TIME)
+    - thanks a lot remember me in [one hour](TIME)
+    - thanks a lot warn me in [three minutes](TIME)
+    - thanks can warn in [four h](TIME)
+    - thanks could notify me in [1 h](TIME)
+    - thanks please you add a alarm in [1 min](TIME)?
+    - thanks please you set timer for [one hour](TIME)?
     - thanks you configure reminder in [one h](TIME)?
-    - warn in [one min](TIME)
+    - warn in [1 min](TIME)
+    - would activate chronometer in [1 h](TIME)?
+    - would alert in [3 hours](TIME)
     - would alert me in [4 h](TIME)
+    - would you activate countdown for [nine mins](TIME)?
     - would you create a alarm in [1 minute](TIME)?
-    - would you remember in [1 h](TIME)
+    - you activate a timer of [1 min](TIME)?
     - you add a chronometer of [nine hours](TIME)?
+    - you add a reminder of [2 mins](TIME)?
     - you alert me in [one min](TIME)
     - you remember in [1 hour](TIME)
+    - you remember me in [5 h](TIME)
+    - you remind in [1 hour](TIME)
     - you remind in [1 minute](TIME)
-    - you set a reminder of [8 minutes](TIME)?
-    - you set chronometer for [one minute](TIME)?
+    - you warn me in [7 mins](TIME)
     - you warn me in [one h](TIME)
 - intent: ask_to_repeat
   examples: |
-    - you repeat?
-    - please what did you say?
-    - Can you say it again?
-    - could you please repeat?
-    - may you please say it again that?
-    - May you repeat?
-    - could you please say it again that?
-    - you please say it again?
-    - come again?
-    - May you say it again?
-    - Would you repeat that?
-    - Can you please repeat?
-    - May you please say it again?
-    - would you say it again that?
-    - could you say it again that?
-    - you please repeat that?
-    - could you repeat?
-    - Could you please say it again that?
-    - Could you say it again that?
-    - Please come again?
-    - could you please repeat that?
-    - May you please repeat that?
-    - Could you please repeat?
-    - May you repeat that?
-    - Could you say it again?
-    - May you please say it again that?
-    - may you repeat?
-    - may you please repeat that?
-    - may you say it again that?
-    - you repeat that?
-    - can you say it again that?
-    - would you repeat that?
-    - can you say it again?
-    - Can you repeat?
-    - Would you please say it again?
-    - can you please repeat?
-    - could you please say it again?
-    - Would you please repeat?
-    - Could you repeat?
-    - could you repeat that?
-    - can you repeat that?
     - Would you please say it again that?
-    - can you repeat?
-    - Could you repeat that?
+    - can you say it again that?
     - Can you repeat that?
-    - you say it again?
-    - what did you say?
-    - can you please say it again that?
+    - Can you say it again?
+    - would you say it again?
+    - may you say it again that?
+    - can you please say it again?
+    - can you please repeat that?
+    - Could you please say it again that?
+    - can you repeat?
+    - Would you repeat?
+    - you please repeat that?
+    - may you please repeat?
+    - could you repeat?
+    - you please say it again that?
+    - could you say it again that?
+    - Could you repeat?
+    - Could you repeat that?
+    - Can you please repeat?
+    - May you please say it again that?
+    - may you repeat that?
+    - May you please repeat that?
+    - Could you say it again that?
+    - Can you repeat?
+    - Would you please repeat?
+    - would you say it again that?
+    - Could you say it again?
+    - Would you please repeat that?
     - would you please repeat?
-    - May you say it again that?
+    - Could you please say it again?
+    - may you please repeat that?
+    - would you repeat that?
+    - could you say it again?
+    - Please what did you say?
+    - can you please repeat?
+    - you say it again that?
+    - may you repeat?
+    - may you say it again?
+    - Would you please say it again?
+    - you repeat that?
+    - Can you please say it again that?
+    - Could you please repeat?
+    - would you please say it again that?
+    - you repeat?
+    - May you please say it again?
+    - Can you say it again that?
+    - could you repeat that?
+    - come again?
+    - you say it again?
+    - you please say it again?
