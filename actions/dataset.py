@@ -110,7 +110,7 @@ class Dataset():
         if len(tags) > 0:
             recipes_mask &= self._df_recipes['tags'].apply(set(t.lower() for t in tags).issubset)
         if cuisine is not None:
-            recipes_mask &= self._df_recipes.cuisine.str.contains(cuisine.lower())
+            recipes_mask &= self._df_recipes['cuisine'].str.contains(cuisine.lower())
         recipe_ids = self._df_recipes[recipes_mask].index.tolist()
         return recipe_ids
 

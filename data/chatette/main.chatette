@@ -26,12 +26,12 @@
     ~[&affirm?] ~[i am?] [done|~[ready]]
 
 %[search_recipes](300)
-    ~[&i want] to ~[eat] [a?] [@[recipe]|@[cuisine] ~[recipe]] ~[day time?].
+    ~[&i want] to ~[eat] [a?] [@[recipe]|@[cuisine] ~[recipe]] ~[day time?]
     ~[&can] you ~[please?] ~[search] [~[recipe] for|how to ~[cook]?] [@[recipe]|@[cuisine] ~[recipe]]?
-    ~[&i want] to ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?].
+    ~[&i want] to ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?]
     ~[&can] you ~[please?] ~[search] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?]?
     [&I] ~[only?] ~[have] @[ingredient][, what ~[can] [&I] ~[cook]\??]
-    ~[&i want] to ~[eat] ~[recipe] @[tag][ [and?] @[tag]?] ~[day time?].
+    ~[&i want] to ~[eat] ~[recipe] @[tag][ [and?] @[tag]?] ~[day time?]
     ~[&can] you ~[please?] ~[search] ~[recipe] @[tag][ [and?] @[tag]?]?
 
 %[ask_alternative_recipe](100)
@@ -41,7 +41,7 @@
 %[ask_ingredients_list](100)
     [&what|which] [other?] ~[ingredient]s [are ~[needed]|do [&I] ~[need]] [for @[CARDINAL] ~[people?]?]?
     ~[&can] you ~[please?] ~[give] [me?] the [list of?] [ingredient][s?] [that are?] ~[needed?] [for @[CARDINAL] ~[people?]?]?
-    ~[&affirm?] ~[i want?] the [list of?] [ingredient][s?] [that are?] ~[needed?] [for @[CARDINAL] ~[people?]?].
+    ~[&affirm?] ~[i want?] the [list of?] [ingredient][s?] [that are?] ~[needed?] [for @[CARDINAL] ~[people?]?]
 
 %[ask_expected_time](100)
     [&how] [long|much time] [[will it|is going to] take?] to ~[cook]?
@@ -58,28 +58,28 @@
     [&how] [much|many] [of?] @[ingredient][ [and|,?] @[ingredient]?] [is|are] ~[needed] [for this [recipe?]?] [for @[CARDINAL] ~[people?]?/80]?
 
 %[tell_people_count](100)
-    ~[&thanks?] [&we] [~[will] be?] @[CARDINAL] ~[people?].
-    ~[&thanks?] [&we] are [in?] @[CARDINAL] ~[people?].
+    ~[&thanks?] [&we] [~[will] be?] @[CARDINAL] ~[people?]
+    ~[&thanks?] [&we] are [in?] @[CARDINAL] ~[people?]
     ~[&thanks?] [what about|and?] for @[CARDINAL] ~[people?]?
 
 %[tell_people_count_one](50)
-    ~[&thanks?] ~[i am] ~[alone].
-    ~[&thanks?] ~[it is] [only|just] me.
+    ~[&thanks?] ~[i am] ~[alone]
+    ~[&thanks?] ~[it is] [only|just] me
 
 %[start_cooking](100)
     ~[&thanks?] ~[can] [&we] [[go ahead|get going] and?] ~[start] ~[cooking] [now?]?
-    ~[&thanks?] [let's?] [~[start] ~[cooking]|~[cook]] [now?].
-    ~[&thanks?] ~[i am] ~[ready] to ~[cook] [now?].
+    ~[&thanks?] [let's?] [~[start] ~[cooking]|~[cook]] [now?]
+    ~[&thanks?] ~[i am] ~[ready] to ~[cook] [now?]
     ~[&thanks?] [~[can] you?] ~[give] me the [~[cooking]|~[recipe]?] ~[instructions] ~[please?]?
 
 %[stop_cooking](50)
-    ~[&sorry?] ~[please?] ~[i want] to ~[stop] ~[cooking].
-    ~[&sorry?] ~[please?] ~[can] [I|we|you] ~[stop] ~[cooking].
-    [~[stop]|exit] ~[cooking?].
+    ~[&sorry?] ~[please?] ~[i want] to ~[stop] ~[cooking]
+    ~[&sorry?] ~[please?] ~[can] [I|we|you] ~[stop] ~[cooking]
+    [~[stop]|exit] ~[cooking?]
 
 %[set_timer](100)
-    ~[&thanks?] ~[please?] ~[can?] [you?] ~[set] [a?] ~[timer] [for|in|of] @[TIME]?
-    ~[&thanks?] ~[please?] ~[can?] [you?] ~[remind] [me?] in @[TIME].
+    ~[&thanks?] ~[please?] [~[can] you?] ~[set] [a?] ~[timer] [for|in|of] @[TIME]?
+    ~[&thanks?] ~[please?] [~[can] you?] ~[remind] [me?] in @[TIME]
 
 %[ask_to_repeat](50)
     ~[&can?] you ~[please?] ~[repeat] [that?]?
