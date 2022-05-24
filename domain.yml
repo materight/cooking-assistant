@@ -97,17 +97,17 @@ responses:
   - text: "Thanks for talking with me. Bye!"
   - text: "Bye!"
 
-  utter_search_recipe/found:
+  utter_search_recipe_found:
   - text: "I found a recipe for \"{recipe_title}\". Would you like to know more?"
 
-  utter_search_recipe/found_alternative:
+  utter_search_recipe_found_alternative:
   - text: "What about \"{recipe_title}\"?"
   - text: "I also found a recipe for \"{recipe_title}\"."
 
-  utter_search_recipe/not_found:
+  utter_search_recipe_not_found:
   - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
 
-  utter_search_recipe/not_found_alternative:
+  utter_search_recipe_not_found_alternative:
   - text: "Sorry I wasn't able to find any alternative. Would you like to search for something else?"
 
   utter_ask_people_count:
@@ -117,34 +117,34 @@ responses:
   utter_expected_time:
   - text: "This recipe requires {prep_time} minutes for preparation and {cook_time} minutes for cooking."
 
-  utter_ingredient_substitute/found:
+  utter_ingredient_substitute_found:
   - text: "You may use {substitute} as a substitute."
 
-  utter_ingredient_substitute/not_found:
+  utter_ingredient_substitute_not_found:
   - text: "Sorry, I couldn't find any substitute for {ingredient}."
 
-  utter_ingredient_substitute/no_ingredient:
+  utter_ingredient_substitute_no_ingredient:
   - text: "Sorry, I couldn't find any alternative."
 
-  utter_ingredient_amount/found:
+  utter_ingredient_amount_found:
   - text: "You need {amounts_str}."
   - text: "Please use {amounts_str}."
 
-  utter_ingredient_amount/not_found:
+  utter_ingredient_amount_not_found:
   - text: "You don't need any {ingredients_str} for this recipe."
 
-  utter_ingredient_amount/no_ingredient:
+  utter_ingredient_amount_no_ingredient:
   - text: "I'm sorry I couldn't understand which ingredient you are referring to."
 
   utter_list_ingredients:
   - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
   - text: "For {people_count_str} you'll need:\n{ingredients_list}"
 
-  utter_set_timer/done:
+  utter_set_timer_done:
   - text: "I've set a timer for {time}."
   - text: "Ok I'll give you a reminder in {time}."
 
-  utter_set_timer/error:
+  utter_set_timer_error:
   - text: "I'm sorry, I couldn't undesterstand."
 
   utter_timer_expired:
@@ -155,11 +155,11 @@ responses:
   - text: "Shall we start cooking?"
   - text: "Do you have everything ready?"
 
-  utter_list_steps/first:
+  utter_list_steps_first:
   - text: "Ok let's start! First, {step_description} Let me know when you're done."
   - text: "Perfect let's cook! To begin, {step_description} Tell me when you're ready for the next step."
 
-  utter_list_steps/next:
+  utter_list_steps_next:
   - text: "Great, now {step_description}"
   - text: "Perfect, now {step_description}"
   - text: "Okay, now {step_description}"
@@ -168,11 +168,11 @@ responses:
   - text: "Now {step_description}"
   - text: "Next {step_description}"
 
-  utter_list_steps/end:
+  utter_list_steps_end:
   - text: "Great! That was the last step, enjoy your meal!"
   - text: "And we are done! Have a nice meal!"
   
-  utter_list_steps/stop:
+  utter_list_steps_stop:
   - text: "Ok, I'll stop reading the recipe."
 
 

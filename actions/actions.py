@@ -32,16 +32,16 @@ class ActionSearchRecipe(Action):
         cuisine = next(tracker.get_latest_entity_values('cuisine'), None)
         logger.info('Search recipe by keyword "%s", ingredients %s, tags %s and cuisine "%s"', keyword, ingredients, tags, cuisine)
         if len(keywords) == 0 and len(ingredients) == 0 and len(tags) == 0 and cuisine is None:
-            dispatcher.utter_message(response='utter_search_recipe/not_found')
+            dispatcher.utter_message(response='utter_search_recipe_not_found')
             return []
         recipes_ids = dataset.search_recipes(keywords)
         logger.info('Found %d recipes', len(recipes_ids))
         if len(recipes_ids) == 0:
-            dispatcher.utter_message(response='utter_search_recipe/not_found')
+            dispatcher.utter_message(response='utter_search_recipe_not_found')
             return []
         else:
             recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
-            dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title, image=recipe.image)
+            dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
             return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
 
 
@@ -55,12 +55,12 @@ class ActionSearchAlternativeRecipe(Action):
         current_recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
         found_recipes_ids = tracker.get_slot('found_recipes_ids')
         if found_recipes_ids is None or len(found_recipes_ids) <= 1:
-            dispatcher.utter_message(response='utter_search_recipe/not_found_alternative')
+            dispatcher.utter_message(response='utter_search_recipe_not_found_alternative')
             return []
         current_recipe_idx = found_recipes_ids.index(current_recipe_id)
         new_recipe_id = found_recipes_ids[(current_recipe_idx + 1) % len(found_recipes_ids)]
         recipe = dataset.get_recipe(new_recipe_id)
-        dispatcher.utter_message(response='utter_search_recipe/found_alternative', recipe_title=recipe.title)
+        dispatcher.utter_message(response='utter_search_recipe_found_alternative', recipe_title=recipe.title)
         return [ SlotSet('current_recipe_id', new_recipe_id) ]
         
 
@@ -134,11 +134,11 @@ class ActionSearchIngredientSubstitute(Action):
             logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)
         # Utter substitute
         if substitute is not None:
-            dispatcher.utter_message(response='utter_ingredient_substitute/found', substitute=substitute)
+            dispatcher.utter_message(response='utter_ingredient_substitute_found', substitute=substitute)
         elif ingredient is not None:
-            dispatcher.utter_message(response='utter_ingredient_substitute/not_found', ingredient=ingredient)
+            dispatcher.utter_message(response='utter_ingredient_substitute_not_found', ingredient=ingredient)
         else:
-            dispatcher.utter_message(response='utter_ingredient_substitute/no_ingredient')
+            dispatcher.utter_message(response='utter_ingredient_substitute_no_ingredient')
         return []
 
 
@@ -158,12 +158,12 @@ class ActionTellIngredientAmount(Action):
                         if any(asked_ingr in ingr.name for asked_ingr in asked_ingredients) ]
             if len(amounts) > 0:
                 amounts_str = utils.join_list_str(amounts)
-                dispatcher.utter_message(response='utter_ingredient_amount/found', amounts_str=amounts_str)
+                dispatcher.utter_message(response='utter_ingredient_amount_found', amounts_str=amounts_str)
             else:
                 ingredients_str = utils.join_list_str(asked_ingredients, last_sep='or')
-                dispatcher.utter_message(response='utter_ingredient_amount/not_found', ingredients_str=ingredients_str)
+                dispatcher.utter_message(response='utter_ingredient_amount_not_found', ingredients_str=ingredients_str)
         else:
-            dispatcher.utter_message(response='utter_ingredient_amount/no_ingredient')
+            dispatcher.utter_message(response='utter_ingredient_amount_no_ingredient')
         return []
 
 
@@ -181,16 +181,16 @@ class ActionListStepsLoop(FormValidationAction):
         if current_step_idx >= len(recipe.steps):
             # All the steps have been read
             logger.info('All the steps of recipe %s have been read', recipe.id)
-            dispatcher.utter_message(response='utter_list_steps/end')
+            dispatcher.utter_message(response='utter_list_steps_end')
             return dict(current_step_idx=-1, list_steps_done=True)
         else:
             # Read next step
             logger.info('Reading step %d/%d of recipe %s', current_step_idx + 1, len(recipe.steps), recipe.id)
             current_step_descr = utils.lower_first_letter(recipe.steps[current_step_idx].description)
             if current_step_idx == 0:
-                dispatcher.utter_message(response='utter_list_steps/first', step_description=current_step_descr)
+                dispatcher.utter_message(response='utter_list_steps_first', step_description=current_step_descr)
             else:
-                dispatcher.utter_message(response='utter_list_steps/next', step_description=current_step_descr)
+                dispatcher.utter_message(response='utter_list_steps_next', step_description=current_step_descr)
             return dict(current_step_idx=current_step_idx, list_steps_done=None)
 
 
@@ -207,10 +207,10 @@ class ActionSetTimer(Action):
             if amount is not None and unit is not None:
                 trigger_time = datetime.now() + timedelta(**{unit: amount})
                 logger.info('Set a timer for %d %s, trigger at %s', amount, unit, trigger_time)
-                dispatcher.utter_message(response='utter_set_timer/done', time=f'{amount} {unit}')
+                dispatcher.utter_message(response='utter_set_timer_done', time=f'{amount} {unit}')
                 return [ ReminderScheduled(trigger_date_time=trigger_time, intent_name='EXTERNAL_timer_expired', kill_on_user_message=False) ]
         logger.info('Could not set timer for entity "%s"', time_str)
-        dispatcher.utter_message(response='utter_set_timer/error', time=time_str)
+        dispatcher.utter_message(response='utter_set_timer_error', time=time_str)
         return [ ]
 
 

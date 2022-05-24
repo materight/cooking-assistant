@@ -144,11 +144,12 @@ rules:
     - active_loop: list_steps_loop
     steps:
     - intent: stop_cooking
+    - action: action_deactivate_loop
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
     - action: action_reset_list_steps_loop
-    - action: utter_list_steps/stop
+    - action: utter_list_steps_stop
     - action: utter_anything_else
 
 
