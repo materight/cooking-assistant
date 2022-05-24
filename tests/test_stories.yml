@@ -5,9 +5,9 @@ stories:
   - user: hi!
     intent: greet
   - action: utter_greet
-  - user: I'd like to prepare a [pizza](recipe)
-    intent: search_by_keyword
-  - action: action_search_by_keyword
+  - user: I'd like to prepare a [pizza](recipe) with [mozzarella](ingredient)
+    intent: search_recipes
+  - action: action_search_recipes
   - slot_was_set:
     - found_recipes_ids: [3, 4]
     - current_recipe_id: 3

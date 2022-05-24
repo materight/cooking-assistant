@@ -21,3 +21,11 @@
 
 // Training data for recipe names
 |recipes.chatette
+
+// Note: tags and cuisine are handled by lookup tables, so no need to create multiple entries here.
+// This is done only to be able to generate NLU data with chatette.
+@[cuisine]
+    italian
+
+@[tag]
+    gluten-free

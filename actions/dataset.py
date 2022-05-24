@@ -1,4 +1,3 @@
-
 import os
 import yaml
 import pandas as pd
@@ -98,19 +97,22 @@ class Dataset():
         recipe = Recipe(id=recipe_id, **df_recipe, ingredients=ingredients, steps=steps)
         return recipe
 
-    def search_by_keyword(self, query: Text) -> List[int]:
-        """Search for a recipe by keyword."""
-        recipes_ids = self._df_recipes[self._df_recipes['title'].str.contains(query, case=False)].index.to_list()
-        return recipes_ids
-
-    def search_by_ingredients(self, query: List[Text]) -> List[int]:
-        """Search for a recipe by ingredients."""
-        query = '|'.join(query)
-        results = self._df_ingredients[self._df_ingredients['name'].str.contains(query, case=False)]
-        # Count number of ingredients occurences
-        results = results.groupby('recipe_id', as_index=False).name.count().rename(columns={'name': 'count'})
-        recipes_ids = results.sort_values('count', ascending=False).recipe_id.to_list() # Returns list ordered by number of mathched ingredients
-        return recipes_ids
+    def search_recipes(self, keywords: List[Text], ingredients: List[Text], tags: List[Text], cuisine: Optional[Text]) -> List[int]:
+        """Search for recipes matching the given keywords, ingredients, tags and cuisine."""
+        recipes_mask = True
+        if len(keywords) > 0:
+            recipes_mask &= self._df_recipes['title'].str.contains('|'.join(keywords), case=False) # Any of the keywords
+        if len(ingredients) > 0:
+            results = self._df_ingredients[self._df_ingredients['name'].str.contains('|'.join(ingredients), case=False)] # All of the ingredients
+            results = results.groupby('recipe_id', as_index=False).name.count().rename(columns=dict(name='count')) # Count number of ingredients occurences
+            results = results[results['count'] == len(ingredients)].recipe_id.to_list() # Returns only the recipes containing all the given ingredients
+            recipes_mask &= self._df_recipes.index.isin(results)
+        if len(tags) > 0:
+            recipes_mask &= self._df_recipes['tags'].apply(set(t.lower() for t in tags).issubset)
+        if cuisine is not None:
+            recipes_mask &= self._df_recipes.cuisine.str.contains(cuisine.lower())
+        recipe_ids = self._df_recipes[recipes_mask].index.tolist()
+        return recipe_ids
 
     def search_ingredient_substitute(self, query: Text) -> Optional[Text]:
         """Search for an alternative to the given ingredient."""

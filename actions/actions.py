@@ -5,62 +5,43 @@ from typing import Any, Text, Dict, List
 
 from word2number import w2n
 from rasa_sdk import Action, Tracker, FormValidationAction
-from rasa_sdk.events import SlotSet, AllSlotsReset, ReminderScheduled
+from rasa_sdk.events import SlotSet, ReminderScheduled
 from rasa_sdk.executor import CollectingDispatcher
 
 from . import utils
-from .dataset import Dataset, Ingredient
+from .dataset import Dataset
 
-# Logger
+# Init logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 # Load dataset globally
 dataset = Dataset()
 
-class ActionSearchByKeyword(Action):
-    """Search for a recipe by keyword."""
 
+class ActionSearchRecipe(Action):
+    """Search for a recipe by keyword, ingredients, tags or cuisine."""
+    
     def name(self) -> Text:
-        return 'action_search_by_keyword'
+        return 'action_search_recipes'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        keyword = next(tracker.get_latest_entity_values('recipe'), None)
-        logger.info('Search recipe by keyword "%s"', keyword)
-        if keyword is None:
+        keywords = list(tracker.get_latest_entity_values('recipe'))
+        ingredients = list(tracker.get_latest_entity_values('ingredient'))
+        tags = list(tracker.get_latest_entity_values('tag'))
+        cuisine = next(tracker.get_latest_entity_values('cuisine'), None)
+        logger.info('Search recipe by keyword "%s", ingredients %s, tags %s and cuisine "%s"', keyword, ingredients, tags, cuisine)
+        if len(keywords) == 0 and len(ingredients) == 0 and len(tags) == 0 and cuisine is None:
             dispatcher.utter_message(response='utter_search_recipe/not_found')
             return []
-        recipes_ids = dataset.search_by_keyword(keyword)
-        logger.info('Found %d recipes',len(recipes_ids))
+        recipes_ids = dataset.search_recipes(keywords)
+        logger.info('Found %d recipes', len(recipes_ids))
         if len(recipes_ids) == 0:
             dispatcher.utter_message(response='utter_search_recipe/not_found')
             return []
         else:
             recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
             dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title, image=recipe.image)
-            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
-
-
-class ActionSearchByIngredients(Action):
-    """Search for a recipe by ingredients."""
-
-    def name(self) -> Text:
-        return 'action_search_by_ingredients'
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        ingredients = list(tracker.get_latest_entity_values('ingredient'))
-        logger.info('Search recipe for ingredients %s', ingredients)
-        if len(ingredients) == 0:
-            dispatcher.utter_message(response='utter_search_recipe/not_found')
-            return []
-        recipes_ids = dataset.search_by_ingredients(ingredients)
-        logger.info('Found %d recipes',len(recipes_ids))
-        if len(recipes_ids) == 0:
-            dispatcher.utter_message(response='utter_search_recipe/not_found')
-            return []
-        else:
-            recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
-            dispatcher.utter_message(response='utter_search_recipe/found', recipe_title=recipe.title)
             return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
 
 
@@ -72,8 +53,8 @@ class ActionSearchAlternativeRecipe(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         current_recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
-        found_recipes_ids = tracker.get_slot('found_recipes_ids') # TODO: handle None recipe_ids
-        if len(found_recipes_ids) <= 1:
+        found_recipes_ids = tracker.get_slot('found_recipes_ids')
+        if found_recipes_ids is None or len(found_recipes_ids) <= 1:
             dispatcher.utter_message(response='utter_search_recipe/not_found_alternative')
             return []
         current_recipe_idx = found_recipes_ids.index(current_recipe_id)

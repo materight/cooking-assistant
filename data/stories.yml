@@ -5,24 +5,13 @@ stories:
 
 ####################### Phase 1: Search recipe #######################
 
-- story: Search for a recipe by keyword
+- story: Search for a recipe
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: search_by_keyword
-    entities: [ recipe ]
-  - action: action_search_by_keyword
-  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
-  - checkpoint: recipe_selected
-
-
-- story: Search for a recipe by ingredients
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: search_by_ingredients
-    entities: [ ingredient ]
-  - action: action_search_by_ingredients
+  - intent: search_recipes
+    entities: [ recipe, ingredient, tag, cuisine ]
+  - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - checkpoint: recipe_selected
   
@@ -31,9 +20,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: search_by_ingredients
-    entities: [ ingredient ]
-  - action: action_search_by_ingredients
+  - intent: search_recipes
+    entities: [ recipe, ingredient, tag, cuisine ]
+  - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - or:
     - intent: ask_alternative_recipe

@@ -23,10 +23,8 @@ intents:
 - greet
 - idk
 - next
-- search_by_ingredients:
-    use_entities: [ ingredient ]
-- search_by_keyword:
-    use_entities: [ recipe ]
+- search_recipes:
+    use_entities: [ recipe, ingredient, tag, cuisine ]
 - set_timer:
     use_entities: [ TIME ]
 - start_cooking
@@ -41,6 +39,8 @@ intents:
 entities:
   - recipe
   - ingredient
+  - tag
+  - cuisine
   - CARDINAL
   - TIME
 
@@ -178,8 +178,7 @@ responses:
 
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
-  - action_search_by_keyword
-  - action_search_by_ingredients
+  - action_search_recipes
   - action_search_alternative_recipe
   - action_tell_expected_time
   - action_tell_ingredient_amount

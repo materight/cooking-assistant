@@ -10,12 +10,25 @@ from actions.dataset import Dataset
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 
-def generate_entites_file(entity_name: Text, items: List[Text], file_path: Text, mode: Text = 'w'):
+
+def generate_entities_file(entity_name: Text, items: List[Text], file_path: Text, mode: Text = 'w'):
     """Generate a file containing a list of entities."""
     with open(file_path, mode, encoding='utf-8') as file:
-        file.write(f'\n@[{entity_name}]\n')
+        file.write(f'@[{entity_name}]\n')
         for item in items:
             file.write(f'    {item}\n')
+        file.write('\n')
+
+
+def generate_lookup_tables(entity_name: Text, items: List[Text], file_path: Text, mode: Text = 'w'):
+    """Generate base file for chatette with entity synonyms and lookup tables (yaml.dump does no supports Rasa format)."""
+    with open(file_path, mode, encoding='utf-8') as file:
+        if mode == 'w': # Write the header only at the beggining of the file
+            file.write('version: "2.0"\nnlu:\n') 
+        file.write(f'- lookup: {entity_name}\n  examples: |\n')
+        for item in items:
+            file.write(f'    - {item}\n')
+        file.write('\n')
 
 
 if __name__ == '__main__':
@@ -24,16 +37,16 @@ if __name__ == '__main__':
 
     # Generate entities for recipes names
     print('Generating recipes keyword entities...')
-    generate_entites_file('recipe', dataset.recipes, os.path.join(DATA_DIR, 'chatette', 'recipes.chatette'))
-
-    # Generate entities for recipe tags
-    print('Generating tags entities...')
-    generate_entites_file('tag', dataset.tags, os.path.join(DATA_DIR, 'chatette', 'tags.chatette'))
-    generate_entites_file('cuisine', dataset.cuisines, os.path.join(DATA_DIR, 'chatette', 'tags.chatette'), mode='a')
+    generate_entities_file('recipe', dataset.recipes, os.path.join(DATA_DIR, 'chatette', 'recipes.chatette'))
 
     # Generate entities for ingredient names
     print('Generating ingredients entities...')
-    generate_entites_file('ingredient', dataset.ingredients, os.path.join(DATA_DIR, 'chatette', 'ingredients.chatette'))
+    generate_entities_file('ingredient', dataset.ingredients, os.path.join(DATA_DIR, 'chatette', 'ingredients.chatette'))
+
+    # Generate entities for recipe tags
+    print('Generating tags lookup tables...')
+    generate_lookup_tables('tag', dataset.tags, os.path.join(DATA_DIR, 'tags.yml'))
+    generate_lookup_tables('cuisine', dataset.cuisines, os.path.join(DATA_DIR, 'tags.yml'), mode='a')
 
     # Generate NLU data with Chatette
     print('Generating data with Chatette...')
