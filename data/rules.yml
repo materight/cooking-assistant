@@ -44,6 +44,7 @@ rules:
     steps:
     - intent: search_recipes
     - action: action_search_recipes
+    wait_for_user_input: false
 
 
   - rule: Refine recipe search by asking user additional filters
