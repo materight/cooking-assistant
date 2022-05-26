@@ -128,7 +128,7 @@ nlu:
     - nah thanks
 - intent: idk
   examples: |
-    - do no care
+    - do not care
     - not sure
     - it's not important
     - i don't know
@@ -141,16 +141,16 @@ nlu:
     - It's not important
     - idk
     - It is the same
-    - I do no care
+    - I do not care
     - it is not important
     - I don't know
     - It is not important
-    - I do no know
+    - I do not know
     - the same
-    - i do no care
+    - i do not care
     - don't care
     - It's the same
-    - i do no know
+    - i do not know
     - It is equal
     - I'm not sure
     - equal
@@ -159,7 +159,7 @@ nlu:
     - i am not sure
     - I don't care
     - boh
-    - do no know
+    - do not know
     - I am not sure
     - it is the same
 - intent: next
