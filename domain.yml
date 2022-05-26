@@ -185,7 +185,7 @@ responses:
   - text: "And we are done! Have a nice meal!"
   
   utter_list_steps_stop:
-  - text: "Ok, I'll stop reading the recipe."
+  - text: "Ok, I'll stop reading the current recipe."
 
 
 # Actions, check https://rasa.com/docs/rasa/actions for more info

@@ -106,7 +106,7 @@ class ActionSearchAlternativeRecipe(Action):
         current_recipe_idx = found_recipes_ids.index(current_recipe_id)
         new_recipe_id = found_recipes_ids[(current_recipe_idx + 1) % len(found_recipes_ids)]
         recipe = dataset.get_recipe(new_recipe_id)
-        dispatcher.utter_message(response='utter_search_recipe_found_alternative', recipe_title=recipe.title)
+        dispatcher.utter_message(response='utter_search_recipe_found_alternative', recipe_title=recipe.title, image=recipe.image)
         return [ SlotSet('current_recipe_id', new_recipe_id) ]
         
 

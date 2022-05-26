@@ -174,7 +174,23 @@ rules:
     - action: utter_anything_else
 
 
-  # Reading cooking steps interruptions 
+  - rule: Stop cooking, ask for new recipe
+    condition:
+    - slot_was_set: [ current_recipe_id ]
+    - active_loop: list_steps_loop
+    steps:
+    - intent: search_recipes
+    - action: action_deactivate_loop
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_reset_list_steps_loop
+    - action: utter_list_steps_stop
+    - action: action_search_recipes
+    wait_for_user_input: false
+
+
+  # Reading cooking steps interruptions and recovery
   - rule: Interruption - ask for alternative ingredient
     condition:
     - active_loop: list_steps_loop
