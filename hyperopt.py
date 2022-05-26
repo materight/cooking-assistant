@@ -1,23 +1,11 @@
 """Script to run hyperparameters optimization of a Rasa model."""
 import os
 import yaml
-import tempfile
 import argparse
 import subprocess
 from datetime import datetime
 
 from sklearn.model_selection import ParameterSampler
-
-HYPERPARAMS = dict(
-    epochs=[20, 50, 100],
-    embedding_dimension=[10, 20, 50],
-    learning_rate=[0.001, 0.01],
-    drop_rate=[0.1, 0.2, 0.3],
-    constrain_similarities=[True, False],
-    max_history=[5, 10, 15],
-    max_ngram=[3, 4, 5],
-    fallback_threshold=[0.4, 0.7],
-)
 
 parser = argparse.ArgumentParser(description="Run hyperparameters optimization of a Rasa model.")
 parser.add_argument('--n-iter', '-n', type=int, default=3, help="Total number of iterations to run (default: %(default)s).")
@@ -51,7 +39,7 @@ if __name__ == "__main__":
     
     # Generate the config files to compare
     configs = []
-    sampler = ParameterSampler(HYPERPARAMS, n_iter=args.n_iter, random_state=0)
+    sampler = ParameterSampler(config['hyperparams'], n_iter=args.n_iter, random_state=0)
     os.makedirs(os.path.join(work_dir, 'configs'))
     print(f'Generating {len(sampler)} pipeline configs...')
     for i, params in enumerate(sampler):

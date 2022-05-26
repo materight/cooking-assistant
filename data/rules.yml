@@ -43,7 +43,6 @@ rules:
   - rule: Search recipe by name, ingredients, tags or cuisine
     steps:
     - intent: search_recipes
-      entities: [ recipe, ingredient, tag, cuisine ]
     - action: action_search_recipes
 
 

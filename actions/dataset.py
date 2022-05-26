@@ -113,7 +113,7 @@ class Dataset():
         # Search with filters
         recipes_mask = True
         if len(keywords) > 0:
-            recipes_mask &= self._df_recipes['title'].str.contains('|'.join(keywords), case=False) # Any of the keywords
+            recipes_mask &= self._df_recipes['title'].str.contains('|'.join(keywords + ingredients), case=False) # Any of the keywords (use also the ingredients)
         if len(ingredients) > 0:
             results = self._df_ingredients[self._df_ingredients['name'].str.contains('|'.join(ingredients), case=False)] # All of the ingredients
             results = results.groupby('recipe_id', as_index=False).name.count().rename(columns=dict(name='count')) # Count number of ingredients occurences

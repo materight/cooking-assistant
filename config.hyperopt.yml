@@ -1,8 +1,19 @@
 language: en
 
+hyperparams:
+  epochs: [20, 50, 100]
+  embedding_dimension: [10, 20, 50]
+  learning_rate: [0.001, 0.01]
+  drop_rate: [0.1, 0.2, 0.3]
+  constrain_similarities: [True, False]
+  max_history: [5, 10, 15]
+  max_ngram: [3, 4, 5]
+  fallback_threshold: [0.4, 0.7]
+  spacy_model: [en_core_web_sm, en_core_web_md]
+
 pipeline:
   - name: SpacyNLP
-    model: en_core_web_md
+    model: $spacy_model
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
