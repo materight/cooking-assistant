@@ -86,8 +86,11 @@ rules:
     condition:
     - slot_was_set: [ current_recipe_id ]
     steps:
-    - intent: ask_ingredient_amount
-      entities: [ ingredient ]
+    - or:
+      - intent: ask_ingredient_amount
+        entities: [ ingredient]
+      - intent: ask_ingredient_amount
+        entities: [ ingredient, CARDINAL ]
     - action: action_tell_ingredient_amount
 
 
@@ -187,8 +190,11 @@ rules:
     condition:
     - active_loop: list_steps_loop
     steps:
-    - intent: ask_ingredient_amount
-      entities: [ ingredient ]
+    - or:
+      - intent: ask_ingredient_amount
+        entities: [ ingredient]
+      - intent: ask_ingredient_amount
+        entities: [ ingredient, CARDINAL ]
     - action: action_tell_ingredient_amount
     - action: list_steps_loop
     - active_loop: list_steps_loop
