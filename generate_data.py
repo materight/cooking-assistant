@@ -44,9 +44,11 @@ if __name__ == '__main__':
     generate_entities_file('ingredient', dataset.ingredients, os.path.join(DATA_DIR, 'chatette', 'ingredients.chatette'))
 
     # Generate entities for recipe tags
-    print('Generating tags lookup tables...')
+    print('Generating tags lookup tables and entities...')
     generate_lookup_tables('tag', dataset.tags, os.path.join(DATA_DIR, 'tags.yml'))
     generate_lookup_tables('cuisine', dataset.cuisines, os.path.join(DATA_DIR, 'tags.yml'), mode='a')
+    generate_entities_file('tag', dataset.tags, os.path.join(DATA_DIR, 'chatette', 'tags.chatette'))
+    generate_entities_file('cuisine', dataset.cuisines, os.path.join(DATA_DIR, 'chatette', 'tags.chatette'), mode='a')
 
     # Generate NLU data with Chatette
     print('Generating data with Chatette...')
