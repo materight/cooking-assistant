@@ -1,7 +1,7 @@
 # List of cooking recipes
 
 - title: Pasta Aglio e Olio
-  image: https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F5853F13-70A5-4A54-B38A-8F229C3050F5/Derivates/7C5F0049-A335-40D1-8EF5-D2702653584E.jpg
+  image: https://i.imgur.com/EESnV7Z.jpeg
   tags: [vegan, vegetarian, dairy-free, spicy]
   cuisine: italian
   prep_time: 15
@@ -322,7 +322,7 @@
 
 - title: Almond Cookies
   image: https://i.imgur.com/bY2SKVg.jpg
-  tags: [vegetarian]
+  tags: [vegetarian, sweet]
   cuisine: null
   prep_time: 10
   cook_time: 15
@@ -559,7 +559,7 @@
 
 - title: Crêpes
   image: https://i.imgur.com/EOfighF.jpg
-  tags: [vegetarian]
+  tags: [vegetarian, sweet]
   cuisine: french
   prep_time: 5
   cook_time: 3
@@ -590,7 +590,7 @@
 
 - title: Apple Tart
   image: https://i.imgur.com/GgT2iue.jpg
-  tags: [dairy-free, vegetarian, vegan]
+  tags: [dairy-free, vegetarian, vegan, sweet]
   cuisine: french
   prep_time: 15
   cook_time: 35
@@ -666,7 +666,7 @@
 
 - title: Peppermint Latte
   image: https://i.imgur.com/xmNWfaN.jpg
-  tags: [gluten-free, vegetarian]
+  tags: [gluten-free, vegetarian, sweet]
   cuisine: null
   prep_time: 5
   cook_time: 0
@@ -694,7 +694,7 @@
 
 - title: Red Wine Poached Pears
   image: https://i.imgur.com/TvlLpOZ.jpg
-  tags: [dairy-free, gluten-free, vegetarian, vegan]
+  tags: [dairy-free, gluten-free, vegetarian, vegan, sweet]
   cuisine: french
   prep_time: 15
   cook_time: 60
@@ -801,7 +801,7 @@
 
 - title: Christmas Cookies
   image: https://i.imgur.com/dsJKk9E.jpg
-  tags: [vegetarian]
+  tags: [vegetarian, sweet]
   cuisine: null
   prep_time: 120
   cook_time: 8
@@ -839,7 +839,7 @@
 
 - title: Gingersnap Cookies
   image: https://i.imgur.com/VbIu49t.jpg
-  tags: [dairy-free, vegetarian, vegan]
+  tags: [dairy-free, vegetarian, vegan, sweet]
   cuisine: german
   prep_time: 15
   cook_time: 15
@@ -944,7 +944,7 @@
 
 - title: Blueberry Muffins
   image: https://i.imgur.com/BVX6IWv.jpg
-  tags: [vegetarian]
+  tags: [vegetarian, sweet]
   cuisine: null
   prep_time: 10
   cook_time: 30
@@ -1131,7 +1131,7 @@
 
 - title: Peanut Butter Cookies
   image: https://i.imgur.com/9hEOxKj.jpg
-  tags: [vegetarian]
+  tags: [vegetarian, sweet]
   cuisine: null
   prep_time: 20
   cook_time: 10
@@ -1300,7 +1300,7 @@
 
 - title: Chocolate Cookies
   image: https://i.imgur.com/frPvz9b.jpg
-  tags: [dairy-free, vegetarian]
+  tags: [dairy-free, vegetarian, sweet]
   cuisine: null
   prep_time: 15
   cook_time: 12

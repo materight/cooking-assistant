@@ -156,8 +156,8 @@ responses:
   - text: "Do you have everything ready?"
 
   utter_list_steps_first:
-  - text: "Ok let's start! First, {step_description} Let me know when you're done."
-  - text: "Perfect let's cook! To begin, {step_description} Tell me when you're ready for the next step."
+  - text: "Ok, let's start! First, {step_description} Let me know when you're done."
+  - text: "Perfect, let's cook! To begin, {step_description} Tell me when you're ready for the next step."
 
   utter_list_steps_next:
   - text: "Great, now {step_description}"
