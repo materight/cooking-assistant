@@ -100,9 +100,9 @@ responses:
   utter_search_recipe_found:
   - text: "I found a recipe for \"{recipe_title}\". Would you like to know more?"
 
-  utter_search_recipe_refine:
-  - text: "Do you want a {} recipe or not?"
-  - text: "Would you be interested in a {} recipe or not?"
+  utter_refine_recipes_search:
+  - text: "Would you like a {} recipe or not?"
+  - text: "Would you be interested in a {} recipe?"
 
   utter_search_recipe_found_alternative:
   - text: "What about \"{recipe_title}\"?"
@@ -183,6 +183,8 @@ responses:
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
   - action_search_recipes
+  - action_refine_recipes_search_ask
+  - action_refine_recipes_search_filter
   - action_search_alternative_recipe
   - action_tell_expected_time
   - action_tell_ingredient_amount

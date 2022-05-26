@@ -43,10 +43,23 @@ rules:
   - rule: Search recipe by name, ingredients, tags or cuisine
     steps:
     - intent: search_recipes
+      entities: [ recipe, ingredient, tag, cuisine ]
     - action: action_search_recipes
 
 
+  - rule: Refine recipe search by asking user additional filters
+    slot_was_set: [ found_recipes_ids ]
+    steps:
+    - action: action_refine_recipes_search_ask
+    - or:
+      - intent: affirm
+      - intent: deny
+      - intent: idk
+    - action: action_refine_recipes_search_filter
+
+
   - rule: Ask for alternative recipe
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
     steps:
     - intent: ask_alternative_recipe
     - action: action_search_alternative_recipe
@@ -63,6 +76,7 @@ rules:
   - rule: Ask for ingredients substitute
     steps:
     - intent: ask_ingredient_substitute
+      entities: [ ingredient ]
     - action: action_search_ingredients_substitutes
 
 
@@ -71,6 +85,7 @@ rules:
     - slot_was_set: [ current_recipe_id ]
     steps:
     - intent: ask_ingredient_amount
+      entities: [ ingredient ]
     - action: action_tell_ingredient_amount
 
 
@@ -97,6 +112,7 @@ rules:
   - rule: Set timer
     steps:
     - intent: set_timer
+      entities: [ TIME ]
     - action: action_set_timer
 
 
@@ -159,6 +175,7 @@ rules:
     - active_loop: list_steps_loop
     steps:
     - intent: ask_ingredient_substitute
+      entities: [ ingredient ]
     - action: action_search_ingredients_substitutes
     - action: list_steps_loop
     - active_loop: list_steps_loop
@@ -169,6 +186,7 @@ rules:
     - active_loop: list_steps_loop
     steps:
     - intent: ask_ingredient_amount
+      entities: [ ingredient ]
     - action: action_tell_ingredient_amount
     - action: list_steps_loop
     - active_loop: list_steps_loop
@@ -189,6 +207,7 @@ rules:
     - active_loop: list_steps_loop
     steps:
     - intent: set_timer
+      entities: [ TIMER ]
     - action: action_set_timer
     - action: list_steps_loop
     - active_loop: list_steps_loop

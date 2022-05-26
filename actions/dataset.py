@@ -2,9 +2,11 @@ import os
 import yaml
 import pandas as pd
 from dataclasses import dataclass
-from typing import List, Text, Optional
+from collections import defaultdict
+from enum import Enum
+from typing import List, Text, Optional, Tuple
 
-from . import utils
+import utils
 
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
@@ -44,6 +46,10 @@ class Recipe:
             ingredient.amount = ingredient.amount * (servings / self.servings)
         self.servings = servings
 
+class RecipeProperty(Enum):
+    TAG = 'tag'
+    CUISINE = 'cuisine'
+
 
 
 class Dataset():
@@ -64,6 +70,7 @@ class Dataset():
         self._df_ingredients_substitutes = pd.DataFrame([next(iter(i.items())) for i  in raw_ingredients_substitutes], columns=['name', 'substitute'])
         # Post-processing
         self._df_recipes = self._df_recipes.drop(['ingredients', 'steps'], axis=1).set_index('id')
+        self._df_recipes[(self._df_recipes.prep_time + self._df_recipes.cook_time) < 30]['tags'].apply(lambda tags: tags.append('quick'))  # Add "quick" tag to short recipes
         self._df_ingredients[['amount', 'unit']] = self._df_ingredients.amount.fillna('').astype(str).str.split(r'(\d+)(.*)', expand=True)[[1,2]]
         self._df_ingredients['amount'] = self._df_ingredients['amount'].astype(float)
 
@@ -80,7 +87,7 @@ class Dataset():
     @property
     def tags(self) -> List[Text]:
         """Returns a list of all the available tags."""
-        return sorted(self._df_recipes.tags.explode().dropna().unique().tolist() + ['quick'])
+        return sorted(self._df_recipes.tags.explode().dropna().unique().tolist())
 
     @property
     def cuisines(self) -> List[Text]:
@@ -113,19 +120,52 @@ class Dataset():
             results = results[results['count'] == len(ingredients)].recipe_id.to_list() # Returns only the recipes containing all the given ingredients
             recipes_mask &= self._df_recipes.index.isin(results)
         if len(tags) > 0:
-            recipes_mask &= self._df_recipes['tags'].apply(tags.issubset)
-            if 'quick' in tags:
-                recipes_mask &= (self._df_recipes['prep_time'] + self._df_recipes['cook_time']) < 30
+            recipes_mask &= self._df_recipes['tags'].apply(tags.issubset) # All of the tags
         if cuisine is not None:
             recipes_mask &= self._df_recipes['cuisine'].str.contains(cuisine, case=False)
         recipe_ids = self._df_recipes[recipes_mask].index.tolist()
         return recipe_ids
 
-    def search_ingredients_substitutes(self, ingredients: List[Text]) -> Optional[Text]:
+    def search_ingredients_substitutes(self, ingredients: List[Text]) -> List[Text]:
         """Search for an alternative to the given ingredient."""
         substitutes = self._df_ingredients_substitutes[self._df_ingredients_substitutes['name'].str.contains('|'.join(ingredients), case=False)].substitute.tolist()
         return substitutes
 
-    def get_discriminative_tags(self, recipe_id) -> List[Text]:
-        """Returns a list of tags that are discriminative for the given recipes."""
-        self._df_recipes[self._df_recipes.index.isin]
+    def get_discriminative_properties(self, recipes_ids: List[int]) -> Tuple[RecipeProperty, Text]:
+        """Returns a list of recipe properties that are present (or not present) in a single recipe from the given group."""
+        recipes = self._df_recipes[self._df_recipes.index.isin(recipes_ids)]
+        n_recipes = len(recipes)
+        # Try to search for a discriminative property by counting their occurences
+        properties = { RecipeProperty.TAG: defaultdict(int), RecipeProperty.CUISINE: defaultdict(int) }
+        for recipe in recipes.itertuples():
+            for tag in recipe.tags:
+                properties[RecipeProperty.TAG][tag] += 1
+            if recipe.cuisine is not None:
+                properties[RecipeProperty.CUISINE][recipe.cuisine] += 1
+        # Get most discrimaniting properties name, based on the number of times they appear (or not appear) in the given recipes.
+        discriminative_properties = []
+        for pname, pcounts in properties.items():
+            if len(pcounts) > 0:
+                pcounts = { k: min(c, n_recipes - c) for k, c in pcounts.items() if c < n_recipes }
+                best_value, best_count = min(pcounts.items(), key=lambda item: item[1]) if len(pcounts) > 0 else (None, float('inf'))
+                discriminative_properties.append((pname, best_value, best_count))
+        # Between the properties types, return the one with the lowest count
+        if len(discriminative_properties) > 0:
+            prop, pvalue, _ = min(discriminative_properties, key=lambda item: item[2])
+        else:
+            prop, pvalue = None, None
+        return prop, pvalue
+
+    def filter_recipes_by_property(self, recipes_ids: List[int], prop: RecipeProperty, value: Text, negative: bool = False) -> List[int]:
+        """Filter the given recipes by the given property value."""
+        recipes = self._df_recipes[self._df_recipes.index.isin(recipes_ids)]
+        if prop == RecipeProperty.TAG:
+            filtered_recipes_mask = recipes['tags'].apply(lambda tags: value in tags)
+        elif prop == RecipeProperty.CUISINE:
+            filtered_recipes_mask = recipes['cuisine'].str.contains(value, case=False)
+        else:
+            raise ValueError(f'Unknown property: {prop}')
+        if negative:
+            filtered_recipes_mask = ~filtered_recipes_mask
+        filtered_recipes_ids = self._df_recipes[filtered_recipes_mask].index.tolist()
+        return filtered_recipes_ids

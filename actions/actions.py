@@ -47,15 +47,45 @@ class ActionSearchRecipe(Action):
             return [ SlotSet('found_recipes_ids', recipes_ids), FollowupAction('action_refine_recipes_search') ]
 
 
-
-class ActionRefineRecipesSearch(Action):
+class ActionRefineRecipesSearchAsk(Action):
     """Asks more questions to narrow down the found recipes."""
         
     def name(self) -> Text:
-        return 'action_refine_recipes_search'
+        return 'action_refine_recipes_search_ask'
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        recipes_ids = tracker.get_slot('found_recipes_ids')
+        prop, value = dataset.get_discriminative_properties(recipes_ids)
+        if prop is not None: # Ask the user for more details
+            dispatcher.utter_message(response='utter_refine_recipes_search', value=value)
+            return [ SlotSet('refine_recipes_search_prop', prop), SlotSet('refine_recipes_search_value', value) ]
+        else:  # If not discriminative property was found, return the first recipe
+            recipe = dataset.get_recipe(recipes_ids[0])
+            dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
+            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
+
+
+class ActionRefineRecipesSearchFilter(Action):
+    """Filter the found recipes by the user's input."""
+        
+    def name(self) -> Text:
+        return 'action_refine_recipes_search_filter'
     
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         found_recipes_ids = tracker.get_slot('found_recipes_ids')
+        prop, value = tracker.get_slot('refine_recipes_search_prop'), tracker.get_slot('refine_recipes_search_value')
+        # Filter the found recipes according to the user's positive or negative response. In case 'idk' is received, do not filter the recipes.
+        user_response = tracker.latest_message['intent'].get('name')
+        if user_response == 'affirm':
+            recipes_ids = dataset.filter_recipes_by_property(found_recipes_ids, prop, value, negative=False)
+        elif user_response == 'deny':
+            recipes_ids = dataset.filter_recipes_by_property(found_recipes_ids, prop, value, negative=True)
+        # Return the first of the filtered recipes
+        recipe = dataset.get_recipe(recipes_ids[0])
+        dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
+        return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id), 
+                 SlotSet('refine_recipes_search_prop', None), SlotSet('refine_recipes_search_value', None) ]
+        # TODO: ask again other questions
 
 
 class ActionSearchAlternativeRecipe(Action):
@@ -65,8 +95,8 @@ class ActionSearchAlternativeRecipe(Action):
         return 'action_search_alternative_recipe'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        current_recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
         found_recipes_ids = tracker.get_slot('found_recipes_ids')
+        current_recipe_id = tracker.get_slot('current_recipe_id') # TODO: handle None recipe
         if found_recipes_ids is None or len(found_recipes_ids) <= 1:
             dispatcher.utter_message(response='utter_search_recipe_not_found_alternative')
             return []
