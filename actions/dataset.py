@@ -1,5 +1,6 @@
 import os
 import yaml
+import numpy as np
 import pandas as pd
 from dataclasses import dataclass
 from collections import defaultdict
@@ -42,7 +43,7 @@ class Recipe:
 
     def set_servings(self, servings: int):
         for ingredient in self.ingredients:
-            ingredient.amount = ingredient.amount * (servings / self.servings)
+            ingredient.amount = np.ceil(ingredient.amount * (servings / self.servings))
         self.servings = servings
 
 class RecipeProperty(str, Enum):

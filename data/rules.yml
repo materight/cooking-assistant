@@ -200,6 +200,16 @@ rules:
     - active_loop: list_steps_loop
 
 
+  - rule: Interruption - Ask for ingredients list
+    condition:
+    - slot_was_set: [ current_recipe_id ]
+    steps:
+    - intent: ask_ingredients_list
+    - action: action_list_ingredients
+    - action: list_steps_loop
+    - active_loop: list_steps_loop
+
+
   - rule: Interruption - ask for expected preparation time
     condition:
     - active_loop: list_steps_loop
