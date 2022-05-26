@@ -36,10 +36,12 @@ if __name__ == "__main__":
     # Load hyperopt config
     with open('config.hyperopt.yml', 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
+        hyperparams = config['hyperparams']
+        del config['hyperparams']
     
     # Generate the config files to compare
     configs = []
-    sampler = ParameterSampler(config['hyperparams'], n_iter=args.n_iter, random_state=0)
+    sampler = ParameterSampler(hyperparams, n_iter=args.n_iter, random_state=0)
     os.makedirs(os.path.join(work_dir, 'configs'))
     print(f'Generating {len(sampler)} pipeline configs...')
     for i, params in enumerate(sampler):
