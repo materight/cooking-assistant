@@ -25,12 +25,12 @@
     ~[&affirm?] ~[next] ~[thanks?]
     ~[&affirm?] ~[i am?] [done|~[ready]]
 
-%[search_recipes](300)
-    ~[&i want] to ~[eat] [a?] @[recipe?keyword/90][@[cuisine] ~[recipe]?!keyword/10] ~[day time?]
-    ~[&can] you ~[please?] ~[search] [~[recipe] for|how to ~[cook]?] @[recipe?keyword/90][@[cuisine] ~[recipe]?!keyword/10]?
+%[search_recipes](400)
+    ~[&i want] to ~[eat] [a?] @[recipe?keyword/90] [@[cuisine] ~[recipe]?!keyword/10] ~[day time?]
+    ~[&can] you ~[please?] ~[search] [~[recipe] for|how to ~[cook]?] @[recipe?keyword/90] [@[cuisine] ~[recipe]?!keyword/10]?
     ~[&i want] to ~[eat] ~[recipe] ~[containing] @[ingredient][ [and?] @[ingredient]?] ~[day time?]
     ~[&can] you ~[please?] ~[search] [@[tag][ [and?] @[tag]]?keyword/10] ~[recipe] ~[containing] [@[ingredient][ [and?] @[ingredient]?]?keyword/90]?
-    [&I] ~[only?] ~[have] @[ingredient][, what ~[can] [&I] ~[cook]\??]
+    [&I] ~[only?] ~[have] @[ingredient][ what ~[can] [&I] ~[cook]\??]
 
 %[ask_alternative_recipe](100)
     [&no?] [[is|are] there?] [any|some|an] ~[alternative] ~[recipe?]?
