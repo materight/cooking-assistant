@@ -5,7 +5,7 @@ from typing import Any, Text, Dict, List
 
 from word2number import w2n
 from rasa_sdk import Action, Tracker, FormValidationAction
-from rasa_sdk.events import SlotSet, ReminderScheduled
+from rasa_sdk.events import SlotSet, ReminderScheduled, FollowupAction
 from rasa_sdk.executor import CollectingDispatcher
 
 from . import utils
@@ -39,10 +39,23 @@ class ActionSearchRecipe(Action):
         if len(recipes_ids) == 0:
             dispatcher.utter_message(response='utter_search_recipe_not_found')
             return []
-        else:
-            recipe = dataset.get_recipe(recipes_ids[0]) # Return first recipe
+        elif len(recipes_ids) == 1:  # Return the single recipe found
+            recipe = dataset.get_recipe(recipes_ids[0])
             dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
             return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
+        else: # More alternatives found, asks the user for more details
+            return [ SlotSet('found_recipes_ids', recipes_ids), FollowupAction('action_refine_recipes_search') ]
+
+
+
+class ActionRefineRecipesSearch(Action):
+    """Asks more questions to narrow down the found recipes."""
+        
+    def name(self) -> Text:
+        return 'action_refine_recipes_search'
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        found_recipes_ids = tracker.get_slot('found_recipes_ids')
 
 
 class ActionSearchAlternativeRecipe(Action):
@@ -119,26 +132,27 @@ class ActionListIngredients(Action):
         return []
 
 
-class ActionSearchIngredientSubstitute(Action):
-    """Search for an alternative to the given ingredient."""
+class ActionSearchIngredientsSubstitutes(Action):
+    """Search for alternatives to the given ingredients."""
 
     def name(self) -> Text:
-        return 'action_search_ingredient_substitute'
+        return 'action_search_ingredients_substitutes'
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        ingredients = list(tracker.get_latest_entity_values('ingredient')) # TODO: handle multiple ingredients and None case
-        ingredient, substitute = None, None
-        if len(ingredients) > 0:
-            ingredient = ingredients[0]
-            substitute = dataset.search_ingredient_substitute(ingredient)
-            logger.info('Substitute for ingredient "%s": %s', ingredient, substitute)
-        # Utter substitute
-        if substitute is not None:
-            dispatcher.utter_message(response='utter_ingredient_substitute_found', substitute=substitute)
-        elif ingredient is not None:
-            dispatcher.utter_message(response='utter_ingredient_substitute_not_found', ingredient=ingredient)
-        else:
+        ingredients = list(tracker.get_latest_entity_values('ingredient'))
+        if len(ingredients) == 0:
             dispatcher.utter_message(response='utter_ingredient_substitute_no_ingredient')
+            return []
+        # Search for substitutes
+        substitutes = dataset.search_ingredients_substitutes(ingredients)
+        logger.info('Substitute for ingredients %s = %s', ingredients, substitutes)
+        # Utter substitutes
+        if len(substitutes) == 0:
+            ingredients_str = utils.join_list_str(ingredients, last_sep='or')
+            dispatcher.utter_message(response='utter_ingredient_substitute_not_found', ingredient=ingredients_str)
+        else:
+            substitutes_str = utils.join_list_str(substitutes, last_sep='and')
+            dispatcher.utter_message(response='utter_ingredient_substitute_found', substitute=substitutes_str)
         return []
 
 

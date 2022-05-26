@@ -63,7 +63,7 @@ rules:
   - rule: Ask for ingredients substitute
     steps:
     - intent: ask_ingredient_substitute
-    - action: action_search_ingredient_substitute
+    - action: action_search_ingredients_substitutes
 
 
   - rule: Ask for ingredients amount
@@ -159,7 +159,7 @@ rules:
     - active_loop: list_steps_loop
     steps:
     - intent: ask_ingredient_substitute
-    - action: action_search_ingredient_substitute
+    - action: action_search_ingredients_substitutes
     - action: list_steps_loop
     - active_loop: list_steps_loop
 

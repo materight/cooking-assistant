@@ -55,7 +55,7 @@ stories:
   steps:
   - checkpoint: recipe_selected
   - intent: ask_ingredient_substitute
-  - action: action_search_ingredient_substitute
+  - action: action_search_ingredients_substitutes
 
 
 - story: Ask for ingredients amount

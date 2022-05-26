@@ -121,9 +121,11 @@ class Dataset():
         recipe_ids = self._df_recipes[recipes_mask].index.tolist()
         return recipe_ids
 
-    def search_ingredient_substitute(self, query: Text) -> Optional[Text]:
+    def search_ingredients_substitutes(self, ingredients: List[Text]) -> Optional[Text]:
         """Search for an alternative to the given ingredient."""
-        results = self._df_ingredients_substitutes[self._df_ingredients_substitutes['name'].str.contains(query, case=False)].substitute.tolist()
-        if len(results) == 0: 
-            return None
-        return results[0]
+        substitutes = self._df_ingredients_substitutes[self._df_ingredients_substitutes['name'].str.contains('|'.join(ingredients), case=False)].substitute.tolist()
+        return substitutes
+
+    def get_discriminative_tags(self, recipe_id) -> List[Text]:
+        """Returns a list of tags that are discriminative for the given recipes."""
+        self._df_recipes[self._df_recipes.index.isin]

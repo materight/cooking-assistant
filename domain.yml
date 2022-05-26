@@ -100,6 +100,10 @@ responses:
   utter_search_recipe_found:
   - text: "I found a recipe for \"{recipe_title}\". Would you like to know more?"
 
+  utter_search_recipe_refine:
+  - text: "Do you want a {} recipe or not?"
+  - text: "Would you be interested in a {} recipe or not?"
+
   utter_search_recipe_found_alternative:
   - text: "What about \"{recipe_title}\"?"
   - text: "I also found a recipe for \"{recipe_title}\"."
@@ -118,13 +122,13 @@ responses:
   - text: "This recipe requires {prep_time} minutes for preparation and {cook_time} minutes for cooking."
 
   utter_ingredient_substitute_found:
-  - text: "You may use {substitute} as a substitute."
+  - text: "You may use {substitute} as substitutes."
 
   utter_ingredient_substitute_not_found:
   - text: "Sorry, I couldn't find any substitute for {ingredient}."
 
   utter_ingredient_substitute_no_ingredient:
-  - text: "Sorry, I couldn't find any alternative."
+  - text: "Sorry, I couldn't find any alternative ingredients."
 
   utter_ingredient_amount_found:
   - text: "You need {amounts_str}."
@@ -183,7 +187,7 @@ actions:
   - action_tell_expected_time
   - action_tell_ingredient_amount
   - action_update_people_count
-  - action_search_ingredient_substitute
+  - action_search_ingredients_substitutes
   - action_list_ingredients
   - validate_list_steps_loop
   - action_reset_list_steps_loop
