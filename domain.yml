@@ -109,8 +109,8 @@ responses:
   - text: "I found a recipe for \"{recipe_title}\". Would you like to know more?"
 
   utter_refine_recipes_search:
-  - text: "Would you like a {} recipe or not?"
-  - text: "Would you be interested in a {} recipe?"
+  - text: "Would you like a {tag} recipe or not?"
+  - text: "Would you be interested in a {tag} recipe?"
 
   utter_search_recipe_found_alternative:
   - text: "What about \"{recipe_title}\"?"

@@ -56,9 +56,10 @@ class ActionRefineRecipesSearchAsk(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes_ids = tracker.get_slot('found_recipes_ids')
         prop, value = dataset.get_discriminative_properties(recipes_ids)
+        logger.info('Refine search by %s with value %s', prop, value)
         if prop is not None: # Ask the user for more details
-            dispatcher.utter_message(response='utter_refine_recipes_search', value=value)
-            return [ SlotSet('refine_recipes_search_prop', prop), SlotSet('refine_recipes_search_value', value) ]
+            dispatcher.utter_message(response='utter_refine_recipes_search', tag=value)
+            return [ SlotSet('refine_recipes_search_prop', str(prop)), SlotSet('refine_recipes_search_value', value) ]
         else:  # If not discriminative property was found, return the first recipe
             recipe = dataset.get_recipe(recipes_ids[0])
             dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
@@ -76,10 +77,12 @@ class ActionRefineRecipesSearchFilter(Action):
         prop, value = tracker.get_slot('refine_recipes_search_prop'), tracker.get_slot('refine_recipes_search_value')
         # Filter the found recipes according to the user's positive or negative response. In case 'idk' is received, do not filter the recipes.
         user_response = tracker.latest_message['intent'].get('name')
+        logger.info('User responeded with intent "%s" to filtering by %s with value %s', user_response, prop, value)
         if user_response == 'affirm':
             recipes_ids = dataset.filter_recipes_by_property(found_recipes_ids, prop, value, negative=False)
         elif user_response == 'deny':
             recipes_ids = dataset.filter_recipes_by_property(found_recipes_ids, prop, value, negative=True)
+        logger.info('Filtered to %d recipes', len(recipes_ids))
         # Return the first of the filtered recipes
         recipe = dataset.get_recipe(recipes_ids[0])
         dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)

@@ -8,7 +8,6 @@ from typing import List, Text, Optional, Tuple
 
 from . import utils
 
-
 PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 @dataclass
@@ -46,10 +45,11 @@ class Recipe:
             ingredient.amount = ingredient.amount * (servings / self.servings)
         self.servings = servings
 
-class RecipeProperty(Enum):
+class RecipeProperty(str, Enum):
     TAG = 'tag'
     CUISINE = 'cuisine'
-
+    def __str__(self) -> Text:
+        return self.value
 
 
 class Dataset():
@@ -162,10 +162,10 @@ class Dataset():
         if prop == RecipeProperty.TAG:
             filtered_recipes_mask = recipes['tags'].apply(lambda tags: value in tags)
         elif prop == RecipeProperty.CUISINE:
-            filtered_recipes_mask = recipes['cuisine'].str.contains(value, case=False)
+            filtered_recipes_mask = recipes['cuisine'].str.contains(value, case=False).fillna(False)
         else:
             raise ValueError(f'Unknown property: {prop}')
         if negative:
             filtered_recipes_mask = ~filtered_recipes_mask
-        filtered_recipes_ids = self._df_recipes[filtered_recipes_mask].index.tolist()
+        filtered_recipes_ids = recipes[filtered_recipes_mask].index.tolist()
         return filtered_recipes_ids
