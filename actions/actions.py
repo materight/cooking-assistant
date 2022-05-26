@@ -73,15 +73,15 @@ class ActionRefineRecipesSearchFilter(Action):
         return 'action_refine_recipes_search_filter'
     
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        found_recipes_ids = tracker.get_slot('found_recipes_ids')
+        recipes_ids = tracker.get_slot('found_recipes_ids')
         prop, value = tracker.get_slot('refine_recipes_search_prop'), tracker.get_slot('refine_recipes_search_value')
         # Filter the found recipes according to the user's positive or negative response. In case 'idk' is received, do not filter the recipes.
         user_response = tracker.latest_message['intent'].get('name')
         logger.info('User responeded with intent "%s" to filtering by %s with value %s', user_response, prop, value)
         if user_response == 'affirm':
-            recipes_ids = dataset.filter_recipes_by_property(found_recipes_ids, prop, value, negative=False)
+            recipes_ids = dataset.filter_recipes_by_property(recipes_ids, prop, value, negative=False)
         elif user_response == 'deny':
-            recipes_ids = dataset.filter_recipes_by_property(found_recipes_ids, prop, value, negative=True)
+            recipes_ids = dataset.filter_recipes_by_property(recipes_ids, prop, value, negative=True)
         logger.info('Filtered to %d recipes', len(recipes_ids))
         # Return the first of the filtered recipes
         recipe = dataset.get_recipe(recipes_ids[0])

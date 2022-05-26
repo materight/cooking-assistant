@@ -35,7 +35,7 @@
     ~[&can] you ~[please?] ~[search] ~[recipe] @[tag][ [and?] @[tag]?]?
 
 %[ask_alternative_recipe](100)
-    [&no?] [is|are] there [any|some|an] ~[alternative] ~[recipe?]?
+    [&no?] [[is|are] there?] [any|some|an] ~[alternative] ~[recipe?]?
     [&no?] what [else|other ~[recipe]] [do you ~[have]|did you find]?
 
 %[ask_ingredients_list](100)
