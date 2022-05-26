@@ -48,7 +48,8 @@ rules:
 
 
   - rule: Refine recipe search by asking user additional filters
-    slot_was_set: [ found_recipes_ids ]
+    condition:
+    - slot_was_set: [ found_recipes_ids ]
     steps:
     - action: action_refine_recipes_search_ask
     - or:
@@ -59,7 +60,8 @@ rules:
 
 
   - rule: Ask for alternative recipe
-  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
+    condition:
+    - slot_was_set: [ found_recipes_ids, current_recipe_id ]
     steps:
     - intent: ask_alternative_recipe
     - action: action_search_alternative_recipe

@@ -30,7 +30,7 @@ class ActionSearchRecipe(Action):
         ingredients = list(tracker.get_latest_entity_values('ingredient'))
         tags = list(tracker.get_latest_entity_values('tag'))
         cuisine = next(tracker.get_latest_entity_values('cuisine'), None)
-        logger.info('Search recipe by keyword "%s", ingredients %s, tags %s and cuisine "%s"', keywords, ingredients, tags, cuisine)
+        logger.info('Search recipe by keywords %s, ingredients %s, tags %s and cuisine "%s"', keywords, ingredients, tags, cuisine)
         if len(keywords) == 0 and len(ingredients) == 0 and len(tags) == 0 and cuisine is None:
             dispatcher.utter_message(response='utter_search_recipe_not_found')
             return []
