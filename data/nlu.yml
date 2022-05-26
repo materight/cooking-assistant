@@ -128,56 +128,40 @@ nlu:
     - nah thanks
 - intent: idk
   examples: |
-    - y do no know
-    - Y I do no know
-    - yep I am not sure
-    - sure i'm not sure
-    - yeah i do no know
-    - sure I do no know
-    - okay I am not sure
-    - yep i'm not sure
-    - Yeah i'm not sure
-    - Yeah i do no know
-    - yep not sure
-    - Yep I'm not sure
-    - yes I don't know
-    - Yeah don't know
-    - Ok I don't know
-    - Yeah not sure
-    - Okay not sure
-    - Y don't know
-    - y not sure
-    - yep do no know
-    - Ok I'm not sure
-    - ok I am not sure
-    - y I'm not sure
-    - Okay boh
-    - yep boh
-    - Yep i don't know
-    - ok i don't know
-    - Sure I am not sure
-    - yes do no know
-    - y i do no know
-    - okay I'm not sure
-    - Okay i do no know
-    - Yep I am not sure
-    - Sure I don't know
-    - yep I'm not sure
-    - okay don't know
-    - Sure don't know
-    - yeah i don't know
-    - Yep I don't know
-    - Yeah i am not sure
-    - yes i don't know
-    - yes boh
-    - Yeah idk
-    - yep I do no know
-    - Sure idk
-    - Sure I do no know
-    - Okay I'm not sure
-    - ok i'm not sure
-    - ok I'm not sure
-    - Yep I do no know
+    - do no care
+    - not sure
+    - it's not important
+    - i don't know
+    - it is equal
+    - It's equal
+    - not important
+    - it's equal
+    - i'm not sure
+    - it's the same
+    - It's not important
+    - idk
+    - It is the same
+    - I do no care
+    - it is not important
+    - I don't know
+    - It is not important
+    - I do no know
+    - the same
+    - i do no care
+    - don't care
+    - It's the same
+    - i do no know
+    - It is equal
+    - I'm not sure
+    - equal
+    - don't know
+    - i don't care
+    - i am not sure
+    - I don't care
+    - boh
+    - do no know
+    - I am not sure
+    - it is the same
 - intent: next
   examples: |
     - I am set
@@ -185,10 +169,10 @@ nlu:
     - Ok done
     - Ok go on thanks a lot
     - Okay done
+    - Okay finished thanks a lot
     - Okay next step thank you
     - Okay proceed thank you
     - Sure I'm done
-    - Sure done
     - Sure i am done
     - Sure next step
     - Y done
@@ -277,7 +261,6 @@ nlu:
     - I only own [chilis](ingredient)
     - I only own [espresso](ingredient), what could I cook?
     - I own [baking soda](ingredient)
-    - I own [chicken breasts](ingredient), what would i prepare?
     - I own [chili flakes](ingredient)
     - I own [crackers](ingredient), what would I prepare?
     - I own [pepperoni](ingredient)
@@ -286,7 +269,6 @@ nlu:
     - I solely have [beef broth](ingredient), what would i cook?
     - I solely have [whole milk](ingredient)
     - I solely own [cumin powder](ingredient), what would i cook?
-    - I want to eat a [Cheddar Baked Potatoes](recipe)
     - I want to eat a [Chicken Enchiladas](recipe) tomorrow
     - I want to eat a [italian](cuisine) something this morning
     - I want to eat food containing [yuca root](ingredient) this dinner
@@ -313,6 +295,7 @@ nlu:
     - I want to try something with [paprika](ingredient)
     - I want to try something with [pepper](ingredient)
     - I would like to eat recipe [gluten-free](tag) [gluten-free](tag) today
+    - I would like to eat something [gluten-free](tag) [gluten-free](tag)
     - I would like to try food using [bell peppers](ingredient) [orange bitters](ingredient) for breakfast
     - I would like to try [italian](cuisine) something tomorrow
     - I would love to eat a [Beef bourguignon](recipe) this breakfast
@@ -358,6 +341,7 @@ nlu:
     - May you please find me food with [peanuts](ingredient)?
     - May you please find me recipe [gluten-free](tag)?
     - May you please find me something [gluten-free](tag) [gluten-free](tag)?
+    - May you please find recipe containing [carrots](ingredient)?
     - May you please search for food [gluten-free](tag) and [gluten-free](tag)?
     - May you please search for something containing [peanuts](ingredient) [pecorino romano cheese](ingredient)?
     - May you please search for something [gluten-free](tag) and [gluten-free](tag)?
@@ -519,6 +503,7 @@ nlu:
     - would you please find food containing [baking powder](ingredient)?
     - would you please find food containing [brioche rolls](ingredient) [chicken broth](ingredient)?
     - would you please find me [Spaghetti Carbonara](recipe)?
+    - would you please find me food [gluten-free](tag)?
     - would you please find me recipe containing [cheese](ingredient) and [basil leaves](ingredient)?
     - would you please find me recipe containing [chicken broth](ingredient) and [beef](ingredient)?
     - would you please find recipe with [bay leaf](ingredient) [orange bitters](ingredient)?
@@ -529,7 +514,6 @@ nlu:
     - would you please search recipe [gluten-free](tag) and [gluten-free](tag)?
     - would you please search something using [baking soda](ingredient)?
     - would you search for food [gluten-free](tag)?
-    - would you search for [italian](cuisine) food?
     - would you search for recipe [gluten-free](tag) [gluten-free](tag)?
     - would you search for something with [frozen puff pastry](ingredient) [parsley](ingredient)?
 - intent: ask_alternative_recipe

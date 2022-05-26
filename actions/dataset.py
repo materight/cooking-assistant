@@ -6,7 +6,7 @@ from collections import defaultdict
 from enum import Enum
 from typing import List, Text, Optional, Tuple
 
-import utils
+from . import utils
 
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
