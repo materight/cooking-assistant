@@ -58,7 +58,7 @@ class ActionRefineRecipesSearchAsk(Action):
         prop, value = dataset.get_discriminative_properties(recipes_ids)
         logger.info('Refine search by %s with value %s', prop, value)
         if prop is not None: # Ask the user for more details
-            dispatcher.utter_message(response='utter_refine_recipes_search', tag=value)
+            dispatcher.utter_message(response='utter_refine_recipes_search', count=len(recipes_ids), tag=value)
             return [ SlotSet('refine_recipes_search_prop', str(prop)), SlotSet('refine_recipes_search_value', value) ]
         else:  # If not discriminative property was found, return the first recipe
             recipe = dataset.get_recipe(recipes_ids[0])

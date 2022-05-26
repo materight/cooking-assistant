@@ -129,7 +129,7 @@ class Dataset():
 
     def search_ingredients_substitutes(self, ingredients: List[Text]) -> List[Text]:
         """Search for an alternative to the given ingredient."""
-        substitutes = self._df_ingredients_substitutes[self._df_ingredients_substitutes['name'].str.contains('|'.join(ingredients), case=False)].substitute.tolist()
+        substitutes = self._df_ingredients_substitutes[self._df_ingredients_substitutes['name'].str.contains('|'.join(ingredients), case=False)].substitute.unique().tolist()
         return substitutes
 
     def get_discriminative_properties(self, recipes_ids: List[int]) -> Tuple[RecipeProperty, Text]:
