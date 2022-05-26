@@ -44,7 +44,7 @@ class ActionSearchRecipe(Action):
             dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
             return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
         else: # More alternatives found, asks the user for more details
-            return [ SlotSet('found_recipes_ids', recipes_ids), FollowupAction('action_refine_recipes_search') ]
+            return [ SlotSet('found_recipes_ids', recipes_ids), FollowupAction('action_refine_recipes_search_ask') ]
 
 
 class ActionRefineRecipesSearchAsk(Action):

@@ -10,11 +10,24 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: search_recipes
-    entities: [ recipe, ingredient, tag, cuisine ]
   - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - checkpoint: recipe_selected
   
+
+- story: Search for a recipe with additional fitlering
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_recipes
+  - action: action_search_recipes
+  - slot_was_set: [ found_recipes_ids ]
+  - action: action_refine_recipes_search_ask
+  - slot_was_set: [ refine_recipes_search_prop, refine_recipes_search_value ]
+  - intent: affirm
+  - action: action_refine_recipes_search_filter
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
+  - checkpoint: recipe_selected
 
 - story: Search for an alternative recipe
   steps:

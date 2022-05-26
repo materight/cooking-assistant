@@ -55,6 +55,14 @@ slots:
     type: any
     influence_conversation: false
 
+  refine_recipes_search_prop:
+    type: text
+    influence_conversation: true
+  
+  refine_recipes_search_value:
+    type: text
+    influence_conversation: true
+
   people_count:
     type: text
     influence_conversation: true
