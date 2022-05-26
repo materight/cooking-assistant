@@ -4,7 +4,9 @@ nlu:
   examples: |
     - dairy-free
     - gluten-free
+    - quick
     - spicy
+    - sweet
     - vegan
     - vegetarian
 

@@ -80,7 +80,7 @@ class Dataset():
     @property
     def tags(self) -> List[Text]:
         """Returns a list of all the available tags."""
-        return sorted(self._df_recipes.tags.explode().dropna().unique().tolist())
+        return sorted(self._df_recipes.tags.explode().dropna().unique().tolist() + ['quick'])
 
     @property
     def cuisines(self) -> List[Text]:
@@ -114,6 +114,8 @@ class Dataset():
             recipes_mask &= self._df_recipes.index.isin(results)
         if len(tags) > 0:
             recipes_mask &= self._df_recipes['tags'].apply(tags.issubset)
+            if 'quick' in tags:
+                recipes_mask &= (self._df_recipes['prep_time'] + self._df_recipes['cook_time']) < 30
         if cuisine is not None:
             recipes_mask &= self._df_recipes['cuisine'].str.contains(cuisine, case=False)
         recipe_ids = self._df_recipes[recipes_mask].index.tolist()
