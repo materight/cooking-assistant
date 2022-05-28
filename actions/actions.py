@@ -236,8 +236,10 @@ class ActionListStepsLoop(FormValidationAction):
             current_step_descr = utils.lower_first_letter(recipe.steps[current_step_idx].description)
             if current_step_idx == 0:
                 dispatcher.utter_message(response='utter_list_steps_first', step_description=current_step_descr)
-            else:
+            elif current_step_idx < len(recipe.steps) - 1:
                 dispatcher.utter_message(response='utter_list_steps_next', step_description=current_step_descr)
+            else:
+                dispatcher.utter_message(response='utter_list_steps_last', step_description=current_step_descr)
             return dict(current_step_idx=current_step_idx, list_steps_done=None)
 
 

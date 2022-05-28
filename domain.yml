@@ -180,6 +180,12 @@ responses:
   - text: "Now {step_description}"
   - text: "Next {step_description}"
 
+  utter_list_steps_last:
+  - text: "Almost done! Now {step_description}"
+  - text: "Last step, {step_description}"
+  - text: "Finally, {step_description}"
+  - text: "To finish, {step_description}"
+
   utter_list_steps_end:
   - text: "Great! That was the last step, enjoy your meal!"
   - text: "And we are done! Have a nice meal!"
