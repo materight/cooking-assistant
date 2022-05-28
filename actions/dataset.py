@@ -7,8 +7,6 @@ from collections import defaultdict
 from enum import Enum
 from typing import List, Text, Optional, Tuple
 
-from . import utils
-
 PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 @dataclass
@@ -17,16 +15,30 @@ class Ingredient:
     name: Text
     amount: Optional[float]
     unit: Optional[Text]
-    def __str__(self) -> str:
-        return utils.ingredient_to_str(self.name, self.amount, self.unit)
+    
+    def to_str(self, default_amount: Text = '') -> Text:
+        res = ''
+        if self.amount is not None and not np.isnan(self.amount): 
+            res += f'{self.amount:{ ".0f" if self.amount.is_integer() else ".1f"}}'
+            res += f'{self.unit} of ' if self.unit else ' '
+        elif default_amount:
+            res += f'{default_amount} '
+        res += self.name
+        return res
+
+    def __str__(self) -> Text:
+        return self.to_str()
+
 
 @dataclass
 class Step:
     recipe_id: int
     step_index: int
     description: Text
+
     def __str__(self) -> str:
         return self.description
+
 
 @dataclass
 class Recipe:
@@ -46,11 +58,13 @@ class Recipe:
             ingredient.amount = np.ceil(ingredient.amount * (servings / self.servings))
         self.servings = servings
 
+
 class RecipeProperty(str, Enum):
     TAG = 'tag'
     CUISINE = 'cuisine'
     def __str__(self) -> Text:
         return self.value
+
 
 
 class Dataset():

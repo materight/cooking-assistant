@@ -48,15 +48,3 @@ def join_list_str(list_str: List[Text], last_sep: Text = 'and'):
         return list_str[0]
     else:
         return ', '.join(list_str[:-1]) + f' {last_sep} ' + list_str[-1]
-
-
-def ingredient_to_str(name: Text, amount: Optional[Text], unit: Optional[Text], default_amount: Text = ''):
-    """Convert the ingredient informations to a single string."""
-    res = ''
-    if amount is not None and not np.isnan(amount): 
-        res += f'{amount:{ ".0f" if amount.is_integer() else ".1f"}}'
-        res += f'{unit} of ' if unit else ' '
-    elif default_amount:
-        res += f'{default_amount} '
-    res += name
-    return res
