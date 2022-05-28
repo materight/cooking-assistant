@@ -25,6 +25,8 @@ pipeline:
     max_ngram: $max_ngram
   - name: SpacyEntityExtractor
     dimensions: [ CARDINAL, TIME ]
+  - name: RegexEntityExtractor
+    use_lookup_tables: True
   - name: DIETClassifier
     epochs: $epochs
     embedding_dimension: $embedding_dimension
@@ -32,12 +34,6 @@ pipeline:
     drop_rate: $drop_rate
     constrain_similarities: $constrain_similarities
   - name: EntitySynonymMapper
-  - name: ResponseSelector
-    epochs: $epochs
-    embedding_dimension: $embedding_dimension
-    learning_rate: $learning_rate
-    drop_rate: $drop_rate
-    constrain_similarities: $constrain_similarities
   - name: FallbackClassifier
     threshold: $fallback_threshold
     ambiguity_threshold: 0.1
@@ -46,13 +42,13 @@ policies:
   - name: MemoizationPolicy
   - name: RulePolicy
     core_fallback_threshold: $fallback_threshold
-  - name: TEDPolicy
+  - name: UnexpecTEDIntentPolicy
     max_history: $max_history
     epochs: $epochs
     embedding_dimension: $embedding_dimension
     learning_rate: $learning_rate
     constrain_similarities: $constrain_similarities
-  - name: UnexpecTEDIntentPolicy
+  - name: TEDPolicy
     max_history: $max_history
     epochs: $epochs
     embedding_dimension: $embedding_dimension
