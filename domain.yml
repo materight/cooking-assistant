@@ -39,12 +39,12 @@ intents:
 
 # Entities, check https://rasa.com/docs/rasa/domain/#entities for more info
 entities:
-  - recipe
-  - ingredient
-  - tag
-  - cuisine
-  - CARDINAL
-  - TIME
+- recipe
+- ingredient
+- tag
+- cuisine
+- CARDINAL
+- TIME
 
 
 # Slots, check https://rasa.com/docs/rasa/domain/#slots for more info
@@ -206,19 +206,19 @@ responses:
 
 # Actions, check https://rasa.com/docs/rasa/actions for more info
 actions:
-  - action_search_recipes
-  - action_refine_recipes_search_ask
-  - action_refine_recipes_search_filter
-  - action_search_alternative_recipe
-  - action_tell_expected_time
-  - action_tell_ingredient_amount
-  - action_update_people_count
-  - action_search_ingredients_substitutes
-  - action_list_ingredients
-  - validate_list_steps_loop
-  - action_reset_list_steps_loop
-  - action_set_timer
-  - action_repeat_last_utterance
+- action_search_recipes
+- action_refine_recipes_search_ask
+- action_refine_recipes_search_filter
+- action_search_alternative_recipe
+- action_tell_expected_time
+- action_tell_ingredient_amount
+- action_update_people_count
+- action_search_ingredients_substitutes
+- action_list_ingredients
+- validate_list_steps_loop
+- action_reset_list_steps_loop
+- action_set_timer
+- action_repeat_last_utterance
 
 
 # Forms, check https://rasa.com/docs/rasa/forms for more info
@@ -227,7 +227,7 @@ forms:
     required_slots:
       list_steps_done:  # Set slot values based on intents so that validate_list_steps_loop is triggered
       # Trigger validation when the form is activated 
-      - type: from_trigger_intent 
+      - type: from_trigger_intent
         intent: affirm
         value: false
       - type: from_trigger_intent
