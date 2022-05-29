@@ -26,9 +26,9 @@ def listdir(path: str, exclude: list = []):
         if os.path.isdir(d) and d not in exclude:
             yield d, os.path.join(path, d)
 
-if __name__ == "__main__":
-    args = parser.parse_args()
-    exp_name = datetime.now().strftime('%Y%m%d-%H%M%S')
+
+def run_hyperopts(exp_name: str, n_iter: int):
+    """Run hyperparameters search."""
     work_dir = os.path.join('hyperopts', exp_name)
     os.makedirs(work_dir)
     print(f'Experiment name: {exp_name}')
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     
     # Generate the config files to compare
     configs = []
-    sampler = ParameterSampler(hyperparams, n_iter=args.n_iter, random_state=0)
+    sampler = ParameterSampler(hyperparams, n_iter=n_iter, random_state=0)
     os.makedirs(os.path.join(work_dir, 'configs'))
     print(f'Generating {len(sampler)} pipeline configs...')
     for i, params in enumerate(sampler):
@@ -54,7 +54,9 @@ if __name__ == "__main__":
     subprocess.run(['rasa', 'test', 'nlu',
         '--config', *configs,
         '--cross-validation',
+        '--no-plot',
         '--runs', '3',
+        '--percentages', '0', '50', '75',
         '--out', f'{work_dir}/nlu',
         '--model', f'{work_dir}/nlu/models'
     ], check=True).returncode
@@ -65,19 +67,31 @@ if __name__ == "__main__":
         '--config', *configs,
         '--cross-validation',
         '--runs', '3',
+        '--percentages', '0', '50', '75',
         '--out', f'{work_dir}/core/models'
     ], check=True).returncode
     for split, stories_dir in dict(train='data', test='tests').items():  # The previous models have been trained excluding a certain amount of training data, so we can evaluate also over the train set
         subprocess.call(['rasa test core',
             '--model', f'{work_dir}/core/models',
             '--stories', stories_dir,
+            '--no-plot',
             '--runs', '3',
             '--evaluate-model-directory'
             '--out', f'{work_dir}/core/{split}'
         ], check=True).returncode
     
+
+def process_results(exp_name):
+    """Process the results of hyperparams search."""
     # Read results from the output files
-#    for run_name, run_path in listdir(os.path.join(work_dir, 'nlu')):
-#        for fold_name, fold_path in listdir(run_path):
-#            for model_name, model_path in listdir(fold_path, exclude='train'):
-                
+    work_dir = os.path.join('hyperopts', exp_name)
+    for run_name, run_path in listdir(os.path.join(work_dir, 'nlu')):
+        for fold_name, fold_path in listdir(run_path):
+            for model_name, model_path in listdir(fold_path, exclude='train'):
+                print()
+
+if __name__ == "__main__":
+    args = parser.parse_args()
+    exp_name = datetime.now().strftime('%Y%m%d-%H%M%S')
+    run_hyperopts(exp_name, args.n_iter)
+    process_results(exp_name)
