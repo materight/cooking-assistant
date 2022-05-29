@@ -39,7 +39,7 @@
 ~[sorry]
     [excuse me]
     ~[i am?] sorry
-    
+
 ~[thanks]
     [thanks [a lot?]|thank you]
 
@@ -52,6 +52,9 @@
 
 ~[use]
     [use|utilize|employ]
+
+~[help]
+    [help|assist]
 
 ~[eat]
     [eat|try]
@@ -107,6 +110,9 @@
 
 ~[timer]
     [timer|reminder|countdown|alarm|chronometer]
+
+~[features]
+    [features|functions|functionalities|capabilities]
 
 ~[containing]
     [containing|with|using]

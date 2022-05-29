@@ -14,6 +14,11 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
+  - rule: Give the user the availabl features
+    steps:
+    - intent: ask_features
+    - action: utter_info
+
 
   - rule: Say you're welcome anytime the user says thank you
     steps:

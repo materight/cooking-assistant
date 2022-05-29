@@ -25,6 +25,11 @@
     ~[&affirm?] ~[next] ~[thanks?]
     ~[&affirm?] ~[i am?] [done|~[ready]]
 
+%[ask_features](50)
+    [&what] can you do?
+    [&how] ~[can] you ~[help] [me?]?
+    [&what|which] are your ~[features]? 
+
 %[search_recipes](400)
     ~[&i want] to ~[eat] [a?] @[recipe?keyword/90] [@[cuisine] ~[recipe]?!keyword/10] ~[day time?]
     ~[&can] you ~[please?] ~[search] [~[recipe] for|how to ~[cook]?] @[recipe?keyword/90] [@[cuisine] ~[recipe]?!keyword/10]?

@@ -12,6 +12,7 @@ intents:
 - affirm
 - ask_alternative_recipe
 - ask_expected_time
+- ask_features
 - ask_ingredient_amount:
     use_entities: [ ingredient, CARDINAL ]
 - ask_ingredient_substitute:
@@ -93,7 +94,7 @@ responses:
   - text: "Happy to help!"
 
   utter_info:
-  - text: "I can help you find and prepare cooking recipes!"
+  - text: "I can help you find and prepare cooking recipes! Try to ask me about a specific recipe or tell me the ingredients you want to use."
 
   utter_please_rephrase:
   - text: "I'm sorry, I didn't understand that. Could you please rephrase?"
