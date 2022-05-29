@@ -24,6 +24,7 @@ intents:
 - greet
 - idk
 - next
+- nlu_fallback
 - search_recipes:
     use_entities: [ recipe, ingredient, tag, cuisine ]
 - set_timer:
