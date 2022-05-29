@@ -288,7 +288,7 @@ nlu:
     - Can you please search recipe containing?
     - Can you please search something with?
     - Can you please search [vegetarian](tag) and [dairy-free](tag) recipe containing [almond extract](ingredient) [red chili flakes](ingredient)?
-    - Can you search [Crêpes?]{"entity": "recipe", "value": "Cr\u00eapes"}
+    - Can you search [Crepes](recipe)?
     - Can you search for [Chili](recipe)?
     - Can you search for [Chocolate Cookies](recipe)?
     - Can you search for food using?
