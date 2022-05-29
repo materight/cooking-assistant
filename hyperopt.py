@@ -1,5 +1,6 @@
 """Script to run hyperparameters optimization of a Rasa model."""
 import os
+import glob
 import yaml
 import argparse
 import subprocess
@@ -80,6 +81,12 @@ def run_hyperopts(exp_name: str, n_iter: int):
             '--out', f'{work_dir}/core/{split}'
         ], check=True).returncode
     
+    # Delete generated models and plots to save space
+    for model_filepath in glob.glob(os.path,join(work_dir, '**/*.tar.gz')):
+        os.remove(model_filepath)
+    for plot_filepath in glob.glob(os.path,join(work_dir, '**/*.png')):
+        os.remove(plot_filepath)
+    
 
 def process_results(exp_name):
     """Process the results of hyperparams search."""
@@ -89,6 +96,7 @@ def process_results(exp_name):
         for fold_name, fold_path in listdir(run_path):
             for model_name, model_path in listdir(fold_path, exclude='train'):
                 print()
+
 
 if __name__ == "__main__":
     args = parser.parse_args()
