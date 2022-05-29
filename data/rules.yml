@@ -14,7 +14,8 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
-  - rule: Give the user the availabl features
+
+  - rule: Tell the user the available features
     steps:
     - intent: ask_features
     - action: utter_info
