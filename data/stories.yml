@@ -5,23 +5,75 @@ stories:
 
 ####################### Phase 1: Search recipe #######################
 
-- story: Search for a recipe
+- story: Search for a recipe by name
   steps:
   - intent: greet
   - action: utter_greet
   - intent: ask_features
   - action: utter_info
   - intent: search_recipes
+    entities:
+    - recipe: pizza
   - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - checkpoint: recipe_selected
   
+
+- story: Search for a recipe by ingredients
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_features
+  - action: utter_info
+  - intent: search_recipes
+    entities:
+    - ingredient: tomatoes
+    - ingredient: eggs
+  - action: action_search_recipes
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
+  - checkpoint: recipe_selected
+  
+
+- story: Search for a recipe by tags
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_features
+  - action: utter_info
+  - intent: search_recipes
+    entities:
+    - tag: gluten-free
+    - tag: vegetarian
+    - cuisine: italian
+  - action: action_search_recipes
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
+  - checkpoint: recipe_selected
+
+
+- story: Search for a recipe by multiple constraints
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_features
+  - action: utter_info
+  - intent: search_recipes
+    entities:
+    - tag: gluten-free
+    - tag: vegetarian
+    - cuisine: italian
+  - action: action_search_recipes
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
+  - checkpoint: recipe_selected
+
 
 - story: Search for a recipe with additional filtering
   steps:
   - intent: greet
   - action: utter_greet
   - intent: search_recipes
+    entities:
+    - ingredient: onions
+    - tag: vegan
   - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids ]
   - action: action_refine_recipes_search_ask
@@ -31,11 +83,14 @@ stories:
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - checkpoint: recipe_selected
 
+
 - story: Search for an alternative recipe
   steps:
   - intent: greet
   - action: utter_greet
   - intent: search_recipes
+    entities:
+    - ingredient: rice
   - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids ]
   - action: action_refine_recipes_search_ask
@@ -58,14 +113,16 @@ stories:
   - checkpoint: recipe_selected
   - or:
     - intent: ask_ingredients_list
-      entities: [ CARDINAL ]
+      entities: 
+      - CARDINAL: '2'
     - intent: affirm
   - action: action_list_ingredients
   - action: utter_ask_start_cooking
   - intent: deny
   - action: utter_ask_more_info
   - intent: ask_ingredient_substitute
-    entities: [ ingredient ]
+    entities: 
+    - ingredient: tomatoes
   - action: action_search_ingredients_substitutes
   - intent: start_cooking
   - checkpoint: cooking_started
@@ -91,12 +148,12 @@ stories:
   - action: utter_ask_more_info
   - intent: affirm
   - action: action_tell_expected_time
-  - or:
-    - intent: tell_people_count
-      entities: [ CARDINAL ]
-    - intent: tell_people_count_one
+  - intent: tell_people_count
+    entities:
+    - CARDINAL: three
   - action: action_update_people_count
-  - slot_was_set: [ people_count ]
+  - slot_was_set: 
+    - people_count: three
   - action: action_list_ingredients
   - action: utter_ask_start_cooking
   - intent: affirm
@@ -114,7 +171,8 @@ stories:
   steps:
   - checkpoint: recipe_selected
   - intent: ask_ingredient_substitute
-    entities: [ ingredient ]
+    entities:
+    - ingredient: onions
   - action: action_search_ingredients_substitutes
 
 
@@ -122,7 +180,9 @@ stories:
   steps:
   - checkpoint: recipe_selected
   - intent: ask_ingredient_amount
-    entities: [ ingredient ]
+    entities: 
+    - ingredient: flour
+    - CARDINAL: '5'
   - action: action_tell_ingredient_amount
 
 
@@ -131,15 +191,22 @@ stories:
   - checkpoint: recipe_selected
   - or:
     - intent: tell_people_count
-      entities: [ CARDINAL ]
+      entities: 
+      - CARDINAL: '6'
     - intent: tell_people_count_one
   - action: action_update_people_count
-  - slot_was_set: [ people_count ]
+  - or:
+    - slot_was_set: 
+      - people_count: '6'
+    - slot_was_set:
+      - people_count: '1'
   - action: action_list_ingredients
   - action: utter_ask_start_cooking
+  - intent: affirm
+  - checkpoint: cooking_started
 
 
-- story: Start cooking (system inititiative)
+- story: Start cooking (system inititiative) (short)
   steps:
   - checkpoint: recipe_selected
   - intent: deny
@@ -148,7 +215,7 @@ stories:
   - checkpoint: cooking_started
 
 
-- story: Start cooking (user initiative)
+- story: Start cooking (user initiative) (short)
   steps:
   - checkpoint: recipe_selected
   - intent: start_cooking
@@ -215,6 +282,8 @@ stories:
     entities:
     - ingredient: lemons
   - action: action_search_ingredients_substitutes
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
   - intent: next
   - action: list_steps_loop
   - slot_was_set: 
@@ -225,6 +294,8 @@ stories:
     entities: 
     - ingredient: eggs
   - action: action_tell_ingredient_amount
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
   - intent: next
   - action: list_steps_loop
   - slot_was_set: 
@@ -235,6 +306,8 @@ stories:
     entities:
     - CARDINAL: four
   - action: action_list_ingredients
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
   - intent: stop_cooking
   - action: action_deactivate_loop
   - active_loop: null
@@ -256,22 +329,29 @@ stories:
     - requested_slot: list_steps_done
   - intent: ask_expected_time
   - action: action_tell_expected_time
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
   - intent: next
   - action: list_steps_loop
-  - slot_was_set: 
-    - current_step_idx: 3
-    - list_steps_done: null
-    - requested_slot: list_steps_done
-  - intent: set_timer
-    entities: [ TIMER ]
-  - action: action_set_timer
-  - intent: next
-  - action: list_steps_loop
-  - slot_was_set: 
+  - slot_was_set:
     - current_step_idx: 1
     - list_steps_done: null
     - requested_slot: list_steps_done
+  - intent: set_timer
+    entities:
+    - TIMER: 30 minutes
+  - action: action_set_timer
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
+    - list_steps_done: null
+    - requested_slot: list_steps_done
   - intent: search_recipes
+    entities:
+    - recipe: pasta
   - action: action_deactivate_loop
   - active_loop: null
   - slot_was_set:
