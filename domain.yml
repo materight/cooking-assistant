@@ -85,118 +85,122 @@ responses:
   - text: Hello! What recipe would you like to try today?
 
   utter_anything_else:
-  - text: "What else can I do for you?"
-  - text: "Would you like to cook something else?"
+  - text: What else can I do for you?
+  - text: Would you like to cook something else?
 
   utter_you_are_welcome:
-  - text: "You're welcome!"
-  - text: "No problem, I'm here to help you!"
-  - text: "Happy to help!"
+  - text: You're welcome!
+  - text: No problem, I'm here to help you!
+  - text: Happy to help!
 
   utter_info:
-  - text: "I can help you find and prepare cooking recipes! Try to ask me about a specific recipe or tell me the ingredients you want to use."
+  - text: I can help you find and prepare cooking recipes! Try to ask me about a specific recipe or tell me the ingredients you want to use.
 
   utter_please_rephrase:
-  - text: "I'm sorry, I didn't understand that. Could you please rephrase?"
+  - text: I'm sorry, I didn't understand that. Could you please rephrase?
 
   utter_default:
   - text: I'm really sorry, I don't know how to help you.
 
   utter_goodbye:
-  - text: "Thanks for talking with me. Bye!"
-  - text: "Bye!"
+  - text: Thanks for talking with me. Bye!
+  - text: Bye!
 
   utter_search_recipe_found:
-  - text: "I found a recipe for \"{recipe_title}\". Would you like to know more?"
+  - text: I found a recipe for \"{recipe_title}\". Would you like to know more?
 
   utter_refine_recipes_search:
-  - text: "I've found {count} recipes. What about something {tag}?"
-  - text: "I've found {count} recipes. Would you like a {tag} option?"
+  - text: I've found {count} recipes. What about something {tag}?
+  - text: I've found {count} recipes. Would you like a {tag} option?
 
   utter_search_recipe_found_alternative:
-  - text: "What about \"{recipe_title}\"?"
-  - text: "I also found a recipe for \"{recipe_title}\"."
+  - text: What about \"{recipe_title}\"?
+  - text: I also found a recipe for \"{recipe_title}\".
 
   utter_search_recipe_not_found:
-  - text: "Sorry, I couldn't find any recipe. Would you like to search for something else?"
+  - text: Sorry, I couldn't find any recipe. Would you like to search for something else?
 
   utter_search_recipe_not_found_alternative:
-  - text: "Sorry I wasn't able to find any alternative. Would you like to search for something else?"
+  - text: Sorry I wasn't able to find any alternative. Would you like to search for something else?
 
   utter_ask_people_count:
-  - text: "Great! How many people are you cooking for?"
-  - text: "Thank you. How many people will be eating?"
+  - text: Great! How many people are you cooking for?
+  - text: Thank you. How many people will be eating?
 
   utter_expected_time:
-  - text: "This recipe requires {prep_time} minutes for preparation and {cook_time} minutes for cooking."
+  - text: This recipe requires {prep_time} minutes for preparation and {cook_time} minutes for cooking.
 
   utter_ingredient_substitute_found:
-  - text: "You may use {substitute} as substitutes."
+  - text: You may use {substitute} as substitutes.
 
   utter_ingredient_substitute_not_found:
-  - text: "Sorry, I couldn't find any substitute for {ingredient}."
+  - text: Sorry, I couldn't find any substitute for {ingredient}.
 
   utter_ingredient_substitute_no_ingredient:
-  - text: "Sorry, I couldn't find any alternative ingredients."
+  - text: Sorry, I couldn't find any alternative ingredients.
 
   utter_ingredient_amount_found:
-  - text: "You need {amounts_str}."
-  - text: "Please use {amounts_str}."
+  - text: You need {amounts_str}.
+  - text: Please use {amounts_str}.
 
   utter_ingredient_amount_not_found:
-  - text: "You don't need any {ingredients_str} for this recipe."
+  - text: You don't need any {ingredients_str} for this recipe.
 
   utter_ingredient_amount_no_ingredient:
-  - text: "I'm sorry I couldn't understand which ingredient you are referring to."
+  - text: I'm sorry I couldn't understand which ingredient you are referring to.
 
   utter_list_ingredients:
-  - text: "Here are the ingredients you'll need for {people_count_str}:\n{ingredients_list}"
-  - text: "For {people_count_str} you'll need:\n{ingredients_list}"
+  - text: |-
+      Here are the ingredients you'll need for {people_count_str}:
+      {ingredients_list}
+  - text: |-
+      For {people_count_str} you'll need:
+      {ingredients_list}
 
   utter_set_timer_done:
-  - text: "I've set a timer for {time}."
-  - text: "Ok I'll give you a reminder in {time}."
+  - text: I've set a timer for {time}.
+  - text: Ok I'll give you a reminder in {time}.
 
   utter_set_timer_error:
-  - text: "I'm sorry, I couldn't undesterstand."
+  - text: I'm sorry, I couldn't undesterstand.
 
   utter_timer_expired:
-  - text: "Are you still there? The timer you set is over!"
-  - text: "Hey, your cooking timer has expired!"
+  - text: Are you still there? The timer you set is over!
+  - text: Hey, your cooking timer has expired!
 
   utter_ask_more_info:
-  - text: "Would you like to know more about this recipe?"
-  - text: "Do you want more information about the recipe?"
+  - text: Would you like to know more about this recipe?
+  - text: Do you want more information about the recipe?
 
   utter_ask_start_cooking:
-  - text: "Shall we start cooking?"
-  - text: "Do you have everything ready?"
+  - text: Shall we start cooking?
+  - text: Do you have everything ready?
 
   utter_list_steps_first:
-  - text: "Ok, let's start! First, {step_description} Let me know when you're done."
-  - text: "Perfect, let's cook! To begin, {step_description} Tell me when you're ready for the next step."
+  - text: Ok, let's start! First, {step_description} Let me know when you're done.
+  - text: Perfect, let's cook! To begin, {step_description} Tell me when you're ready for the next step.
 
   utter_list_steps_next:
-  - text: "Great, now {step_description}"
-  - text: "Perfect, now {step_description}"
-  - text: "Okay, now {step_description}"
-  - text: "After that, {step_description}"
-  - text: "Then {step_description}"
-  - text: "Now {step_description}"
-  - text: "Next {step_description}"
+  - text: Great, now {step_description}
+  - text: Perfect, now {step_description}
+  - text: Okay, now {step_description}
+  - text: After that, {step_description}
+  - text: Then {step_description}
+  - text: Now {step_description}
+  - text: Next {step_description}
 
   utter_list_steps_last:
-  - text: "Almost done! Now {step_description}"
-  - text: "Last step, {step_description}"
-  - text: "Finally, {step_description}"
-  - text: "To finish, {step_description}"
+  - text: Almost done! Now {step_description}
+  - text: Last step, {step_description}
+  - text: Finally, {step_description}
+  - text: To finish, {step_description}
 
   utter_list_steps_end:
-  - text: "Great! That was the last step, enjoy your meal!"
-  - text: "And we are done! Have a nice meal!"
+  - text: Great! That was the last step, enjoy your meal!
+  - text: And we are done! Have a nice meal!
   
   utter_list_steps_stop:
-  - text: "Ok, I'll stop reading the current recipe."
+  - text: Ok, I'll stop reading the current recipe.
 
 
 # Actions, check https://rasa.com/docs/rasa/actions for more info
