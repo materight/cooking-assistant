@@ -213,7 +213,7 @@ rules:
     steps:
     - or:
       - intent: ask_ingredient_amount
-        entities: [ ingredient]
+        entities: [ ingredient ]
       - intent: ask_ingredient_amount
         entities: [ ingredient, CARDINAL ]
     - action: action_tell_ingredient_amount

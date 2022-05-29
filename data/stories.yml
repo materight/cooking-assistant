@@ -9,6 +9,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: ask_features
+  - action: utter_info
   - intent: search_recipes
   - action: action_search_recipes
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
@@ -34,8 +36,12 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: search_recipes
-    entities: [ recipe, ingredient, tag, cuisine ]
   - action: action_search_recipes
+  - slot_was_set: [ found_recipes_ids ]
+  - action: action_refine_recipes_search_ask
+  - slot_was_set: [ refine_recipes_search_prop, refine_recipes_search_value ]
+  - intent: affirm
+  - action: action_refine_recipes_search_filter
   - slot_was_set: [ found_recipes_ids, current_recipe_id ]
   - or:
     - intent: ask_alternative_recipe
@@ -47,6 +53,24 @@ stories:
 
 ####################### Phase 2: Get more infos about the recipe #######################
 
+- story: Ask for more info about the current recipe 
+  steps:
+  - checkpoint: recipe_selected
+  - or:
+    - intent: ask_ingredients_list
+      entities: [ CARDINAL ]
+    - intent: affirm
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - intent: deny
+  - action: utter_ask_more_info
+  - intent: ask_ingredient_substitute
+    entities: [ ingredient ]
+  - action: action_search_ingredients_substitutes
+  - intent: start_cooking
+  - checkpoint: cooking_started
+
+
 - story: Ask for ingredient lists
   steps:
   - checkpoint: recipe_selected
@@ -55,6 +79,28 @@ stories:
     - intent: affirm
   - action: action_list_ingredients
   - action: utter_ask_start_cooking
+
+
+- story: Ask for more info about the current recipe with affirm/deny
+  steps:
+  - checkpoint: recipe_selected
+  - intent: affirm
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - intent: deny
+  - action: utter_ask_more_info
+  - intent: affirm
+  - action: action_tell_expected_time
+  - or:
+    - intent: tell_people_count
+      entities: [ CARDINAL ]
+    - intent: tell_people_count_one
+  - action: action_update_people_count
+  - slot_was_set: [ people_count ]
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - intent: affirm
+  - checkpoint: cooking_started
 
 
 - story: Ask for expected preparation time
@@ -68,6 +114,7 @@ stories:
   steps:
   - checkpoint: recipe_selected
   - intent: ask_ingredient_substitute
+    entities: [ ingredient ]
   - action: action_search_ingredients_substitutes
 
 
@@ -75,6 +122,7 @@ stories:
   steps:
   - checkpoint: recipe_selected
   - intent: ask_ingredient_amount
+    entities: [ ingredient ]
   - action: action_tell_ingredient_amount
 
 
@@ -109,11 +157,129 @@ stories:
 
 ####################### Phase 3: Start cooking #######################
 
-- story: Start reading recipe steps
+- story: Start reading recipe steps (long)
   steps:
   - checkpoint: cooking_started
   - action: list_steps_loop
   - active_loop: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 0
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 1
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 2
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: next 
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+    - requested_slot: null
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
+
+
+- story: Start reading recipe steps (short)
+  steps:
+  - checkpoint: cooking_started
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+
+
+- story: Rading recipe steps with interruptions (1)
+  steps:
+  - checkpoint: cooking_started
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: affirm
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 1
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: ask_ingredient_substitute
+    entities:
+    - ingredient: lemons
+  - action: action_search_ingredients_substitutes
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 2
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: ask_ingredient_amount
+    entities: 
+    - ingredient: eggs
+  - action: action_tell_ingredient_amount
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 3
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: ask_ingredients_list
+    entities:
+    - CARDINAL: four
+  - action: action_list_ingredients
+  - intent: stop_cooking
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_reset_list_steps_loop
+  - action: utter_list_steps_stop
+  - action: utter_anything_else
+
+
+- story: Rading recipe steps with interruptions (2)
+  steps:
+  - checkpoint: cooking_started
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: ask_expected_time
+  - action: action_tell_expected_time
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 3
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: set_timer
+    entities: [ TIMER ]
+  - action: action_set_timer
+  - intent: next
+  - action: list_steps_loop
+  - slot_was_set: 
+    - current_step_idx: 1
+    - list_steps_done: null
+    - requested_slot: list_steps_done
+  - intent: search_recipes
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_reset_list_steps_loop
+  - action: utter_list_steps_stop
+  - action: action_search_recipes
+  - slot_was_set: [ found_recipes_ids, current_recipe_id ]
 
 
 - story: Exit reading recipe steps if the user changes his mind
@@ -129,37 +295,3 @@ stories:
   - action: action_reset_list_steps_loop
   - action: utter_list_steps_stop
   - action: utter_anything_else
-
-
-# - story: Start reading recipe steps
-#   steps:
-#   - checkpoint: cooking_started
-#   - action: list_steps_loop
-#   - active_loop: list_steps_loop
-#   - slot_was_set: 
-#     - current_step_idx: 0
-#     - list_steps_done: null
-#     - requested_slot: list_steps_done
-#   - intent: next
-#   - action: list_steps_loop
-#   - slot_was_set: 
-#     - current_step_idx: 1
-#     - list_steps_done: null
-#     - requested_slot: list_steps_done
-#   - intent: next
-#   - action: list_steps_loop
-#   - slot_was_set: 
-#     - current_step_idx: 2
-#     - list_steps_done: null
-#     - requested_slot: list_steps_done
-#   - intent: next 
-#   - action: list_steps_loop
-#   - active_loop: null
-#   - slot_was_set: 
-#     - current_step_idx: -1
-#     - list_steps_done: True
-#     - requested_slot: null
-#   - action: action_reset_list_steps_loop
-#   - action: utter_anything_else
-
-

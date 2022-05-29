@@ -164,6 +164,10 @@ responses:
   - text: "Are you still there? The timer you set is over!"
   - text: "Hey, your cooking timer has expired!"
 
+  utter_ask_more_info:
+  - text: "Would you like to know more about this recipe?"
+  - text: "Do you want more information about the recipe?"
+
   utter_ask_start_cooking:
   - text: "Shall we start cooking?"
   - text: "Do you have everything ready?"
