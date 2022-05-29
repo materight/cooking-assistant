@@ -246,7 +246,7 @@ rules:
     - active_loop: list_steps_loop
     steps:
     - intent: set_timer
-      entities: [ TIMER ]
+      entities: [ TIME ]
     - action: action_set_timer
     - action: list_steps_loop
     - active_loop: list_steps_loop
