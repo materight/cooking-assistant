@@ -82,9 +82,9 @@ def run_hyperopts(exp_name: str, n_iter: int):
         ], check=True).returncode
     
     # Delete generated models and plots to save space
-    for model_filepath in glob.glob(os.path,join(work_dir, '**/*.tar.gz')):
+    for model_filepath in glob.glob(os.path.join(work_dir, '**/*.tar.gz'), recursive=True):
         os.remove(model_filepath)
-    for plot_filepath in glob.glob(os.path,join(work_dir, '**/*.png')):
+    for plot_filepath in glob.glob(os.path.join(work_dir, '**/*.png'), recursive=True):
         os.remove(plot_filepath)
     
 
