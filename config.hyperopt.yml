@@ -5,7 +5,6 @@ hyperparams:
   embedding_dimension: [10, 20, 50]
   learning_rate: [0.001, 0.01]
   drop_rate: [0.1, 0.2, 0.3]
-  constrain_similarities: [True, False]
   max_history: [5, 10, 15]
   max_ngram: [3, 4, 5]
   fallback_threshold: [0.4, 0.7]
@@ -26,13 +25,13 @@ pipeline:
   - name: SpacyEntityExtractor
     dimensions: [ CARDINAL, TIME ]
   - name: RegexEntityExtractor
-    use_lookup_tables: True
+    use_lookup_tables: true
   - name: DIETClassifier
     epochs: $epochs
     embedding_dimension: $embedding_dimension
     learning_rate: $learning_rate
     drop_rate: $drop_rate
-    constrain_similarities: $constrain_similarities
+    constrain_similarities: true
   - name: EntitySynonymMapper
   - name: FallbackClassifier
     threshold: $fallback_threshold
@@ -47,10 +46,10 @@ policies:
     epochs: $epochs
     embedding_dimension: $embedding_dimension
     learning_rate: $learning_rate
-    constrain_similarities: $constrain_similarities
+    constrain_similarities: true
   - name: TEDPolicy
     max_history: $max_history
     epochs: $epochs
     embedding_dimension: $embedding_dimension
     learning_rate: $learning_rate
-    constrain_similarities: $constrain_similarities
+    constrain_similarities: true

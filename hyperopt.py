@@ -2,14 +2,18 @@
 import os
 import glob
 import yaml
+import json
 import argparse
 import subprocess
 from datetime import datetime
+from collections import defaultdict
 
 from sklearn.model_selection import ParameterSampler
 
 parser = argparse.ArgumentParser(description="Run hyperparameters optimization of a Rasa model.")
 parser.add_argument('--n-iter', '-n', type=int, default=10, help="Total number of iterations to run (default: %(default)s).")
+
+PROJECT_ROOT = os.path.dirname(__file__)
 
 def set_hyperparams(config: dict, params: dict) -> dict:
     """Set the given hyperparams in the config dictionary."""
@@ -23,14 +27,15 @@ def set_hyperparams(config: dict, params: dict) -> dict:
 
 def listdir(path: str, exclude: list = []):
     """List all files in a directory."""
-    for d in os.listdir(path):
-        if os.path.isdir(d) and d not in exclude:
-            yield d, os.path.join(path, d)
+    for dir_name in os.listdir(path):
+        dir_path = os.path.join(path, dir_name)
+        if os.path.isdir(dir_path) and dir_name not in exclude:
+            yield dir_name, dir_path
 
 
 def run_hyperopts(exp_name: str, n_iter: int):
     """Run hyperparameters search."""
-    work_dir = os.path.join('hyperopts', exp_name)
+    work_dir = os.path.join(PROJECT_ROOT, 'hyperopts', exp_name)
     os.makedirs(work_dir)
     print(f'Experiment name: {exp_name}')
     
@@ -47,7 +52,7 @@ def run_hyperopts(exp_name: str, n_iter: int):
     print(f'Generating {len(sampler)} pipeline configs...')
     for i, params in enumerate(sampler):
         with open(os.path.join(work_dir, 'configs', f'{i+1}.yml'), 'w') as f:
-            yaml.dump(set_hyperparams(config, params), f)
+            yaml.dump(dict(**set_hyperparams(config, params), hyperparams=params), f)
             configs.append(f.name)
     
     # Train and test NLU models with cross-validation
@@ -91,15 +96,29 @@ def run_hyperopts(exp_name: str, n_iter: int):
 def process_results(exp_name):
     """Process the results of hyperparams search."""
     # Read results from the output files
-    work_dir = os.path.join('hyperopts', exp_name)
-    for run_name, run_path in listdir(os.path.join(work_dir, 'nlu')):
+    work_dir = os.path.join(PROJECT_ROOT, 'hyperopts', exp_name)
+    # Parse NLU results
+    runs_paths = list(listdir(os.path.join(work_dir, 'nlu')))
+    runs_count = len(runs_paths)
+    nlu_results = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+    for run_name, run_path in runs_paths:
         for fold_name, fold_path in listdir(run_path):
-            for model_name, model_path in listdir(fold_path, exclude='train'):
-                print()
+            exclusion_fraction = fold_name.replace('_exclusion', '')
+            for report_name, report_path in listdir(fold_path, exclude='train'):
+                config_name = report_name.replace('_report', '')
+                # Get report files of each component
+                for component_report_path in glob.glob(os.path.join(report_path, '*_report.json')):
+                    component_name = os.path.basename(component_report_path).replace('_report.json', '')
+                    with open(component_report_path, 'r') as f:
+                        component_report = json.load(f)
+                    f1_score = component_report['weighted avg']['f1-score']
+                    nlu_results[config_name][component_name][exclusion_fraction] += f1_score / runs_count # Average over three runs
+
+
 
 
 if __name__ == "__main__":
     args = parser.parse_args()
-    exp_name = datetime.now().strftime('%Y%m%d-%H%M%S')
-    run_hyperopts(exp_name, args.n_iter)
+    exp_name = '20220528-115649' # datetime.now().strftime('%Y%m%d-%H%M%S')
+    #run_hyperopts(exp_name, args.n_iter)
     process_results(exp_name)

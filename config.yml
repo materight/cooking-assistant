@@ -16,7 +16,7 @@ pipeline:
   - name: SpacyEntityExtractor
     dimensions: [ CARDINAL, TIME ]
   - name: RegexEntityExtractor
-    use_lookup_tables: True
+    use_lookup_tables: true
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true
