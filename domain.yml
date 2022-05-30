@@ -108,15 +108,15 @@ responses:
   - text: Bye!
 
   utter_search_recipe_found:
-  - text: I found a recipe for \"{recipe_title}\". Would you like to know more?
+  - text: I found a recipe for "{recipe_title}". Would you like to know more?
 
   utter_refine_recipes_search:
   - text: I've found {count} recipes. What about something {tag}?
   - text: I've found {count} recipes. Would you like a {tag} option?
 
   utter_search_recipe_found_alternative:
-  - text: What about \"{recipe_title}\"?
-  - text: I also found a recipe for \"{recipe_title}\".
+  - text: What about "{recipe_title}"?
+  - text: I also found a recipe for "{recipe_title}".
 
   utter_search_recipe_not_found:
   - text: Sorry, I couldn't find any recipe. Would you like to search for something else?
