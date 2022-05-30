@@ -85,22 +85,22 @@ stories:
 
 ####################### Phase 2: Get more infos about the recipe #######################
 
-- story: Ask for more info about the current recipe 
-  steps:
-  - checkpoint: recipe_selected
-  - or:
-    - intent: ask_ingredients_list
-    - intent: affirm
-  - action: action_list_ingredients
-  - action: utter_ask_start_cooking
-  - intent: deny
-  - action: utter_ask_more_info
-  - intent: ask_ingredient_substitute
-    entities: 
-    - ingredient: tomatoes
-  - action: action_search_ingredients_substitutes
-  - intent: start_cooking
-  - checkpoint: cooking_started
+# - story: Ask for more info about the current recipe 
+#   steps:
+#   - checkpoint: recipe_selected
+#   - or:
+#     - intent: ask_ingredients_list
+#     - intent: affirm
+#   - action: action_list_ingredients
+#   - action: utter_ask_start_cooking
+#   - intent: deny
+#   - action: utter_ask_more_info
+#   - intent: ask_ingredient_substitute
+#     entities: 
+#     - ingredient: tomatoes
+#   - action: action_search_ingredients_substitutes
+#   - intent: start_cooking
+#   - checkpoint: cooking_started
 
 
 - story: Ask for ingredient lists
@@ -113,26 +113,26 @@ stories:
   - action: utter_ask_start_cooking
 
 
-- story: Ask for more info about the current recipe with affirm/deny
-  steps:
-  - checkpoint: recipe_selected
-  - intent: affirm
-  - action: action_list_ingredients
-  - action: utter_ask_start_cooking
-  - intent: deny
-  - action: utter_ask_more_info
-  - intent: affirm
-  - action: action_tell_expected_time
-  - intent: tell_people_count
-    entities:
-    - CARDINAL: three
-  - action: action_update_people_count
-  - slot_was_set: 
-    - people_count: three
-  - action: action_list_ingredients
-  - action: utter_ask_start_cooking
-  - intent: affirm
-  - checkpoint: cooking_started
+# - story: Ask for more info about the current recipe with affirm/deny
+#   steps:
+#   - checkpoint: recipe_selected
+#   - intent: affirm
+#   - action: action_list_ingredients
+#   - action: utter_ask_start_cooking
+#   - intent: deny
+#   - action: utter_ask_more_info
+#   - intent: affirm
+#   - action: action_tell_expected_time
+#   - intent: tell_people_count
+#     entities:
+#     - CARDINAL: three
+#   - action: action_update_people_count
+#   - slot_was_set: 
+#     - people_count: three
+#   - action: action_list_ingredients
+#   - action: utter_ask_start_cooking
+#   - intent: affirm
+#   - checkpoint: cooking_started
 
 
 - story: Ask for expected preparation time
