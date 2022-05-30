@@ -38,11 +38,11 @@ class ActionSearchRecipe(Action):
         logger.info('Found %d recipes', len(recipes_ids))
         if len(recipes_ids) == 0:
             dispatcher.utter_message(response='utter_search_recipe_not_found')
-            return [ FollowupAction('action_listen') ]
+            return []
         elif len(recipes_ids) == 1:  # Return the single recipe found
             recipe = dataset.get_recipe(recipes_ids[0])
             dispatcher.utter_message(response='utter_search_recipe_found', recipe_title=recipe.title, image=recipe.image)
-            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id), FollowupAction('action_listen') ]
+            return [ SlotSet('found_recipes_ids', recipes_ids), SlotSet('current_recipe_id', recipe.id) ]
         else: # More alternatives found, asks the user for more details
             return [ SlotSet('found_recipes_ids', recipes_ids), FollowupAction('action_refine_recipes_search_ask') ]
 
