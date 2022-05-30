@@ -90,8 +90,6 @@ stories:
   - checkpoint: recipe_selected
   - or:
     - intent: ask_ingredients_list
-      entities: 
-      - CARDINAL: '2'
     - intent: affirm
   - action: action_list_ingredients
   - action: utter_ask_start_cooking

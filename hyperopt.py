@@ -7,7 +7,7 @@ import argparse
 import subprocess
 from datetime import datetime
 from collections import defaultdict
-
+import pandas as pd
 from sklearn.model_selection import ParameterSampler
 
 parser = argparse.ArgumentParser(description="Run hyperparameters optimization of a Rasa model.")
@@ -100,20 +100,22 @@ def process_results(exp_name):
     # Parse NLU results
     runs_paths = list(listdir(os.path.join(work_dir, 'nlu')))
     runs_count = len(runs_paths)
-    nlu_results = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
+    nlu_results = defaultdict(lambda: defaultdict(int))
     for run_name, run_path in runs_paths:
         for fold_name, fold_path in listdir(run_path):
             exclusion_fraction = fold_name.replace('_exclusion', '')
             for report_name, report_path in listdir(fold_path, exclude='train'):
-                config_name = report_name.replace('_report', '')
+                config_name = int(report_name.replace('_report', ''))
                 # Get report files of each component
                 for component_report_path in glob.glob(os.path.join(report_path, '*_report.json')):
                     component_name = os.path.basename(component_report_path).replace('_report.json', '')
                     with open(component_report_path, 'r') as f:
                         component_report = json.load(f)
-                    f1_score = component_report['weighted avg']['f1-score']
-                    nlu_results[config_name][component_name][exclusion_fraction] += f1_score / runs_count # Average over three runs
-
+                    f1_score = component_report['weighted avg']['f1-score'] * 100
+                    nlu_results[config_name][(component_name, exclusion_fraction)] += f1_score / runs_count # Average over three runs
+    nlu_results = pd.DataFrame.from_dict(nlu_results, orient='index').sort_index(axis=0).sort_index(axis=1)
+    nlu_results.to_csv(os.path.join(work_dir, 'nlu_report.csv'), sep='\t', float_format='%.2f')
+    # Parse dialogue model results
 
 
 
