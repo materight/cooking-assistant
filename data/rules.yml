@@ -223,7 +223,7 @@ rules:
 
   - rule: Interruption - Ask for ingredients list
     condition:
-    - slot_was_set: [ current_recipe_id ]
+    - active_loop: list_steps_loop
     steps:
     - intent: ask_ingredients_list
     - action: action_list_ingredients
