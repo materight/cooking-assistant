@@ -8,7 +8,7 @@ hyperparams:
   max_history: [5, 10, 15]
   max_ngram: [3, 4, 5]
   fallback_threshold: [0.4, 0.7]
-  spacy_model: [en_core_web_sm, en_core_web_md]
+  spacy_model: [en_core_web_sm, en_core_web_md, en_core_web_lg]
 
 pipeline:
   - name: SpacyNLP
