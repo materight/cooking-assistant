@@ -121,6 +121,6 @@ def process_results(exp_name):
 
 if __name__ == "__main__":
     args = parser.parse_args()
-    exp_name = '20220528-115649' # datetime.now().strftime('%Y%m%d-%H%M%S')
-    #run_hyperopts(exp_name, args.n_iter)
+    exp_name = datetime.now().strftime('%Y%m%d-%H%M%S')
+    run_hyperopts(exp_name, args.n_iter)
     process_results(exp_name)
