@@ -12,7 +12,7 @@ import pandas as pd
 from sklearn.model_selection import ParameterSampler
 
 parser = argparse.ArgumentParser(description="Run hyperparameters optimization of a Rasa model.")
-parser.add_argument('--n-iter', '-n', type=int, default=10, help="Total number of iterations to run (default: %(default)s).")
+parser.add_argument('--n-iter', '-n', type=int, default=100, help="Total number of iterations to run (default: %(default)s).")
 parser.add_argument('--n-runs', '-r', type=int, default=3, help="Total number of experiments per run (default: %(default)s).")
 parser.add_argument('--percentages', '-p', type=int, nargs="+", default=[0, 50, 75], help="Fractions of training data to held-out during training (default: %(default)s).")
 
@@ -59,18 +59,18 @@ def run_hyperopts(exp_name: str, n_iter: int, n_runs: int, percentages: list):
             configs.append(f.name)
 
     # Train and test NLU models with cross-validation
-    # print('\nTraining and testing NLU models...')
-    # subprocess.run(['rasa', 'test', 'nlu',
-    #     '--domain', os.path.join(PROJECT_ROOT, 'domain.yml'),
-    #     '--nlu', os.path.join(PROJECT_ROOT, 'data'),
-    #     '--config', *configs,
-    #     '--cross-validation',
-    #     '--no-plot',
-    #     '--runs', str(n_runs),
-    #     '--percentages', *map(str, percentages),
-    #     '--out', f'{work_dir}/nlu',
-    #     '--model', f'{work_dir}/nlu/models'
-    # ], check=True).returncode
+    print('\nTraining and testing NLU models...')
+    subprocess.run(['rasa', 'test', 'nlu',
+        '--domain', os.path.join(PROJECT_ROOT, 'domain.yml'),
+        '--nlu', os.path.join(PROJECT_ROOT, 'data'),
+        '--config', *configs,
+        '--cross-validation',
+        '--no-plot',
+        '--runs', str(n_runs),
+        '--percentages', *map(str, percentages),
+        '--out',  os.path.join(work_dir, 'nlu'),
+        '--model',  os.path.join(work_dir, 'nlu', 'models')
+    ], check=True).returncode
 
     # Merge stories and rules in a single file to support rasa training with multiple stories
     with tempfile.NamedTemporaryFile(suffix='.yml', mode='w', delete=False) as tmp_file:
@@ -80,31 +80,34 @@ def run_hyperopts(exp_name: str, n_iter: int, n_runs: int, percentages: list):
             tmp_file.write(stories_file.read())
             rules_file.readline() # Skip first line with "version"
             tmp_file.write(rules_file.read())
-    # Train and test dialogue models
+
+    # Train dialogue models
+    print('\nTraining dialogue models...')
     subprocess.run(['rasa', 'train', 'core',
         '--domain', os.path.join(PROJECT_ROOT, 'domain.yml'),
         '--stories', tmp_stories_path,
         '--config', *configs,
         '--runs', str(n_runs),
         '--percentages', *map(str, percentages),
-        '--out', f'{work_dir}/core/models'
+        '--out', os.path.join(work_dir, 'core', 'models')
     ], check=True).returncode
+
+    # Test dialogue models
     print('\nTesting dialogue models...')
     for split, stories_dir in dict(train='data', test='tests').items():  # The previous models have been trained excluding a certain amount of training data, so we can evaluate also over the train set
         subprocess.run(['rasa', 'test', 'core',
-            '--model', f'{work_dir}/core/models',
+            '--model', os.path.join(work_dir, 'core', 'models'),
             '--stories', os.path.join(PROJECT_ROOT, stories_dir),
             '--end-to-end',
-            '--no-plot',
             '--evaluate-model-directory',
-            '--out', f'{work_dir}/core/{split}'
+            '--out', os.path.join(work_dir, 'core', split)
         ], check=True).returncode
     
     # Delete generated models and plots to save space
-    for model_filepath in glob.glob(os.path.join(work_dir, '**/*.tar.gz'), recursive=True):
-        os.remove(model_filepath)
-    for plot_filepath in glob.glob(os.path.join(work_dir, '**/*.png'), recursive=True):
-        os.remove(plot_filepath)
+    for extension in [ 'tar.gz', 'png', 'pdf' ]:
+        for filepath in glob.iglob(os.path.join(work_dir, f'**/*.{extension}'), recursive=True):
+            #os.remove(filepath)
+            print(filepath)
     
 
 def process_results(exp_name):
