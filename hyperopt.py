@@ -88,7 +88,7 @@ def run_hyperopts(exp_name: str, n_iter: int, n_runs: int, percentages: list):
         '--stories', tmp_stories_path,
         '--config', *configs,
         '--runs', str(n_runs),
-        '--percentages', *map(str, percentages),
+        '--percentages', '0', # *map(str, percentages),
         '--out', os.path.join(work_dir, 'core', 'models')
     ], check=True).returncode
 
