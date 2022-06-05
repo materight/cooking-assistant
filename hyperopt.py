@@ -123,6 +123,10 @@ def process_results(exp_name):
             exclusion_fraction = fold_name.replace('_exclusion', '')
             for report_name, report_path in listdir(fold_path, exclude='train'):
                 config_name = int(report_name.replace('_report', ''))
+                # Load config hyperparameters values
+                with open(os.path.join(work_dir, 'configs', f'{config_name}.yml'), 'r') as f:
+                    hp = yaml.load(f, Loader=yaml.FullLoader)['hyperparams']
+                    nlu_results[config_name].update({ (k, ''): v for k, v in hp.items() })
                 # Get report files of each component
                 for component_report_path in glob.glob(os.path.join(report_path, '*_report.json')):
                     component_name = os.path.basename(component_report_path).replace('_report.json', '')
