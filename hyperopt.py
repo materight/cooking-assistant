@@ -98,7 +98,6 @@ def run_hyperopts(exp_name: str, n_iter: int, n_runs: int, percentages: list):
         subprocess.run(['rasa', 'test', 'core',
             '--model', os.path.join(work_dir, 'core', 'models'),
             '--stories', os.path.join(PROJECT_ROOT, stories_dir),
-            '--end-to-end',
             '--evaluate-model-directory',
             '--out', os.path.join(work_dir, 'core', split)
         ], check=True).returncode
@@ -106,8 +105,7 @@ def run_hyperopts(exp_name: str, n_iter: int, n_runs: int, percentages: list):
     # Delete generated models and plots to save space
     for extension in [ 'tar.gz', 'png', 'pdf' ]:
         for filepath in glob.iglob(os.path.join(work_dir, f'**/*.{extension}'), recursive=True):
-            #os.remove(filepath)
-            print(filepath)
+            os.remove(filepath)
     
 
 def process_results(exp_name):
@@ -136,7 +134,8 @@ def process_results(exp_name):
                     nlu_results[config_name][(component_name, exclusion_fraction)] += f1_score / runs_count # Average over three runs
     nlu_results = pd.DataFrame.from_dict(nlu_results, orient='index').sort_index(axis=1, ascending=True).sort_values(('DIETClassifier', '0%'), ascending=False)
     nlu_results.to_csv(os.path.join(work_dir, 'nlu_report.csv'), sep='\t', float_format='%.2f')
-
+    # Parse core results
+    
 
 if __name__ == "__main__":
     args = parser.parse_args()

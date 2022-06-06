@@ -2,7 +2,7 @@ version: "2.0"
 stories:
 
 
-- story: Happy path 1
+- story: Happy path
   steps:
   - user: hi!
     intent: greet
@@ -80,7 +80,7 @@ stories:
   - action: utter_anything_else
 
 
-- story: Happy path 2
+- story: Happy path
   steps:
   - user: hi!
     intent: greet
@@ -144,8 +144,7 @@ stories:
   - action: utter_anything_else
 
 
-
-- story: Happy path 3
+- story: Happy path
   steps:
   - user: hi!
     intent: greet
@@ -209,7 +208,7 @@ stories:
     - current_recipe_id: [10]
 
 
-- story: Happy path 4
+- story: Happy path
   steps:
   - user: I want to prepare something [italian](cuisine) but also [vegan](tag).
     intent: search_recipes
@@ -265,3 +264,4 @@ stories:
     - list_steps_done: True
   - action: action_reset_list_steps_loop
   - action: utter_anything_else
+
