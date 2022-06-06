@@ -19,6 +19,9 @@ pipeline:
     use_lookup_tables: true
   - name: DIETClassifier
     epochs: 100
+    embedding_dimension: 50
+    learning_rate: 0.001
+    drop_rate: 0.2
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: FallbackClassifier
@@ -29,12 +32,13 @@ pipeline:
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy
+    core_fallback_threshold: 0.4 
   - name: UnexpecTEDIntentPolicy
-    max_history: 5
+    max_history: 10
     epochs: 100
     constrain_similarities: true
   - name: TEDPolicy
-    max_history: 5
+    max_history: 10
     epochs: 100
     split_entities_by_comma: true
     constrain_similarities: true
