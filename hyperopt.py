@@ -88,30 +88,38 @@ def run_hyperopts(exp_name: str, n_iter: int, n_runs: int, percentages: list):
         '--stories', tmp_stories_path,
         '--config', *configs,
         '--runs', str(n_runs),
-        '--percentages', '0', # *map(str, percentages),
+        '--percentages', '0',
         '--out', os.path.join(work_dir, 'core', 'models')
     ], check=True).returncode
 
     # Test dialogue models
     print('\nTesting dialogue models...')
-    for split, stories_dir in dict(train='data', test='tests').items():  # The previous models have been trained excluding a certain amount of training data, so we can evaluate also over the train set
-        subprocess.run(['rasa', 'test', 'core',
-            '--model', os.path.join(work_dir, 'core', 'models'),
-            '--stories', os.path.join(PROJECT_ROOT, stories_dir),
-            '--evaluate-model-directory',
-            '--out', os.path.join(work_dir, 'core', split)
-        ], check=True).returncode
-    
+    for run_name, run_path in listdir(os.path.join(work_dir, 'core', 'models')):
+        for model_path in glob.iglob(os.path.join(run_path, '*.tar.gz')):
+            model_name = os.path.basename(model_path).replace('.tar.gz', '')
+            for split, stories_dir in dict(train='data', test='tests').items():
+                subprocess.run(['rasa', 'test', 'core',
+                    '--model', model_path,
+                    '--stories', os.path.join(PROJECT_ROOT, stories_dir, 'stories.yml'),
+                    '--out', os.path.join(work_dir, 'core', run_name, model_name, split)
+                ], check=True).returncode
+
     # Delete generated models and plots to save space
-    for extension in [ 'tar.gz', 'png', 'pdf' ]:
-        for filepath in glob.iglob(os.path.join(work_dir, f'**/*.{extension}'), recursive=True):
-            os.remove(filepath)
+    # for extension in [ 'tar.gz', 'png', 'pdf' ]:
+    #     for filepath in glob.iglob(os.path.join(work_dir, f'**/*.{extension}'), recursive=True):
+    #         os.remove(filepath)
     
 
 def process_results(exp_name):
     """Process the results of hyperparams search."""
     # Read results from the output files
     work_dir = os.path.join(PROJECT_ROOT, 'hyperopts', exp_name)
+    # Load configs hyperparameters
+    configs = {}
+    for config_file in glob.iglob(os.path.join(work_dir, 'configs', '*.yml')):
+        config_name = int(os.path.basename(config_file).replace('.yml', ''))
+        with open(config_file, 'r') as f:
+            configs[config_name] = yaml.load(f, Loader=yaml.FullLoader)['hyperparams']
     # Parse NLU results
     runs_paths = list(listdir(os.path.join(work_dir, 'nlu')))
     runs_count = len(runs_paths)
@@ -121,20 +129,32 @@ def process_results(exp_name):
             exclusion_fraction = fold_name.replace('_exclusion', '')
             for report_name, report_path in listdir(fold_path, exclude='train'):
                 config_name = int(report_name.replace('_report', ''))
-                # Load config hyperparameters values
-                with open(os.path.join(work_dir, 'configs', f'{config_name}.yml'), 'r') as f:
-                    hp = yaml.load(f, Loader=yaml.FullLoader)['hyperparams']
-                    nlu_results[config_name].update({ ('', k): v for k, v in hp.items() })
+                nlu_results[config_name].update({ ('', k): v for k, v in configs[config_name].items() })
                 # Get report files of each component
                 for component_report_path in glob.glob(os.path.join(report_path, '*_report.json')):
                     component_name = os.path.basename(component_report_path).replace('_report.json', '')
                     with open(component_report_path, 'r') as f:
                         component_report = json.load(f)
                     f1_score = component_report['weighted avg']['f1-score'] * 100
-                    nlu_results[config_name][(component_name, exclusion_fraction)] += f1_score / runs_count # Average over three runs
+                    nlu_results[config_name][(component_name, exclusion_fraction)] += f1_score / runs_count # Average over the runs
     nlu_results = pd.DataFrame.from_dict(nlu_results, orient='index').sort_index(axis=1, ascending=True).sort_values(('DIETClassifier', '0%'), ascending=False)
     nlu_results.to_csv(os.path.join(work_dir, 'nlu_report.csv'), sep='\t', float_format='%.2f')
     # Parse core results
+    runs_paths = list(listdir(os.path.join(work_dir, 'core'), exclude='models'))
+    runs_count = len(runs_paths)
+    core_results = defaultdict(lambda: defaultdict(int))
+    for run_name, run_path in runs_paths:
+        for model_name, model_path in listdir(run_path):
+            config_name = int(model_name.split('__')[0])
+            core_results[config_name].update({ ('', k): v for k, v in configs[config_name].items() })
+            for split_name, split_path in listdir(model_path):
+                # Get report files of each component
+                with open(os.path.join(split_path, 'story_report.json'), 'r') as f:
+                    split_report = json.load(f)
+                core_results[config_name][(split_name, 'f1_action_prediction')] += (split_report['weighted avg']['f1-score'] * 100) / runs_count # Average over the runs
+                core_results[config_name][(split_name, 'story_accuracy')] += (split_report['conversation_accuracy']['accuracy'] * 100) / runs_count # Average over the runs
+    core_results = pd.DataFrame.from_dict(core_results, orient='index').sort_index(axis=1, ascending=True).sort_values(('test', 'f1_action_prediction'), ascending=False)
+    core_results.to_csv(os.path.join(work_dir, 'core_report.csv'), sep='\t', float_format='%.2f')
     
 
 if __name__ == "__main__":

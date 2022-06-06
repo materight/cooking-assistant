@@ -155,10 +155,6 @@ stories:
   - slot_was_set:
     - found_recipes_ids: [3, 4]
     - current_recipe_id: 4
-  - action: action_refine_recipes_search_ask
-  - user: Yes thanks
-    intent: affirm
-  - action: action_refine_recipes_search_filter
   - user: Ok that sounds great. What ingredients do I have to use?
     intent: ask_ingredients_list
   - action: action_list_ingredients
