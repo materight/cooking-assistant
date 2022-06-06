@@ -7,7 +7,7 @@ hyperparams:
   drop_rate: [0.1, 0.2, 0.3]
   max_history: [5, 10, 15]
   max_ngram: [3, 4, 5]
-  fallback_threshold: [0.4, 0.7]
+  fallback_threshold: [0.3, 0.5]
   spacy_model: [en_core_web_sm, en_core_web_md, en_core_web_lg]
 
 pipeline:

@@ -25,14 +25,14 @@ pipeline:
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: FallbackClassifier
-    threshold: 0.4
+    threshold: 0.3
     ambiguity_threshold: 0.1
 
 # Policies, check https://rasa.com/docs/rasa/policies/ for more info
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy
-    core_fallback_threshold: 0.4 
+    core_fallback_threshold: 0.3
   - name: UnexpecTEDIntentPolicy
     max_history: 10
     epochs: 100

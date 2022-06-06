@@ -265,3 +265,41 @@ stories:
   - action: action_reset_list_steps_loop
   - action: utter_anything_else
 
+
+- story: Story from user conversation
+  steps:
+  - user: hi
+    intent: greet
+  - action: utter_greet
+  - user: I want [bnsa skadf](recipe)
+    intent: ask_ingredient_substitute
+  - action: utter_please_rephrase
+  - user: I would like a [Banana bread](recipe)
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [ 22 ]
+    - current_recipe_id: 22
+  - user: yes thanks
+    intent: affirm
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: yes please 
+    intent: affirm
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - list_steps_done: null
+    - current_step_idx: 0
+  - intent: next
+    user: done
+  - action: list_steps_loop
+  - slot_was_set:
+    - list_steps_done: null
+    - current_step_idx: 1
+  - intent: ask_ingredient_amount
+    user: how many [walnuts](ingredient) do i need
+  - action: action_tell_ingredient_amount
+  - action: list_steps_loop
+
+
+
