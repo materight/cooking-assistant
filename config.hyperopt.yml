@@ -52,4 +52,5 @@ policies:
     epochs: $epochs
     embedding_dimension: $embedding_dimension
     learning_rate: $learning_rate
+    split_entities_by_comma: true
     constrain_similarities: true
