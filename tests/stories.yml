@@ -1,23 +1,26 @@
 version: "2.0"
 stories:
+
+
 - story: Happy path 1
   steps:
   - user: hi!
     intent: greet
   - action: utter_greet
-  - user: I'd like to prepare a [pizza](recipe) with [mozzarella](ingredient)
+  - user: What can you do for me?
+    intent: ask_features
+  - action: utter_info
+  - user: Nice! I'd like to prepare a [pizza](recipe) with [pepperoni](ingredient)
     intent: search_recipes
   - action: action_search_recipes
   - slot_was_set:
-    - found_recipes_ids: [3, 4]
-    - current_recipe_id: 3
+    - found_recipes_ids: [4]
+    - current_recipe_id: 4
   - user: I don't know, is there any other recipe?
     intent: ask_alternative_recipe
   - action: action_search_alternative_recipe
-  - slot_was_set:
-    - current_recipe_id: 4
-  - user: Perfect, yes
-    intent: affirm
+  - user: Ok, what ingredients do I need?
+    intent: ask_ingredients_list
   - action: action_list_ingredients
   - action: utter_ask_start_cooking
   - user: We'll be in [four](CARDINAL) people
@@ -37,6 +40,7 @@ stories:
   - slot_was_set:
     - current_step_idx: 0
   - user: Ok done
+    intent: next
   - action: list_steps_loop
   - slot_was_set:
     - current_step_idx: 1
@@ -46,6 +50,218 @@ stories:
   - action: list_steps_loop
   - active_loop: list_steps_loop
   - user: Ok next
+    intent: next
   - action: list_steps_loop
   - slot_was_set:
     - current_step_idx: 2
+  - user: Done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 3
+  - user: Next
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 4
+  - user: Go on
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 5
+  - user: Ok done
+    intent: next
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
+
+
+- story: Happy path 2
+  steps:
+  - user: hi!
+    intent: greet
+  - action: utter_greet
+  - user: I want to cook a [baked salmon](recipe) recipe, should be also [gluten-free](tag).
+    intent: search_recipes
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [6]
+    - current_recipe_id: 6
+  - user: That would be perfect thanks, how long is it going to take?
+    intent: ask_expected_time
+  - action: action_tell_expected_time
+  - user: Sorry could you repeate please?
+    intent: ask_to_repeat
+  - action: action_repeat_last_utterance
+  - user: Thank you. Ok let's start cooking!
+    intent: start_cooking
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+  - user: Ok done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 1
+  - user: How many [salmon filets](ingredient) do I need for [six](CARDINAL) people?
+    intent: ask_ingredient_amount
+  - action: action_tell_ingredient_amount
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Ok perfect, next
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
+  - user: Done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 3
+  - user: Ok done, can you remind me about it in [20 minutes](TIME)?
+    intent: set_timer
+  - action: action_set_timer
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Okay thanks, let's go on with the next step
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 5
+  - user: Ok done
+    intent: next
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
+
+
+
+- story: Happy path 3
+  steps:
+  - user: hi!
+    intent: greet
+  - action: utter_greet
+  - user: Nice! I want to cook a [pizza](recipe)
+    intent: search_recipes
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [3, 4]
+    - current_recipe_id: 4
+  - action: action_refine_recipes_search_ask
+  - user: Yes thanks
+    intent: affirm
+  - action: action_refine_recipes_search_filter
+  - user: Ok that sounds great. What ingredients do I have to use?
+    intent: ask_ingredients_list
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: Actually I have [seven](CARDINAL) friends over.
+    intent: tell_people_count
+  - action: action_update_people_count
+  - slot_was_set:
+    - people_count: seven
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: Yes thank you.
+    intent: affirm
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+  - user: Ok done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 1
+  - user: I don't have any [pepperoni](ingredient) right now, what can I use instead?
+    intent: ask_ingredient_substitute
+  - action: action_search_ingredients_substitutes
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Ok next
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
+  - user: Done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 3
+  - user: Mh I've changed my mind, is there any recipe [vegan](tag) recipe with [mushrooms](ingredient)?
+    intent: search_recipes
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_reset_list_steps_loop
+  - action: utter_list_steps_stop
+  - action: action_search_recipes
+  - slot_was_set: 
+    - found_recipes_ids: [10, 24, 37]
+    - current_recipe_id: [10]
+
+
+- story: Happy path 4
+  steps:
+  - user: I want to prepare something [italian](cuisine) but also [vegan](tag).
+    intent: search_recipes
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [14]
+    - current_recipe_id: 14
+  - user: Is there any alternative?
+    intent: ask_alternative_recipe
+  - action: action_search_alternative_recipe
+  - user: Ok no problem. Can you read me the recipe?
+    intent: start_cooking
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+  - user: Ok done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 1
+  - user: How many [salmon filets](ingredient) do I need for [six](CARDINAL) people?
+    intent: ask_ingredient_amount
+  - action: action_tell_ingredient_amount
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Ok perfect, next
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
+  - user: Done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 3
+  - user: Ok done, can you remind me about it in [20 minutes](TIME)?
+    intent: set_timer
+  - action: action_set_timer
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Okay thanks, let's go on with the next step
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 5
+  - user: Ok done
+    intent: next
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
