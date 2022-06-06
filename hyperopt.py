@@ -134,10 +134,8 @@ def process_results(exp_name):
                         component_report = json.load(f)
                     f1_score = component_report['weighted avg']['f1-score'] * 100
                     nlu_results[config_name][(component_name, exclusion_fraction)] += f1_score / runs_count # Average over three runs
-    nlu_results = pd.DataFrame.from_dict(nlu_results, orient='index').sort_index(axis=0).sort_index(axis=1, ascending=True)
+    nlu_results = pd.DataFrame.from_dict(nlu_results, orient='index').sort_index(axis=1, ascending=True).sort_values(('DIETClassifier', '0%'), ascending=False)
     nlu_results.to_csv(os.path.join(work_dir, 'nlu_report.csv'), sep='\t', float_format='%.2f')
-    # Parse dialogue model results
-    print('ok')
 
 
 if __name__ == "__main__":
