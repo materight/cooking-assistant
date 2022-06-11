@@ -3,6 +3,7 @@ pandas==1.3.1
 PyYAML==6.0
 rasa==2.8.27
 rasa[spacy]==2.8.27
+transformers==4.19.4
 scikit-learn==0.24.2
 chatette==1.6.3
 word2number==1.1

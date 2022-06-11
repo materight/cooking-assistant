@@ -19,7 +19,7 @@ pipeline:
 
   # - name: SpacyFeaturizer
   - name: LanguageModelFeaturizer
-    model_name: DistilBERT
+    model_name: distilbert
     cache_dir: /tmp
 
   - name: RegexFeaturizer
