@@ -1309,30 +1309,26 @@
   - name: flour
     amount: 600ml
   - name: butter
-    amount: 113g
+    amount: 120g
   - name: sugar
-    amount: 175ml
+    amount: 140ml
   - name: brown sugar
-    amount: 175ml
+    amount: 140ml
   - name: eggs
     amount: 2
-  - name: baking soda
-    amount: 5ml
   - name: vanilla extract
-    amount: 5ml
+    amount: 10ml
   - name: baking powder
-    amount: 5ml
+    amount: 10ml
   - name: chocolate chips
-    amount: 475ml
+    amount: 400ml
   steps:
-  - Preheat oven to 350°F (175°C).
-  - Combine all ingredients in a large bowl.
-  - Mix ingredients together with a mixer until they are thoroughly combined.
-  - Line two baking sheets with parchment paper and grease with cooking spray.
-  - Form balls of dough with your hands and place them on the baking sheets. You should
-    end up with about 22 balls of dough.
-  - Bake for 10 - 12 minutes.
-  - Remove from oven and let cool for at least 15 minutes.
+  - Combine the flour, sugar and baking powder in a large bowl.
+  - Melt the butter and add to the mixture along the eggs, the vanilla extract and the chocolate chips.
+  - Mix the ingredients together until they are thoroughly combined.
+  - Form small balls of dough with your hands and place them in a baking sheet.
+  - Bake for 10/12 minutes in the oven at 175°C.
+  - Remove from the oven and let cool for at least 15 minutes.
 
 - title: Ribeye steak
   image: https://i.imgur.com/zhijVV1.jpg
