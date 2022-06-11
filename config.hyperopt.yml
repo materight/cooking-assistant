@@ -13,8 +13,12 @@ hyperparams:
 pipeline:
   - name: SpacyNLP
     model: $spacy_model
-  - name: SpacyTokenizer
-  - name: SpacyFeaturizer
+  
+  # - name: SpacyTokenizer
+  - name: WhiteSpaceTokenizer
+
+  # - name: SpacyFeaturizer
+  
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -26,12 +30,24 @@ pipeline:
     dimensions: [ CARDINAL, TIME ]
   - name: RegexEntityExtractor
     use_lookup_tables: true
-  - name: DIETClassifier
-    epochs: $epochs
-    embedding_dimension: $embedding_dimension
-    learning_rate: $learning_rate
-    drop_rate: $drop_rate
-    constrain_similarities: true
+  
+  # - name: DIETClassifier
+  #   epochs: $epochs
+  #   embedding_dimension: $embedding_dimension
+  #   learning_rate: $learning_rate
+  #   drop_rate: $drop_rate
+  #   constrain_similarities: true
+
+  - name: SklearnIntentClassifier
+    C: [ 1, 2, 5, 10, 20, 100 ]
+    kernels: [ linear ]
+    gamma: [ 0.1 ]
+  - name: CRFEntityExtractor
+    max_iterations: $epochs
+    L1_c: 0.1
+    L2_c: 0.1
+
+
   - name: EntitySynonymMapper
   - name: FallbackClassifier
     threshold: $fallback_threshold
