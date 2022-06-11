@@ -17,7 +17,11 @@ pipeline:
   # - name: SpacyTokenizer
   - name: WhitespaceTokenizer
 
-  # - name: SpacyFeaturizer
+  - name: SpacyFeaturizer
+  # - name: LanguageModelFeaturizer
+  #   model_name: bert
+  #   model_weights: rasa/LaBSE
+  #   cache_dir: /tmp
   
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
