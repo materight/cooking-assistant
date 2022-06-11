@@ -22,6 +22,18 @@ The NLU data is generated with [Chatette](https://github.com/SimGus/Chatette) an
     ```
 
 
+## Run on Google Assistant
+- Setup a new project on the [Google actions console](https://console.actions.google.com/).
+- In two separate terminals, run the actions server and the trained model:
+    ```shell
+    python -m rasa run actions
+    python -m rasa run --enable-api -p 5004
+    ```
+- Install [NGrok](https://ngrok.com/) and run `ngrok http 5004` to expose the local Rasa API server.
+- Copy the NGrok url in the two `url` fields in `action.json` as `{url}/webhooks/google_assistant/webhook`.
+- Install the [Google actions CLI](https://developers.google.com/actions/tools/gactions-cli) and run `gactions update --action_package action.json --project {PROJECT_ID}` to deploy on Google Assistant using the project id created in step 1.
+- Run `gactions test --action_package action.json --project {PROJECT_ID}` to enable testing of your action.
+
 ## Hyperparameter optimization
 To run an hyperparameter search:
 
