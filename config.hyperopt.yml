@@ -15,7 +15,7 @@ pipeline:
     model: $spacy_model
   
   # - name: SpacyTokenizer
-  - name: WhiteSpaceTokenizer
+  - name: WhitespaceTokenizer
 
   # - name: SpacyFeaturizer
   
