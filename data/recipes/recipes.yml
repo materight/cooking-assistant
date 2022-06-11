@@ -1304,7 +1304,7 @@
   cuisine: null
   prep_time: 15
   cook_time: 12
-  servings: 20
+  servings: 8
   ingredients:
   - name: flour
     amount: 600ml
