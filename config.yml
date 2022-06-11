@@ -20,8 +20,8 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
     embedding_dimension: 50
-    learning_rate: 0.001
-    drop_rate: 0.2
+    learning_rate: 0.01
+    drop_rate: 0.1
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: FallbackClassifier
@@ -36,9 +36,13 @@ policies:
   - name: UnexpecTEDIntentPolicy
     max_history: 10
     epochs: 100
+    embedding_dimension: 50
+    learning_rate: 0.001
     constrain_similarities: true
   - name: TEDPolicy
     max_history: 10
     epochs: 100
+    embedding_dimension: 50
+    learning_rate: 0.001
     split_entities_by_comma: true
     constrain_similarities: true
