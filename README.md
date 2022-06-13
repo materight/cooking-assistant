@@ -3,6 +3,12 @@ A *conversational agent* developed with [Rasa](https://rasa.com/) to help search
 
 The NLU data is generated with [Chatette](https://github.com/SimGus/Chatette) and the recipes are provided by [justthedarnrecipe.com](https://justthedarnrecipe.com/).
 
+<div align="center">
+    <img src="img/screen1.jpg" alt="Screenshot 1" width="250">
+    <img src="img/screen2.jpg" alt="Screenshot 1" width="250">
+    <img src="img/screen3.jpg" alt="Screenshot 1" width="250">
+</div>
+
 
 ## Get started
 - Install the required dependencies and models:
