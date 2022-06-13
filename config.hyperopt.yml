@@ -58,6 +58,7 @@ pipeline:
 
 policies:
   - name: MemoizationPolicy
+    max_history: $max_history
   - name: RulePolicy
     core_fallback_threshold: $fallback_threshold
   - name: UnexpecTEDIntentPolicy
