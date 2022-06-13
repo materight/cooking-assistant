@@ -204,7 +204,7 @@ stories:
     - current_recipe_id: [10]
 
 
-- story: Happy path
+- story: Story from user conversation
   steps:
   - user: I want to prepare something [italian](cuisine) but also [vegan](tag).
     intent: search_recipes
@@ -269,8 +269,11 @@ stories:
   - action: utter_greet
   - user: I want [bnsa skadf](recipe)
     intent: ask_ingredient_substitute
-  - action: utter_please_rephrase
-  - user: I would like a [Banana bread](recipe)
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [ ]
+    - current_recipe_id: 22
+  - user: I would like a [banana bread](recipe)
   - action: action_search_recipes
   - slot_was_set:
     - found_recipes_ids: [ 22 ]
@@ -299,3 +302,208 @@ stories:
 
 
 
+- story: Story from user conversation
+  steps:
+  - user: hello
+    intent: greet
+  - action: utter_greet
+  - user: I want to cook a [banan bread](recipe)
+    intent: search_recipes
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: []
+  - user: I want to cook a [banana bread](recipe)
+    intent: search_recipes
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [12]
+    - current_recipe_id: 12
+  - user: "Yes"
+    intent: affirm
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: For [four](CARDINAL)?
+    intent: tell_people_count
+  - action: action_update_people_count
+  - slot_was_set:
+    - people_count: four
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - user: Ok
+    intent: affirm
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 0
+  - user: Ok
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 1
+  - user: How much [flour](ingredient)
+    intent: ask_ingredient_amount
+  - action: action_tell_ingredient_amount
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
+  - user: Ok
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 3
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
+  - user: "No"
+    intent: deny
+
+
+- story: Story from user conversation
+  steps:
+  - intent: search_recipes
+    user: I would like to cook [meat](recipe) with [almond](recipe)
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [10, 42, 51]
+  - action: action_refine_recipes_search_ask
+  - slot_was_set:
+    - refine_recipes_search_prop: tag
+    - refine_recipes_search_value: vegetarian
+  - intent: affirm
+    user: Ok
+  - action: action_refine_recipes_search_filter
+  - slot_was_set:
+    - found_recipes_ids: [10]
+    - current_recipe_id: 10
+    - refine_recipes_search_prop: null
+    - refine_recipes_search_value: null
+  - intent: ask_ingredients_list
+    user: I would like the ingredientas
+  - action: action_list_ingredients
+  - action: action_default_fallback
+  - intent: ask_expected_time
+    user: How long does It take to cook
+  - action: action_tell_expected_time
+  - intent: affirm
+    user: Ok
+  - action: action_default_fallback
+
+
+- story: Story from user conversation
+  steps:
+  - intent: greet
+    user: hi
+  - action: utter_greet
+  - intent: ask_ingredient_substitute
+    user: search [banan bread](recipe)
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: []
+  - intent: search_recipes
+    user: I would like [banana bread](recipe)
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: 22
+    - current_recipe_id: 22
+  - intent: affirm
+    user: "yes"
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - intent: affirm
+    user: yes
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - list_steps_done: null
+    - current_step_idx: 0
+    - requested_slot: list_steps_done
+  - intent: next
+    user: done
+  - action: list_steps_loop
+  - slot_was_set:
+    - list_steps_done: null
+    - current_step_idx: 1
+    - requested_slot: list_steps_done
+  - intent: ask_ingredient_amount
+    user: how many [walnuts](ingredient) do i need
+  - action: action_tell_ingredient_amount
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - user: Done
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 2
+  - user: Ok
+    intent: next
+  - action: list_steps_loop
+  - slot_was_set:
+    - current_step_idx: 3
+  - action: list_steps_loop
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
+  - user: "no"
+    intent: deny
+
+
+
+- story: Story from user conversation
+  steps:
+  - intent: search_recipes
+    user: Some [Pasta](recipe)
+  - action: action_search_recipes
+  - slot_was_set:
+    - found_recipes_ids: [0, 48]
+  - action: action_refine_recipes_search_ask
+  - slot_was_set:
+    - refine_recipes_search_prop: tag
+    - refine_recipes_search_value: vegan
+  - intent: deny
+    user: "No"
+  - action: action_refine_recipes_search_filter
+  - slot_was_set:
+    - found_recipes_ids: 48
+    - current_recipe_id: 48
+    - refine_recipes_search_prop: null
+    - refine_recipes_search_value: null
+  - intent: affirm
+    user: "Yes"
+  - action: action_list_ingredients
+  - action: utter_ask_start_cooking
+  - intent: affirm
+    user: "Yes"
+  - action: list_steps_loop
+  - active_loop: list_steps_loop
+  - slot_was_set:
+    - list_steps_done: null
+    - current_step_idx: 0
+    - requested_slot: list_steps_done
+  - intent: next
+    user: Done
+  - action: list_steps_loop
+  - slot_was_set:
+    - list_steps_done: null
+    - current_step_idx: 1
+    - requested_slot: list_steps_done
+  - intent: next
+    user: Done
+  - active_loop: null
+  - slot_was_set: 
+    - current_step_idx: -1
+    - list_steps_done: True
+  - action: action_reset_list_steps_loop
+  - action: utter_anything_else
+  - user: "no"
+    intent: deny
