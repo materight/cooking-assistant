@@ -28,25 +28,27 @@ class GoogleConnector(InputChannel):
             intent = payload['inputs'][0]['intent'] 			
             text = payload['inputs'][0]['rawInputs'][0]['query'] 
 	
-            if intent == 'actions.intent.MAIN':	
-                message = 'Hello! Welcome to the cooking assistant. You can start by saying hi.'			 
+            items = []
+            if intent == 'actions.intent.MAIN':
+                items.append({'simpleResponse': { 'textToSpeech': 'Hello! Welcome to the Cooking assistant!'	}})
             else:
-                out = CollectingOutputChannel()			
+                out = CollectingOutputChannel()
                 await on_new_message(UserMessage(text, out))
-                responses = [m['text'] for m in out.messages]
-                message = responses[0]
+                logger.info("Received message: %s", out.messages)
+                for m in out.messages:
+                    if 'text' in m:
+                        items.append({'simpleResponse': { 'textToSpeech': m['text'] }})
+                    elif 'image' in m:
+                        items.append({'basicCard': { 'image': { 'url': m['image'] } }})
+                    else:
+                        logger.error("Unknown message type: %s", m)
             r = {
                 'expectUserResponse': 'true',
                 'expectedInputs': [{
                     'possibleIntents': [ { 'intent': 'actions.intent.TEXT' } ],
                     'inputPrompt': {
                         'richInitialPrompt': {
-                            'items': [{
-                                'simpleResponse': {
-                                    'textToSpeech': message,
-                                    'displayText': message
-                                }
-                            }]
+                            'items': items
                         }
                     }
                 }]
