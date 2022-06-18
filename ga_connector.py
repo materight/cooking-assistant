@@ -30,7 +30,7 @@ class GoogleConnector(InputChannel):
 	
             items = []
             if intent == 'actions.intent.MAIN':
-                items.append({'simpleResponse': { 'textToSpeech': 'Hello! Welcome to the Cooking assistant!'	}})
+                items.append({'simpleResponse': { 'textToSpeech': 'Hello! Welcome to the Cooking assistant! What would you like to prepare today?'	}})
             else:
                 out = CollectingOutputChannel()
                 await on_new_message(UserMessage(text, out))
