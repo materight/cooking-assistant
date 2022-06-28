@@ -1,5 +1,5 @@
 # Cooking Assistant with Rasa
-A *conversational agent* developed with [Rasa](https://rasa.com/) to help searching and preparing food recipes.
+A *conversational agent* developed with [Rasa](https://rasa.com/) to help searching and preparing food recipes. Check the [report](report.pdf) for more details.
 
 The NLU data is generated with [Chatette](https://github.com/SimGus/Chatette) and the recipes are provided by [justthedarnrecipe.com](https://justthedarnrecipe.com/).
 
