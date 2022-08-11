@@ -43,7 +43,7 @@ The NLU data is generated with [Chatette](https://github.com/SimGus/Chatette) an
 ## Hyperparameter optimization
 To run an hyperparameter search:
 
-- Change the hyperparameters to use in `conig.hyperopt.yml`, under the `hyperparams` key.
+- Change the hyperparameters to use in `config.hyperopt.yml`, under the `hyperparams` key.
 - Run the `python hyperopt.py -n [N_ITERATIONS]` script.
 
 For each configuration 3 runs will be executed, using different held-out fractions of the training data for evaluation. The configurations files, the trained models and the final evaluation results can be then found in the `hyperopts` directory.
